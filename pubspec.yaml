@@ -1,5 +1,5 @@
 name: keiser_metrics_sdk
-version: 5.0.22
+version: 5.0.23
 description: OpenAPI API client
 homepage: homepage
 repository: https://github.com/KeiserCorp/Keiser.Metrics.SDK.Dart
