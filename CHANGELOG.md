@@ -1,4 +1,4 @@
-## 5.0.30
+## 5.0.31
 
 - Updates metrics connection to `0.5.0`
 
