@@ -727,7 +727,7 @@ import 'package:keiser_metrics_sdk/api.dart';
 final api = MetricsApi metricsApi = MetricsApi();
 final String appType = appType_example; // String | Allowed values: performance, elder, medical, commercial
 final num facilityStrengthMachineId = 8.14; // num | 
-final String forceUnit = forceUnit_example; // String | Allowed values: lb, kg, ne, er
+final String forceUnit = forceUnit_example; // String | Allowed values: lb, kg, ne, er, lb, kg, ne, er
 final bool isFacilityConfigurationOverridden = true; // bool | 
 final String primaryFocus = primaryFocus_example; // String | Allowed values: power, force, velocity, rom
 final String secondaryFocus = secondaryFocus_example; // String | Allowed values: power, force, velocity, rom
@@ -747,7 +747,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **appType** | **String**| Allowed values: performance, elder, medical, commercial | 
  **facilityStrengthMachineId** | **num**|  | 
- **forceUnit** | **String**| Allowed values: lb, kg, ne, er | 
+ **forceUnit** | **String**| Allowed values: lb, kg, ne, er, lb, kg, ne, er | 
  **isFacilityConfigurationOverridden** | **bool**|  | 
  **primaryFocus** | **String**| Allowed values: power, force, velocity, rom | 
  **secondaryFocus** | **String**| Allowed values: power, force, velocity, rom | 

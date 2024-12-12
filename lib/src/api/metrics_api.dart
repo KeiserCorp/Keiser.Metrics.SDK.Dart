@@ -482,7 +482,7 @@ class MetricsApi {
   /// Parameters:
   /// * [appType] - Allowed values: performance, elder, medical, commercial
   /// * [facilityStrengthMachineId] 
-  /// * [forceUnit] - Allowed values: lb, kg, ne, er
+  /// * [forceUnit] - Allowed values: lb, kg, ne, er, lb, kg, ne, er
   /// * [isFacilityConfigurationOverridden] 
   /// * [primaryFocus] - Allowed values: power, force, velocity, rom
   /// * [secondaryFocus] - Allowed values: power, force, velocity, rom
