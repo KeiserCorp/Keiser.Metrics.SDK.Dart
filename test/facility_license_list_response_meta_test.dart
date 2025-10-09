@@ -17,7 +17,7 @@ void main() {
       // TODO
     });
 
-    // String type
+    // FacilityLicenseType type
     test('to test the property `type`', () async {
       // TODO
     });

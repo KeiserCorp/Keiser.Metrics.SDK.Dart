@@ -13,4 +13,8 @@ enum SessionSorting {
   startedAt,
   @JsonValue(r'endedAt')
   endedAt,
+  @JsonValue(r'name')
+  names,
+  @JsonValue(r'open')
+  open,
 }

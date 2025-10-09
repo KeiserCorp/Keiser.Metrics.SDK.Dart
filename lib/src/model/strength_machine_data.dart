@@ -4,6 +4,7 @@
 
 // ignore_for_file: unused_element
 import 'package:keiser_metrics_sdk/src/model/strength_exercise_data.dart';
+import 'package:keiser_metrics_sdk/src/model/strength_machine_line.dart';
 import 'package:keiser_metrics_sdk/src/model/strength_machine_model_data.dart';
 import 'package:json_annotation/json_annotation.dart';
 
@@ -69,7 +70,7 @@ class StrengthMachineData {
   )
 
 
-  final StrengthMachineDataLineEnum line;
+  final StrengthMachineLine line;
 
 
 
@@ -165,23 +166,4 @@ class StrengthMachineData {
   }
 
 }
-
-
-enum StrengthMachineDataLineEnum {
-  @JsonValue(r'a250')
-  a250,
-  @JsonValue(r'a300')
-  a300,
-  @JsonValue(r'a350')
-  a350,
-  @JsonValue(r'infinity')
-  infinity,
-  @JsonValue(r'powerRack')
-  powerRack,
-  @JsonValue(r'a400')
-  a400,
-  @JsonValue(r'a500')
-  a500,
-}
-
 

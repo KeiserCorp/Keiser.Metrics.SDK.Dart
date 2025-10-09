@@ -12,12 +12,12 @@ void main() {
       // TODO
     });
 
-    // String from
+    // DateTime from
     test('to test the property `from`', () async {
       // TODO
     });
 
-    // String to
+    // DateTime to
     test('to test the property `to`', () async {
       // TODO
     });

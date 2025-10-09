@@ -31,20 +31,15 @@ FacilityConfigurationData _$FacilityConfigurationDataFromJson(
           facilityId: $checkedConvert('facilityId', (v) => v as num),
           memberIdentificationComposition: $checkedConvert(
               'memberIdentificationComposition',
-              (v) => $enumDecode(
-                  _$FacilityConfigurationDataMemberIdentificationCompositionEnumEnumMap,
-                  v)),
+              (v) => $enumDecode(_$CharacterTypeEnumMap, v)),
           memberIdentificationForceLength: $checkedConvert(
               'memberIdentificationForceLength', (v) => v as bool),
           memberIdentificationLength:
               $checkedConvert('memberIdentificationLength', (v) => v as num),
           memberIdentificationRegex:
               $checkedConvert('memberIdentificationRegex', (v) => v as String),
-          memberSecretComposition: $checkedConvert(
-              'memberSecretComposition',
-              (v) => $enumDecode(
-                  _$FacilityConfigurationDataMemberSecretCompositionEnumEnumMap,
-                  v)),
+          memberSecretComposition: $checkedConvert('memberSecretComposition',
+              (v) => $enumDecode(_$CharacterTypeEnumMap, v)),
           memberSecretForceLength:
               $checkedConvert('memberSecretForceLength', (v) => v as bool),
           memberSecretLength:
@@ -63,28 +58,20 @@ Map<String, dynamic> _$FacilityConfigurationDataToJson(
     <String, dynamic>{
       'facilityId': instance.facilityId,
       'memberIdentificationComposition':
-          _$FacilityConfigurationDataMemberIdentificationCompositionEnumEnumMap[
-              instance.memberIdentificationComposition]!,
+          _$CharacterTypeEnumMap[instance.memberIdentificationComposition]!,
       'memberIdentificationForceLength':
           instance.memberIdentificationForceLength,
       'memberIdentificationLength': instance.memberIdentificationLength,
       'memberIdentificationRegex': instance.memberIdentificationRegex,
       'memberSecretComposition':
-          _$FacilityConfigurationDataMemberSecretCompositionEnumEnumMap[
-              instance.memberSecretComposition]!,
+          _$CharacterTypeEnumMap[instance.memberSecretComposition]!,
       'memberSecretForceLength': instance.memberSecretForceLength,
       'memberSecretLength': instance.memberSecretLength,
       'memberSecretRegex': instance.memberSecretRegex,
       'memberRequireEmail': instance.memberRequireEmail,
     };
 
-const _$FacilityConfigurationDataMemberIdentificationCompositionEnumEnumMap = {
-  FacilityConfigurationDataMemberIdentificationCompositionEnum.numeric:
-      'numeric',
-  FacilityConfigurationDataMemberIdentificationCompositionEnum.alpha: 'alpha',
-};
-
-const _$FacilityConfigurationDataMemberSecretCompositionEnumEnumMap = {
-  FacilityConfigurationDataMemberSecretCompositionEnum.numeric: 'numeric',
-  FacilityConfigurationDataMemberSecretCompositionEnum.alpha: 'alpha',
+const _$CharacterTypeEnumMap = {
+  CharacterType.numeric: 'numeric',
+  CharacterType.alpha: 'alpha',
 };

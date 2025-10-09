@@ -9,9 +9,9 @@ import 'package:keiser_metrics_sdk/api.dart';
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **facilityId** | **num** |  | 
-**appType** | **String** |  | 
+**appType** | [**StrengthMachineAppType**](StrengthMachineAppType.md) |  | 
 **timeZone** | **String** |  | 
-**forceUnit** | **String** |  | 
+**forceUnit** | [**ForceUnit**](ForceUnit.md) |  | 
 **primaryFocus** | **String** |  | 
 **secondaryFocus** | **String** |  | 
 **locale** | **String** |  | 

@@ -12,11 +12,11 @@ ProfileData _$ProfileDataFromJson(Map<String, dynamic> json) => $checkedCreate(
       ($checkedConvert) {
         $checkKeys(
           json,
-          requiredKeys: const ['userId', 'updatedAt'],
+          requiredKeys: const ['userId'],
         );
         final val = ProfileData(
           userId: $checkedConvert('userId', (v) => v as num),
-          updatedAt: $checkedConvert('updatedAt', (v) => v as String),
+          updatedAt: $checkedConvert('updatedAt', (v) => v as String?),
           names: $checkedConvert('name', (v) => v as String?),
           birthday: $checkedConvert('birthday', (v) => v as String?),
           gender: $checkedConvert('gender', (v) => v as String?),
@@ -31,7 +31,6 @@ ProfileData _$ProfileDataFromJson(Map<String, dynamic> json) => $checkedCreate(
 Map<String, dynamic> _$ProfileDataToJson(ProfileData instance) {
   final val = <String, dynamic>{
     'userId': instance.userId,
-    'updatedAt': instance.updatedAt,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -40,6 +39,7 @@ Map<String, dynamic> _$ProfileDataToJson(ProfileData instance) {
     }
   }
 
+  writeNotNull('updatedAt', instance.updatedAt);
   writeNotNull('name', instance.names);
   writeNotNull('birthday', instance.birthday);
   writeNotNull('gender', instance.gender);

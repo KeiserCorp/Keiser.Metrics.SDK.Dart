@@ -8,7 +8,7 @@ import 'package:keiser_metrics_sdk/api.dart';
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**type** | **String** |  | 
+**type** | [**InBodyType**](InBodyType.md) |  | 
 **account** | **String** |  | [optional] 
 **key** | **String** |  | [optional] 
 

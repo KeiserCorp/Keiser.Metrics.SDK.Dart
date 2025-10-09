@@ -14,17 +14,17 @@ Name | Type | Description | Notes
 **version** | **String** |  | 
 **serial** | **String** |  | 
 **completedAt** | [**DateTime**](DateTime.md) |  | 
-**chest** | **num** |  | 
-**rom1** | **num** |  | 
-**rom2** | **num** |  | 
-**seat** | **num** |  | 
-**resistance** | **num** |  | 
-**resistancePrecision** | **String** |  | 
+**chest** | **num** |  | [optional] 
+**rom1** | **num** |  | [optional] 
+**rom2** | **num** |  | [optional] 
+**seat** | **num** |  | [optional] 
+**resistance** | **num** |  | [optional] 
+**resistancePrecision** | [**ResistancePrecision**](ResistancePrecision.md) |  | 
 **repetitionCount** | **num** |  | 
-**forceUnit** | **String** |  | 
+**forceUnit** | [**ForceUnit**](ForceUnit.md) |  | [optional] 
 **peakPower** | **num** |  | [optional] 
 **peakVelocity** | **num** |  | [optional] 
-**work** | **num** |  | 
+**work** | **num** |  | [optional] 
 **distance** | **num** |  | [optional] 
 **addedWeight** | **num** |  | [optional] 
 **test** | [**StrengthMachineDataSetTestData**](StrengthMachineDataSetTestData.md) |  | [optional] 

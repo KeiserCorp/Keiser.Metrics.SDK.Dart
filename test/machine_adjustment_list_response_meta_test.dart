@@ -12,7 +12,7 @@ void main() {
       // TODO
     });
 
-    // String sort
+    // MachineAdjustmentSorting sort
     test('to test the property `sort`', () async {
       // TODO
     });

@@ -18,19 +18,15 @@ StrengthExerciseVariantData _$StrengthExerciseVariantDataFromJson(
         );
         final val = StrengthExerciseVariantData(
           id: $checkedConvert('id', (v) => v as num),
-          variant: $checkedConvert(
-              'variant',
-              (v) => $enumDecode(
-                  _$StrengthExerciseVariantDataVariantEnumEnumMap, v)),
+          variant: $checkedConvert('variant',
+              (v) => $enumDecode(_$StrengthExerciseVariantTypeEnumMap, v)),
           attachment: $checkedConvert(
               'attachment',
               (v) => $enumDecodeNullable(
-                  _$StrengthExerciseVariantDataAttachmentEnumEnumMap, v)),
+                  _$StrengthExerciseVariantAttachmentEnumMap, v)),
           equipmentMechanicalMovement: $checkedConvert(
               'equipmentMechanicalMovement',
-              (v) => $enumDecode(
-                  _$StrengthExerciseVariantDataEquipmentMechanicalMovementEnumEnumMap,
-                  v)),
+              (v) => $enumDecode(_$StrengthExerciseMovementEnumMap, v)),
           instructionalImage:
               $checkedConvert('instructionalImage', (v) => v as String?),
           instructionalVideo:
@@ -60,8 +56,7 @@ Map<String, dynamic> _$StrengthExerciseVariantDataToJson(
     StrengthExerciseVariantData instance) {
   final val = <String, dynamic>{
     'id': instance.id,
-    'variant':
-        _$StrengthExerciseVariantDataVariantEnumEnumMap[instance.variant]!,
+    'variant': _$StrengthExerciseVariantTypeEnumMap[instance.variant]!,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -71,10 +66,9 @@ Map<String, dynamic> _$StrengthExerciseVariantDataToJson(
   }
 
   writeNotNull('attachment',
-      _$StrengthExerciseVariantDataAttachmentEnumEnumMap[instance.attachment]);
+      _$StrengthExerciseVariantAttachmentEnumMap[instance.attachment]);
   val['equipmentMechanicalMovement'] =
-      _$StrengthExerciseVariantDataEquipmentMechanicalMovementEnumEnumMap[
-          instance.equipmentMechanicalMovement]!;
+      _$StrengthExerciseMovementEnumMap[instance.equipmentMechanicalMovement]!;
   writeNotNull('instructionalImage', instance.instructionalImage);
   writeNotNull('instructionalVideo', instance.instructionalVideo);
   writeNotNull('strengthExercise', instance.strengthExercise?.toJson());
@@ -84,30 +78,28 @@ Map<String, dynamic> _$StrengthExerciseVariantDataToJson(
   return val;
 }
 
-const _$StrengthExerciseVariantDataVariantEnumEnumMap = {
-  StrengthExerciseVariantDataVariantEnum.normal: 'normal',
-  StrengthExerciseVariantDataVariantEnum.singleArm: 'singleArm',
-  StrengthExerciseVariantDataVariantEnum.singleLeg: 'singleLeg',
-  StrengthExerciseVariantDataVariantEnum.singleArmSingleLeg:
-      'singleArmSingleLeg',
-  StrengthExerciseVariantDataVariantEnum.doubleArmSingleLeg:
-      'doubleArmSingleLeg',
-  StrengthExerciseVariantDataVariantEnum.alternate: 'alternate',
+const _$StrengthExerciseVariantTypeEnumMap = {
+  StrengthExerciseVariantType.normal: 'normal',
+  StrengthExerciseVariantType.singleArm: 'singleArm',
+  StrengthExerciseVariantType.singleLeg: 'singleLeg',
+  StrengthExerciseVariantType.singleArmSingleLeg: 'singleArmSingleLeg',
+  StrengthExerciseVariantType.doubleArmSingleLeg: 'doubleArmSingleLeg',
+  StrengthExerciseVariantType.alternate: 'alternate',
 };
 
-const _$StrengthExerciseVariantDataAttachmentEnumEnumMap = {
-  StrengthExerciseVariantDataAttachmentEnum.bar: 'bar',
-  StrengthExerciseVariantDataAttachmentEnum.rope: 'rope',
-  StrengthExerciseVariantDataAttachmentEnum.singleHandles: 'singleHandles',
-  StrengthExerciseVariantDataAttachmentEnum.doubleHandles: 'doubleHandles',
-  StrengthExerciseVariantDataAttachmentEnum.ankleStrap: 'ankleStrap',
-  StrengthExerciseVariantDataAttachmentEnum.thighStrap: 'thighStrap',
-  StrengthExerciseVariantDataAttachmentEnum.belt: 'belt',
+const _$StrengthExerciseVariantAttachmentEnumMap = {
+  StrengthExerciseVariantAttachment.bar: 'bar',
+  StrengthExerciseVariantAttachment.rope: 'rope',
+  StrengthExerciseVariantAttachment.singleHandles: 'singleHandles',
+  StrengthExerciseVariantAttachment.doubleHandles: 'doubleHandles',
+  StrengthExerciseVariantAttachment.ankleStrap: 'ankleStrap',
+  StrengthExerciseVariantAttachment.thighStrap: 'thighStrap',
+  StrengthExerciseVariantAttachment.belt: 'belt',
+  StrengthExerciseVariantAttachment.dip: 'dip',
+  StrengthExerciseVariantAttachment.pullUpBar: 'pullUpBar',
 };
 
-const _$StrengthExerciseVariantDataEquipmentMechanicalMovementEnumEnumMap = {
-  StrengthExerciseVariantDataEquipmentMechanicalMovementEnum.unilateral:
-      'unilateral',
-  StrengthExerciseVariantDataEquipmentMechanicalMovementEnum.bilateral:
-      'bilateral',
+const _$StrengthExerciseMovementEnumMap = {
+  StrengthExerciseMovement.unilateral: 'unilateral',
+  StrengthExerciseMovement.bilateral: 'bilateral',
 };

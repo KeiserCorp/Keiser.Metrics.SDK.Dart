@@ -17,8 +17,10 @@ MSeriesDataSetListResponseMeta _$MSeriesDataSetListResponseMetaFromJson(
           requiredKeys: const ['sort'],
         );
         final val = MSeriesDataSetListResponseMeta(
-          from: $checkedConvert('from', (v) => v as String?),
-          to: $checkedConvert('to', (v) => v as String?),
+          from: $checkedConvert(
+              'from', (v) => v == null ? null : DateTime.parse(v as String)),
+          to: $checkedConvert(
+              'to', (v) => v == null ? null : DateTime.parse(v as String)),
           source_: $checkedConvert('source', (v) => v as String?),
           sort: $checkedConvert(
               'sort', (v) => $enumDecode(_$MSeriesDataSetSortingEnumMap, v)),
@@ -43,8 +45,8 @@ Map<String, dynamic> _$MSeriesDataSetListResponseMetaToJson(
     }
   }
 
-  writeNotNull('from', instance.from);
-  writeNotNull('to', instance.to);
+  writeNotNull('from', instance.from?.toIso8601String());
+  writeNotNull('to', instance.to?.toIso8601String());
   writeNotNull('source', instance.source_);
   val['sort'] = _$MSeriesDataSetSortingEnumMap[instance.sort]!;
   writeNotNull('userId', instance.userId);

@@ -14,13 +14,13 @@ SessionPlanSequenceData _$SessionPlanSequenceDataFromJson(
       ($checkedConvert) {
         $checkKeys(
           json,
-          requiredKeys: const ['id', 'name', 'description', 'notes'],
+          requiredKeys: const ['id', 'name'],
         );
         final val = SessionPlanSequenceData(
           id: $checkedConvert('id', (v) => v as num),
           names: $checkedConvert('name', (v) => v as String),
-          description: $checkedConvert('description', (v) => v as String),
-          notes: $checkedConvert('notes', (v) => v as String),
+          description: $checkedConvert('description', (v) => v as String?),
+          notes: $checkedConvert('notes', (v) => v as String?),
           user: $checkedConvert(
               'user',
               (v) => v == null
@@ -43,8 +43,6 @@ Map<String, dynamic> _$SessionPlanSequenceDataToJson(
   final val = <String, dynamic>{
     'id': instance.id,
     'name': instance.names,
-    'description': instance.description,
-    'notes': instance.notes,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -53,6 +51,8 @@ Map<String, dynamic> _$SessionPlanSequenceDataToJson(
     }
   }
 
+  writeNotNull('description', instance.description);
+  writeNotNull('notes', instance.notes);
   writeNotNull('user', instance.user?.toJson());
   writeNotNull('sessionPlanSets',
       instance.sessionPlanSets?.map((e) => e.toJson()).toList());

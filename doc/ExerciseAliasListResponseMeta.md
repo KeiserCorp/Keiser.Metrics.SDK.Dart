@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 **cardioExerciseId** | **num** |  | [optional] 
 **stretchExerciseId** | **num** |  | [optional] 
 **alias** | **String** |  | [optional] 
-**type** | **String** |  | [optional] 
+**type** | [**ExerciseAliasType**](ExerciseAliasType.md) |  | [optional] 
 **sort** | [**ExerciseAliasSorting**](ExerciseAliasSorting.md) |  | 
 **ascending** | **bool** |  | [optional] 
 **limit** | **num** |  | [optional] 

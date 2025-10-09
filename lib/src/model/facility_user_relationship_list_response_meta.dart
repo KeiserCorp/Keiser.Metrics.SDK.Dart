@@ -4,7 +4,7 @@
 
 // ignore_for_file: unused_element
 import 'package:keiser_metrics_sdk/src/model/facility_user_relationship_sorting.dart';
-import 'package:keiser_metrics_sdk/src/model/facility_employee_role.dart';
+import 'package:keiser_metrics_sdk/src/model/employee_role.dart';
 import 'package:json_annotation/json_annotation.dart';
 
 part 'facility_user_relationship_list_response_meta.g.dart';
@@ -101,7 +101,7 @@ class FacilityUserRelationshipListResponseMeta {
   )
 
 
-  final FacilityEmployeeRole? employeeRole;
+  final EmployeeRole? employeeRole;
 
 
 

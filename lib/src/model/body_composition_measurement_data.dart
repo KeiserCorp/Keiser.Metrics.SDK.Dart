@@ -18,438 +18,438 @@ class BodyCompositionMeasurementData {
   /// Returns a new [BodyCompositionMeasurementData] instance.
   const BodyCompositionMeasurementData({
 
-    required  this.totalBodyWater,
+     this.totalBodyWater,
 
-    required  this.intracellularWater,
+     this.intracellularWater,
 
-    required  this.extracellularWater,
+     this.extracellularWater,
 
-    required  this.extracellularWaterToTotalBodyWaterRatio,
+     this.extracellularWaterToTotalBodyWaterRatio,
 
-    required  this.dryLeanMass,
+     this.dryLeanMass,
 
-    required  this.bodyFatMass,
+     this.bodyFatMass,
 
-    required  this.leanBodyMass,
+     this.leanBodyMass,
 
-    required  this.skeletalMuscleMass,
+     this.skeletalMuscleMass,
 
-    required  this.bodyMassIndex,
+     this.bodyMassIndex,
 
-    required  this.visceralFatLevel,
+     this.visceralFatLevel,
 
-    required  this.basalMetabolicRate,
+     this.basalMetabolicRate,
 
-    required  this.leanBodyMassOfRightArm,
+     this.leanBodyMassOfRightArm,
 
-    required  this.leanBodyMassPercentageOfRightArm,
+     this.leanBodyMassPercentageOfRightArm,
 
-    required  this.leanBodyMassOfLeftArm,
+     this.leanBodyMassOfLeftArm,
 
-    required  this.leanBodyMassPercentageOfLeftArm,
+     this.leanBodyMassPercentageOfLeftArm,
 
-    required  this.leanBodyMassOfTrunk,
+     this.leanBodyMassOfTrunk,
 
-    required  this.leanBodyMassPercentageOfTrunk,
+     this.leanBodyMassPercentageOfTrunk,
 
-    required  this.leanBodyMassOfRightLeg,
+     this.leanBodyMassOfRightLeg,
 
-    required  this.leanBodyMassPercentageOfRightLeg,
+     this.leanBodyMassPercentageOfRightLeg,
 
-    required  this.leanBodyMassOfLeftLeg,
+     this.leanBodyMassOfLeftLeg,
 
-    required  this.leanBodyMassPercentageOfLeftLeg,
+     this.leanBodyMassPercentageOfLeftLeg,
 
-    required  this.bodyFatMassOfRightArm,
+     this.bodyFatMassOfRightArm,
 
-    required  this.bodyFatMassPercentageOfRightArm,
+     this.bodyFatMassPercentageOfRightArm,
 
-    required  this.bodyFatMassOfLeftArm,
+     this.bodyFatMassOfLeftArm,
 
-    required  this.bodyFatMassPercentageOfLeftArm,
+     this.bodyFatMassPercentageOfLeftArm,
 
-    required  this.bodyFatMassOfTrunk,
+     this.bodyFatMassOfTrunk,
 
-    required  this.bodyFatMassPercentageOfTrunk,
+     this.bodyFatMassPercentageOfTrunk,
 
-    required  this.bodyFatMassOfRightLeg,
+     this.bodyFatMassOfRightLeg,
 
-    required  this.bodyFatMassPercentageOfRightLeg,
+     this.bodyFatMassPercentageOfRightLeg,
 
-    required  this.bodyFatMassOfLeftLeg,
+     this.bodyFatMassOfLeftLeg,
 
-    required  this.bodyFatMassPercentageOfLeftLeg,
+     this.bodyFatMassPercentageOfLeftLeg,
   });
 
   @JsonKey(
     
     name: r'totalBodyWater',
-    required: true,
+    required: false,
     includeIfNull: false
   )
 
 
-  final num totalBodyWater;
+  final num? totalBodyWater;
 
 
 
   @JsonKey(
     
     name: r'intracellularWater',
-    required: true,
+    required: false,
     includeIfNull: false
   )
 
 
-  final num intracellularWater;
+  final num? intracellularWater;
 
 
 
   @JsonKey(
     
     name: r'extracellularWater',
-    required: true,
+    required: false,
     includeIfNull: false
   )
 
 
-  final num extracellularWater;
+  final num? extracellularWater;
 
 
 
   @JsonKey(
     
     name: r'extracellularWaterToTotalBodyWaterRatio',
-    required: true,
+    required: false,
     includeIfNull: false
   )
 
 
-  final num extracellularWaterToTotalBodyWaterRatio;
+  final num? extracellularWaterToTotalBodyWaterRatio;
 
 
 
   @JsonKey(
     
     name: r'dryLeanMass',
-    required: true,
+    required: false,
     includeIfNull: false
   )
 
 
-  final num dryLeanMass;
+  final num? dryLeanMass;
 
 
 
   @JsonKey(
     
     name: r'bodyFatMass',
-    required: true,
+    required: false,
     includeIfNull: false
   )
 
 
-  final num bodyFatMass;
+  final num? bodyFatMass;
 
 
 
   @JsonKey(
     
     name: r'leanBodyMass',
-    required: true,
+    required: false,
     includeIfNull: false
   )
 
 
-  final num leanBodyMass;
+  final num? leanBodyMass;
 
 
 
   @JsonKey(
     
     name: r'skeletalMuscleMass',
-    required: true,
+    required: false,
     includeIfNull: false
   )
 
 
-  final num skeletalMuscleMass;
+  final num? skeletalMuscleMass;
 
 
 
   @JsonKey(
     
     name: r'bodyMassIndex',
-    required: true,
+    required: false,
     includeIfNull: false
   )
 
 
-  final num bodyMassIndex;
+  final num? bodyMassIndex;
 
 
 
   @JsonKey(
     
     name: r'visceralFatLevel',
-    required: true,
+    required: false,
     includeIfNull: false
   )
 
 
-  final num visceralFatLevel;
+  final num? visceralFatLevel;
 
 
 
   @JsonKey(
     
     name: r'basalMetabolicRate',
-    required: true,
+    required: false,
     includeIfNull: false
   )
 
 
-  final num basalMetabolicRate;
+  final num? basalMetabolicRate;
 
 
 
   @JsonKey(
     
     name: r'leanBodyMassOfRightArm',
-    required: true,
+    required: false,
     includeIfNull: false
   )
 
 
-  final num leanBodyMassOfRightArm;
+  final num? leanBodyMassOfRightArm;
 
 
 
   @JsonKey(
     
     name: r'leanBodyMassPercentageOfRightArm',
-    required: true,
+    required: false,
     includeIfNull: false
   )
 
 
-  final num leanBodyMassPercentageOfRightArm;
+  final num? leanBodyMassPercentageOfRightArm;
 
 
 
   @JsonKey(
     
     name: r'leanBodyMassOfLeftArm',
-    required: true,
+    required: false,
     includeIfNull: false
   )
 
 
-  final num leanBodyMassOfLeftArm;
+  final num? leanBodyMassOfLeftArm;
 
 
 
   @JsonKey(
     
     name: r'leanBodyMassPercentageOfLeftArm',
-    required: true,
+    required: false,
     includeIfNull: false
   )
 
 
-  final num leanBodyMassPercentageOfLeftArm;
+  final num? leanBodyMassPercentageOfLeftArm;
 
 
 
   @JsonKey(
     
     name: r'leanBodyMassOfTrunk',
-    required: true,
+    required: false,
     includeIfNull: false
   )
 
 
-  final num leanBodyMassOfTrunk;
+  final num? leanBodyMassOfTrunk;
 
 
 
   @JsonKey(
     
     name: r'leanBodyMassPercentageOfTrunk',
-    required: true,
+    required: false,
     includeIfNull: false
   )
 
 
-  final num leanBodyMassPercentageOfTrunk;
+  final num? leanBodyMassPercentageOfTrunk;
 
 
 
   @JsonKey(
     
     name: r'leanBodyMassOfRightLeg',
-    required: true,
+    required: false,
     includeIfNull: false
   )
 
 
-  final num leanBodyMassOfRightLeg;
+  final num? leanBodyMassOfRightLeg;
 
 
 
   @JsonKey(
     
     name: r'leanBodyMassPercentageOfRightLeg',
-    required: true,
+    required: false,
     includeIfNull: false
   )
 
 
-  final num leanBodyMassPercentageOfRightLeg;
+  final num? leanBodyMassPercentageOfRightLeg;
 
 
 
   @JsonKey(
     
     name: r'leanBodyMassOfLeftLeg',
-    required: true,
+    required: false,
     includeIfNull: false
   )
 
 
-  final num leanBodyMassOfLeftLeg;
+  final num? leanBodyMassOfLeftLeg;
 
 
 
   @JsonKey(
     
     name: r'leanBodyMassPercentageOfLeftLeg',
-    required: true,
+    required: false,
     includeIfNull: false
   )
 
 
-  final num leanBodyMassPercentageOfLeftLeg;
+  final num? leanBodyMassPercentageOfLeftLeg;
 
 
 
   @JsonKey(
     
     name: r'bodyFatMassOfRightArm',
-    required: true,
+    required: false,
     includeIfNull: false
   )
 
 
-  final num bodyFatMassOfRightArm;
+  final num? bodyFatMassOfRightArm;
 
 
 
   @JsonKey(
     
     name: r'bodyFatMassPercentageOfRightArm',
-    required: true,
+    required: false,
     includeIfNull: false
   )
 
 
-  final num bodyFatMassPercentageOfRightArm;
+  final num? bodyFatMassPercentageOfRightArm;
 
 
 
   @JsonKey(
     
     name: r'bodyFatMassOfLeftArm',
-    required: true,
+    required: false,
     includeIfNull: false
   )
 
 
-  final num bodyFatMassOfLeftArm;
+  final num? bodyFatMassOfLeftArm;
 
 
 
   @JsonKey(
     
     name: r'bodyFatMassPercentageOfLeftArm',
-    required: true,
+    required: false,
     includeIfNull: false
   )
 
 
-  final num bodyFatMassPercentageOfLeftArm;
+  final num? bodyFatMassPercentageOfLeftArm;
 
 
 
   @JsonKey(
     
     name: r'bodyFatMassOfTrunk',
-    required: true,
+    required: false,
     includeIfNull: false
   )
 
 
-  final num bodyFatMassOfTrunk;
+  final num? bodyFatMassOfTrunk;
 
 
 
   @JsonKey(
     
     name: r'bodyFatMassPercentageOfTrunk',
-    required: true,
+    required: false,
     includeIfNull: false
   )
 
 
-  final num bodyFatMassPercentageOfTrunk;
+  final num? bodyFatMassPercentageOfTrunk;
 
 
 
   @JsonKey(
     
     name: r'bodyFatMassOfRightLeg',
-    required: true,
+    required: false,
     includeIfNull: false
   )
 
 
-  final num bodyFatMassOfRightLeg;
+  final num? bodyFatMassOfRightLeg;
 
 
 
   @JsonKey(
     
     name: r'bodyFatMassPercentageOfRightLeg',
-    required: true,
+    required: false,
     includeIfNull: false
   )
 
 
-  final num bodyFatMassPercentageOfRightLeg;
+  final num? bodyFatMassPercentageOfRightLeg;
 
 
 
   @JsonKey(
     
     name: r'bodyFatMassOfLeftLeg',
-    required: true,
+    required: false,
     includeIfNull: false
   )
 
 
-  final num bodyFatMassOfLeftLeg;
+  final num? bodyFatMassOfLeftLeg;
 
 
 
   @JsonKey(
     
     name: r'bodyFatMassPercentageOfLeftLeg',
-    required: true,
+    required: false,
     includeIfNull: false
   )
 
 
-  final num bodyFatMassPercentageOfLeftLeg;
+  final num? bodyFatMassPercentageOfLeftLeg;
 
 
 

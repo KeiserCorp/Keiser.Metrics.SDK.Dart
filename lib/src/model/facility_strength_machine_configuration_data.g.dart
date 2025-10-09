@@ -27,17 +27,11 @@ FacilityStrengthMachineConfigurationData
             );
             final val = FacilityStrengthMachineConfigurationData(
               facilityId: $checkedConvert('facilityId', (v) => v as num),
-              appType: $checkedConvert(
-                  'appType',
-                  (v) => $enumDecode(
-                      _$FacilityStrengthMachineConfigurationDataAppTypeEnumEnumMap,
-                      v)),
+              appType: $checkedConvert('appType',
+                  (v) => $enumDecode(_$StrengthMachineAppTypeEnumMap, v)),
               timeZone: $checkedConvert('timeZone', (v) => v as String),
               forceUnit: $checkedConvert(
-                  'forceUnit',
-                  (v) => $enumDecode(
-                      _$FacilityStrengthMachineConfigurationDataForceUnitEnumEnumMap,
-                      v)),
+                  'forceUnit', (v) => $enumDecode(_$ForceUnitEnumMap, v)),
               primaryFocus: $checkedConvert('primaryFocus', (v) => v as String),
               secondaryFocus:
                   $checkedConvert('secondaryFocus', (v) => v as String),
@@ -56,11 +50,9 @@ Map<String, dynamic> _$FacilityStrengthMachineConfigurationDataToJson(
     FacilityStrengthMachineConfigurationData instance) {
   final val = <String, dynamic>{
     'facilityId': instance.facilityId,
-    'appType': _$FacilityStrengthMachineConfigurationDataAppTypeEnumEnumMap[
-        instance.appType]!,
+    'appType': _$StrengthMachineAppTypeEnumMap[instance.appType]!,
     'timeZone': instance.timeZone,
-    'forceUnit': _$FacilityStrengthMachineConfigurationDataForceUnitEnumEnumMap[
-        instance.forceUnit]!,
+    'forceUnit': _$ForceUnitEnumMap[instance.forceUnit]!,
     'primaryFocus': instance.primaryFocus,
     'secondaryFocus': instance.secondaryFocus,
     'locale': instance.locale,
@@ -76,17 +68,16 @@ Map<String, dynamic> _$FacilityStrengthMachineConfigurationDataToJson(
   return val;
 }
 
-const _$FacilityStrengthMachineConfigurationDataAppTypeEnumEnumMap = {
-  FacilityStrengthMachineConfigurationDataAppTypeEnum.performance:
-      'performance',
-  FacilityStrengthMachineConfigurationDataAppTypeEnum.elder: 'elder',
-  FacilityStrengthMachineConfigurationDataAppTypeEnum.medical: 'medical',
-  FacilityStrengthMachineConfigurationDataAppTypeEnum.commercial: 'commercial',
+const _$StrengthMachineAppTypeEnumMap = {
+  StrengthMachineAppType.performance: 'performance',
+  StrengthMachineAppType.elder: 'elder',
+  StrengthMachineAppType.medical: 'medical',
+  StrengthMachineAppType.commercial: 'commercial',
 };
 
-const _$FacilityStrengthMachineConfigurationDataForceUnitEnumEnumMap = {
-  FacilityStrengthMachineConfigurationDataForceUnitEnum.lb: 'lb',
-  FacilityStrengthMachineConfigurationDataForceUnitEnum.kg: 'kg',
-  FacilityStrengthMachineConfigurationDataForceUnitEnum.ne: 'ne',
-  FacilityStrengthMachineConfigurationDataForceUnitEnum.er: 'er',
+const _$ForceUnitEnumMap = {
+  ForceUnit.lb: 'lb',
+  ForceUnit.kg: 'kg',
+  ForceUnit.ne: 'ne',
+  ForceUnit.er: 'er',
 };

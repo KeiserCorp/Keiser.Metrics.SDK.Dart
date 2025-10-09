@@ -10,8 +10,8 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **num** |  | 
 **names** | **String** |  | 
-**description** | **String** |  | 
-**notes** | **String** |  | 
+**description** | **String** |  | [optional] 
+**notes** | **String** |  | [optional] 
 **user** | [**UserData**](UserData.md) |  | [optional] 
 **sessionPlanSets** | [**List&lt;SessionPlanSetData&gt;**](SessionPlanSetData.md) |  | [optional] 
 

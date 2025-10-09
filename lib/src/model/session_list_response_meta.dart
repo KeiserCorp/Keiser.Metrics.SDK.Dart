@@ -46,7 +46,7 @@ class SessionListResponseMeta {
   )
 
 
-  final String? from;
+  final DateTime? from;
 
 
 
@@ -58,7 +58,7 @@ class SessionListResponseMeta {
   )
 
 
-  final String? to;
+  final DateTime? to;
 
 
 

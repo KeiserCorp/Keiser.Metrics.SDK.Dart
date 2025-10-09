@@ -22,33 +22,33 @@ class A500TimeSeriesPointData {
 
     required  this.timeSinceEpoch,
 
-    required  this.leftPosition,
+     this.leftPosition,
 
-    required  this.leftPower,
+     this.leftPower,
 
-    required  this.leftVelocity,
+     this.leftVelocity,
 
-    required  this.leftAcceleration,
+     this.leftAcceleration,
 
-    required  this.leftForceOfMassAcceleration,
+     this.leftForceOfMassAcceleration,
 
-    required  this.leftMechanicalWeight,
+     this.leftMechanicalWeight,
 
-    required  this.leftRawPower,
+     this.leftRawPower,
 
-    required  this.rightPosition,
+     this.rightPosition,
 
-    required  this.rightPower,
+     this.rightPower,
 
-    required  this.rightVelocity,
+     this.rightVelocity,
 
-    required  this.rightAcceleration,
+     this.rightAcceleration,
 
-    required  this.rightForceOfMassAcceleration,
+     this.rightForceOfMassAcceleration,
 
-    required  this.rightMechanicalWeight,
+     this.rightMechanicalWeight,
 
-    required  this.rightRawPower,
+     this.rightRawPower,
 
      this.leftTorque,
 
@@ -86,168 +86,168 @@ class A500TimeSeriesPointData {
   @JsonKey(
     
     name: r'leftPosition',
-    required: true,
+    required: false,
     includeIfNull: false
   )
 
 
-  final num leftPosition;
+  final num? leftPosition;
 
 
 
   @JsonKey(
     
     name: r'leftPower',
-    required: true,
+    required: false,
     includeIfNull: false
   )
 
 
-  final num leftPower;
+  final num? leftPower;
 
 
 
   @JsonKey(
     
     name: r'leftVelocity',
-    required: true,
+    required: false,
     includeIfNull: false
   )
 
 
-  final num leftVelocity;
+  final num? leftVelocity;
 
 
 
   @JsonKey(
     
     name: r'leftAcceleration',
-    required: true,
+    required: false,
     includeIfNull: false
   )
 
 
-  final num leftAcceleration;
+  final num? leftAcceleration;
 
 
 
   @JsonKey(
     
     name: r'leftForceOfMassAcceleration',
-    required: true,
+    required: false,
     includeIfNull: false
   )
 
 
-  final num leftForceOfMassAcceleration;
+  final num? leftForceOfMassAcceleration;
 
 
 
   @JsonKey(
     
     name: r'leftMechanicalWeight',
-    required: true,
+    required: false,
     includeIfNull: false
   )
 
 
-  final num leftMechanicalWeight;
+  final num? leftMechanicalWeight;
 
 
 
   @JsonKey(
     
     name: r'leftRawPower',
-    required: true,
+    required: false,
     includeIfNull: false
   )
 
 
-  final num leftRawPower;
+  final num? leftRawPower;
 
 
 
   @JsonKey(
     
     name: r'rightPosition',
-    required: true,
+    required: false,
     includeIfNull: false
   )
 
 
-  final num rightPosition;
+  final num? rightPosition;
 
 
 
   @JsonKey(
     
     name: r'rightPower',
-    required: true,
+    required: false,
     includeIfNull: false
   )
 
 
-  final num rightPower;
+  final num? rightPower;
 
 
 
   @JsonKey(
     
     name: r'rightVelocity',
-    required: true,
+    required: false,
     includeIfNull: false
   )
 
 
-  final num rightVelocity;
+  final num? rightVelocity;
 
 
 
   @JsonKey(
     
     name: r'rightAcceleration',
-    required: true,
+    required: false,
     includeIfNull: false
   )
 
 
-  final num rightAcceleration;
+  final num? rightAcceleration;
 
 
 
   @JsonKey(
     
     name: r'rightForceOfMassAcceleration',
-    required: true,
+    required: false,
     includeIfNull: false
   )
 
 
-  final num rightForceOfMassAcceleration;
+  final num? rightForceOfMassAcceleration;
 
 
 
   @JsonKey(
     
     name: r'rightMechanicalWeight',
-    required: true,
+    required: false,
     includeIfNull: false
   )
 
 
-  final num rightMechanicalWeight;
+  final num? rightMechanicalWeight;
 
 
 
   @JsonKey(
     
     name: r'rightRawPower',
-    required: true,
+    required: false,
     includeIfNull: false
   )
 
 
-  final num rightRawPower;
+  final num? rightRawPower;
 
 
 

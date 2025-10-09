@@ -21,15 +21,8 @@ StrengthMachineDataSetData _$StrengthMachineDataSetDataFromJson(
             'version',
             'serial',
             'completedAt',
-            'chest',
-            'rom1',
-            'rom2',
-            'seat',
-            'resistance',
             'resistancePrecision',
-            'repetitionCount',
-            'forceUnit',
-            'work'
+            'repetitionCount'
           ],
         );
         final val = StrengthMachineDataSetData(
@@ -41,24 +34,19 @@ StrengthMachineDataSetData _$StrengthMachineDataSetDataFromJson(
           serial: $checkedConvert('serial', (v) => v as String),
           completedAt: $checkedConvert(
               'completedAt', (v) => DateTime.parse(v as String)),
-          chest: $checkedConvert('chest', (v) => v as num),
-          rom1: $checkedConvert('rom1', (v) => v as num),
-          rom2: $checkedConvert('rom2', (v) => v as num),
-          seat: $checkedConvert('seat', (v) => v as num),
-          resistance: $checkedConvert('resistance', (v) => v as num),
-          resistancePrecision: $checkedConvert(
-              'resistancePrecision',
-              (v) => $enumDecode(
-                  _$StrengthMachineDataSetDataResistancePrecisionEnumEnumMap,
-                  v)),
+          chest: $checkedConvert('chest', (v) => v as num?),
+          rom1: $checkedConvert('rom1', (v) => v as num?),
+          rom2: $checkedConvert('rom2', (v) => v as num?),
+          seat: $checkedConvert('seat', (v) => v as num?),
+          resistance: $checkedConvert('resistance', (v) => v as num?),
+          resistancePrecision: $checkedConvert('resistancePrecision',
+              (v) => $enumDecode(_$ResistancePrecisionEnumMap, v)),
           repetitionCount: $checkedConvert('repetitionCount', (v) => v as num),
           forceUnit: $checkedConvert(
-              'forceUnit',
-              (v) => $enumDecode(
-                  _$StrengthMachineDataSetDataForceUnitEnumEnumMap, v)),
+              'forceUnit', (v) => $enumDecodeNullable(_$ForceUnitEnumMap, v)),
           peakPower: $checkedConvert('peakPower', (v) => v as num?),
           peakVelocity: $checkedConvert('peakVelocity', (v) => v as num?),
-          work: $checkedConvert('work', (v) => v as num),
+          work: $checkedConvert('work', (v) => v as num?),
           distance: $checkedConvert('distance', (v) => v as num?),
           addedWeight: $checkedConvert('addedWeight', (v) => v as num?),
           test: $checkedConvert(
@@ -107,17 +95,6 @@ Map<String, dynamic> _$StrengthMachineDataSetDataToJson(
     'version': instance.version,
     'serial': instance.serial,
     'completedAt': instance.completedAt.toIso8601String(),
-    'chest': instance.chest,
-    'rom1': instance.rom1,
-    'rom2': instance.rom2,
-    'seat': instance.seat,
-    'resistance': instance.resistance,
-    'resistancePrecision':
-        _$StrengthMachineDataSetDataResistancePrecisionEnumEnumMap[
-            instance.resistancePrecision]!,
-    'repetitionCount': instance.repetitionCount,
-    'forceUnit':
-        _$StrengthMachineDataSetDataForceUnitEnumEnumMap[instance.forceUnit]!,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -126,9 +103,18 @@ Map<String, dynamic> _$StrengthMachineDataSetDataToJson(
     }
   }
 
+  writeNotNull('chest', instance.chest);
+  writeNotNull('rom1', instance.rom1);
+  writeNotNull('rom2', instance.rom2);
+  writeNotNull('seat', instance.seat);
+  writeNotNull('resistance', instance.resistance);
+  val['resistancePrecision'] =
+      _$ResistancePrecisionEnumMap[instance.resistancePrecision]!;
+  val['repetitionCount'] = instance.repetitionCount;
+  writeNotNull('forceUnit', _$ForceUnitEnumMap[instance.forceUnit]);
   writeNotNull('peakPower', instance.peakPower);
   writeNotNull('peakVelocity', instance.peakVelocity);
-  val['work'] = instance.work;
+  writeNotNull('work', instance.work);
   writeNotNull('distance', instance.distance);
   writeNotNull('addedWeight', instance.addedWeight);
   writeNotNull('test', instance.test?.toJson());
@@ -141,14 +127,14 @@ Map<String, dynamic> _$StrengthMachineDataSetDataToJson(
   return val;
 }
 
-const _$StrengthMachineDataSetDataResistancePrecisionEnumEnumMap = {
-  StrengthMachineDataSetDataResistancePrecisionEnum.int_: 'int',
-  StrengthMachineDataSetDataResistancePrecisionEnum.dec: 'dec',
+const _$ResistancePrecisionEnumMap = {
+  ResistancePrecision.int_: 'int',
+  ResistancePrecision.dec: 'dec',
 };
 
-const _$StrengthMachineDataSetDataForceUnitEnumEnumMap = {
-  StrengthMachineDataSetDataForceUnitEnum.lb: 'lb',
-  StrengthMachineDataSetDataForceUnitEnum.kg: 'kg',
-  StrengthMachineDataSetDataForceUnitEnum.ne: 'ne',
-  StrengthMachineDataSetDataForceUnitEnum.er: 'er',
+const _$ForceUnitEnumMap = {
+  ForceUnit.lb: 'lb',
+  ForceUnit.kg: 'kg',
+  ForceUnit.ne: 'ne',
+  ForceUnit.er: 'er',
 };

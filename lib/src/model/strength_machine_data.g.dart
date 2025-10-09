@@ -18,8 +18,8 @@ StrengthMachineData _$StrengthMachineDataFromJson(Map<String, dynamic> json) =>
         final val = StrengthMachineData(
           id: $checkedConvert('id', (v) => v as num),
           names: $checkedConvert('name', (v) => v as String),
-          line: $checkedConvert('line',
-              (v) => $enumDecode(_$StrengthMachineDataLineEnumEnumMap, v)),
+          line: $checkedConvert(
+              'line', (v) => $enumDecode(_$StrengthMachineLineEnumMap, v)),
           variant: $checkedConvert('variant', (v) => v as String?),
           dualSided: $checkedConvert('dualSided', (v) => v as bool),
           defaultStrengthExerciseId:
@@ -45,7 +45,7 @@ Map<String, dynamic> _$StrengthMachineDataToJson(StrengthMachineData instance) {
   final val = <String, dynamic>{
     'id': instance.id,
     'name': instance.names,
-    'line': _$StrengthMachineDataLineEnumEnumMap[instance.line]!,
+    'line': _$StrengthMachineLineEnumMap[instance.line]!,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -63,12 +63,12 @@ Map<String, dynamic> _$StrengthMachineDataToJson(StrengthMachineData instance) {
   return val;
 }
 
-const _$StrengthMachineDataLineEnumEnumMap = {
-  StrengthMachineDataLineEnum.a250: 'a250',
-  StrengthMachineDataLineEnum.a300: 'a300',
-  StrengthMachineDataLineEnum.a350: 'a350',
-  StrengthMachineDataLineEnum.infinity: 'infinity',
-  StrengthMachineDataLineEnum.powerRack: 'powerRack',
-  StrengthMachineDataLineEnum.a400: 'a400',
-  StrengthMachineDataLineEnum.a500: 'a500',
+const _$StrengthMachineLineEnumMap = {
+  StrengthMachineLine.a250: 'a250',
+  StrengthMachineLine.a300: 'a300',
+  StrengthMachineLine.a350: 'a350',
+  StrengthMachineLine.infinity: 'infinity',
+  StrengthMachineLine.powerRack: 'powerRack',
+  StrengthMachineLine.a400: 'a400',
+  StrengthMachineLine.a500: 'a500',
 };

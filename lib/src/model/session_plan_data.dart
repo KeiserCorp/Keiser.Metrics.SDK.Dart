@@ -25,9 +25,9 @@ class SessionPlanData {
 
     required  this.names,
 
-    required  this.description,
+     this.description,
 
-    required  this.notes,
+     this.notes,
 
     required  this.startAt,
 
@@ -79,24 +79,24 @@ class SessionPlanData {
   @JsonKey(
     
     name: r'description',
-    required: true,
+    required: false,
     includeIfNull: false
   )
 
 
-  final String description;
+  final String? description;
 
 
 
   @JsonKey(
     
     name: r'notes',
-    required: true,
+    required: false,
     includeIfNull: false
   )
 
 
-  final String notes;
+  final String? notes;
 
 
 

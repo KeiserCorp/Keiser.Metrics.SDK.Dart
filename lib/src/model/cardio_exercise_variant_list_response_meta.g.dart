@@ -22,7 +22,10 @@ CardioExerciseVariantListResponseMeta
                   $checkedConvert('cardioExerciseId', (v) => v as num?),
               cardioMachineId:
                   $checkedConvert('cardioMachineId', (v) => v as num?),
-              variant: $checkedConvert('variant', (v) => v as String?),
+              variant: $checkedConvert(
+                  'variant',
+                  (v) => $enumDecodeNullable(
+                      _$CardioExerciseVariantTypeEnumMap, v)),
               sort: $checkedConvert('sort',
                   (v) => $enumDecode(_$CardioExerciseVariantSortingEnumMap, v)),
               ascending: $checkedConvert('ascending', (v) => v as bool?),
@@ -46,7 +49,7 @@ Map<String, dynamic> _$CardioExerciseVariantListResponseMetaToJson(
 
   writeNotNull('cardioExerciseId', instance.cardioExerciseId);
   writeNotNull('cardioMachineId', instance.cardioMachineId);
-  writeNotNull('variant', instance.variant);
+  writeNotNull('variant', _$CardioExerciseVariantTypeEnumMap[instance.variant]);
   val['sort'] = _$CardioExerciseVariantSortingEnumMap[instance.sort]!;
   writeNotNull('ascending', instance.ascending);
   writeNotNull('limit', instance.limit);
@@ -54,6 +57,10 @@ Map<String, dynamic> _$CardioExerciseVariantListResponseMetaToJson(
   writeNotNull('totalCount', instance.totalCount);
   return val;
 }
+
+const _$CardioExerciseVariantTypeEnumMap = {
+  CardioExerciseVariantType.normal: 'normal',
+};
 
 const _$CardioExerciseVariantSortingEnumMap = {
   CardioExerciseVariantSorting.id: 'id',

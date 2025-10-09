@@ -17,7 +17,7 @@ void main() {
       // TODO
     });
 
-    // String type
+    // ExerciseAliasType type
     test('to test the property `type`', () async {
       // TODO
     });

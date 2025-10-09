@@ -19,9 +19,7 @@ MachineAdjustmentListResponseMeta _$MachineAdjustmentListResponseMetaFromJson(
         final val = MachineAdjustmentListResponseMeta(
           model: $checkedConvert('model', (v) => v as String?),
           sort: $checkedConvert(
-              'sort',
-              (v) => $enumDecode(
-                  _$MachineAdjustmentListResponseMetaSortEnumEnumMap, v)),
+              'sort', (v) => $enumDecode(_$MachineAdjustmentSortingEnumMap, v)),
           ascending: $checkedConvert('ascending', (v) => v as bool?),
           limit: $checkedConvert('limit', (v) => v as num?),
           offset: $checkedConvert('offset', (v) => v as num?),
@@ -42,8 +40,7 @@ Map<String, dynamic> _$MachineAdjustmentListResponseMetaToJson(
   }
 
   writeNotNull('model', instance.model);
-  val['sort'] =
-      _$MachineAdjustmentListResponseMetaSortEnumEnumMap[instance.sort]!;
+  val['sort'] = _$MachineAdjustmentSortingEnumMap[instance.sort]!;
   writeNotNull('ascending', instance.ascending);
   writeNotNull('limit', instance.limit);
   writeNotNull('offset', instance.offset);
@@ -51,8 +48,6 @@ Map<String, dynamic> _$MachineAdjustmentListResponseMetaToJson(
   return val;
 }
 
-const _$MachineAdjustmentListResponseMetaSortEnumEnumMap = {
-  MachineAdjustmentListResponseMetaSortEnum
-          .importLeftParenthesisSlashHomeSlashRunnerSlashWorkSlashKeiserPeriodMetricsPeriodAPISlashKeiserPeriodMetricsPeriodAPISlashSrcSlashModelsSlashMachineAdjustmentRightParenthesisPeriodMachineAdjustmentSorting:
-      'import(/home/runner/work/Keiser.Metrics.API/Keiser.Metrics.API/src/models/MachineAdjustment).MachineAdjustmentSorting',
+const _$MachineAdjustmentSortingEnumMap = {
+  MachineAdjustmentSorting.id: 'id',
 };

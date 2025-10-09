@@ -8,7 +8,7 @@ import 'package:keiser_metrics_sdk/api.dart';
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**model** | **String** |  | 
+**model** | **String** |  | [optional] 
 **source_** | **String** |  | [optional] 
 **sort** | [**FacilityStrengthMachineSorting**](FacilityStrengthMachineSorting.md) |  | 
 **facilityId** | **num** |  | [optional] 

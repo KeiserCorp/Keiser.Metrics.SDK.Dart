@@ -4,6 +4,7 @@
 
 // ignore_for_file: unused_element
 import 'package:keiser_metrics_sdk/src/model/facility_license_sorting.dart';
+import 'package:keiser_metrics_sdk/src/model/facility_license_type.dart';
 import 'package:json_annotation/json_annotation.dart';
 
 part 'facility_license_list_response_meta.g.dart';
@@ -21,11 +22,11 @@ class FacilityLicenseListResponseMeta {
 
      this.names,
 
-    required  this.key,
+     this.key,
 
-    required  this.type,
+     this.type,
 
-    required  this.accountId,
+     this.accountId,
 
     required  this.sort,
 
@@ -53,36 +54,36 @@ class FacilityLicenseListResponseMeta {
   @JsonKey(
     
     name: r'key',
-    required: true,
+    required: false,
     includeIfNull: false
   )
 
 
-  final String key;
+  final String? key;
 
 
 
   @JsonKey(
     
     name: r'type',
-    required: true,
+    required: false,
     includeIfNull: false
   )
 
 
-  final FacilityLicenseListResponseMetaTypeEnum type;
+  final FacilityLicenseType? type;
 
 
 
   @JsonKey(
     
     name: r'accountId',
-    required: true,
+    required: false,
     includeIfNull: false
   )
 
 
-  final String accountId;
+  final String? accountId;
 
 
 
@@ -180,15 +181,4 @@ class FacilityLicenseListResponseMeta {
   }
 
 }
-
-
-enum FacilityLicenseListResponseMetaTypeEnum {
-  @JsonValue(r'normal')
-  normal,
-  @JsonValue(r'test')
-  test,
-  @JsonValue(r'demo')
-  demo,
-}
-
 

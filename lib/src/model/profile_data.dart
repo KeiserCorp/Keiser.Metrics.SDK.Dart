@@ -20,7 +20,7 @@ class ProfileData {
 
     required  this.userId,
 
-    required  this.updatedAt,
+     this.updatedAt,
 
      this.names,
 
@@ -48,12 +48,12 @@ class ProfileData {
   @JsonKey(
     
     name: r'updatedAt',
-    required: true,
+    required: false,
     includeIfNull: false
   )
 
 
-  final String updatedAt;
+  final String? updatedAt;
 
 
 

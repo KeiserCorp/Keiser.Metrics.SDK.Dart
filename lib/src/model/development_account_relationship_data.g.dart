@@ -23,8 +23,8 @@ DevelopmentAccountRelationshipData _$DevelopmentAccountRelationshipDataFromJson(
               $checkedConvert('developmentAccountId', (v) => v as num),
           role: $checkedConvert(
               'role',
-              (v) => $enumDecode(
-                  _$DevelopmentAccountRelationshipDataRoleEnumEnumMap, v)),
+              (v) =>
+                  $enumDecode(_$DevelopmentAccountRelationshipRoleEnumMap, v)),
           user: $checkedConvert(
               'user',
               (v) => v == null
@@ -46,7 +46,7 @@ Map<String, dynamic> _$DevelopmentAccountRelationshipDataToJson(
     'id': instance.id,
     'userId': instance.userId,
     'developmentAccountId': instance.developmentAccountId,
-    'role': _$DevelopmentAccountRelationshipDataRoleEnumEnumMap[instance.role]!,
+    'role': _$DevelopmentAccountRelationshipRoleEnumMap[instance.role]!,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -60,7 +60,7 @@ Map<String, dynamic> _$DevelopmentAccountRelationshipDataToJson(
   return val;
 }
 
-const _$DevelopmentAccountRelationshipDataRoleEnumEnumMap = {
-  DevelopmentAccountRelationshipDataRoleEnum.owner: 'owner',
-  DevelopmentAccountRelationshipDataRoleEnum.developer: 'developer',
+const _$DevelopmentAccountRelationshipRoleEnumMap = {
+  DevelopmentAccountRelationshipRole.owner: 'owner',
+  DevelopmentAccountRelationshipRole.developer: 'developer',
 };

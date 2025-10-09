@@ -3,6 +3,7 @@
 //
 
 // ignore_for_file: unused_element
+import 'package:keiser_metrics_sdk/src/model/in_body_type.dart';
 import 'package:json_annotation/json_annotation.dart';
 
 part 'facility_in_body_integration_data.g.dart';
@@ -33,7 +34,7 @@ class FacilityInBodyIntegrationData {
   )
 
 
-  final FacilityInBodyIntegrationDataTypeEnum type;
+  final InBodyType type;
 
 
 
@@ -83,13 +84,4 @@ class FacilityInBodyIntegrationData {
   }
 
 }
-
-
-enum FacilityInBodyIntegrationDataTypeEnum {
-  @JsonValue(r'local')
-  local,
-  @JsonValue(r'web')
-  web,
-}
-
 

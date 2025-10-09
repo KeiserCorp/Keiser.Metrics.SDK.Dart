@@ -4,6 +4,7 @@
 
 // ignore_for_file: unused_element
 import 'package:keiser_metrics_sdk/src/model/strength_machine_data_set_test_subset_data.dart';
+import 'package:keiser_metrics_sdk/src/model/strength_test_type.dart';
 import 'package:json_annotation/json_annotation.dart';
 
 part 'strength_machine_data_set_test_data.g.dart';
@@ -34,7 +35,7 @@ class StrengthMachineDataSetTestData {
   )
 
 
-  final StrengthMachineDataSetTestDataTypeEnum type;
+  final StrengthTestType type;
 
 
 
@@ -84,17 +85,4 @@ class StrengthMachineDataSetTestData {
   }
 
 }
-
-
-enum StrengthMachineDataSetTestDataTypeEnum {
-  @JsonValue(r'power6r')
-  power6r,
-  @JsonValue(r'a4206r')
-  a4206r,
-  @JsonValue(r'a42010r')
-  a42010r,
-  @JsonValue(r'a50010r')
-  a50010r,
-}
-
 

@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **num** |  | 
 **names** | **String** |  | 
-**line** | **String** |  | 
+**line** | [**StrengthMachineLine**](StrengthMachineLine.md) |  | 
 **variant** | **String** |  | [optional] 
 **dualSided** | **bool** |  | 
 **defaultStrengthExerciseId** | **num** |  | [optional] 

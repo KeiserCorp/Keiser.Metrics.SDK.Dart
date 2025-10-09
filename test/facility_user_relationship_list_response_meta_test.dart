@@ -27,7 +27,7 @@ void main() {
       // TODO
     });
 
-    // FacilityEmployeeRole employeeRole
+    // EmployeeRole employeeRole
     test('to test the property `employeeRole`', () async {
       // TODO
     });

@@ -14,11 +14,11 @@ SessionPlanSetInstanceData _$SessionPlanSetInstanceDataFromJson(
       ($checkedConvert) {
         $checkKeys(
           json,
-          requiredKeys: const ['id', 'notes', 'completed'],
+          requiredKeys: const ['id', 'completed'],
         );
         final val = SessionPlanSetInstanceData(
           id: $checkedConvert('id', (v) => v as num),
-          notes: $checkedConvert('notes', (v) => v as String),
+          notes: $checkedConvert('notes', (v) => v as String?),
           completed: $checkedConvert('completed', (v) => v as bool),
           type: $checkedConvert(
               'type',
@@ -57,8 +57,6 @@ Map<String, dynamic> _$SessionPlanSetInstanceDataToJson(
     SessionPlanSetInstanceData instance) {
   final val = <String, dynamic>{
     'id': instance.id,
-    'notes': instance.notes,
-    'completed': instance.completed,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -67,6 +65,8 @@ Map<String, dynamic> _$SessionPlanSetInstanceDataToJson(
     }
   }
 
+  writeNotNull('notes', instance.notes);
+  val['completed'] = instance.completed;
   writeNotNull(
       'type', _$SessionPlanSetInstanceDataTypeEnumEnumMap[instance.type]);
   writeNotNull('sessionPlanCardioSet', instance.sessionPlanCardioSet?.toJson());
@@ -80,8 +80,8 @@ Map<String, dynamic> _$SessionPlanSetInstanceDataToJson(
 }
 
 const _$SessionPlanSetInstanceDataTypeEnumEnumMap = {
+  SessionPlanSetInstanceDataTypeEnum.cardio: 'cardio',
   SessionPlanSetInstanceDataTypeEnum.strength: 'strength',
   SessionPlanSetInstanceDataTypeEnum.stretch: 'stretch',
-  SessionPlanSetInstanceDataTypeEnum.cardio: 'cardio',
   SessionPlanSetInstanceDataTypeEnum.activity: 'activity',
 };

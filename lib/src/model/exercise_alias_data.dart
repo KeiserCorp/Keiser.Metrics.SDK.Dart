@@ -3,6 +3,7 @@
 //
 
 // ignore_for_file: unused_element
+import 'package:keiser_metrics_sdk/src/model/exercise_alias_type.dart';
 import 'package:keiser_metrics_sdk/src/model/strength_exercise_data.dart';
 import 'package:keiser_metrics_sdk/src/model/stretch_exercise_data.dart';
 import 'package:keiser_metrics_sdk/src/model/cardio_exercise_data.dart';
@@ -66,7 +67,7 @@ class ExerciseAliasData {
   )
 
 
-  final ExerciseAliasDataTypeEnum? type;
+  final ExerciseAliasType? type;
 
 
 
@@ -134,15 +135,4 @@ class ExerciseAliasData {
   }
 
 }
-
-
-enum ExerciseAliasDataTypeEnum {
-  @JsonValue(r'strength')
-  strength,
-  @JsonValue(r'stretch')
-  stretch,
-  @JsonValue(r'cardio')
-  cardio,
-}
-
 

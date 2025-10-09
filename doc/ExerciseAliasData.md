@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **num** |  | 
 **alias** | **String** |  | 
-**type** | **String** |  | [optional] 
+**type** | [**ExerciseAliasType**](ExerciseAliasType.md) |  | [optional] 
 **strengthExercise** | [**StrengthExerciseData**](StrengthExerciseData.md) |  | [optional] 
 **cardioExercise** | [**CardioExerciseData**](CardioExerciseData.md) |  | [optional] 
 **stretchExercise** | [**StretchExerciseData**](StretchExerciseData.md) |  | [optional] 

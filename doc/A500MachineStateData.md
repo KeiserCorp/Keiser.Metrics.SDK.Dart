@@ -10,8 +10,8 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **facilityStrengthMachineId** | **num** |  | 
 **isFacilityConfigurationOverridden** | **bool** |  | 
-**appType** | **String** |  | 
-**forceUnit** | **String** |  | 
+**appType** | [**A500AppType**](A500AppType.md) |  | 
+**forceUnit** | [**ForceUnit**](ForceUnit.md) |  | 
 **primaryFocus** | **String** |  | 
 **secondaryFocus** | **String** |  | 
 **facilityStrengthMachine** | [**FacilityStrengthMachineData**](FacilityStrengthMachineData.md) |  | [optional] 

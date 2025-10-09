@@ -9,10 +9,10 @@ import 'package:keiser_metrics_sdk/api.dart';
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **num** |  | 
-**category** | **String** |  | 
-**movement** | **String** |  | [optional] 
-**humanMovement** | **String** |  | 
-**plane** | **String** |  | 
+**category** | [**StrengthExerciseCategory**](StrengthExerciseCategory.md) |  | 
+**movement** | [**StrengthExerciseMovementDEP**](StrengthExerciseMovementDEP.md) |  | [optional] 
+**humanMovement** | [**StrengthExerciseMovement**](StrengthExerciseMovement.md) |  | [optional] 
+**plane** | [**StrengthExercisePlane**](StrengthExercisePlane.md) |  | 
 **defaultExerciseAlias** | [**ExerciseAliasData**](ExerciseAliasData.md) |  | [optional] 
 **exerciseAliases** | [**List&lt;ExerciseAliasData&gt;**](ExerciseAliasData.md) |  | [optional] 
 **strengthExerciseVariants** | [**List&lt;StrengthExerciseVariantData&gt;**](StrengthExerciseVariantData.md) |  | [optional] 

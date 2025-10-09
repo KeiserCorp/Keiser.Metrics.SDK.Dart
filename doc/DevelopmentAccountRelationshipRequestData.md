@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 **id** | **num** |  | 
 **developmentAccountId** | **num** |  | 
 **displayEmail** | **String** |  | 
-**role** | **String** |  | 
+**role** | [**DevelopmentAccountRelationshipRole**](DevelopmentAccountRelationshipRole.md) |  | 
 **code** | **String** |  | [optional] 
 **user** | [**UserData**](UserData.md) |  | [optional] 
 **userId** | **num** |  | [optional] 

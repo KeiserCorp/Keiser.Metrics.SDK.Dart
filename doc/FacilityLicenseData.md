@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 **key** | **String** |  | 
 **accountId** | **String** |  | [optional] 
 **term** | **num** |  | 
-**type** | **String** |  | 
+**type** | [**FacilityLicenseType**](FacilityLicenseType.md) |  | 
 **facilityId** | **num** |  | [optional] 
 **effectiveDate** | [**DateTime**](DateTime.md) |  | [optional] 
 **facility** | [**FacilityData**](FacilityData.md) |  | [optional] 

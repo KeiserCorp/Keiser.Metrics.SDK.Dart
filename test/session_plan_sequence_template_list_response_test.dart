@@ -12,7 +12,7 @@ void main() {
       // TODO
     });
 
-    // SessionPlansequenceTemplateMeta sessionPlanSequenceTemplatesMeta
+    // SessionPlanSequenceTemplateMeta sessionPlanSequenceTemplatesMeta
     test('to test the property `sessionPlanSequenceTemplatesMeta`', () async {
       // TODO
     });

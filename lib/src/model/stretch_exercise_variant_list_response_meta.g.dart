@@ -22,7 +22,10 @@ StretchExerciseVariantListResponseMeta
                   $checkedConvert('stretchExerciseId', (v) => v as num?),
               stretchMachineId:
                   $checkedConvert('stretchMachineId', (v) => v as num?),
-              variant: $checkedConvert('variant', (v) => v as String?),
+              variant: $checkedConvert(
+                  'variant',
+                  (v) => $enumDecodeNullable(
+                      _$StretchExerciseVariantTypeEnumMap, v)),
               sort: $checkedConvert(
                   'sort',
                   (v) =>
@@ -48,7 +51,8 @@ Map<String, dynamic> _$StretchExerciseVariantListResponseMetaToJson(
 
   writeNotNull('stretchExerciseId', instance.stretchExerciseId);
   writeNotNull('stretchMachineId', instance.stretchMachineId);
-  writeNotNull('variant', instance.variant);
+  writeNotNull(
+      'variant', _$StretchExerciseVariantTypeEnumMap[instance.variant]);
   val['sort'] = _$StretchExerciseVariantSortingEnumMap[instance.sort]!;
   writeNotNull('ascending', instance.ascending);
   writeNotNull('limit', instance.limit);
@@ -56,6 +60,10 @@ Map<String, dynamic> _$StretchExerciseVariantListResponseMetaToJson(
   writeNotNull('totalCount', instance.totalCount);
   return val;
 }
+
+const _$StretchExerciseVariantTypeEnumMap = {
+  StretchExerciseVariantType.normal: 'normal',
+};
 
 const _$StretchExerciseVariantSortingEnumMap = {
   StretchExerciseVariantSorting.id: 'id',

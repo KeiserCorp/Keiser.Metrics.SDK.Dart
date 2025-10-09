@@ -44,7 +44,7 @@ class HeightMeasurementListResponseMeta {
   )
 
 
-  final String? from;
+  final DateTime? from;
 
 
 
@@ -56,7 +56,7 @@ class HeightMeasurementListResponseMeta {
   )
 
 
-  final String? to;
+  final DateTime? to;
 
 
 

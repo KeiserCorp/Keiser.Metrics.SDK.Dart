@@ -17,4 +17,6 @@ enum StrengthExerciseSorting {
   movement,
   @JsonValue(r'plane')
   plane,
+  @JsonValue(r'humanMovement')
+  humanMovement,
 }

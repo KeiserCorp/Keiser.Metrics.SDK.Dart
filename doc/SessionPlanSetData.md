@@ -9,8 +9,8 @@ import 'package:keiser_metrics_sdk/api.dart';
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **num** |  | 
-**notes** | **String** |  | 
-**type** | **String** |  | [optional] 
+**notes** | **String** |  | [optional] 
+**type** | [**SessionPlanSetType**](SessionPlanSetType.md) |  | [optional] 
 **sessionPlanCardioSet** | [**SessionPlanCardioSetData**](SessionPlanCardioSetData.md) |  | [optional] 
 **sessionPlanStrengthSet** | [**SessionPlanStrengthSetData**](SessionPlanStrengthSetData.md) |  | [optional] 
 **sessionPlanStretchSet** | [**SessionPlanStretchSetData**](SessionPlanStretchSetData.md) |  | [optional] 

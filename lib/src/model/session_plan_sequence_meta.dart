@@ -18,13 +18,9 @@ class SessionPlanSequenceMeta {
   /// Returns a new [SessionPlanSequenceMeta] instance.
   const SessionPlanSequenceMeta({
 
-    required  this.names,
+     this.names,
 
-    required  this.description,
-
-    required  this.from,
-
-    required  this.to,
+     this.description,
 
      this.sort,
 
@@ -40,48 +36,24 @@ class SessionPlanSequenceMeta {
   @JsonKey(
     
     name: r'name',
-    required: true,
+    required: false,
     includeIfNull: false
   )
 
 
-  final String names;
+  final String? names;
 
 
 
   @JsonKey(
     
     name: r'description',
-    required: true,
+    required: false,
     includeIfNull: false
   )
 
 
-  final String description;
-
-
-
-  @JsonKey(
-    
-    name: r'from',
-    required: true,
-    includeIfNull: false
-  )
-
-
-  final DateTime from;
-
-
-
-  @JsonKey(
-    
-    name: r'to',
-    required: true,
-    includeIfNull: false
-  )
-
-
-  final DateTime to;
+  final String? description;
 
 
 
@@ -149,8 +121,6 @@ class SessionPlanSequenceMeta {
   bool operator ==(Object other) => identical(this, other) || other is SessionPlanSequenceMeta &&
      other.names == names &&
      other.description == description &&
-     other.from == from &&
-     other.to == to &&
      other.sort == sort &&
      other.ascending == ascending &&
      other.limit == limit &&
@@ -161,8 +131,6 @@ class SessionPlanSequenceMeta {
   int get hashCode =>
     names.hashCode +
     description.hashCode +
-    from.hashCode +
-    to.hashCode +
     sort.hashCode +
     ascending.hashCode +
     limit.hashCode +

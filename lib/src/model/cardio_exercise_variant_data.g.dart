@@ -18,10 +18,8 @@ CardioExerciseVariantData _$CardioExerciseVariantDataFromJson(
         );
         final val = CardioExerciseVariantData(
           id: $checkedConvert('id', (v) => v as num),
-          variant: $checkedConvert(
-              'variant',
-              (v) => $enumDecode(
-                  _$CardioExerciseVariantDataVariantEnumEnumMap, v)),
+          variant: $checkedConvert('variant',
+              (v) => $enumDecode(_$CardioExerciseVariantTypeEnumMap, v)),
           instructionalImage:
               $checkedConvert('instructionalImage', (v) => v as String?),
           instructionalVideo:
@@ -51,7 +49,7 @@ Map<String, dynamic> _$CardioExerciseVariantDataToJson(
     CardioExerciseVariantData instance) {
   final val = <String, dynamic>{
     'id': instance.id,
-    'variant': _$CardioExerciseVariantDataVariantEnumEnumMap[instance.variant]!,
+    'variant': _$CardioExerciseVariantTypeEnumMap[instance.variant]!,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -69,6 +67,6 @@ Map<String, dynamic> _$CardioExerciseVariantDataToJson(
   return val;
 }
 
-const _$CardioExerciseVariantDataVariantEnumEnumMap = {
-  CardioExerciseVariantDataVariantEnum.normal: 'normal',
+const _$CardioExerciseVariantTypeEnumMap = {
+  CardioExerciseVariantType.normal: 'normal',
 };

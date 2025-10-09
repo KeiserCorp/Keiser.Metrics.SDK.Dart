@@ -17,7 +17,7 @@ void main() {
       // TODO
     });
 
-    // String variant
+    // CardioExerciseVariantType variant
     test('to test the property `variant`', () async {
       // TODO
     });

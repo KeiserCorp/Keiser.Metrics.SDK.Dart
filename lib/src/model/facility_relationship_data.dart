@@ -4,7 +4,7 @@
 
 // ignore_for_file: unused_element
 import 'package:keiser_metrics_sdk/src/model/facility_data.dart';
-import 'package:keiser_metrics_sdk/src/model/fingerprint_data.dart';
+import 'package:keiser_metrics_sdk/src/model/employee_role.dart';
 import 'package:keiser_metrics_sdk/src/model/facility_session_user_data.dart';
 import 'package:json_annotation/json_annotation.dart';
 
@@ -38,8 +38,6 @@ class FacilityRelationshipData {
      this.facility,
 
      this.user,
-
-     this.fingerprint,
   });
 
   @JsonKey(
@@ -122,7 +120,7 @@ class FacilityRelationshipData {
   )
 
 
-  final FacilityRelationshipDataEmployeeRoleEnum? employeeRole;
+  final EmployeeRole? employeeRole;
 
 
 
@@ -150,18 +148,6 @@ class FacilityRelationshipData {
 
 
 
-  @JsonKey(
-    
-    name: r'fingerprint',
-    required: false,
-    includeIfNull: false
-  )
-
-
-  final FingerprintData? fingerprint;
-
-
-
   @override
   bool operator ==(Object other) => identical(this, other) || other is FacilityRelationshipData &&
      other.id == id &&
@@ -172,8 +158,7 @@ class FacilityRelationshipData {
      other.hasSecretSet == hasSecretSet &&
      other.employeeRole == employeeRole &&
      other.facility == facility &&
-     other.user == user &&
-     other.fingerprint == fingerprint;
+     other.user == user;
 
   @override
   int get hashCode =>
@@ -185,8 +170,7 @@ class FacilityRelationshipData {
     hasSecretSet.hashCode +
     employeeRole.hashCode +
     facility.hashCode +
-    user.hashCode +
-    fingerprint.hashCode;
+    user.hashCode;
 
   factory FacilityRelationshipData.fromJson(Map<String, dynamic> json) => _$FacilityRelationshipDataFromJson(json);
 
@@ -198,19 +182,4 @@ class FacilityRelationshipData {
   }
 
 }
-
-
-enum FacilityRelationshipDataEmployeeRoleEnum {
-  @JsonValue(r'admin')
-  admin,
-  @JsonValue(r'customerSupport')
-  customerSupport,
-  @JsonValue(r'trainer')
-  trainer,
-  @JsonValue(r'frontDesk')
-  frontDesk,
-  @JsonValue(r'maintenance')
-  maintenance,
-}
-
 

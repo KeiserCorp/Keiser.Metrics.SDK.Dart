@@ -12,7 +12,7 @@ void main() {
       // TODO
     });
 
-    // String appType
+    // StrengthMachineAppType appType
     test('to test the property `appType`', () async {
       // TODO
     });
@@ -22,7 +22,7 @@ void main() {
       // TODO
     });
 
-    // String forceUnit
+    // ForceUnit forceUnit
     test('to test the property `forceUnit`', () async {
       // TODO
     });

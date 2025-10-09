@@ -20,8 +20,8 @@ FacilityLicenseData _$FacilityLicenseDataFromJson(Map<String, dynamic> json) =>
           key: $checkedConvert('key', (v) => v as String),
           accountId: $checkedConvert('accountId', (v) => v as String?),
           term: $checkedConvert('term', (v) => v as num),
-          type: $checkedConvert('type',
-              (v) => $enumDecode(_$FacilityLicenseDataTypeEnumEnumMap, v)),
+          type: $checkedConvert(
+              'type', (v) => $enumDecode(_$FacilityLicenseTypeEnumMap, v)),
           facilityId: $checkedConvert('facilityId', (v) => v as num?),
           effectiveDate: $checkedConvert('effectiveDate',
               (v) => v == null ? null : DateTime.parse(v as String)),
@@ -49,15 +49,15 @@ Map<String, dynamic> _$FacilityLicenseDataToJson(FacilityLicenseData instance) {
 
   writeNotNull('accountId', instance.accountId);
   val['term'] = instance.term;
-  val['type'] = _$FacilityLicenseDataTypeEnumEnumMap[instance.type]!;
+  val['type'] = _$FacilityLicenseTypeEnumMap[instance.type]!;
   writeNotNull('facilityId', instance.facilityId);
   writeNotNull('effectiveDate', instance.effectiveDate?.toIso8601String());
   writeNotNull('facility', instance.facility?.toJson());
   return val;
 }
 
-const _$FacilityLicenseDataTypeEnumEnumMap = {
-  FacilityLicenseDataTypeEnum.normal: 'normal',
-  FacilityLicenseDataTypeEnum.test: 'test',
-  FacilityLicenseDataTypeEnum.demo: 'demo',
+const _$FacilityLicenseTypeEnumMap = {
+  FacilityLicenseType.normal: 'normal',
+  FacilityLicenseType.demo: 'demo',
+  FacilityLicenseType.test: 'test',
 };

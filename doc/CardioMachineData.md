@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 **id** | **num** |  | 
 **names** | **String** |  | 
 **line** | **String** |  | 
-**parseCode** | **String** |  | 
+**parseCode** | [**CardioMachineParseCode**](CardioMachineParseCode.md) |  | 
 **defaultCardioExerciseId** | **num** |  | [optional] 
 **machineTypeFallback** | **String** |  | [optional] 
 **defaultCardioExercise** | [**CardioExerciseData**](CardioExerciseData.md) |  | [optional] 

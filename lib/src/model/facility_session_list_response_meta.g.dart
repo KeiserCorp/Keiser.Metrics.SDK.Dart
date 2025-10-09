@@ -19,8 +19,10 @@ FacilitySessionListResponseMeta _$FacilitySessionListResponseMetaFromJson(
         final val = FacilitySessionListResponseMeta(
           open: $checkedConvert('open', (v) => v as bool?),
           names: $checkedConvert('name', (v) => v as String?),
-          from: $checkedConvert('from', (v) => v as String?),
-          to: $checkedConvert('to', (v) => v as String?),
+          from: $checkedConvert(
+              'from', (v) => v == null ? null : DateTime.parse(v as String)),
+          to: $checkedConvert(
+              'to', (v) => v == null ? null : DateTime.parse(v as String)),
           sort: $checkedConvert(
               'sort', (v) => $enumDecode(_$SessionSortingEnumMap, v)),
           facilityId: $checkedConvert('facilityId', (v) => v as num?),
@@ -46,8 +48,8 @@ Map<String, dynamic> _$FacilitySessionListResponseMetaToJson(
 
   writeNotNull('open', instance.open);
   writeNotNull('name', instance.names);
-  writeNotNull('from', instance.from);
-  writeNotNull('to', instance.to);
+  writeNotNull('from', instance.from?.toIso8601String());
+  writeNotNull('to', instance.to?.toIso8601String());
   val['sort'] = _$SessionSortingEnumMap[instance.sort]!;
   writeNotNull('facilityId', instance.facilityId);
   writeNotNull('ascending', instance.ascending);
@@ -61,4 +63,6 @@ const _$SessionSortingEnumMap = {
   SessionSorting.id: 'id',
   SessionSorting.startedAt: 'startedAt',
   SessionSorting.endedAt: 'endedAt',
+  SessionSorting.names: 'name',
+  SessionSorting.open: 'open',
 };

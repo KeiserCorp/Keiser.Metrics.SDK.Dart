@@ -4,7 +4,10 @@
 
 // ignore_for_file: unused_element
 import 'package:keiser_metrics_sdk/src/model/strength_exercise_data.dart';
+import 'package:keiser_metrics_sdk/src/model/strength_exercise_variant_attachment.dart';
 import 'package:keiser_metrics_sdk/src/model/strength_machine_data.dart';
+import 'package:keiser_metrics_sdk/src/model/strength_exercise_variant_type.dart';
+import 'package:keiser_metrics_sdk/src/model/strength_exercise_movement.dart';
 import 'package:keiser_metrics_sdk/src/model/exercise_ordinal_set_assignment_data.dart';
 import 'package:json_annotation/json_annotation.dart';
 
@@ -60,7 +63,7 @@ class StrengthExerciseVariantData {
   )
 
 
-  final StrengthExerciseVariantDataVariantEnum variant;
+  final StrengthExerciseVariantType variant;
 
 
 
@@ -72,7 +75,7 @@ class StrengthExerciseVariantData {
   )
 
 
-  final StrengthExerciseVariantDataAttachmentEnum? attachment;
+  final StrengthExerciseVariantAttachment? attachment;
 
 
 
@@ -84,7 +87,7 @@ class StrengthExerciseVariantData {
   )
 
 
-  final StrengthExerciseVariantDataEquipmentMechanicalMovementEnum equipmentMechanicalMovement;
+  final StrengthExerciseMovement equipmentMechanicalMovement;
 
 
 
@@ -182,49 +185,4 @@ class StrengthExerciseVariantData {
   }
 
 }
-
-
-enum StrengthExerciseVariantDataVariantEnum {
-  @JsonValue(r'normal')
-  normal,
-  @JsonValue(r'singleArm')
-  singleArm,
-  @JsonValue(r'singleLeg')
-  singleLeg,
-  @JsonValue(r'singleArmSingleLeg')
-  singleArmSingleLeg,
-  @JsonValue(r'doubleArmSingleLeg')
-  doubleArmSingleLeg,
-  @JsonValue(r'alternate')
-  alternate,
-}
-
-
-
-enum StrengthExerciseVariantDataAttachmentEnum {
-  @JsonValue(r'bar')
-  bar,
-  @JsonValue(r'rope')
-  rope,
-  @JsonValue(r'singleHandles')
-  singleHandles,
-  @JsonValue(r'doubleHandles')
-  doubleHandles,
-  @JsonValue(r'ankleStrap')
-  ankleStrap,
-  @JsonValue(r'thighStrap')
-  thighStrap,
-  @JsonValue(r'belt')
-  belt,
-}
-
-
-
-enum StrengthExerciseVariantDataEquipmentMechanicalMovementEnum {
-  @JsonValue(r'unilateral')
-  unilateral,
-  @JsonValue(r'bilateral')
-  bilateral,
-}
-
 

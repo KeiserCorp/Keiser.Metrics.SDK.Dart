@@ -28,12 +28,10 @@ A500MachineStateData _$A500MachineStateDataFromJson(
               $checkedConvert('facilityStrengthMachineId', (v) => v as num),
           isFacilityConfigurationOverridden: $checkedConvert(
               'isFacilityConfigurationOverridden', (v) => v as bool),
-          appType: $checkedConvert('appType',
-              (v) => $enumDecode(_$A500MachineStateDataAppTypeEnumEnumMap, v)),
+          appType: $checkedConvert(
+              'appType', (v) => $enumDecode(_$A500AppTypeEnumMap, v)),
           forceUnit: $checkedConvert(
-              'forceUnit',
-              (v) =>
-                  $enumDecode(_$A500MachineStateDataForceUnitEnumEnumMap, v)),
+              'forceUnit', (v) => $enumDecode(_$ForceUnitEnumMap, v)),
           primaryFocus: $checkedConvert('primaryFocus', (v) => v as String),
           secondaryFocus: $checkedConvert('secondaryFocus', (v) => v as String),
           facilityStrengthMachine: $checkedConvert(
@@ -53,9 +51,8 @@ Map<String, dynamic> _$A500MachineStateDataToJson(
     'facilityStrengthMachineId': instance.facilityStrengthMachineId,
     'isFacilityConfigurationOverridden':
         instance.isFacilityConfigurationOverridden,
-    'appType': _$A500MachineStateDataAppTypeEnumEnumMap[instance.appType]!,
-    'forceUnit':
-        _$A500MachineStateDataForceUnitEnumEnumMap[instance.forceUnit]!,
+    'appType': _$A500AppTypeEnumMap[instance.appType]!,
+    'forceUnit': _$ForceUnitEnumMap[instance.forceUnit]!,
     'primaryFocus': instance.primaryFocus,
     'secondaryFocus': instance.secondaryFocus,
   };
@@ -71,16 +68,16 @@ Map<String, dynamic> _$A500MachineStateDataToJson(
   return val;
 }
 
-const _$A500MachineStateDataAppTypeEnumEnumMap = {
-  A500MachineStateDataAppTypeEnum.performance: 'performance',
-  A500MachineStateDataAppTypeEnum.elder: 'elder',
-  A500MachineStateDataAppTypeEnum.medical: 'medical',
-  A500MachineStateDataAppTypeEnum.commercial: 'commercial',
+const _$A500AppTypeEnumMap = {
+  A500AppType.performance: 'performance',
+  A500AppType.elder: 'elder',
+  A500AppType.medical: 'medical',
+  A500AppType.commercial: 'commercial',
 };
 
-const _$A500MachineStateDataForceUnitEnumEnumMap = {
-  A500MachineStateDataForceUnitEnum.lb: 'lb',
-  A500MachineStateDataForceUnitEnum.kg: 'kg',
-  A500MachineStateDataForceUnitEnum.ne: 'ne',
-  A500MachineStateDataForceUnitEnum.er: 'er',
+const _$ForceUnitEnumMap = {
+  ForceUnit.lb: 'lb',
+  ForceUnit.kg: 'kg',
+  ForceUnit.ne: 'ne',
+  ForceUnit.er: 'er',
 };

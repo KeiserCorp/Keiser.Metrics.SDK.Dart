@@ -7,6 +7,7 @@ import 'package:keiser_metrics_sdk/src/model/session_plan_cardio_set_data.dart';
 import 'package:keiser_metrics_sdk/src/model/session_plan_activity_set_data.dart';
 import 'package:keiser_metrics_sdk/src/model/session_plan_strength_set_data.dart';
 import 'package:keiser_metrics_sdk/src/model/session_plan_stretch_set_data.dart';
+import 'package:keiser_metrics_sdk/src/model/session_plan_set_type.dart';
 import 'package:json_annotation/json_annotation.dart';
 
 part 'session_plan_set_data.g.dart';
@@ -24,7 +25,7 @@ class SessionPlanSetData {
 
     required  this.id,
 
-    required  this.notes,
+     this.notes,
 
      this.type,
 
@@ -52,12 +53,12 @@ class SessionPlanSetData {
   @JsonKey(
     
     name: r'notes',
-    required: true,
+    required: false,
     includeIfNull: false
   )
 
 
-  final String notes;
+  final String? notes;
 
 
 
@@ -69,7 +70,7 @@ class SessionPlanSetData {
   )
 
 
-  final SessionPlanSetDataTypeEnum? type;
+  final SessionPlanSetType? type;
 
 
 
@@ -151,17 +152,4 @@ class SessionPlanSetData {
   }
 
 }
-
-
-enum SessionPlanSetDataTypeEnum {
-  @JsonValue(r'strength')
-  strength,
-  @JsonValue(r'stretch')
-  stretch,
-  @JsonValue(r'cardio')
-  cardio,
-  @JsonValue(r'activity')
-  activity,
-}
-
 

@@ -17,8 +17,10 @@ SessionListResponseMeta _$SessionListResponseMetaFromJson(
           requiredKeys: const ['sort'],
         );
         final val = SessionListResponseMeta(
-          from: $checkedConvert('from', (v) => v as String?),
-          to: $checkedConvert('to', (v) => v as String?),
+          from: $checkedConvert(
+              'from', (v) => v == null ? null : DateTime.parse(v as String)),
+          to: $checkedConvert(
+              'to', (v) => v == null ? null : DateTime.parse(v as String)),
           open: $checkedConvert('open', (v) => v as bool?),
           sort: $checkedConvert(
               'sort', (v) => $enumDecode(_$SessionSortingEnumMap, v)),
@@ -42,8 +44,8 @@ Map<String, dynamic> _$SessionListResponseMetaToJson(
     }
   }
 
-  writeNotNull('from', instance.from);
-  writeNotNull('to', instance.to);
+  writeNotNull('from', instance.from?.toIso8601String());
+  writeNotNull('to', instance.to?.toIso8601String());
   writeNotNull('open', instance.open);
   val['sort'] = _$SessionSortingEnumMap[instance.sort]!;
   writeNotNull('userId', instance.userId);
@@ -58,4 +60,6 @@ const _$SessionSortingEnumMap = {
   SessionSorting.id: 'id',
   SessionSorting.startedAt: 'startedAt',
   SessionSorting.endedAt: 'endedAt',
+  SessionSorting.names: 'name',
+  SessionSorting.open: 'open',
 };

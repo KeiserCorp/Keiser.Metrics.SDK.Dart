@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **member** | **bool** |  | [optional] 
 **employee** | **bool** |  | [optional] 
-**employeeRole** | [**FacilityEmployeeRole**](FacilityEmployeeRole.md) |  | [optional] 
+**employeeRole** | [**EmployeeRole**](EmployeeRole.md) |  | [optional] 
 **sort** | [**UserFacilityRelationshipSorting**](UserFacilityRelationshipSorting.md) |  | 
 **userId** | **num** |  | [optional] 
 **ascending** | **bool** |  | [optional] 

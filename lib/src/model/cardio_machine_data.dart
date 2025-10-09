@@ -3,6 +3,7 @@
 //
 
 // ignore_for_file: unused_element
+import 'package:keiser_metrics_sdk/src/model/cardio_machine_parse_code.dart';
 import 'package:keiser_metrics_sdk/src/model/cardio_exercise_data.dart';
 import 'package:json_annotation/json_annotation.dart';
 
@@ -78,7 +79,7 @@ class CardioMachineData {
   )
 
 
-  final CardioMachineDataParseCodeEnum parseCode;
+  final CardioMachineParseCode parseCode;
 
 
 
@@ -153,15 +154,6 @@ class CardioMachineData {
 enum CardioMachineDataLineEnum {
   @JsonValue(r'mSeries')
   mSeries,
-}
-
-
-
-enum CardioMachineDataParseCodeEnum {
-  @JsonValue(r'ms6')
-  ms6,
-  @JsonValue(r'ms6e')
-  ms6e,
 }
 
 

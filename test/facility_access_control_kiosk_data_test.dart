@@ -17,17 +17,12 @@ void main() {
       // TODO
     });
 
-    // bool isFingerprintAuthenticationAllowed
-    test('to test the property `isFingerprintAuthenticationAllowed`', () async {
-      // TODO
-    });
-
-    // String primaryIdentification
+    // FacilityAccessControlKioskPrimaryIdentification primaryIdentification
     test('to test the property `primaryIdentification`', () async {
       // TODO
     });
 
-    // String secondaryIdentification
+    // FacilityAccessControlKioskSecondaryIdentification secondaryIdentification
     test('to test the property `secondaryIdentification`', () async {
       // TODO
     });

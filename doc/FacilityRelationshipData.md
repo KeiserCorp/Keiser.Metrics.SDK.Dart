@@ -14,10 +14,9 @@ Name | Type | Description | Notes
 **member** | **bool** |  | 
 **memberIdentifier** | **String** |  | [optional] 
 **hasSecretSet** | **bool** |  | 
-**employeeRole** | **String** |  | [optional] 
+**employeeRole** | [**EmployeeRole**](EmployeeRole.md) |  | [optional] 
 **facility** | [**FacilityData**](FacilityData.md) |  | [optional] 
 **user** | [**FacilitySessionUserData**](FacilitySessionUserData.md) |  | [optional] 
-**fingerprint** | [**FingerprintData**](FingerprintData.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

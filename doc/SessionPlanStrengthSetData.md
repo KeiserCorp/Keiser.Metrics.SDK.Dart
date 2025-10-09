@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **repetitionCount** | **num** |  | 
 **resistance** | **num** |  | 
-**forceUnit** | **String** |  | 
+**forceUnit** | [**ForceUnit**](ForceUnit.md) |  | 
 **strengthExercise** | [**StrengthExerciseData**](StrengthExerciseData.md) |  | [optional] 
 **strengthMachine** | [**StrengthMachineData**](StrengthMachineData.md) |  | [optional] 
 

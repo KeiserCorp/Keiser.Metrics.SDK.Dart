@@ -18,11 +18,11 @@ class FacilityCardioMachineListResponseMeta {
   /// Returns a new [FacilityCardioMachineListResponseMeta] instance.
   const FacilityCardioMachineListResponseMeta({
 
-    required  this.model,
+     this.model,
 
-    required  this.serial,
+     this.serial,
 
-    required  this.location,
+     this.location,
 
      this.sort,
 
@@ -38,36 +38,36 @@ class FacilityCardioMachineListResponseMeta {
   @JsonKey(
     
     name: r'model',
-    required: true,
+    required: false,
     includeIfNull: false
   )
 
 
-  final String model;
+  final String? model;
 
 
 
   @JsonKey(
     
     name: r'serial',
-    required: true,
+    required: false,
     includeIfNull: false
   )
 
 
-  final String serial;
+  final String? serial;
 
 
 
   @JsonKey(
     
     name: r'location',
-    required: true,
+    required: false,
     includeIfNull: false
   )
 
 
-  final String location;
+  final String? location;
 
 
 

@@ -3,7 +3,9 @@
 //
 
 // ignore_for_file: unused_element
+import 'package:keiser_metrics_sdk/src/model/strength_machine_app_type.dart';
 import 'package:keiser_metrics_sdk/src/model/facility_data.dart';
+import 'package:keiser_metrics_sdk/src/model/force_unit.dart';
 import 'package:json_annotation/json_annotation.dart';
 
 part 'facility_strength_machine_configuration_data.g.dart';
@@ -56,7 +58,7 @@ class FacilityStrengthMachineConfigurationData {
   )
 
 
-  final FacilityStrengthMachineConfigurationDataAppTypeEnum appType;
+  final StrengthMachineAppType appType;
 
 
 
@@ -80,7 +82,7 @@ class FacilityStrengthMachineConfigurationData {
   )
 
 
-  final FacilityStrengthMachineConfigurationDataForceUnitEnum forceUnit;
+  final ForceUnit forceUnit;
 
 
 
@@ -164,30 +166,4 @@ class FacilityStrengthMachineConfigurationData {
   }
 
 }
-
-
-enum FacilityStrengthMachineConfigurationDataAppTypeEnum {
-  @JsonValue(r'performance')
-  performance,
-  @JsonValue(r'elder')
-  elder,
-  @JsonValue(r'medical')
-  medical,
-  @JsonValue(r'commercial')
-  commercial,
-}
-
-
-
-enum FacilityStrengthMachineConfigurationDataForceUnitEnum {
-  @JsonValue(r'lb')
-  lb,
-  @JsonValue(r'kg')
-  kg,
-  @JsonValue(r'ne')
-  ne,
-  @JsonValue(r'er')
-  er,
-}
-
 

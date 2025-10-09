@@ -5,6 +5,8 @@
 // ignore_for_file: unused_element
 import 'package:keiser_metrics_sdk/src/model/a500_time_series_point_data.dart';
 import 'package:keiser_metrics_sdk/src/model/a500_rep_data_point_data.dart';
+import 'package:keiser_metrics_sdk/src/model/test_side.dart';
+import 'package:keiser_metrics_sdk/src/model/a500_data_set_type.dart';
 import 'package:keiser_metrics_sdk/src/model/a500_test_result_data.dart';
 import 'package:json_annotation/json_annotation.dart';
 
@@ -70,7 +72,7 @@ class A500DataSetData {
   )
 
 
-  final A500DataSetDataTypeEnum type;
+  final A500DataSetType type;
 
 
 
@@ -82,7 +84,7 @@ class A500DataSetData {
   )
 
 
-  final A500DataSetDataTestSideEnum? testSide;
+  final TestSide? testSide;
 
 
 
@@ -166,24 +168,4 @@ class A500DataSetData {
   }
 
 }
-
-
-enum A500DataSetDataTypeEnum {
-  @JsonValue(r'normal')
-  normal,
-  @JsonValue(r'test')
-  test,
-}
-
-
-
-enum A500DataSetDataTestSideEnum {
-  @JsonValue(r'left')
-  left,
-  @JsonValue(r'right')
-  right,
-  @JsonValue(r'both')
-  both,
-}
-
 

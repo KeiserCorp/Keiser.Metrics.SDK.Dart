@@ -353,7 +353,7 @@ void main() {
     //
     // 1
     //
-    //Future<DevelopmentAccountResponse> developmentAccountCreate(String privacyUrl, String termsUrl, { String address, num company, String websiteUrl, String apiVersion }) async
+    //Future<DevelopmentAccountResponse> developmentAccountCreate(String privacyUrl, String termsUrl, { String address, String company, String websiteUrl, String apiVersion }) async
     test('test developmentAccountCreate', () async {
       // TODO
     });
@@ -704,7 +704,7 @@ void main() {
     //
     // 2
     //
-    //Future<FacilityAccessControlKioskResponse> facilityAccessControlKioskUpdate(bool isKioskModeAllowed, { bool isFingerprintAuthenticationAllowed, String primaryIdentification, String secondaryIdentification, String apiVersion }) async
+    //Future<FacilityAccessControlKioskResponse> facilityAccessControlKioskUpdate(bool isKioskModeAllowed, { String primaryIdentification, String secondaryIdentification, String apiVersion }) async
     test('test facilityAccessControlKioskUpdate', () async {
       // TODO
     });
@@ -727,12 +727,30 @@ void main() {
       // TODO
     });
 
+    // Create a facility cardio machine
+    //
+    // 1
+    //
+    //Future<FacilityCardioMachineResponse> facilityCardioMachineCreate(num cardioMachineId, String model, String serial, String version, { String location, String apiVersion }) async
+    test('test facilityCardioMachineCreate', () async {
+      // TODO
+    });
+
     // Delete a facility cardio machine
     //
     // 1
     //
     //Future facilityCardioMachineDelete(num id, { String apiVersion }) async
     test('test facilityCardioMachineDelete', () async {
+      // TODO
+    });
+
+    // List facility cardio machines
+    //
+    // 1
+    //
+    //Future<FacilityCardioMachineListResponse> facilityCardioMachineList({ bool ascending, num limit, String location, String model, num offset, String serial, String sort, String apiVersion }) async
+    test('test facilityCardioMachineList', () async {
       // TODO
     });
 
@@ -911,7 +929,7 @@ void main() {
     //
     // 1
     //
-    //Future<FacilityProfileResponse> facilityProfileUpdate(String names, { String address, num city, String country, String phone, String postcode, String state, String website, String apiVersion }) async
+    //Future<FacilityProfileResponse> facilityProfileUpdate(String names, { String address, String city, String country, String phone, String postcode, String state, String website, String apiVersion }) async
     test('test facilityProfileUpdate', () async {
       // TODO
     });
@@ -1231,11 +1249,20 @@ void main() {
       // TODO
     });
 
+    // Create a facility strength machine
+    //
+    // 1
+    //
+    //Future<FacilityStrengthMachineResponse> facilityStrengthMachineCreate(num model, String serial, num strengthMachineId, String version, { String location, String apiVersion }) async
+    test('test facilityStrengthMachineCreate', () async {
+      // TODO
+    });
+
     // Creates facility strength machines using eChip data
     //
     // 1
     //
-    //Future<FacilityStrengthMachineBulkCreateResponse> facilityStrengthMachineCreateEchip(num echipData, { String apiVersion }) async
+    //Future<FacilityStrengthMachineBulkCreateResponse> facilityStrengthMachineCreateEchip(String echipData, { String apiVersion }) async
     test('test facilityStrengthMachineCreateEchip', () async {
       // TODO
     });
@@ -1519,87 +1546,6 @@ void main() {
       // TODO
     });
 
-    // Create a user mSeries Challenge
-    //
-    // 1
-    //
-    //Future<MSeriesChallengeResponse> mSeriesChallengeCreate(String challengeType, String focus, bool isPublic, String names, num userLimit, { DateTime endAt, num goal, DateTime startAt, String apiVersion }) async
-    test('test mSeriesChallengeCreate', () async {
-      // TODO
-    });
-
-    // Delete a user's owned mSeries Challenge
-    //
-    // 1
-    //
-    //Future mSeriesChallengeDelete(num id, { String apiVersion }) async
-    test('test mSeriesChallengeDelete', () async {
-      // TODO
-    });
-
-    // List a user's owned or joined mSeries Challenges
-    //
-    // 1
-    //
-    //Future<MSeriesChallengeListResponse> mSeriesChallengeList({ bool ascending, DateTime from, bool isCompleted, num limit, num offset, String relationship, String sort, DateTime to, num userId, String apiVersion }) async
-    test('test mSeriesChallengeList', () async {
-      // TODO
-    });
-
-    // Join Challenge
-    //
-    // 1
-    //
-    //Future<MSeriesChallengeParticipantResponse> mSeriesChallengeParticipantCreate(String joinCode, { num userId, String apiVersion }) async
-    test('test mSeriesChallengeParticipantCreate', () async {
-      // TODO
-    });
-
-    // Leave Challenge
-    //
-    // 1
-    //
-    //Future mSeriesChallengeParticipantDelete(num mSeriesChallengeId, { num userId, String apiVersion }) async
-    test('test mSeriesChallengeParticipantDelete', () async {
-      // TODO
-    });
-
-    // Search for mSeries Challenge Participants
-    //
-    // 1
-    //
-    //Future<MSeriesChallengeParticipantListResponse> mSeriesChallengeParticipantList(String nameSearchQuery, { bool ascending, String joinCode, num limit, num mSeriesChallengeId, num offset, String sort, num userId, String apiVersion }) async
-    test('test mSeriesChallengeParticipantList', () async {
-      // TODO
-    });
-
-    // Show a user's mSeries User Challenge Participant Record
-    //
-    // 1
-    //
-    //Future<MSeriesChallengeParticipantResponse> mSeriesChallengeParticipantShow({ String joinCode, num mSeriesChallengeId, num mSeriesChallengeParticipantId, num userId, String apiVersion }) async
-    test('test mSeriesChallengeParticipantShow', () async {
-      // TODO
-    });
-
-    // Show a user mSeries Challenge
-    //
-    // 1
-    //
-    //Future<MSeriesChallengeResponse> mSeriesChallengeShow({ num id, String joinCode, num userId, String apiVersion }) async
-    test('test mSeriesChallengeShow', () async {
-      // TODO
-    });
-
-    // Update a user mSeries Challenge
-    //
-    // 1
-    //
-    //Future<MSeriesChallengeResponse> mSeriesChallengeUpdate(num id, { bool isPublic, String names, num userLimit, String apiVersion }) async
-    test('test mSeriesChallengeUpdate', () async {
-      // TODO
-    });
-
     // Create a user M Series data set
     //
     // 1
@@ -1820,7 +1766,7 @@ void main() {
     //
     // 1
     //
-    //Future oauthToken(String clientIdentifier, String clientSecret, String grantType, { String authorizationCode, String refreshToken, String apiVersion }) async
+    //Future<OauthTokenResponse> oauthToken(String clientIdentifier, String clientSecret, String grantType, { String authorizationCode, String refreshToken, String apiVersion }) async
     test('test oauthToken', () async {
       // TODO
     });
@@ -2122,7 +2068,7 @@ void main() {
       // TODO
     });
 
-    // Show a session plan set intance
+    // Show a session plan set instance
     //
     // 1
     //
@@ -2153,7 +2099,7 @@ void main() {
     //
     // 1
     //
-    //Future<SessionPlanSetInstanceResponse> sessionPlanSetInstanceUpdateStrength(bool completed, num id, { num completedForceUnit, num completedRepetitionCount, num completedResistance, num strengthMachineDataSetId, num userId, String apiVersion }) async
+    //Future<SessionPlanSetInstanceResponse> sessionPlanSetInstanceUpdateStrength(bool completed, num id, { String completedForceUnit, num completedRepetitionCount, num completedResistance, num strengthMachineDataSetId, num userId, String apiVersion }) async
     test('test sessionPlanSetInstanceUpdateStrength', () async {
       // TODO
     });
@@ -2171,7 +2117,7 @@ void main() {
     //
     // 1
     //
-    //Future<SessionPlanSetListResponse> sessionPlanSetList({ bool ascending, num limit, String names, num offset, String sort, String type, num userId, String apiVersion }) async
+    //Future<SessionPlanSetListResponse> sessionPlanSetList({ bool ascending, DateTime from, num limit, String names, num offset, String sort, DateTime to, String type, num userId, String apiVersion }) async
     test('test sessionPlanSetList', () async {
       // TODO
     });
@@ -2369,7 +2315,7 @@ void main() {
     //
     // 1
     //
-    //Future<SessionPlanTemplateListResponse> sessionPlanTemplateList({ bool ascending, String description, num limit, String names, num offset, bool public, bool scheduleLength, String sort, num userId, String apiVersion }) async
+    //Future<SessionPlanTemplateListResponse> sessionPlanTemplateList({ bool ascending, String description, DateTime from, num limit, String names, num offset, bool public, num scheduleLength, String sort, DateTime to, num userId, String apiVersion }) async
     test('test sessionPlanTemplateList', () async {
       // TODO
     });
@@ -2873,7 +2819,7 @@ void main() {
     //
     // 1
     //
-    //Future<UserResponse> userCreate(num email, String password, { bool refreshable, String apiVersion }) async
+    //Future<UserResponse> userCreate(String email, String password, { bool refreshable, String apiVersion }) async
     test('test userCreate', () async {
       // TODO
     });
@@ -2882,7 +2828,7 @@ void main() {
     //
     // 1
     //
-    //Future userCreateBasic(num email, String password, { bool refreshable, String apiVersion }) async
+    //Future userCreateBasic(String email, String password, { bool refreshable, String apiVersion }) async
     test('test userCreateBasic', () async {
       // TODO
     });

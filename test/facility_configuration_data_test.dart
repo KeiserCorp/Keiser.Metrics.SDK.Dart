@@ -12,7 +12,7 @@ void main() {
       // TODO
     });
 
-    // String memberIdentificationComposition
+    // CharacterType memberIdentificationComposition
     test('to test the property `memberIdentificationComposition`', () async {
       // TODO
     });
@@ -32,7 +32,7 @@ void main() {
       // TODO
     });
 
-    // String memberSecretComposition
+    // CharacterType memberSecretComposition
     test('to test the property `memberSecretComposition`', () async {
       // TODO
     });

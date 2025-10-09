@@ -30,10 +30,8 @@ FacilityRelationshipData _$FacilityRelationshipDataFromJson(
           memberIdentifier:
               $checkedConvert('memberIdentifier', (v) => v as String?),
           hasSecretSet: $checkedConvert('hasSecretSet', (v) => v as bool),
-          employeeRole: $checkedConvert(
-              'employeeRole',
-              (v) => $enumDecodeNullable(
-                  _$FacilityRelationshipDataEmployeeRoleEnumEnumMap, v)),
+          employeeRole: $checkedConvert('employeeRole',
+              (v) => $enumDecodeNullable(_$EmployeeRoleEnumMap, v)),
           facility: $checkedConvert(
               'facility',
               (v) => v == null
@@ -45,11 +43,6 @@ FacilityRelationshipData _$FacilityRelationshipDataFromJson(
                   ? null
                   : FacilitySessionUserData.fromJson(
                       v as Map<String, dynamic>)),
-          fingerprint: $checkedConvert(
-              'fingerprint',
-              (v) => v == null
-                  ? null
-                  : FingerprintData.fromJson(v as Map<String, dynamic>)),
         );
         return val;
       },
@@ -72,18 +65,16 @@ Map<String, dynamic> _$FacilityRelationshipDataToJson(
 
   writeNotNull('memberIdentifier', instance.memberIdentifier);
   val['hasSecretSet'] = instance.hasSecretSet;
-  writeNotNull('employeeRole',
-      _$FacilityRelationshipDataEmployeeRoleEnumEnumMap[instance.employeeRole]);
+  writeNotNull('employeeRole', _$EmployeeRoleEnumMap[instance.employeeRole]);
   writeNotNull('facility', instance.facility?.toJson());
   writeNotNull('user', instance.user?.toJson());
-  writeNotNull('fingerprint', instance.fingerprint?.toJson());
   return val;
 }
 
-const _$FacilityRelationshipDataEmployeeRoleEnumEnumMap = {
-  FacilityRelationshipDataEmployeeRoleEnum.admin: 'admin',
-  FacilityRelationshipDataEmployeeRoleEnum.customerSupport: 'customerSupport',
-  FacilityRelationshipDataEmployeeRoleEnum.trainer: 'trainer',
-  FacilityRelationshipDataEmployeeRoleEnum.frontDesk: 'frontDesk',
-  FacilityRelationshipDataEmployeeRoleEnum.maintenance: 'maintenance',
+const _$EmployeeRoleEnumMap = {
+  EmployeeRole.admin: 'admin',
+  EmployeeRole.customerSupport: 'customerSupport',
+  EmployeeRole.trainer: 'trainer',
+  EmployeeRole.frontDesk: 'frontDesk',
+  EmployeeRole.maintenance: 'maintenance',
 };

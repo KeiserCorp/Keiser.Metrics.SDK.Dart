@@ -17,7 +17,7 @@ void main() {
       // TODO
     });
 
-    // String line
+    // StrengthMachineLine line
     test('to test the property `line`', () async {
       // TODO
     });

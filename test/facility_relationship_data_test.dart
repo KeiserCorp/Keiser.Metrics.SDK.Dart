@@ -37,7 +37,7 @@ void main() {
       // TODO
     });
 
-    // String employeeRole
+    // EmployeeRole employeeRole
     test('to test the property `employeeRole`', () async {
       // TODO
     });
@@ -49,11 +49,6 @@ void main() {
 
     // FacilitySessionUserData user
     test('to test the property `user`', () async {
-      // TODO
-    });
-
-    // FingerprintData fingerprint
-    test('to test the property `fingerprint`', () async {
       // TODO
     });
 

@@ -13,14 +13,10 @@ FacilityCardioMachineListResponseMeta
           'FacilityCardioMachineListResponseMeta',
           json,
           ($checkedConvert) {
-            $checkKeys(
-              json,
-              requiredKeys: const ['model', 'serial', 'location'],
-            );
             final val = FacilityCardioMachineListResponseMeta(
-              model: $checkedConvert('model', (v) => v as String),
-              serial: $checkedConvert('serial', (v) => v as String),
-              location: $checkedConvert('location', (v) => v as String),
+              model: $checkedConvert('model', (v) => v as String?),
+              serial: $checkedConvert('serial', (v) => v as String?),
+              location: $checkedConvert('location', (v) => v as String?),
               sort: $checkedConvert('sort', (v) => v as String?),
               ascending: $checkedConvert('ascending', (v) => v as bool?),
               limit: $checkedConvert('limit', (v) => v as num?),
@@ -33,11 +29,7 @@ FacilityCardioMachineListResponseMeta
 
 Map<String, dynamic> _$FacilityCardioMachineListResponseMetaToJson(
     FacilityCardioMachineListResponseMeta instance) {
-  final val = <String, dynamic>{
-    'model': instance.model,
-    'serial': instance.serial,
-    'location': instance.location,
-  };
+  final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
     if (value != null) {
@@ -45,6 +37,9 @@ Map<String, dynamic> _$FacilityCardioMachineListResponseMetaToJson(
     }
   }
 
+  writeNotNull('model', instance.model);
+  writeNotNull('serial', instance.serial);
+  writeNotNull('location', instance.location);
   writeNotNull('sort', instance.sort);
   writeNotNull('ascending', instance.ascending);
   writeNotNull('limit', instance.limit);

@@ -9,7 +9,7 @@ import 'package:keiser_metrics_sdk/api.dart';
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **userId** | **num** |  | 
-**updatedAt** | **String** |  | 
+**updatedAt** | **String** |  | [optional] 
 **names** | **String** |  | [optional] 
 **birthday** | **String** |  | [optional] 
 **gender** | **String** |  | [optional] 

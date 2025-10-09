@@ -33,10 +33,8 @@ FacilityRelationshipRequestData _$FacilityRelationshipRequestDataFromJson(
           member: $checkedConvert('member', (v) => v as bool),
           memberIdentifier:
               $checkedConvert('memberIdentifier', (v) => v as String?),
-          employeeRole: $checkedConvert(
-              'employeeRole',
-              (v) => $enumDecodeNullable(
-                  _$FacilityRelationshipRequestDataEmployeeRoleEnumEnumMap, v)),
+          employeeRole: $checkedConvert('employeeRole',
+              (v) => $enumDecodeNullable(_$EmployeeRoleEnumMap, v)),
           facility: $checkedConvert(
               'facility',
               (v) => v == null
@@ -70,20 +68,16 @@ Map<String, dynamic> _$FacilityRelationshipRequestDataToJson(
   }
 
   writeNotNull('memberIdentifier', instance.memberIdentifier);
-  writeNotNull(
-      'employeeRole',
-      _$FacilityRelationshipRequestDataEmployeeRoleEnumEnumMap[
-          instance.employeeRole]);
+  writeNotNull('employeeRole', _$EmployeeRoleEnumMap[instance.employeeRole]);
   writeNotNull('facility', instance.facility?.toJson());
   writeNotNull('user', instance.user?.toJson());
   return val;
 }
 
-const _$FacilityRelationshipRequestDataEmployeeRoleEnumEnumMap = {
-  FacilityRelationshipRequestDataEmployeeRoleEnum.admin: 'admin',
-  FacilityRelationshipRequestDataEmployeeRoleEnum.customerSupport:
-      'customerSupport',
-  FacilityRelationshipRequestDataEmployeeRoleEnum.trainer: 'trainer',
-  FacilityRelationshipRequestDataEmployeeRoleEnum.frontDesk: 'frontDesk',
-  FacilityRelationshipRequestDataEmployeeRoleEnum.maintenance: 'maintenance',
+const _$EmployeeRoleEnumMap = {
+  EmployeeRole.admin: 'admin',
+  EmployeeRole.customerSupport: 'customerSupport',
+  EmployeeRole.trainer: 'trainer',
+  EmployeeRole.frontDesk: 'frontDesk',
+  EmployeeRole.maintenance: 'maintenance',
 };

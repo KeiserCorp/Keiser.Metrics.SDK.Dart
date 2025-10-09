@@ -15,10 +15,10 @@ FacilityStrengthMachineListResponseMeta
           ($checkedConvert) {
             $checkKeys(
               json,
-              requiredKeys: const ['model', 'sort'],
+              requiredKeys: const ['sort'],
             );
             final val = FacilityStrengthMachineListResponseMeta(
-              model: $checkedConvert('model', (v) => v as String),
+              model: $checkedConvert('model', (v) => v as String?),
               source_: $checkedConvert('source', (v) => v as String?),
               sort: $checkedConvert(
                   'sort',
@@ -37,9 +37,7 @@ FacilityStrengthMachineListResponseMeta
 
 Map<String, dynamic> _$FacilityStrengthMachineListResponseMetaToJson(
     FacilityStrengthMachineListResponseMeta instance) {
-  final val = <String, dynamic>{
-    'model': instance.model,
-  };
+  final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
     if (value != null) {
@@ -47,6 +45,7 @@ Map<String, dynamic> _$FacilityStrengthMachineListResponseMetaToJson(
     }
   }
 
+  writeNotNull('model', instance.model);
   writeNotNull('source', instance.source_);
   val['sort'] = _$FacilityStrengthMachineSortingEnumMap[instance.sort]!;
   writeNotNull('facilityId', instance.facilityId);

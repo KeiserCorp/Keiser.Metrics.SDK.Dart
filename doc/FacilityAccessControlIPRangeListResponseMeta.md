@@ -9,8 +9,8 @@ import 'package:keiser_metrics_sdk/api.dart';
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **cidr** | **String** |  | [optional] 
-**from** | **String** |  | [optional] 
-**to** | **String** |  | [optional] 
+**from** | [**DateTime**](DateTime.md) |  | [optional] 
+**to** | [**DateTime**](DateTime.md) |  | [optional] 
 **source_** | **String** |  | [optional] 
 **sort** | [**FacilityAccessControlIPRangeSorting**](FacilityAccessControlIPRangeSorting.md) |  | 
 **ascending** | **bool** |  | [optional] 

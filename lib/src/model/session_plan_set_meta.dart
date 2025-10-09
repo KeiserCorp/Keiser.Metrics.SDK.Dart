@@ -3,6 +3,7 @@
 //
 
 // ignore_for_file: unused_element
+import 'package:keiser_metrics_sdk/src/model/session_plan_set_type.dart';
 import 'package:json_annotation/json_annotation.dart';
 
 part 'session_plan_set_meta.g.dart';
@@ -18,13 +19,13 @@ class SessionPlanSetMeta {
   /// Returns a new [SessionPlanSetMeta] instance.
   const SessionPlanSetMeta({
 
-    required  this.names,
+     this.names,
 
-    required  this.type,
+     this.type,
 
-    required  this.from,
+     this.from,
 
-    required  this.to,
+     this.to,
 
      this.sort,
 
@@ -40,48 +41,48 @@ class SessionPlanSetMeta {
   @JsonKey(
     
     name: r'name',
-    required: true,
+    required: false,
     includeIfNull: false
   )
 
 
-  final String names;
+  final String? names;
 
 
 
   @JsonKey(
     
     name: r'type',
-    required: true,
+    required: false,
     includeIfNull: false
   )
 
 
-  final SessionPlanSetMetaTypeEnum type;
+  final SessionPlanSetType? type;
 
 
 
   @JsonKey(
     
     name: r'from',
-    required: true,
+    required: false,
     includeIfNull: false
   )
 
 
-  final DateTime from;
+  final DateTime? from;
 
 
 
   @JsonKey(
     
     name: r'to',
-    required: true,
+    required: false,
     includeIfNull: false
   )
 
 
-  final DateTime to;
+  final DateTime? to;
 
 
 
@@ -179,17 +180,4 @@ class SessionPlanSetMeta {
   }
 
 }
-
-
-enum SessionPlanSetMetaTypeEnum {
-  @JsonValue(r'strength')
-  strength,
-  @JsonValue(r'stretch')
-  stretch,
-  @JsonValue(r'cardio')
-  cardio,
-  @JsonValue(r'activity')
-  activity,
-}
-
 

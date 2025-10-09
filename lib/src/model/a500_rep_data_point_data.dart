@@ -3,6 +3,8 @@
 //
 
 // ignore_for_file: unused_element
+import 'package:keiser_metrics_sdk/src/model/side.dart';
+import 'package:keiser_metrics_sdk/src/model/force_unit.dart';
 import 'package:json_annotation/json_annotation.dart';
 
 part 'a500_rep_data_point_data.g.dart';
@@ -81,7 +83,7 @@ class A500RepDataPointData {
   )
 
 
-  final A500RepDataPointDataSideEnum side;
+  final Side side;
 
 
 
@@ -213,7 +215,7 @@ class A500RepDataPointData {
   )
 
 
-  final A500RepDataPointDataForceUnitEnum forceUnit;
+  final ForceUnit forceUnit;
 
 
 
@@ -371,26 +373,4 @@ class A500RepDataPointData {
   }
 
 }
-
-
-enum A500RepDataPointDataSideEnum {
-  @JsonValue(r'left')
-  left,
-  @JsonValue(r'right')
-  right,
-}
-
-
-
-enum A500RepDataPointDataForceUnitEnum {
-  @JsonValue(r'lb')
-  lb,
-  @JsonValue(r'kg')
-  kg,
-  @JsonValue(r'ne')
-  ne,
-  @JsonValue(r'er')
-  er,
-}
-
 

@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 **defaultAlias** | **String** |  | [optional] 
 **category** | [**StrengthExerciseCategory**](StrengthExerciseCategory.md) |  | [optional] 
 **movement** | [**StrengthExerciseMovementDEP**](StrengthExerciseMovementDEP.md) |  | [optional] 
-**humanMovement** | [**StrengthExerciseMovement**](StrengthExerciseMovement.md) |  | 
+**humanMovement** | [**StrengthExerciseMovement**](StrengthExerciseMovement.md) |  | [optional] 
 **plane** | [**StrengthExercisePlane**](StrengthExercisePlane.md) |  | [optional] 
 **sort** | [**StrengthExerciseSorting**](StrengthExerciseSorting.md) |  | 
 **ascending** | **bool** |  | [optional] 

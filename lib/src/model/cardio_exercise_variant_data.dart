@@ -5,6 +5,7 @@
 // ignore_for_file: unused_element
 import 'package:keiser_metrics_sdk/src/model/cardio_machine_data.dart';
 import 'package:keiser_metrics_sdk/src/model/exercise_ordinal_set_assignment_data.dart';
+import 'package:keiser_metrics_sdk/src/model/cardio_exercise_variant_type.dart';
 import 'package:keiser_metrics_sdk/src/model/cardio_exercise_data.dart';
 import 'package:json_annotation/json_annotation.dart';
 
@@ -56,7 +57,7 @@ class CardioExerciseVariantData {
   )
 
 
-  final CardioExerciseVariantDataVariantEnum variant;
+  final CardioExerciseVariantType variant;
 
 
 
@@ -150,11 +151,4 @@ class CardioExerciseVariantData {
   }
 
 }
-
-
-enum CardioExerciseVariantDataVariantEnum {
-  @JsonValue(r'normal')
-  normal,
-}
-
 

@@ -3,6 +3,7 @@
 //
 
 // ignore_for_file: unused_element
+import 'package:keiser_metrics_sdk/src/model/character_type.dart';
 import 'package:json_annotation/json_annotation.dart';
 
 part 'facility_configuration_data.g.dart';
@@ -59,7 +60,7 @@ class FacilityConfigurationData {
   )
 
 
-  final FacilityConfigurationDataMemberIdentificationCompositionEnum memberIdentificationComposition;
+  final CharacterType memberIdentificationComposition;
 
 
 
@@ -107,7 +108,7 @@ class FacilityConfigurationData {
   )
 
 
-  final FacilityConfigurationDataMemberSecretCompositionEnum memberSecretComposition;
+  final CharacterType memberSecretComposition;
 
 
 
@@ -195,22 +196,4 @@ class FacilityConfigurationData {
   }
 
 }
-
-
-enum FacilityConfigurationDataMemberIdentificationCompositionEnum {
-  @JsonValue(r'numeric')
-  numeric,
-  @JsonValue(r'alpha')
-  alpha,
-}
-
-
-
-enum FacilityConfigurationDataMemberSecretCompositionEnum {
-  @JsonValue(r'numeric')
-  numeric,
-  @JsonValue(r'alpha')
-  alpha,
-}
-
 

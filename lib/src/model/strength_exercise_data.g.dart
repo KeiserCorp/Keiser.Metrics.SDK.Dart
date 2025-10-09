@@ -14,22 +14,20 @@ StrengthExerciseData _$StrengthExerciseDataFromJson(
       ($checkedConvert) {
         $checkKeys(
           json,
-          requiredKeys: const ['id', 'category', 'humanMovement', 'plane'],
+          requiredKeys: const ['id', 'category', 'plane'],
         );
         final val = StrengthExerciseData(
           id: $checkedConvert('id', (v) => v as num),
           category: $checkedConvert('category',
-              (v) => $enumDecode(_$StrengthExerciseDataCategoryEnumEnumMap, v)),
+              (v) => $enumDecode(_$StrengthExerciseCategoryEnumMap, v)),
           movement: $checkedConvert(
               'movement',
-              (v) => $enumDecodeNullable(
-                  _$StrengthExerciseDataMovementEnumEnumMap, v)),
-          humanMovement: $checkedConvert(
-              'humanMovement',
-              (v) => $enumDecode(
-                  _$StrengthExerciseDataHumanMovementEnumEnumMap, v)),
-          plane: $checkedConvert('plane',
-              (v) => $enumDecode(_$StrengthExerciseDataPlaneEnumEnumMap, v)),
+              (v) =>
+                  $enumDecodeNullable(_$StrengthExerciseMovementDEPEnumMap, v)),
+          humanMovement: $checkedConvert('humanMovement',
+              (v) => $enumDecodeNullable(_$StrengthExerciseMovementEnumMap, v)),
+          plane: $checkedConvert(
+              'plane', (v) => $enumDecode(_$StrengthExercisePlaneEnumMap, v)),
           defaultExerciseAlias: $checkedConvert(
               'defaultExerciseAlias',
               (v) => v == null
@@ -67,7 +65,7 @@ Map<String, dynamic> _$StrengthExerciseDataToJson(
     StrengthExerciseData instance) {
   final val = <String, dynamic>{
     'id': instance.id,
-    'category': _$StrengthExerciseDataCategoryEnumEnumMap[instance.category]!,
+    'category': _$StrengthExerciseCategoryEnumMap[instance.category]!,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -77,10 +75,10 @@ Map<String, dynamic> _$StrengthExerciseDataToJson(
   }
 
   writeNotNull(
-      'movement', _$StrengthExerciseDataMovementEnumEnumMap[instance.movement]);
-  val['humanMovement'] =
-      _$StrengthExerciseDataHumanMovementEnumEnumMap[instance.humanMovement]!;
-  val['plane'] = _$StrengthExerciseDataPlaneEnumEnumMap[instance.plane]!;
+      'movement', _$StrengthExerciseMovementDEPEnumMap[instance.movement]);
+  writeNotNull('humanMovement',
+      _$StrengthExerciseMovementEnumMap[instance.humanMovement]);
+  val['plane'] = _$StrengthExercisePlaneEnumMap[instance.plane]!;
   writeNotNull('defaultExerciseAlias', instance.defaultExerciseAlias?.toJson());
   writeNotNull('exerciseAliases',
       instance.exerciseAliases?.map((e) => e.toJson()).toList());
@@ -93,26 +91,26 @@ Map<String, dynamic> _$StrengthExerciseDataToJson(
   return val;
 }
 
-const _$StrengthExerciseDataCategoryEnumEnumMap = {
-  StrengthExerciseDataCategoryEnum.lowerBody: 'lowerBody',
-  StrengthExerciseDataCategoryEnum.upperBody: 'upperBody',
-  StrengthExerciseDataCategoryEnum.core: 'core',
-  StrengthExerciseDataCategoryEnum.explosive: 'explosive',
-  StrengthExerciseDataCategoryEnum.complex: 'complex',
+const _$StrengthExerciseCategoryEnumMap = {
+  StrengthExerciseCategory.lowerBody: 'lowerBody',
+  StrengthExerciseCategory.upperBody: 'upperBody',
+  StrengthExerciseCategory.core: 'core',
+  StrengthExerciseCategory.explosive: 'explosive',
+  StrengthExerciseCategory.complex: 'complex',
 };
 
-const _$StrengthExerciseDataMovementEnumEnumMap = {
-  StrengthExerciseDataMovementEnum.isolation: 'isolation',
-  StrengthExerciseDataMovementEnum.compound: 'compound',
+const _$StrengthExerciseMovementDEPEnumMap = {
+  StrengthExerciseMovementDEP.isolation: 'isolation',
+  StrengthExerciseMovementDEP.compound: 'compound',
 };
 
-const _$StrengthExerciseDataHumanMovementEnumEnumMap = {
-  StrengthExerciseDataHumanMovementEnum.unilateral: 'unilateral',
-  StrengthExerciseDataHumanMovementEnum.bilateral: 'bilateral',
+const _$StrengthExerciseMovementEnumMap = {
+  StrengthExerciseMovement.unilateral: 'unilateral',
+  StrengthExerciseMovement.bilateral: 'bilateral',
 };
 
-const _$StrengthExerciseDataPlaneEnumEnumMap = {
-  StrengthExerciseDataPlaneEnum.sagittal: 'sagittal',
-  StrengthExerciseDataPlaneEnum.frontal: 'frontal',
-  StrengthExerciseDataPlaneEnum.transverse: 'transverse',
+const _$StrengthExercisePlaneEnumMap = {
+  StrengthExercisePlane.sagittal: 'sagittal',
+  StrengthExercisePlane.frontal: 'frontal',
+  StrengthExercisePlane.transverse: 'transverse',
 };

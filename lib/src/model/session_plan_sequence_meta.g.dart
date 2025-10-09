@@ -12,15 +12,9 @@ SessionPlanSequenceMeta _$SessionPlanSequenceMetaFromJson(
       'SessionPlanSequenceMeta',
       json,
       ($checkedConvert) {
-        $checkKeys(
-          json,
-          requiredKeys: const ['name', 'description', 'from', 'to'],
-        );
         final val = SessionPlanSequenceMeta(
-          names: $checkedConvert('name', (v) => v as String),
-          description: $checkedConvert('description', (v) => v as String),
-          from: $checkedConvert('from', (v) => DateTime.parse(v as String)),
-          to: $checkedConvert('to', (v) => DateTime.parse(v as String)),
+          names: $checkedConvert('name', (v) => v as String?),
+          description: $checkedConvert('description', (v) => v as String?),
           sort: $checkedConvert('sort', (v) => v as String?),
           ascending: $checkedConvert('ascending', (v) => v as bool?),
           limit: $checkedConvert('limit', (v) => v as num?),
@@ -34,12 +28,7 @@ SessionPlanSequenceMeta _$SessionPlanSequenceMetaFromJson(
 
 Map<String, dynamic> _$SessionPlanSequenceMetaToJson(
     SessionPlanSequenceMeta instance) {
-  final val = <String, dynamic>{
-    'name': instance.names,
-    'description': instance.description,
-    'from': instance.from.toIso8601String(),
-    'to': instance.to.toIso8601String(),
-  };
+  final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
     if (value != null) {
@@ -47,6 +36,8 @@ Map<String, dynamic> _$SessionPlanSequenceMetaToJson(
     }
   }
 
+  writeNotNull('name', instance.names);
+  writeNotNull('description', instance.description);
   writeNotNull('sort', instance.sort);
   writeNotNull('ascending', instance.ascending);
   writeNotNull('limit', instance.limit);

@@ -36,8 +36,7 @@ A500RepDataPointData _$A500RepDataPointDataFromJson(
         );
         final val = A500RepDataPointData(
           id: $checkedConvert('id', (v) => v as num),
-          side: $checkedConvert('side',
-              (v) => $enumDecode(_$A500RepDataPointDataSideEnumEnumMap, v)),
+          side: $checkedConvert('side', (v) => $enumDecode(_$SideEnumMap, v)),
           count: $checkedConvert('count', (v) => v as num),
           work: $checkedConvert('work', (v) => v as num),
           completedAt: $checkedConvert(
@@ -50,9 +49,7 @@ A500RepDataPointData _$A500RepDataPointDataFromJson(
           rangeOfMotion: $checkedConvert('rangeOfMotion', (v) => v as num),
           setPointForce: $checkedConvert('setPointForce', (v) => v as num),
           forceUnit: $checkedConvert(
-              'forceUnit',
-              (v) =>
-                  $enumDecode(_$A500RepDataPointDataForceUnitEnumEnumMap, v)),
+              'forceUnit', (v) => $enumDecode(_$ForceUnitEnumMap, v)),
           startSinceEpoch: $checkedConvert('startSinceEpoch', (v) => v as num),
           endSinceEpoch: $checkedConvert('endSinceEpoch', (v) => v as num),
           addedMass: $checkedConvert('addedMass', (v) => v as num),
@@ -70,7 +67,7 @@ Map<String, dynamic> _$A500RepDataPointDataToJson(
     A500RepDataPointData instance) {
   final val = <String, dynamic>{
     'id': instance.id,
-    'side': _$A500RepDataPointDataSideEnumEnumMap[instance.side]!,
+    'side': _$SideEnumMap[instance.side]!,
     'count': instance.count,
     'work': instance.work,
     'completedAt': instance.completedAt.toIso8601String(),
@@ -81,8 +78,7 @@ Map<String, dynamic> _$A500RepDataPointDataToJson(
     'averageVelocity': instance.averageVelocity,
     'rangeOfMotion': instance.rangeOfMotion,
     'setPointForce': instance.setPointForce,
-    'forceUnit':
-        _$A500RepDataPointDataForceUnitEnumEnumMap[instance.forceUnit]!,
+    'forceUnit': _$ForceUnitEnumMap[instance.forceUnit]!,
     'startSinceEpoch': instance.startSinceEpoch,
     'endSinceEpoch': instance.endSinceEpoch,
     'addedMass': instance.addedMass,
@@ -102,14 +98,14 @@ Map<String, dynamic> _$A500RepDataPointDataToJson(
   return val;
 }
 
-const _$A500RepDataPointDataSideEnumEnumMap = {
-  A500RepDataPointDataSideEnum.left: 'left',
-  A500RepDataPointDataSideEnum.right: 'right',
+const _$SideEnumMap = {
+  Side.left: 'left',
+  Side.right: 'right',
 };
 
-const _$A500RepDataPointDataForceUnitEnumEnumMap = {
-  A500RepDataPointDataForceUnitEnum.lb: 'lb',
-  A500RepDataPointDataForceUnitEnum.kg: 'kg',
-  A500RepDataPointDataForceUnitEnum.ne: 'ne',
-  A500RepDataPointDataForceUnitEnum.er: 'er',
+const _$ForceUnitEnumMap = {
+  ForceUnit.lb: 'lb',
+  ForceUnit.kg: 'kg',
+  ForceUnit.ne: 'ne',
+  ForceUnit.er: 'er',
 };

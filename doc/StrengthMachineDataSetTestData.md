@@ -8,7 +8,7 @@ import 'package:keiser_metrics_sdk/api.dart';
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**type** | **String** |  | 
+**type** | [**StrengthTestType**](StrengthTestType.md) |  | 
 **high** | [**StrengthMachineDataSetTestSubsetData**](StrengthMachineDataSetTestSubsetData.md) |  | 
 **low** | [**StrengthMachineDataSetTestSubsetData**](StrengthMachineDataSetTestSubsetData.md) |  | 
 

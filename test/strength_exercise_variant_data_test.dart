@@ -12,17 +12,17 @@ void main() {
       // TODO
     });
 
-    // String variant
+    // StrengthExerciseVariantType variant
     test('to test the property `variant`', () async {
       // TODO
     });
 
-    // String attachment
+    // StrengthExerciseVariantAttachment attachment
     test('to test the property `attachment`', () async {
       // TODO
     });
 
-    // String equipmentMechanicalMovement
+    // StrengthExerciseMovement equipmentMechanicalMovement
     test('to test the property `equipmentMechanicalMovement`', () async {
       // TODO
     });

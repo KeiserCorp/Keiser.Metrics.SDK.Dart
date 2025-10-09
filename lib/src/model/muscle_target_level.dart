@@ -11,6 +11,6 @@ enum MuscleTargetLevel {
   primary,
   @JsonValue(r'secondary')
   secondary,
-  @JsonValue(r'stabilizer')
-  stabilizer,
+  @JsonValue(r'tertiary')
+  tertiary,
 }

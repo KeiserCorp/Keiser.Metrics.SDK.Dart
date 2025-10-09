@@ -30,8 +30,6 @@ class StatusResponse {
 
     required  this.names,
 
-    required  this.description,
-
     required  this.version,
 
      this.consumedMemoryMB,
@@ -73,7 +71,7 @@ class StatusResponse {
   )
 
 
-  final num id;
+  final String id;
 
 
 
@@ -110,18 +108,6 @@ class StatusResponse {
 
 
   final String names;
-
-
-
-  @JsonKey(
-    
-    name: r'description',
-    required: true,
-    includeIfNull: false
-  )
-
-
-  final String description;
 
 
 
@@ -181,7 +167,6 @@ class StatusResponse {
      other.actionheroVersion == actionheroVersion &&
      other.uptime == uptime &&
      other.names == names &&
-     other.description == description &&
      other.version == version &&
      other.consumedMemoryMB == consumedMemoryMB &&
      other.eventLoopDelay == eventLoopDelay &&
@@ -195,7 +180,6 @@ class StatusResponse {
     actionheroVersion.hashCode +
     uptime.hashCode +
     names.hashCode +
-    description.hashCode +
     version.hashCode +
     consumedMemoryMB.hashCode +
     eventLoopDelay.hashCode +

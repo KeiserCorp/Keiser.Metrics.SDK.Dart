@@ -18,17 +18,17 @@ class SessionPlanTemplateMeta {
   /// Returns a new [SessionPlanTemplateMeta] instance.
   const SessionPlanTemplateMeta({
 
-    required  this.names,
+     this.names,
 
-    required  this.description,
+     this.description,
 
-    required  this.scheduleLength,
+     this.scheduleLength,
 
-    required  this.public,
+     this.public,
 
-    required  this.from,
+     this.from,
 
-    required  this.to,
+     this.to,
 
      this.sort,
 
@@ -44,72 +44,72 @@ class SessionPlanTemplateMeta {
   @JsonKey(
     
     name: r'name',
-    required: true,
+    required: false,
     includeIfNull: false
   )
 
 
-  final String names;
+  final String? names;
 
 
 
   @JsonKey(
     
     name: r'description',
-    required: true,
+    required: false,
     includeIfNull: false
   )
 
 
-  final String description;
+  final String? description;
 
 
 
   @JsonKey(
     
     name: r'scheduleLength',
-    required: true,
+    required: false,
     includeIfNull: false
   )
 
 
-  final num scheduleLength;
+  final num? scheduleLength;
 
 
 
   @JsonKey(
     
     name: r'public',
-    required: true,
+    required: false,
     includeIfNull: false
   )
 
 
-  final bool public;
+  final bool? public;
 
 
 
   @JsonKey(
     
     name: r'from',
-    required: true,
+    required: false,
     includeIfNull: false
   )
 
 
-  final DateTime from;
+  final DateTime? from;
 
 
 
   @JsonKey(
     
     name: r'to',
-    required: true,
+    required: false,
     includeIfNull: false
   )
 
 
-  final DateTime to;
+  final DateTime? to;
 
 
 

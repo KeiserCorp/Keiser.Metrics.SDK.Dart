@@ -24,10 +24,8 @@ ExerciseAliasListResponseMeta _$ExerciseAliasListResponseMetaFromJson(
           stretchExerciseId:
               $checkedConvert('stretchExerciseId', (v) => v as num?),
           alias: $checkedConvert('alias', (v) => v as String?),
-          type: $checkedConvert(
-              'type',
-              (v) => $enumDecodeNullable(
-                  _$ExerciseAliasListResponseMetaTypeEnumEnumMap, v)),
+          type: $checkedConvert('type',
+              (v) => $enumDecodeNullable(_$ExerciseAliasTypeEnumMap, v)),
           sort: $checkedConvert(
               'sort', (v) => $enumDecode(_$ExerciseAliasSortingEnumMap, v)),
           ascending: $checkedConvert('ascending', (v) => v as bool?),
@@ -53,8 +51,7 @@ Map<String, dynamic> _$ExerciseAliasListResponseMetaToJson(
   writeNotNull('cardioExerciseId', instance.cardioExerciseId);
   writeNotNull('stretchExerciseId', instance.stretchExerciseId);
   writeNotNull('alias', instance.alias);
-  writeNotNull(
-      'type', _$ExerciseAliasListResponseMetaTypeEnumEnumMap[instance.type]);
+  writeNotNull('type', _$ExerciseAliasTypeEnumMap[instance.type]);
   val['sort'] = _$ExerciseAliasSortingEnumMap[instance.sort]!;
   writeNotNull('ascending', instance.ascending);
   writeNotNull('limit', instance.limit);
@@ -63,10 +60,10 @@ Map<String, dynamic> _$ExerciseAliasListResponseMetaToJson(
   return val;
 }
 
-const _$ExerciseAliasListResponseMetaTypeEnumEnumMap = {
-  ExerciseAliasListResponseMetaTypeEnum.strength: 'strength',
-  ExerciseAliasListResponseMetaTypeEnum.stretch: 'stretch',
-  ExerciseAliasListResponseMetaTypeEnum.cardio: 'cardio',
+const _$ExerciseAliasTypeEnumMap = {
+  ExerciseAliasType.cardio: 'cardio',
+  ExerciseAliasType.strength: 'strength',
+  ExerciseAliasType.stretch: 'stretch',
 };
 
 const _$ExerciseAliasSortingEnumMap = {

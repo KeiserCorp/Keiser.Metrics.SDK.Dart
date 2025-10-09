@@ -21,7 +21,7 @@ CardioMachineData _$CardioMachineDataFromJson(Map<String, dynamic> json) =>
           line: $checkedConvert('line',
               (v) => $enumDecode(_$CardioMachineDataLineEnumEnumMap, v)),
           parseCode: $checkedConvert('parseCode',
-              (v) => $enumDecode(_$CardioMachineDataParseCodeEnumEnumMap, v)),
+              (v) => $enumDecode(_$CardioMachineParseCodeEnumMap, v)),
           defaultCardioExerciseId:
               $checkedConvert('defaultCardioExerciseId', (v) => v as num?),
           machineTypeFallback:
@@ -42,7 +42,7 @@ Map<String, dynamic> _$CardioMachineDataToJson(CardioMachineData instance) {
     'id': instance.id,
     'name': instance.names,
     'line': _$CardioMachineDataLineEnumEnumMap[instance.line]!,
-    'parseCode': _$CardioMachineDataParseCodeEnumEnumMap[instance.parseCode]!,
+    'parseCode': _$CardioMachineParseCodeEnumMap[instance.parseCode]!,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -62,7 +62,7 @@ const _$CardioMachineDataLineEnumEnumMap = {
   CardioMachineDataLineEnum.mSeries: 'mSeries',
 };
 
-const _$CardioMachineDataParseCodeEnumEnumMap = {
-  CardioMachineDataParseCodeEnum.ms6: 'ms6',
-  CardioMachineDataParseCodeEnum.ms6e: 'ms6e',
+const _$CardioMachineParseCodeEnumMap = {
+  CardioMachineParseCode.ms6: 'ms6',
+  CardioMachineParseCode.ms6e: 'ms6e',
 };

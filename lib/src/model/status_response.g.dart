@@ -20,7 +20,6 @@ StatusResponse _$StatusResponseFromJson(Map<String, dynamic> json) =>
             'actionheroVersion',
             'uptime',
             'name',
-            'description',
             'version'
           ],
         );
@@ -28,12 +27,11 @@ StatusResponse _$StatusResponseFromJson(Map<String, dynamic> json) =>
           nodeStatus: $checkedConvert('nodeStatus', (v) => v as String),
           problems: $checkedConvert('problems',
               (v) => (v as List<dynamic>).map((e) => e as String).toList()),
-          id: $checkedConvert('id', (v) => v as num),
+          id: $checkedConvert('id', (v) => v as String),
           actionheroVersion:
               $checkedConvert('actionheroVersion', (v) => v as String),
           uptime: $checkedConvert('uptime', (v) => v as num),
           names: $checkedConvert('name', (v) => v as String),
-          description: $checkedConvert('description', (v) => v as String),
           version: $checkedConvert('version', (v) => v as String),
           consumedMemoryMB:
               $checkedConvert('consumedMemoryMB', (v) => v as num?),
@@ -54,7 +52,6 @@ Map<String, dynamic> _$StatusResponseToJson(StatusResponse instance) {
     'actionheroVersion': instance.actionheroVersion,
     'uptime': instance.uptime,
     'name': instance.names,
-    'description': instance.description,
     'version': instance.version,
   };
 

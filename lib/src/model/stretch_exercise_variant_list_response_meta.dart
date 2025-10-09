@@ -4,6 +4,7 @@
 
 // ignore_for_file: unused_element
 import 'package:keiser_metrics_sdk/src/model/stretch_exercise_variant_sorting.dart';
+import 'package:keiser_metrics_sdk/src/model/stretch_exercise_variant_type.dart';
 import 'package:json_annotation/json_annotation.dart';
 
 part 'stretch_exercise_variant_list_response_meta.g.dart';
@@ -68,7 +69,7 @@ class StretchExerciseVariantListResponseMeta {
   )
 
 
-  final String? variant;
+  final StretchExerciseVariantType? variant;
 
 
 

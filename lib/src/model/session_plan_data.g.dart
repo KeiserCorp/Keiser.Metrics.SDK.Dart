@@ -16,8 +16,6 @@ SessionPlanData _$SessionPlanDataFromJson(Map<String, dynamic> json) =>
           requiredKeys: const [
             'id',
             'name',
-            'description',
-            'notes',
             'startAt',
             'active',
             'repeating',
@@ -28,8 +26,8 @@ SessionPlanData _$SessionPlanDataFromJson(Map<String, dynamic> json) =>
         final val = SessionPlanData(
           id: $checkedConvert('id', (v) => v as num),
           names: $checkedConvert('name', (v) => v as String),
-          description: $checkedConvert('description', (v) => v as String),
-          notes: $checkedConvert('notes', (v) => v as String),
+          description: $checkedConvert('description', (v) => v as String?),
+          notes: $checkedConvert('notes', (v) => v as String?),
           startAt: $checkedConvert('startAt', (v) => v as String),
           endAt: $checkedConvert('endAt', (v) => v as String?),
           active: $checkedConvert('active', (v) => v as bool),
@@ -71,9 +69,6 @@ Map<String, dynamic> _$SessionPlanDataToJson(SessionPlanData instance) {
   final val = <String, dynamic>{
     'id': instance.id,
     'name': instance.names,
-    'description': instance.description,
-    'notes': instance.notes,
-    'startAt': instance.startAt,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -82,6 +77,9 @@ Map<String, dynamic> _$SessionPlanDataToJson(SessionPlanData instance) {
     }
   }
 
+  writeNotNull('description', instance.description);
+  writeNotNull('notes', instance.notes);
+  val['startAt'] = instance.startAt;
   writeNotNull('endAt', instance.endAt);
   val['active'] = instance.active;
   val['repeating'] = instance.repeating;

@@ -44,7 +44,7 @@ class StrengthMachineDataSetListResponseMeta {
   )
 
 
-  final String? from;
+  final DateTime? from;
 
 
 
@@ -56,7 +56,7 @@ class StrengthMachineDataSetListResponseMeta {
   )
 
 
-  final String? to;
+  final DateTime? to;
 
 
 

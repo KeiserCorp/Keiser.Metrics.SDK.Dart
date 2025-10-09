@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **stretchExerciseId** | **num** |  | [optional] 
 **stretchMachineId** | **num** |  | [optional] 
-**variant** | **String** |  | [optional] 
+**variant** | [**StretchExerciseVariantType**](StretchExerciseVariantType.md) |  | [optional] 
 **sort** | [**StretchExerciseVariantSorting**](StretchExerciseVariantSorting.md) |  | 
 **ascending** | **bool** |  | [optional] 
 **limit** | **num** |  | [optional] 

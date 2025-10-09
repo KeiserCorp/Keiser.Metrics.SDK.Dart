@@ -10,20 +10,20 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **num** |  | 
 **timeSinceEpoch** | **num** |  | 
-**leftPosition** | **num** |  | 
-**leftPower** | **num** |  | 
-**leftVelocity** | **num** |  | 
-**leftAcceleration** | **num** |  | 
-**leftForceOfMassAcceleration** | **num** |  | 
-**leftMechanicalWeight** | **num** |  | 
-**leftRawPower** | **num** |  | 
-**rightPosition** | **num** |  | 
-**rightPower** | **num** |  | 
-**rightVelocity** | **num** |  | 
-**rightAcceleration** | **num** |  | 
-**rightForceOfMassAcceleration** | **num** |  | 
-**rightMechanicalWeight** | **num** |  | 
-**rightRawPower** | **num** |  | 
+**leftPosition** | **num** |  | [optional] 
+**leftPower** | **num** |  | [optional] 
+**leftVelocity** | **num** |  | [optional] 
+**leftAcceleration** | **num** |  | [optional] 
+**leftForceOfMassAcceleration** | **num** |  | [optional] 
+**leftMechanicalWeight** | **num** |  | [optional] 
+**leftRawPower** | **num** |  | [optional] 
+**rightPosition** | **num** |  | [optional] 
+**rightPower** | **num** |  | [optional] 
+**rightVelocity** | **num** |  | [optional] 
+**rightAcceleration** | **num** |  | [optional] 
+**rightForceOfMassAcceleration** | **num** |  | [optional] 
+**rightMechanicalWeight** | **num** |  | [optional] 
+**rightRawPower** | **num** |  | [optional] 
 **leftTorque** | **num** |  | [optional] 
 **rightTorque** | **num** |  | [optional] 
 **leftForce** | **num** |  | [optional] 

@@ -18,9 +18,7 @@ FacilityInBodyIntegrationData _$FacilityInBodyIntegrationDataFromJson(
         );
         final val = FacilityInBodyIntegrationData(
           type: $checkedConvert(
-              'type',
-              (v) => $enumDecode(
-                  _$FacilityInBodyIntegrationDataTypeEnumEnumMap, v)),
+              'type', (v) => $enumDecode(_$InBodyTypeEnumMap, v)),
           account: $checkedConvert('account', (v) => v as String?),
           key: $checkedConvert('key', (v) => v as String?),
         );
@@ -31,7 +29,7 @@ FacilityInBodyIntegrationData _$FacilityInBodyIntegrationDataFromJson(
 Map<String, dynamic> _$FacilityInBodyIntegrationDataToJson(
     FacilityInBodyIntegrationData instance) {
   final val = <String, dynamic>{
-    'type': _$FacilityInBodyIntegrationDataTypeEnumEnumMap[instance.type]!,
+    'type': _$InBodyTypeEnumMap[instance.type]!,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -45,7 +43,7 @@ Map<String, dynamic> _$FacilityInBodyIntegrationDataToJson(
   return val;
 }
 
-const _$FacilityInBodyIntegrationDataTypeEnumEnumMap = {
-  FacilityInBodyIntegrationDataTypeEnum.local: 'local',
-  FacilityInBodyIntegrationDataTypeEnum.web: 'web',
+const _$InBodyTypeEnumMap = {
+  InBodyType.web: 'web',
+  InBodyType.local: 'local',
 };

@@ -9,11 +9,11 @@ import 'package:keiser_metrics_sdk/api.dart';
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **facilityId** | **num** |  | 
-**memberIdentificationComposition** | **String** |  | 
+**memberIdentificationComposition** | [**CharacterType**](CharacterType.md) |  | 
 **memberIdentificationForceLength** | **bool** |  | 
 **memberIdentificationLength** | **num** |  | 
 **memberIdentificationRegex** | **String** |  | 
-**memberSecretComposition** | **String** |  | 
+**memberSecretComposition** | [**CharacterType**](CharacterType.md) |  | 
 **memberSecretForceLength** | **bool** |  | 
 **memberSecretLength** | **num** |  | 
 **memberSecretRegex** | **String** |  | 

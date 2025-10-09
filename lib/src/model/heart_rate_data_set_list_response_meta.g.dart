@@ -17,8 +17,10 @@ HeartRateDataSetListResponseMeta _$HeartRateDataSetListResponseMetaFromJson(
           requiredKeys: const ['sort'],
         );
         final val = HeartRateDataSetListResponseMeta(
-          from: $checkedConvert('from', (v) => v as String?),
-          to: $checkedConvert('to', (v) => v as String?),
+          from: $checkedConvert(
+              'from', (v) => v == null ? null : DateTime.parse(v as String)),
+          to: $checkedConvert(
+              'to', (v) => v == null ? null : DateTime.parse(v as String)),
           source_: $checkedConvert('source', (v) => v as String?),
           sort: $checkedConvert(
               'sort', (v) => $enumDecode(_$HeartRateDataSetSortingEnumMap, v)),
@@ -43,8 +45,8 @@ Map<String, dynamic> _$HeartRateDataSetListResponseMetaToJson(
     }
   }
 
-  writeNotNull('from', instance.from);
-  writeNotNull('to', instance.to);
+  writeNotNull('from', instance.from?.toIso8601String());
+  writeNotNull('to', instance.to?.toIso8601String());
   writeNotNull('source', instance.source_);
   val['sort'] = _$HeartRateDataSetSortingEnumMap[instance.sort]!;
   writeNotNull('userId', instance.userId);

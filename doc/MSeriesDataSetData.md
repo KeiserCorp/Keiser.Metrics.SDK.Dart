@@ -29,7 +29,7 @@ Name | Type | Description | Notes
 **averageMetabolicEquivalent** | **num** |  | [optional] 
 **stepCount** | **num** |  | [optional] 
 **duration** | **num** |  | 
-**initialOffset** | **String** |  | [optional] 
+**initialOffset** | **num** |  | [optional] 
 **machineType** | **String** |  | 
 **weight** | **num** |  | [optional] 
 **averageFtp** | **num** |  | [optional] 

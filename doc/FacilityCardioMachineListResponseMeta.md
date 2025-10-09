@@ -8,9 +8,9 @@ import 'package:keiser_metrics_sdk/api.dart';
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**model** | **String** |  | 
-**serial** | **String** |  | 
-**location** | **String** |  | 
+**model** | **String** |  | [optional] 
+**serial** | **String** |  | [optional] 
+**location** | **String** |  | [optional] 
 **sort** | **String** |  | [optional] 
 **ascending** | **bool** |  | [optional] 
 **limit** | **num** |  | [optional] 

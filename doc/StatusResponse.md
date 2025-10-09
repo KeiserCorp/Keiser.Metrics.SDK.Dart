@@ -10,11 +10,10 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **nodeStatus** | **String** |  | 
 **problems** | **List&lt;String&gt;** |  | 
-**id** | **num** |  | 
+**id** | **String** |  | 
 **actionheroVersion** | **String** |  | 
 **uptime** | **num** |  | 
 **names** | **String** |  | 
-**description** | **String** |  | 
 **version** | **String** |  | 
 **consumedMemoryMB** | **num** |  | [optional] 
 **eventLoopDelay** | **num** |  | [optional] 

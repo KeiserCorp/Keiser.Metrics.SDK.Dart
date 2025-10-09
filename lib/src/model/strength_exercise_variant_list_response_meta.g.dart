@@ -22,7 +22,10 @@ StrengthExerciseVariantListResponseMeta
                   $checkedConvert('strengthExerciseId', (v) => v as num?),
               strengthMachineId:
                   $checkedConvert('strengthMachineId', (v) => v as num?),
-              variant: $checkedConvert('variant', (v) => v as String?),
+              variant: $checkedConvert(
+                  'variant',
+                  (v) => $enumDecodeNullable(
+                      _$StrengthExerciseVariantTypeEnumMap, v)),
               attachment: $checkedConvert('attachment', (v) => v as String?),
               equipmentMechanicalMovement: $checkedConvert(
                   'equipmentMechanicalMovement', (v) => v as String?),
@@ -51,7 +54,8 @@ Map<String, dynamic> _$StrengthExerciseVariantListResponseMetaToJson(
 
   writeNotNull('strengthExerciseId', instance.strengthExerciseId);
   writeNotNull('strengthMachineId', instance.strengthMachineId);
-  writeNotNull('variant', instance.variant);
+  writeNotNull(
+      'variant', _$StrengthExerciseVariantTypeEnumMap[instance.variant]);
   writeNotNull('attachment', instance.attachment);
   writeNotNull(
       'equipmentMechanicalMovement', instance.equipmentMechanicalMovement);
@@ -63,8 +67,19 @@ Map<String, dynamic> _$StrengthExerciseVariantListResponseMetaToJson(
   return val;
 }
 
+const _$StrengthExerciseVariantTypeEnumMap = {
+  StrengthExerciseVariantType.normal: 'normal',
+  StrengthExerciseVariantType.singleArm: 'singleArm',
+  StrengthExerciseVariantType.singleLeg: 'singleLeg',
+  StrengthExerciseVariantType.singleArmSingleLeg: 'singleArmSingleLeg',
+  StrengthExerciseVariantType.doubleArmSingleLeg: 'doubleArmSingleLeg',
+  StrengthExerciseVariantType.alternate: 'alternate',
+};
+
 const _$StrengthExerciseVariantSortingEnumMap = {
   StrengthExerciseVariantSorting.id: 'id',
   StrengthExerciseVariantSorting.variant: 'variant',
   StrengthExerciseVariantSorting.attachment: 'attachment',
+  StrengthExerciseVariantSorting.equipmentMechanicalMovement:
+      'equipmentMechanicalMovement',
 };

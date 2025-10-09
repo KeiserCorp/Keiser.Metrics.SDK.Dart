@@ -18,15 +18,15 @@ class SessionPlanMeta {
   /// Returns a new [SessionPlanMeta] instance.
   const SessionPlanMeta({
 
-    required  this.names,
+     this.names,
 
-    required  this.description,
+     this.description,
 
-    required  this.active,
+     this.active,
 
-    required  this.from,
+     this.from,
 
-    required  this.to,
+     this.to,
 
      this.sort,
 
@@ -42,60 +42,60 @@ class SessionPlanMeta {
   @JsonKey(
     
     name: r'name',
-    required: true,
+    required: false,
     includeIfNull: false
   )
 
 
-  final String names;
+  final String? names;
 
 
 
   @JsonKey(
     
     name: r'description',
-    required: true,
+    required: false,
     includeIfNull: false
   )
 
 
-  final String description;
+  final String? description;
 
 
 
   @JsonKey(
     
     name: r'active',
-    required: true,
+    required: false,
     includeIfNull: false
   )
 
 
-  final bool active;
+  final bool? active;
 
 
 
   @JsonKey(
     
     name: r'from',
-    required: true,
+    required: false,
     includeIfNull: false
   )
 
 
-  final DateTime from;
+  final DateTime? from;
 
 
 
   @JsonKey(
     
     name: r'to',
-    required: true,
+    required: false,
     includeIfNull: false
   )
 
 
-  final DateTime to;
+  final DateTime? to;
 
 
 

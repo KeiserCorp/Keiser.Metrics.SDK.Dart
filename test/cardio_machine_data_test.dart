@@ -22,7 +22,7 @@ void main() {
       // TODO
     });
 
-    // String parseCode
+    // CardioMachineParseCode parseCode
     test('to test the property `parseCode`', () async {
       // TODO
     });

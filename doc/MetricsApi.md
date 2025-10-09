@@ -89,13 +89,15 @@ Method | HTTP request | Description
 [**facilityAccessControlKioskUpdate**](MetricsApi.md#facilityaccesscontrolkioskupdate) | **PUT** /facility/access-control/kiosk | Update the facility access control kiosk entity
 [**facilityAccessControlShow**](MetricsApi.md#facilityaccesscontrolshow) | **GET** /facility/access-control | Show a facility access control
 [**facilityApplyLicense**](MetricsApi.md#facilityapplylicense) | **POST** /facility/apply-license | Updates a facility license
+[**facilityCardioMachineCreate**](MetricsApi.md#facilitycardiomachinecreate) | **POST** /facility/cardio-machine | Create a facility cardio machine
 [**facilityCardioMachineDelete**](MetricsApi.md#facilitycardiomachinedelete) | **DELETE** /facility/cardio-machine/{id} | Delete a facility cardio machine
-[**facilityCardioMachineShow**](MetricsApi.md#facilitycardiomachineshow) | **POST** /facility/cardio-machine | Show a facility cardio machine
+[**facilityCardioMachineList**](MetricsApi.md#facilitycardiomachinelist) | **GET** /facility/cardio-machine/list | List facility cardio machines
+[**facilityCardioMachineShow**](MetricsApi.md#facilitycardiomachineshow) | **GET** /facility/cardio-machine | Show a facility cardio machine
 [**facilityCardioMachineUpdate**](MetricsApi.md#facilitycardiomachineupdate) | **PUT** /facility/cardio-machine/{id} | Update a facility cardio machine
 [**facilityConfigurationShow**](MetricsApi.md#facilityconfigurationshow) | **GET** /facility/configuration | Show a facility configuration
 [**facilityConfigurationSubscribe**](MetricsApi.md#facilityconfigurationsubscribe) | **GET** /facilityConfiguration/subscribe | Subscribe to facility configuration
 [**facilityConfigurationUpdate**](MetricsApi.md#facilityconfigurationupdate) | **PUT** /facility/configuration | Update a facility configuration
-[**facilityCreate**](MetricsApi.md#facilitycreate) | **POST** /facility  | Create a facility
+[**facilityCreate**](MetricsApi.md#facilitycreate) | **POST** /facility | Create a facility
 [**facilityInBodyIntegrationCreate**](MetricsApi.md#facilityinbodyintegrationcreate) | **POST** /facility/inbody-integration | Create a facility InBody integration
 [**facilityInBodyIntegrationDelete**](MetricsApi.md#facilityinbodyintegrationdelete) | **DELETE** /facility/inbody-integration | Delete a facility InBody integration
 [**facilityInBodyIntegrationShow**](MetricsApi.md#facilityinbodyintegrationshow) | **GET** /facility/inbody-integration | Show a facility InBody integration settings
@@ -145,6 +147,7 @@ Method | HTTP request | Description
 [**facilityStrengthMachineConfigurationShow**](MetricsApi.md#facilitystrengthmachineconfigurationshow) | **GET** /facility/strength-machine/configuration | Show a facility strength machine default configuration
 [**facilityStrengthMachineConfigurationSubscribe**](MetricsApi.md#facilitystrengthmachineconfigurationsubscribe) | **GET** /facilityStrengthMachineConfiguration/subscribe | Subscribe to changes to facility strength machine configuration
 [**facilityStrengthMachineConfigurationUpdate**](MetricsApi.md#facilitystrengthmachineconfigurationupdate) | **PUT** /facility/strength-machine/configuration | Update a facility strength machine configuration
+[**facilityStrengthMachineCreate**](MetricsApi.md#facilitystrengthmachinecreate) | **POST** /facility/strength-machine/{strengthMachineId} | Create a facility strength machine
 [**facilityStrengthMachineCreateEchip**](MetricsApi.md#facilitystrengthmachinecreateechip) | **POST** /facility/strength-machine/echip | Creates facility strength machines using eChip data
 [**facilityStrengthMachineDelete**](MetricsApi.md#facilitystrengthmachinedelete) | **DELETE** /facility/strength-machine/{id} | Delete a facility strength machine
 [**facilityStrengthMachineInitializerOTP**](MetricsApi.md#facilitystrengthmachineinitializerotp) | **GET** /facility/strength-machine/initializer-otp | Show facility strength machine initializer token
@@ -177,15 +180,6 @@ Method | HTTP request | Description
 [**mSeriesAppSessionExportFlat**](MetricsApi.md#mseriesappsessionexportflat) | **GET** /m-series/app-session/export/{filename} | Export a user&#39;s session as a flat file
 [**mSeriesAppSessionList**](MetricsApi.md#mseriesappsessionlist) | **GET** /m-series/app-session/list | List a user&#39;s sessions generated using M Series app data
 [**mSeriesAppSessionShow**](MetricsApi.md#mseriesappsessionshow) | **GET** /m-series/app-session | Show a user&#39;s session generated using M Series app data
-[**mSeriesChallengeCreate**](MetricsApi.md#mserieschallengecreate) | **POST** /m-series/challenge | Create a user mSeries Challenge
-[**mSeriesChallengeDelete**](MetricsApi.md#mserieschallengedelete) | **DELETE** /m-series/challenge/{id} | Delete a user&#39;s owned mSeries Challenge
-[**mSeriesChallengeList**](MetricsApi.md#mserieschallengelist) | **GET** /m-series/challenge/list | List a user&#39;s owned or joined mSeries Challenges
-[**mSeriesChallengeParticipantCreate**](MetricsApi.md#mserieschallengeparticipantcreate) | **POST** /m-series/challenge/participant | Join Challenge
-[**mSeriesChallengeParticipantDelete**](MetricsApi.md#mserieschallengeparticipantdelete) | **DELETE** /m-series/challenge/{mSeriesChallengeId}/participant | Leave Challenge
-[**mSeriesChallengeParticipantList**](MetricsApi.md#mserieschallengeparticipantlist) | **GET** /m-series/challenge/participant/list | Search for mSeries Challenge Participants
-[**mSeriesChallengeParticipantShow**](MetricsApi.md#mserieschallengeparticipantshow) | **GET** /m-series/challenge/participant | Show a user&#39;s mSeries User Challenge Participant Record
-[**mSeriesChallengeShow**](MetricsApi.md#mserieschallengeshow) | **GET** /m-series/challenge | Show a user mSeries Challenge
-[**mSeriesChallengeUpdate**](MetricsApi.md#mserieschallengeupdate) | **PUT** /m-series/challenge/{id} | Update a user mSeries Challenge
 [**mSeriesDataSetCreate**](MetricsApi.md#mseriesdatasetcreate) | **POST** /m-series/data-set | Create a user M Series data set
 [**mSeriesDataSetDelete**](MetricsApi.md#mseriesdatasetdelete) | **DELETE** /m-series/data-set/{id} | Delete a user&#39;s M Series data set
 [**mSeriesDataSetList**](MetricsApi.md#mseriesdatasetlist) | **GET** /m-series/data-set/list | List a user&#39;s M Series data sets
@@ -244,7 +238,7 @@ Method | HTTP request | Description
 [**sessionPlanSetCreateStrength**](MetricsApi.md#sessionplansetcreatestrength) | **POST** /session-plan-set/{sequenceId}/strength-set | Create session plan strength set
 [**sessionPlanSetCreateStretch**](MetricsApi.md#sessionplansetcreatestretch) | **POST** /session-plan-set/{sequenceId}/stretch-set | Create session plan stretch set
 [**sessionPlanSetDelete**](MetricsApi.md#sessionplansetdelete) | **DELETE** /session-plan-set/{id} | Delete session plan set
-[**sessionPlanSetInstanceShow**](MetricsApi.md#sessionplansetinstanceshow) | **GET** /session-plan-set-instance | Show a session plan set intance
+[**sessionPlanSetInstanceShow**](MetricsApi.md#sessionplansetinstanceshow) | **GET** /session-plan-set-instance | Show a session plan set instance
 [**sessionPlanSetInstanceUpdateActivity**](MetricsApi.md#sessionplansetinstanceupdateactivity) | **PUT** /session-plan-set-instance/{id}/activity-set | Update session plan activity set instance
 [**sessionPlanSetInstanceUpdateCardio**](MetricsApi.md#sessionplansetinstanceupdatecardio) | **PUT** /session-plan-set-instance/{id}/cardio-set | Update session plan cardio set instance
 [**sessionPlanSetInstanceUpdateStrength**](MetricsApi.md#sessionplansetinstanceupdatestrength) | **PUT** /session-plan-set-instance/{id}/strength-set | Update session plan strength set instance
@@ -277,7 +271,7 @@ Method | HTTP request | Description
 [**sessionPlanUpdate**](MetricsApi.md#sessionplanupdate) | **PUT** /session-plan/{id} | Update session plan
 [**sessionShow**](MetricsApi.md#sessionshow) | **GET** /session | Show a user&#39;s session
 [**sessionStart**](MetricsApi.md#sessionstart) | **POST** /session | Start a user session
-[**sessionSubscribe**](MetricsApi.md#sessionsubscribe) | **GET** /session:subscribe | Subscribe to changes to a user&#39;s session
+[**sessionSubscribe**](MetricsApi.md#sessionsubscribe) | **GET** /session/subscribe | Subscribe to changes to a user&#39;s session
 [**strengthExerciseCreate**](MetricsApi.md#strengthexercisecreate) | **POST** /strength-exercise | Create a strength exercise
 [**strengthExerciseDelete**](MetricsApi.md#strengthexercisedelete) | **DELETE** /strength-exercise/{id} | Delete a strength exercise
 [**strengthExerciseList**](MetricsApi.md#strengthexerciselist) | **GET** /strength-exercise/list | List strength exercises
@@ -727,7 +721,7 @@ import 'package:keiser_metrics_sdk/api.dart';
 final api = MetricsApi metricsApi = MetricsApi();
 final String appType = appType_example; // String | Allowed values: performance, elder, medical, commercial
 final num facilityStrengthMachineId = 8.14; // num | 
-final String forceUnit = forceUnit_example; // String | Allowed values: lb, kg, ne, er, lb, kg, ne, er
+final String forceUnit = forceUnit_example; // String | Allowed values: lb, kg, ne, er
 final bool isFacilityConfigurationOverridden = true; // bool | 
 final String primaryFocus = primaryFocus_example; // String | Allowed values: power, force, velocity, rom
 final String secondaryFocus = secondaryFocus_example; // String | Allowed values: power, force, velocity, rom
@@ -747,7 +741,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **appType** | **String**| Allowed values: performance, elder, medical, commercial | 
  **facilityStrengthMachineId** | **num**|  | 
- **forceUnit** | **String**| Allowed values: lb, kg, ne, er, lb, kg, ne, er | 
+ **forceUnit** | **String**| Allowed values: lb, kg, ne, er | 
  **isFacilityConfigurationOverridden** | **bool**|  | 
  **primaryFocus** | **String**| Allowed values: power, force, velocity, rom | 
  **secondaryFocus** | **String**| Allowed values: power, force, velocity, rom | 
@@ -2277,7 +2271,7 @@ final api = MetricsApi metricsApi = MetricsApi();
 final String privacyUrl = privacyUrl_example; // String | 
 final String termsUrl = termsUrl_example; // String | 
 final String address = address_example; // String | 
-final num company = 8.14; // num | 
+final String company = company_example; // String | 
 final String websiteUrl = websiteUrl_example; // String | 
 final String apiVersion = apiVersion_example; // String | 
 
@@ -2296,7 +2290,7 @@ Name | Type | Description  | Notes
  **privacyUrl** | **String**|  | 
  **termsUrl** | **String**|  | 
  **address** | **String**|  | [optional] 
- **company** | **num**|  | [optional] 
+ **company** | **String**|  | [optional] 
  **websiteUrl** | **String**|  | [optional] 
  **apiVersion** | **String**|  | [optional] 
 
@@ -4274,7 +4268,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **facilityAccessControlKioskUpdate**
-> FacilityAccessControlKioskResponse facilityAccessControlKioskUpdate(isKioskModeAllowed, isFingerprintAuthenticationAllowed, primaryIdentification, secondaryIdentification, apiVersion)
+> FacilityAccessControlKioskResponse facilityAccessControlKioskUpdate(isKioskModeAllowed, primaryIdentification, secondaryIdentification, apiVersion)
 
 Update the facility access control kiosk entity
 
@@ -4289,13 +4283,12 @@ import 'package:keiser_metrics_sdk/api.dart';
 
 final api = MetricsApi metricsApi = MetricsApi();
 final bool isKioskModeAllowed = true; // bool | 
-final bool isFingerprintAuthenticationAllowed = true; // bool | 
 final String primaryIdentification = primaryIdentification_example; // String | Allowed values: uuid, memberIdentifier, emailAddress, fullName
 final String secondaryIdentification = secondaryIdentification_example; // String | Allowed values: none, uuid, memberIdentifier, yearOfBirth, memberSecret
 final String apiVersion = apiVersion_example; // String | 
 
 try {
-    final response = metricsApi.facilityAccessControlKioskUpdate(isKioskModeAllowed, isFingerprintAuthenticationAllowed, primaryIdentification, secondaryIdentification, apiVersion);
+    final response = metricsApi.facilityAccessControlKioskUpdate(isKioskModeAllowed, primaryIdentification, secondaryIdentification, apiVersion);
     print(response);
 } catch on DioError (e) {
     print('Exception when calling MetricsApi->facilityAccessControlKioskUpdate: $e\n');
@@ -4307,7 +4300,6 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **isKioskModeAllowed** | **bool**|  | 
- **isFingerprintAuthenticationAllowed** | **bool**|  | [optional] 
  **primaryIdentification** | **String**| Allowed values: uuid, memberIdentifier, emailAddress, fullName | [optional] 
  **secondaryIdentification** | **String**| Allowed values: none, uuid, memberIdentifier, yearOfBirth, memberSecret | [optional] 
  **apiVersion** | **String**|  | [optional] 
@@ -4421,6 +4413,62 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **facilityCardioMachineCreate**
+> FacilityCardioMachineResponse facilityCardioMachineCreate(cardioMachineId, model, serial, version, location, apiVersion)
+
+Create a facility cardio machine
+
+1
+
+### Example
+```dart
+import 'package:keiser_metrics_sdk/api.dart';
+// TODO Configure HTTP basic authorization: bearerAuth
+//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').username = 'YOUR_USERNAME'
+//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').password = 'YOUR_PASSWORD';
+
+final api = MetricsApi metricsApi = MetricsApi();
+final num cardioMachineId = 8.14; // num | 
+final String model = model_example; // String | 
+final String serial = serial_example; // String | 
+final String version = version_example; // String | 
+final String location = location_example; // String | 
+final String apiVersion = apiVersion_example; // String | 
+
+try {
+    final response = metricsApi.facilityCardioMachineCreate(cardioMachineId, model, serial, version, location, apiVersion);
+    print(response);
+} catch on DioError (e) {
+    print('Exception when calling MetricsApi->facilityCardioMachineCreate: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **cardioMachineId** | **num**|  | 
+ **model** | **String**|  | 
+ **serial** | **String**|  | 
+ **version** | **String**|  | 
+ **location** | **String**|  | [optional] 
+ **apiVersion** | **String**|  | [optional] 
+
+### Return type
+
+[**FacilityCardioMachineResponse**](FacilityCardioMachineResponse.md)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **facilityCardioMachineDelete**
 > facilityCardioMachineDelete(id, apiVersion)
 
@@ -4465,6 +4513,66 @@ void (empty response body)
 
  - **Content-Type**: Not defined
  - **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **facilityCardioMachineList**
+> FacilityCardioMachineListResponse facilityCardioMachineList(ascending, limit, location, model, offset, serial, sort, apiVersion)
+
+List facility cardio machines
+
+1
+
+### Example
+```dart
+import 'package:keiser_metrics_sdk/api.dart';
+// TODO Configure HTTP basic authorization: bearerAuth
+//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').username = 'YOUR_USERNAME'
+//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').password = 'YOUR_PASSWORD';
+
+final api = MetricsApi metricsApi = MetricsApi();
+final bool ascending = true; // bool | 
+final num limit = 8.14; // num | 
+final String location = location_example; // String | 
+final String model = model_example; // String | 
+final num offset = 8.14; // num | 
+final String serial = serial_example; // String | 
+final String sort = sort_example; // String | Allowed values: id, name
+final String apiVersion = apiVersion_example; // String | 
+
+try {
+    final response = metricsApi.facilityCardioMachineList(ascending, limit, location, model, offset, serial, sort, apiVersion);
+    print(response);
+} catch on DioError (e) {
+    print('Exception when calling MetricsApi->facilityCardioMachineList: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **ascending** | **bool**|  | [optional] [default to true]
+ **limit** | **num**|  | [optional] 
+ **location** | **String**|  | [optional] 
+ **model** | **String**|  | [optional] 
+ **offset** | **num**|  | [optional] 
+ **serial** | **String**|  | [optional] 
+ **sort** | **String**| Allowed values: id, name | [optional] [default to 'id']
+ **apiVersion** | **String**|  | [optional] 
+
+### Return type
+
+[**FacilityCardioMachineListResponse**](FacilityCardioMachineListResponse.md)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -5458,7 +5566,7 @@ import 'package:keiser_metrics_sdk/api.dart';
 final api = MetricsApi metricsApi = MetricsApi();
 final String names = names_example; // String | 
 final String address = address_example; // String | 
-final num city = 8.14; // num | 
+final String city = city_example; // String | 
 final String country = country_example; // String | 
 final String phone = phone_example; // String | 
 final String postcode = postcode_example; // String | 
@@ -5480,7 +5588,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **names** | **String**|  | 
  **address** | **String**|  | [optional] 
- **city** | **num**|  | [optional] 
+ **city** | **String**|  | [optional] 
  **country** | **String**|  | [optional] 
  **phone** | **String**|  | [optional] 
  **postcode** | **String**|  | [optional] 
@@ -5521,7 +5629,7 @@ final api = MetricsApi metricsApi = MetricsApi();
 final String names = names_example; // String | 
 final DateTime birthday = 2013-10-20T19:20:30+01:00; // DateTime | 
 final String email = email_example; // String | 
-final String employeeRole = employeeRole_example; // String | Allowed values: admin, customerSupport, trainer, frontDesk, maintenance, machine, kiosk
+final String employeeRole = employeeRole_example; // String | Allowed values: admin, customerSupport, trainer, frontDesk, maintenance
 final String gender = gender_example; // String | Allowed values: m, f, o
 final String language = language_example; // String | Allowed values: af, ar, az, be, bg, ca, cs, cy, da, de, dv, el, en, eo, es, et, eu, fa, fi, fo, fr, gl, gu, he, hi, hr, hu, hy, id, is, it, ja, ka, kk, kn, ko, kok, ky, lt, lv, mi, mk, mn, mr, ms, mt, nb, nl, ns, pa, pl, ps, pt, qu, ro, ru, sa, se, sk, sl, sq, sv, sw, ta, te, th, tl, tn, tr, tt, ts, uk, ur, uz, vi, xh, zh, zu
 final bool member = true; // bool | 
@@ -5545,7 +5653,7 @@ Name | Type | Description  | Notes
  **names** | **String**|  | 
  **birthday** | **DateTime**|  | [optional] 
  **email** | **String**|  | [optional] 
- **employeeRole** | **String**| Allowed values: admin, customerSupport, trainer, frontDesk, maintenance, machine, kiosk | [optional] 
+ **employeeRole** | **String**| Allowed values: admin, customerSupport, trainer, frontDesk, maintenance | [optional] 
  **gender** | **String**| Allowed values: m, f, o | [optional] 
  **language** | **String**| Allowed values: af, ar, az, be, bg, ca, cs, cy, da, de, dv, el, en, eo, es, et, eu, fa, fi, fo, fr, gl, gu, he, hi, hr, hu, hy, id, is, it, ja, ka, kk, kn, ko, kok, ky, lt, lv, mi, mk, mn, mr, ms, mt, nb, nl, ns, pa, pl, ps, pt, qu, ro, ru, sa, se, sk, sl, sq, sv, sw, ta, te, th, tl, tn, tr, tt, ts, uk, ur, uz, vi, xh, zh, zu | [optional] 
  **member** | **bool**|  | [optional] 
@@ -5633,7 +5741,7 @@ import 'package:keiser_metrics_sdk/api.dart';
 final api = MetricsApi metricsApi = MetricsApi();
 final bool ascending = true; // bool | 
 final bool employee = true; // bool | 
-final String employeeRole = employeeRole_example; // String | Allowed values: admin, customerSupport, trainer, frontDesk, maintenance, machine, kiosk
+final String employeeRole = employeeRole_example; // String | Allowed values: admin, customerSupport, trainer, frontDesk, maintenance
 final bool includeSession = true; // bool | 
 final num limit = 8.14; // num | 
 final bool member = true; // bool | 
@@ -5657,7 +5765,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ascending** | **bool**|  | [optional] [default to true]
  **employee** | **bool**|  | [optional] 
- **employeeRole** | **String**| Allowed values: admin, customerSupport, trainer, frontDesk, maintenance, machine, kiosk | [optional] 
+ **employeeRole** | **String**| Allowed values: admin, customerSupport, trainer, frontDesk, maintenance | [optional] 
  **includeSession** | **bool**|  | [optional] 
  **limit** | **num**|  | [optional] 
  **member** | **bool**|  | [optional] 
@@ -5794,7 +5902,7 @@ import 'package:keiser_metrics_sdk/api.dart';
 
 final api = MetricsApi metricsApi = MetricsApi();
 final num id = 8.14; // num | 
-final String employeeRole = employeeRole_example; // String | Allowed values: admin, customerSupport, trainer, frontDesk, maintenance, machine, kiosk
+final String employeeRole = employeeRole_example; // String | Allowed values: admin, customerSupport, trainer, frontDesk, maintenance
 final bool member = true; // bool | 
 final String memberIdentifier = memberIdentifier_example; // String | 
 final String apiVersion = apiVersion_example; // String | 
@@ -5812,7 +5920,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **num**|  | 
- **employeeRole** | **String**| Allowed values: admin, customerSupport, trainer, frontDesk, maintenance, machine, kiosk | [optional] 
+ **employeeRole** | **String**| Allowed values: admin, customerSupport, trainer, frontDesk, maintenance | [optional] 
  **member** | **bool**|  | [optional] 
  **memberIdentifier** | **String**|  | [optional] 
  **apiVersion** | **String**|  | [optional] 
@@ -5848,7 +5956,7 @@ import 'package:keiser_metrics_sdk/api.dart';
 
 final api = MetricsApi metricsApi = MetricsApi();
 final String email = email_example; // String | 
-final String employeeRole = employeeRole_example; // String | Allowed values: admin, customerSupport, trainer, frontDesk, maintenance, machine, kiosk
+final String employeeRole = employeeRole_example; // String | Allowed values: admin, customerSupport, trainer, frontDesk, maintenance
 final bool member = true; // bool | 
 final String memberIdentifier = memberIdentifier_example; // String | 
 final num userId = 8.14; // num | 
@@ -5867,7 +5975,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **email** | **String**|  | [optional] 
- **employeeRole** | **String**| Allowed values: admin, customerSupport, trainer, frontDesk, maintenance, machine, kiosk | [optional] 
+ **employeeRole** | **String**| Allowed values: admin, customerSupport, trainer, frontDesk, maintenance | [optional] 
  **member** | **bool**|  | [optional] 
  **memberIdentifier** | **String**|  | [optional] 
  **userId** | **num**|  | [optional] 
@@ -5908,7 +6016,7 @@ final num limit = 8.14; // num |
 final String memberIdentifier = memberIdentifier_example; // String | 
 final String names = names_example; // String | 
 final num offset = 8.14; // num | 
-final String sort = sort_example; // String | Allowed values: id, name, memberIdentifier, employeeRole
+final String sort = sort_example; // String | Allowed values: id, name
 final num userId = 8.14; // num | 
 final String apiVersion = apiVersion_example; // String | 
 
@@ -5929,7 +6037,7 @@ Name | Type | Description  | Notes
  **memberIdentifier** | **String**|  | [optional] 
  **names** | **String**|  | [optional] 
  **offset** | **num**|  | [optional] 
- **sort** | **String**| Allowed values: id, name, memberIdentifier, employeeRole | [optional] [default to 'id']
+ **sort** | **String**| Allowed values: id, name | [optional] [default to 'id']
  **userId** | **num**|  | [optional] 
  **apiVersion** | **String**|  | [optional] 
 
@@ -6168,7 +6276,7 @@ final num facilityId = 8.14; // num |
 final num limit = 8.14; // num | 
 final String names = names_example; // String | 
 final num offset = 8.14; // num | 
-final String sort = sort_example; // String | Allowed values: id, name
+final String sort = sort_example; // String | Allowed values: id, name, memberIdentifier, employeeRole
 final num userId = 8.14; // num | 
 final String apiVersion = apiVersion_example; // String | 
 
@@ -6189,7 +6297,7 @@ Name | Type | Description  | Notes
  **limit** | **num**|  | [optional] 
  **names** | **String**|  | [optional] 
  **offset** | **num**|  | [optional] 
- **sort** | **String**| Allowed values: id, name | [optional] [default to 'id']
+ **sort** | **String**| Allowed values: id, name, memberIdentifier, employeeRole | [optional] [default to 'id']
  **userId** | **num**|  | [optional] 
  **apiVersion** | **String**|  | [optional] 
 
@@ -6426,7 +6534,7 @@ import 'package:keiser_metrics_sdk/api.dart';
 final api = MetricsApi metricsApi = MetricsApi();
 final bool ascending = true; // bool | 
 final bool employee = true; // bool | 
-final String employeeRole = employeeRole_example; // String | Allowed values: admin, customerSupport, trainer, frontDesk, maintenance, machine, kiosk
+final String employeeRole = employeeRole_example; // String | Allowed values: admin, customerSupport, trainer, frontDesk, maintenance
 final num limit = 8.14; // num | 
 final bool member = true; // bool | 
 final num offset = 8.14; // num | 
@@ -6448,7 +6556,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ascending** | **bool**|  | [optional] [default to true]
  **employee** | **bool**|  | [optional] 
- **employeeRole** | **String**| Allowed values: admin, customerSupport, trainer, frontDesk, maintenance, machine, kiosk | [optional] 
+ **employeeRole** | **String**| Allowed values: admin, customerSupport, trainer, frontDesk, maintenance | [optional] 
  **limit** | **num**|  | [optional] 
  **member** | **bool**|  | [optional] 
  **offset** | **num**|  | [optional] 
@@ -6639,7 +6747,7 @@ import 'package:keiser_metrics_sdk/api.dart';
 
 final api = MetricsApi metricsApi = MetricsApi();
 final DateTime from = 2013-10-20T19:20:30+01:00; // DateTime | 
-final String group = group_example; // String | Allowed values: monthly, weekly, yearly
+final String group = group_example; // String | Allowed values: monthly, yearly, weekly
 final DateTime to = 2013-10-20T19:20:30+01:00; // DateTime | 
 final String apiVersion = apiVersion_example; // String | 
 
@@ -6655,7 +6763,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **from** | **DateTime**|  | 
- **group** | **String**| Allowed values: monthly, weekly, yearly | 
+ **group** | **String**| Allowed values: monthly, yearly, weekly | 
  **to** | **DateTime**|  | 
  **apiVersion** | **String**|  | [optional] 
 
@@ -6842,7 +6950,7 @@ final num limit = 8.14; // num |
 final String names = names_example; // String | 
 final num offset = 8.14; // num | 
 final bool open = true; // bool | 
-final String sort = sort_example; // String | Allowed values: id, name, open, startedAt, endedAt
+final String sort = sort_example; // String | Allowed values: id, startedAt, endedAt, name, open
 final DateTime to = 2013-10-20T19:20:30+01:00; // DateTime | 
 final String apiVersion = apiVersion_example; // String | 
 
@@ -6864,7 +6972,7 @@ Name | Type | Description  | Notes
  **names** | **String**|  | [optional] 
  **offset** | **num**|  | [optional] 
  **open** | **bool**|  | [optional] 
- **sort** | **String**| Allowed values: id, name, open, startedAt, endedAt | [optional] [default to 'startedAt']
+ **sort** | **String**| Allowed values: id, startedAt, endedAt, name, open | [optional] [default to 'startedAt']
  **to** | **DateTime**|  | [optional] 
  **apiVersion** | **String**|  | [optional] 
 
@@ -7337,6 +7445,62 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **facilityStrengthMachineCreate**
+> FacilityStrengthMachineResponse facilityStrengthMachineCreate(model, serial, strengthMachineId, version, location, apiVersion)
+
+Create a facility strength machine
+
+1
+
+### Example
+```dart
+import 'package:keiser_metrics_sdk/api.dart';
+// TODO Configure HTTP basic authorization: bearerAuth
+//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').username = 'YOUR_USERNAME'
+//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').password = 'YOUR_PASSWORD';
+
+final api = MetricsApi metricsApi = MetricsApi();
+final num model = 8.14; // num | 
+final String serial = serial_example; // String | 
+final num strengthMachineId = 8.14; // num | 
+final String version = version_example; // String | 
+final String location = location_example; // String | 
+final String apiVersion = apiVersion_example; // String | 
+
+try {
+    final response = metricsApi.facilityStrengthMachineCreate(model, serial, strengthMachineId, version, location, apiVersion);
+    print(response);
+} catch on DioError (e) {
+    print('Exception when calling MetricsApi->facilityStrengthMachineCreate: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **model** | **num**|  | 
+ **serial** | **String**|  | 
+ **strengthMachineId** | **num**|  | 
+ **version** | **String**|  | 
+ **location** | **String**|  | [optional] 
+ **apiVersion** | **String**|  | [optional] 
+
+### Return type
+
+[**FacilityStrengthMachineResponse**](FacilityStrengthMachineResponse.md)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **facilityStrengthMachineCreateEchip**
 > FacilityStrengthMachineBulkCreateResponse facilityStrengthMachineCreateEchip(echipData, apiVersion)
 
@@ -7352,7 +7516,7 @@ import 'package:keiser_metrics_sdk/api.dart';
 //defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').password = 'YOUR_PASSWORD';
 
 final api = MetricsApi metricsApi = MetricsApi();
-final num echipData = 8.14; // num | 
+final String echipData = echipData_example; // String | 
 final String apiVersion = apiVersion_example; // String | 
 
 try {
@@ -7367,7 +7531,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **echipData** | **num**|  | 
+ **echipData** | **String**|  | 
  **apiVersion** | **String**|  | [optional] 
 
 ### Return type
@@ -9033,500 +9197,6 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **mSeriesChallengeCreate**
-> MSeriesChallengeResponse mSeriesChallengeCreate(challengeType, focus, isPublic, names, userLimit, endAt, goal, startAt, apiVersion)
-
-Create a user mSeries Challenge
-
-1
-
-### Example
-```dart
-import 'package:keiser_metrics_sdk/api.dart';
-// TODO Configure HTTP basic authorization: bearerAuth
-//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').username = 'YOUR_USERNAME'
-//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').password = 'YOUR_PASSWORD';
-
-final api = MetricsApi metricsApi = MetricsApi();
-final String challengeType = challengeType_example; // String | Allowed values: timeBased, goalBased
-final String focus = focus_example; // String | Allowed values: points, caloricBurn, distance, duration
-final bool isPublic = true; // bool | 
-final String names = names_example; // String | 
-final num userLimit = 8.14; // num | 
-final DateTime endAt = 2013-10-20T19:20:30+01:00; // DateTime | 
-final num goal = 8.14; // num | 
-final DateTime startAt = 2013-10-20T19:20:30+01:00; // DateTime | 
-final String apiVersion = apiVersion_example; // String | 
-
-try {
-    final response = metricsApi.mSeriesChallengeCreate(challengeType, focus, isPublic, names, userLimit, endAt, goal, startAt, apiVersion);
-    print(response);
-} catch on DioError (e) {
-    print('Exception when calling MetricsApi->mSeriesChallengeCreate: $e\n');
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **challengeType** | **String**| Allowed values: timeBased, goalBased | 
- **focus** | **String**| Allowed values: points, caloricBurn, distance, duration | 
- **isPublic** | **bool**|  | 
- **names** | **String**|  | 
- **userLimit** | **num**|  | 
- **endAt** | **DateTime**|  | [optional] 
- **goal** | **num**|  | [optional] 
- **startAt** | **DateTime**|  | [optional] 
- **apiVersion** | **String**|  | [optional] 
-
-### Return type
-
-[**MSeriesChallengeResponse**](MSeriesChallengeResponse.md)
-
-### Authorization
-
-[bearerAuth](../README.md#bearerAuth)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **mSeriesChallengeDelete**
-> mSeriesChallengeDelete(id, apiVersion)
-
-Delete a user's owned mSeries Challenge
-
-1
-
-### Example
-```dart
-import 'package:keiser_metrics_sdk/api.dart';
-// TODO Configure HTTP basic authorization: bearerAuth
-//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').username = 'YOUR_USERNAME'
-//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').password = 'YOUR_PASSWORD';
-
-final api = MetricsApi metricsApi = MetricsApi();
-final num id = 8.14; // num | 
-final String apiVersion = apiVersion_example; // String | 
-
-try {
-    metricsApi.mSeriesChallengeDelete(id, apiVersion);
-} catch on DioError (e) {
-    print('Exception when calling MetricsApi->mSeriesChallengeDelete: $e\n');
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **num**|  | 
- **apiVersion** | **String**|  | [optional] 
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-[bearerAuth](../README.md#bearerAuth)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **mSeriesChallengeList**
-> MSeriesChallengeListResponse mSeriesChallengeList(ascending, from, isCompleted, limit, offset, relationship, sort, to, userId, apiVersion)
-
-List a user's owned or joined mSeries Challenges
-
-1
-
-### Example
-```dart
-import 'package:keiser_metrics_sdk/api.dart';
-// TODO Configure HTTP basic authorization: bearerAuth
-//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').username = 'YOUR_USERNAME'
-//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').password = 'YOUR_PASSWORD';
-
-final api = MetricsApi metricsApi = MetricsApi();
-final bool ascending = true; // bool | 
-final DateTime from = 2013-10-20T19:20:30+01:00; // DateTime | 
-final bool isCompleted = true; // bool | 
-final num limit = 8.14; // num | 
-final num offset = 8.14; // num | 
-final String relationship = relationship_example; // String | Allowed values: owned, joined
-final String sort = sort_example; // String | Allowed values: id, startAt, endAt, createdAt
-final DateTime to = 2013-10-20T19:20:30+01:00; // DateTime | 
-final num userId = 8.14; // num | 
-final String apiVersion = apiVersion_example; // String | 
-
-try {
-    final response = metricsApi.mSeriesChallengeList(ascending, from, isCompleted, limit, offset, relationship, sort, to, userId, apiVersion);
-    print(response);
-} catch on DioError (e) {
-    print('Exception when calling MetricsApi->mSeriesChallengeList: $e\n');
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **ascending** | **bool**|  | [optional] [default to false]
- **from** | **DateTime**|  | [optional] 
- **isCompleted** | **bool**|  | [optional] [default to false]
- **limit** | **num**|  | [optional] 
- **offset** | **num**|  | [optional] 
- **relationship** | **String**| Allowed values: owned, joined | [optional] [default to 'joined']
- **sort** | **String**| Allowed values: id, startAt, endAt, createdAt | [optional] [default to 'startAt']
- **to** | **DateTime**|  | [optional] 
- **userId** | **num**|  | [optional] 
- **apiVersion** | **String**|  | [optional] 
-
-### Return type
-
-[**MSeriesChallengeListResponse**](MSeriesChallengeListResponse.md)
-
-### Authorization
-
-[bearerAuth](../README.md#bearerAuth)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **mSeriesChallengeParticipantCreate**
-> MSeriesChallengeParticipantResponse mSeriesChallengeParticipantCreate(joinCode, userId, apiVersion)
-
-Join Challenge
-
-1
-
-### Example
-```dart
-import 'package:keiser_metrics_sdk/api.dart';
-// TODO Configure HTTP basic authorization: bearerAuth
-//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').username = 'YOUR_USERNAME'
-//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').password = 'YOUR_PASSWORD';
-
-final api = MetricsApi metricsApi = MetricsApi();
-final String joinCode = joinCode_example; // String | 
-final num userId = 8.14; // num | 
-final String apiVersion = apiVersion_example; // String | 
-
-try {
-    final response = metricsApi.mSeriesChallengeParticipantCreate(joinCode, userId, apiVersion);
-    print(response);
-} catch on DioError (e) {
-    print('Exception when calling MetricsApi->mSeriesChallengeParticipantCreate: $e\n');
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **joinCode** | **String**|  | 
- **userId** | **num**|  | [optional] 
- **apiVersion** | **String**|  | [optional] 
-
-### Return type
-
-[**MSeriesChallengeParticipantResponse**](MSeriesChallengeParticipantResponse.md)
-
-### Authorization
-
-[bearerAuth](../README.md#bearerAuth)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **mSeriesChallengeParticipantDelete**
-> mSeriesChallengeParticipantDelete(mSeriesChallengeId, userId, apiVersion)
-
-Leave Challenge
-
-1
-
-### Example
-```dart
-import 'package:keiser_metrics_sdk/api.dart';
-// TODO Configure HTTP basic authorization: bearerAuth
-//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').username = 'YOUR_USERNAME'
-//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').password = 'YOUR_PASSWORD';
-
-final api = MetricsApi metricsApi = MetricsApi();
-final num mSeriesChallengeId = 8.14; // num | 
-final num userId = 8.14; // num | 
-final String apiVersion = apiVersion_example; // String | 
-
-try {
-    metricsApi.mSeriesChallengeParticipantDelete(mSeriesChallengeId, userId, apiVersion);
-} catch on DioError (e) {
-    print('Exception when calling MetricsApi->mSeriesChallengeParticipantDelete: $e\n');
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **mSeriesChallengeId** | **num**|  | 
- **userId** | **num**|  | [optional] 
- **apiVersion** | **String**|  | [optional] 
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-[bearerAuth](../README.md#bearerAuth)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **mSeriesChallengeParticipantList**
-> MSeriesChallengeParticipantListResponse mSeriesChallengeParticipantList(nameSearchQuery, ascending, joinCode, limit, mSeriesChallengeId, offset, sort, userId, apiVersion)
-
-Search for mSeries Challenge Participants
-
-1
-
-### Example
-```dart
-import 'package:keiser_metrics_sdk/api.dart';
-// TODO Configure HTTP basic authorization: bearerAuth
-//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').username = 'YOUR_USERNAME'
-//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').password = 'YOUR_PASSWORD';
-
-final api = MetricsApi metricsApi = MetricsApi();
-final String nameSearchQuery = nameSearchQuery_example; // String | 
-final bool ascending = true; // bool | 
-final String joinCode = joinCode_example; // String | 
-final num limit = 8.14; // num | 
-final num mSeriesChallengeId = 8.14; // num | 
-final num offset = 8.14; // num | 
-final String sort = sort_example; // String | Allowed values: id, name, joinedAt
-final num userId = 8.14; // num | 
-final String apiVersion = apiVersion_example; // String | 
-
-try {
-    final response = metricsApi.mSeriesChallengeParticipantList(nameSearchQuery, ascending, joinCode, limit, mSeriesChallengeId, offset, sort, userId, apiVersion);
-    print(response);
-} catch on DioError (e) {
-    print('Exception when calling MetricsApi->mSeriesChallengeParticipantList: $e\n');
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **nameSearchQuery** | **String**|  | 
- **ascending** | **bool**|  | [optional] [default to true]
- **joinCode** | **String**|  | [optional] 
- **limit** | **num**|  | [optional] 
- **mSeriesChallengeId** | **num**|  | [optional] 
- **offset** | **num**|  | [optional] 
- **sort** | **String**| Allowed values: id, name, joinedAt | [optional] [default to 'name']
- **userId** | **num**|  | [optional] 
- **apiVersion** | **String**|  | [optional] 
-
-### Return type
-
-[**MSeriesChallengeParticipantListResponse**](MSeriesChallengeParticipantListResponse.md)
-
-### Authorization
-
-[bearerAuth](../README.md#bearerAuth)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **mSeriesChallengeParticipantShow**
-> MSeriesChallengeParticipantResponse mSeriesChallengeParticipantShow(joinCode, mSeriesChallengeId, mSeriesChallengeParticipantId, userId, apiVersion)
-
-Show a user's mSeries User Challenge Participant Record
-
-1
-
-### Example
-```dart
-import 'package:keiser_metrics_sdk/api.dart';
-// TODO Configure HTTP basic authorization: bearerAuth
-//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').username = 'YOUR_USERNAME'
-//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').password = 'YOUR_PASSWORD';
-
-final api = MetricsApi metricsApi = MetricsApi();
-final String joinCode = joinCode_example; // String | 
-final num mSeriesChallengeId = 8.14; // num | 
-final num mSeriesChallengeParticipantId = 8.14; // num | 
-final num userId = 8.14; // num | 
-final String apiVersion = apiVersion_example; // String | 
-
-try {
-    final response = metricsApi.mSeriesChallengeParticipantShow(joinCode, mSeriesChallengeId, mSeriesChallengeParticipantId, userId, apiVersion);
-    print(response);
-} catch on DioError (e) {
-    print('Exception when calling MetricsApi->mSeriesChallengeParticipantShow: $e\n');
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **joinCode** | **String**|  | [optional] 
- **mSeriesChallengeId** | **num**|  | [optional] 
- **mSeriesChallengeParticipantId** | **num**|  | [optional] 
- **userId** | **num**|  | [optional] 
- **apiVersion** | **String**|  | [optional] 
-
-### Return type
-
-[**MSeriesChallengeParticipantResponse**](MSeriesChallengeParticipantResponse.md)
-
-### Authorization
-
-[bearerAuth](../README.md#bearerAuth)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **mSeriesChallengeShow**
-> MSeriesChallengeResponse mSeriesChallengeShow(id, joinCode, userId, apiVersion)
-
-Show a user mSeries Challenge
-
-1
-
-### Example
-```dart
-import 'package:keiser_metrics_sdk/api.dart';
-// TODO Configure HTTP basic authorization: bearerAuth
-//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').username = 'YOUR_USERNAME'
-//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').password = 'YOUR_PASSWORD';
-
-final api = MetricsApi metricsApi = MetricsApi();
-final num id = 8.14; // num | 
-final String joinCode = joinCode_example; // String | 
-final num userId = 8.14; // num | 
-final String apiVersion = apiVersion_example; // String | 
-
-try {
-    final response = metricsApi.mSeriesChallengeShow(id, joinCode, userId, apiVersion);
-    print(response);
-} catch on DioError (e) {
-    print('Exception when calling MetricsApi->mSeriesChallengeShow: $e\n');
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **num**|  | [optional] 
- **joinCode** | **String**|  | [optional] 
- **userId** | **num**|  | [optional] 
- **apiVersion** | **String**|  | [optional] 
-
-### Return type
-
-[**MSeriesChallengeResponse**](MSeriesChallengeResponse.md)
-
-### Authorization
-
-[bearerAuth](../README.md#bearerAuth)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **mSeriesChallengeUpdate**
-> MSeriesChallengeResponse mSeriesChallengeUpdate(id, isPublic, names, userLimit, apiVersion)
-
-Update a user mSeries Challenge
-
-1
-
-### Example
-```dart
-import 'package:keiser_metrics_sdk/api.dart';
-// TODO Configure HTTP basic authorization: bearerAuth
-//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').username = 'YOUR_USERNAME'
-//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').password = 'YOUR_PASSWORD';
-
-final api = MetricsApi metricsApi = MetricsApi();
-final num id = 8.14; // num | 
-final bool isPublic = true; // bool | 
-final String names = names_example; // String | 
-final num userLimit = 8.14; // num | 
-final String apiVersion = apiVersion_example; // String | 
-
-try {
-    final response = metricsApi.mSeriesChallengeUpdate(id, isPublic, names, userLimit, apiVersion);
-    print(response);
-} catch on DioError (e) {
-    print('Exception when calling MetricsApi->mSeriesChallengeUpdate: $e\n');
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **num**|  | 
- **isPublic** | **bool**|  | [optional] 
- **names** | **String**|  | [optional] 
- **userLimit** | **num**|  | [optional] 
- **apiVersion** | **String**|  | [optional] 
-
-### Return type
-
-[**MSeriesChallengeResponse**](MSeriesChallengeResponse.md)
-
-### Authorization
-
-[bearerAuth](../README.md#bearerAuth)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 # **mSeriesDataSetCreate**
 > MSeriesDataSetResponse mSeriesDataSetCreate(buildMajor, buildMinor, mSeriesDataPoints, ordinalId, source_, autoAttachSession, cardioMachineId, machineType, sessionId, userId, apiVersion)
 
@@ -10623,7 +10293,7 @@ import 'package:keiser_metrics_sdk/api.dart';
 
 final api = MetricsApi metricsApi = MetricsApi();
 final String redirect = redirect_example; // String | 
-final String service = service_example; // String | Allowed values: google, facebook, apple, strava, trainingpeaks
+final String service = service_example; // String | Allowed values: apple, google, facebook, strava, trainingpeaks
 final String type = type_example; // String | Allowed values: login, connect
 final String apiVersion = apiVersion_example; // String | 
 
@@ -10640,7 +10310,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **redirect** | **String**|  | 
- **service** | **String**| Allowed values: google, facebook, apple, strava, trainingpeaks | 
+ **service** | **String**| Allowed values: apple, google, facebook, strava, trainingpeaks | 
  **type** | **String**| Allowed values: login, connect | 
  **apiVersion** | **String**|  | [optional] 
 
@@ -10817,7 +10487,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **oauthToken**
-> oauthToken(clientIdentifier, clientSecret, grantType, authorizationCode, refreshToken, apiVersion)
+> OauthTokenResponse oauthToken(clientIdentifier, clientSecret, grantType, authorizationCode, refreshToken, apiVersion)
 
 Returns tokens for third party oauth
 
@@ -10830,13 +10500,14 @@ import 'package:keiser_metrics_sdk/api.dart';
 final api = MetricsApi metricsApi = MetricsApi();
 final String clientIdentifier = clientIdentifier_example; // String | 
 final String clientSecret = clientSecret_example; // String | 
-final String grantType = grantType_example; // String | Allowed values: authorization_code, refresh_token
+final String grantType = grantType_example; // String | 
 final String authorizationCode = authorizationCode_example; // String | 
 final String refreshToken = refreshToken_example; // String | 
 final String apiVersion = apiVersion_example; // String | 
 
 try {
-    metricsApi.oauthToken(clientIdentifier, clientSecret, grantType, authorizationCode, refreshToken, apiVersion);
+    final response = metricsApi.oauthToken(clientIdentifier, clientSecret, grantType, authorizationCode, refreshToken, apiVersion);
+    print(response);
 } catch on DioError (e) {
     print('Exception when calling MetricsApi->oauthToken: $e\n');
 }
@@ -10848,14 +10519,14 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **clientIdentifier** | **String**|  | 
  **clientSecret** | **String**|  | 
- **grantType** | **String**| Allowed values: authorization_code, refresh_token | 
+ **grantType** | **String**|  | 
  **authorizationCode** | **String**|  | [optional] 
  **refreshToken** | **String**|  | [optional] 
  **apiVersion** | **String**|  | [optional] 
 
 ### Return type
 
-void (empty response body)
+[**OauthTokenResponse**](OauthTokenResponse.md)
 
 ### Authorization
 
@@ -10864,7 +10535,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -11240,7 +10911,7 @@ final num limit = 8.14; // num |
 final num offset = 8.14; // num | 
 final bool open = true; // bool | 
 final String requireExtendedDataType = requireExtendedDataType_example; // String | Allowed values: mSeries, strength, heartRate, session, workout
-final String sort = sort_example; // String | Allowed values: id, startedAt, endedAt
+final String sort = sort_example; // String | Allowed values: id, startedAt, endedAt, name, open
 final DateTime to = 2013-10-20T19:20:30+01:00; // DateTime | 
 final num userId = 8.14; // num | 
 final String apiVersion = apiVersion_example; // String | 
@@ -11263,7 +10934,7 @@ Name | Type | Description  | Notes
  **offset** | **num**|  | [optional] 
  **open** | **bool**|  | [optional] 
  **requireExtendedDataType** | **String**| Allowed values: mSeries, strength, heartRate, session, workout | [optional] 
- **sort** | **String**| Allowed values: id, startedAt, endedAt | [optional] [default to 'startedAt']
+ **sort** | **String**| Allowed values: id, startedAt, endedAt, name, open | [optional] [default to 'startedAt']
  **to** | **DateTime**|  | [optional] 
  **userId** | **num**|  | [optional] 
  **apiVersion** | **String**|  | [optional] 
@@ -12675,7 +12346,7 @@ void (empty response body)
 # **sessionPlanSetInstanceShow**
 > SessionPlanSetInstanceResponse sessionPlanSetInstanceShow(id, userId, apiVersion)
 
-Show a session plan set intance
+Show a session plan set instance
 
 1
 
@@ -12851,7 +12522,7 @@ import 'package:keiser_metrics_sdk/api.dart';
 final api = MetricsApi metricsApi = MetricsApi();
 final bool completed = true; // bool | 
 final num id = 8.14; // num | 
-final num completedForceUnit = 8.14; // num | 
+final String completedForceUnit = completedForceUnit_example; // String | Allowed values: lb, kg, ne, er
 final num completedRepetitionCount = 8.14; // num | 
 final num completedResistance = 8.14; // num | 
 final num strengthMachineDataSetId = 8.14; // num | 
@@ -12872,7 +12543,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **completed** | **bool**|  | 
  **id** | **num**|  | 
- **completedForceUnit** | **num**|  | [optional] 
+ **completedForceUnit** | **String**| Allowed values: lb, kg, ne, er | [optional] 
  **completedRepetitionCount** | **num**|  | [optional] 
  **completedResistance** | **num**|  | [optional] 
  **strengthMachineDataSetId** | **num**|  | [optional] 
@@ -12947,7 +12618,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **sessionPlanSetList**
-> SessionPlanSetListResponse sessionPlanSetList(ascending, limit, names, offset, sort, type, userId, apiVersion)
+> SessionPlanSetListResponse sessionPlanSetList(ascending, from, limit, names, offset, sort, to, type, userId, apiVersion)
 
 List session plan sets
 
@@ -12962,16 +12633,18 @@ import 'package:keiser_metrics_sdk/api.dart';
 
 final api = MetricsApi metricsApi = MetricsApi();
 final bool ascending = true; // bool | 
+final DateTime from = 2013-10-20T19:20:30+01:00; // DateTime | 
 final num limit = 8.14; // num | 
 final String names = names_example; // String | 
 final num offset = 8.14; // num | 
 final String sort = sort_example; // String | Allowed values: id, name
+final DateTime to = 2013-10-20T19:20:30+01:00; // DateTime | 
 final String type = type_example; // String | Allowed values: cardio, strength, stretch, activity
 final num userId = 8.14; // num | 
 final String apiVersion = apiVersion_example; // String | 
 
 try {
-    final response = metricsApi.sessionPlanSetList(ascending, limit, names, offset, sort, type, userId, apiVersion);
+    final response = metricsApi.sessionPlanSetList(ascending, from, limit, names, offset, sort, to, type, userId, apiVersion);
     print(response);
 } catch on DioError (e) {
     print('Exception when calling MetricsApi->sessionPlanSetList: $e\n');
@@ -12983,10 +12656,12 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ascending** | **bool**|  | [optional] [default to true]
+ **from** | **DateTime**|  | [optional] 
  **limit** | **num**|  | [optional] 
  **names** | **String**|  | [optional] 
  **offset** | **num**|  | [optional] 
  **sort** | **String**| Allowed values: id, name | [optional] [default to 'id']
+ **to** | **DateTime**|  | [optional] 
  **type** | **String**| Allowed values: cardio, strength, stretch, activity | [optional] 
  **userId** | **num**|  | [optional] 
  **apiVersion** | **String**|  | [optional] 
@@ -14173,7 +13848,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **sessionPlanTemplateList**
-> SessionPlanTemplateListResponse sessionPlanTemplateList(ascending, description, limit, names, offset, public, scheduleLength, sort, userId, apiVersion)
+> SessionPlanTemplateListResponse sessionPlanTemplateList(ascending, description, from, limit, names, offset, public, scheduleLength, sort, to, userId, apiVersion)
 
 List session plan templates
 
@@ -14189,17 +13864,19 @@ import 'package:keiser_metrics_sdk/api.dart';
 final api = MetricsApi metricsApi = MetricsApi();
 final bool ascending = true; // bool | 
 final String description = description_example; // String | 
+final DateTime from = 2013-10-20T19:20:30+01:00; // DateTime | 
 final num limit = 8.14; // num | 
 final String names = names_example; // String | 
 final num offset = 8.14; // num | 
 final bool public = true; // bool | 
-final bool scheduleLength = true; // bool | 
+final num scheduleLength = 8.14; // num | 
 final String sort = sort_example; // String | Allowed values: id, name, scheduleLength, public
+final DateTime to = 2013-10-20T19:20:30+01:00; // DateTime | 
 final num userId = 8.14; // num | 
 final String apiVersion = apiVersion_example; // String | 
 
 try {
-    final response = metricsApi.sessionPlanTemplateList(ascending, description, limit, names, offset, public, scheduleLength, sort, userId, apiVersion);
+    final response = metricsApi.sessionPlanTemplateList(ascending, description, from, limit, names, offset, public, scheduleLength, sort, to, userId, apiVersion);
     print(response);
 } catch on DioError (e) {
     print('Exception when calling MetricsApi->sessionPlanTemplateList: $e\n');
@@ -14212,12 +13889,14 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ascending** | **bool**|  | [optional] [default to true]
  **description** | **String**|  | [optional] 
+ **from** | **DateTime**|  | [optional] 
  **limit** | **num**|  | [optional] 
  **names** | **String**|  | [optional] 
  **offset** | **num**|  | [optional] 
  **public** | **bool**|  | [optional] 
- **scheduleLength** | **bool**|  | [optional] 
+ **scheduleLength** | **num**|  | [optional] 
  **sort** | **String**| Allowed values: id, name, scheduleLength, public | [optional] [default to 'id']
+ **to** | **DateTime**|  | [optional] 
  **userId** | **num**|  | [optional] 
  **apiVersion** | **String**|  | [optional] 
 
@@ -14591,7 +14270,7 @@ final String category = category_example; // String | Allowed values: lowerBody,
 final String defaultExerciseAlias = defaultExerciseAlias_example; // String | 
 final String humanMovement = humanMovement_example; // String | Allowed values: unilateral, bilateral
 final String plane = plane_example; // String | Allowed values: sagittal, frontal, transverse
-final String movement = movement_example; // String | Allowed values: compound, isolation
+final String movement = movement_example; // String | Allowed values: isolation, compound
 final String apiVersion = apiVersion_example; // String | 
 
 try {
@@ -14610,7 +14289,7 @@ Name | Type | Description  | Notes
  **defaultExerciseAlias** | **String**|  | 
  **humanMovement** | **String**| Allowed values: unilateral, bilateral | 
  **plane** | **String**| Allowed values: sagittal, frontal, transverse | 
- **movement** | **String**| Allowed values: compound, isolation | [optional] 
+ **movement** | **String**| Allowed values: isolation, compound | [optional] 
  **apiVersion** | **String**|  | [optional] 
 
 ### Return type
@@ -14695,7 +14374,7 @@ final String category = category_example; // String | Allowed values: lowerBody,
 final String defaultAlias = defaultAlias_example; // String | 
 final String humanMovement = humanMovement_example; // String | Allowed values: unilateral, bilateral
 final num limit = 8.14; // num | 
-final String movement = movement_example; // String | Allowed values: compound, isolation
+final String movement = movement_example; // String | Allowed values: isolation, compound
 final num offset = 8.14; // num | 
 final String plane = plane_example; // String | Allowed values: sagittal, frontal, transverse
 final String sort = sort_example; // String | Allowed values: id, defaultAlias, category, movement, plane, humanMovement
@@ -14718,7 +14397,7 @@ Name | Type | Description  | Notes
  **defaultAlias** | **String**|  | [optional] 
  **humanMovement** | **String**| Allowed values: unilateral, bilateral | [optional] 
  **limit** | **num**|  | [optional] 
- **movement** | **String**| Allowed values: compound, isolation | [optional] 
+ **movement** | **String**| Allowed values: isolation, compound | [optional] 
  **offset** | **num**|  | [optional] 
  **plane** | **String**| Allowed values: sagittal, frontal, transverse | [optional] 
  **sort** | **String**| Allowed values: id, defaultAlias, category, movement, plane, humanMovement | [optional] [default to 'id']
@@ -15063,7 +14742,7 @@ final String category = category_example; // String | Allowed values: lowerBody,
 final String humanMovement = humanMovement_example; // String | Allowed values: unilateral, bilateral
 final num id = 8.14; // num | 
 final String plane = plane_example; // String | Allowed values: sagittal, frontal, transverse
-final String movement = movement_example; // String | Allowed values: compound, isolation
+final String movement = movement_example; // String | Allowed values: isolation, compound
 final String apiVersion = apiVersion_example; // String | 
 
 try {
@@ -15082,7 +14761,7 @@ Name | Type | Description  | Notes
  **humanMovement** | **String**| Allowed values: unilateral, bilateral | 
  **id** | **num**|  | 
  **plane** | **String**| Allowed values: sagittal, frontal, transverse | 
- **movement** | **String**| Allowed values: compound, isolation | [optional] 
+ **movement** | **String**| Allowed values: isolation, compound | [optional] 
  **apiVersion** | **String**|  | [optional] 
 
 ### Return type
@@ -17190,7 +16869,7 @@ Create a user with basic authentication
 import 'package:keiser_metrics_sdk/api.dart';
 
 final api = MetricsApi metricsApi = MetricsApi();
-final num email = 8.14; // num | 
+final String email = email_example; // String | 
 final String password = password_example; // String | 
 final bool refreshable = true; // bool | 
 final String apiVersion = apiVersion_example; // String | 
@@ -17207,7 +16886,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **email** | **num**|  | 
+ **email** | **String**|  | 
  **password** | **String**|  | 
  **refreshable** | **bool**|  | [optional] 
  **apiVersion** | **String**|  | [optional] 
@@ -17239,7 +16918,7 @@ Create a user with basic authentication [DEP]
 import 'package:keiser_metrics_sdk/api.dart';
 
 final api = MetricsApi metricsApi = MetricsApi();
-final num email = 8.14; // num | 
+final String email = email_example; // String | 
 final String password = password_example; // String | 
 final bool refreshable = true; // bool | 
 final String apiVersion = apiVersion_example; // String | 
@@ -17255,7 +16934,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **email** | **num**|  | 
+ **email** | **String**|  | 
  **password** | **String**|  | 
  **refreshable** | **bool**|  | [optional] 
  **apiVersion** | **String**|  | [optional] 

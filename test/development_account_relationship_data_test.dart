@@ -22,7 +22,7 @@ void main() {
       // TODO
     });
 
-    // String role
+    // DevelopmentAccountRelationshipRole role
     test('to test the property `role`', () async {
       // TODO
     });

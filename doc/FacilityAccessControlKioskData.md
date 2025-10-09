@@ -10,9 +10,8 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **kioskModeAllowed** | **bool** |  | [optional] 
 **isKioskModeAllowed** | **bool** |  | 
-**isFingerprintAuthenticationAllowed** | **bool** |  | 
-**primaryIdentification** | **String** |  | 
-**secondaryIdentification** | **String** |  | 
+**primaryIdentification** | [**FacilityAccessControlKioskPrimaryIdentification**](FacilityAccessControlKioskPrimaryIdentification.md) |  | 
+**secondaryIdentification** | [**FacilityAccessControlKioskSecondaryIdentification**](FacilityAccessControlKioskSecondaryIdentification.md) |  | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

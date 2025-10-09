@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **strengthExerciseId** | **num** |  | [optional] 
 **strengthMachineId** | **num** |  | [optional] 
-**variant** | **String** |  | [optional] 
+**variant** | [**StrengthExerciseVariantType**](StrengthExerciseVariantType.md) |  | [optional] 
 **attachment** | **String** |  | [optional] 
 **equipmentMechanicalMovement** | **String** |  | [optional] 
 **sort** | [**StrengthExerciseVariantSorting**](StrengthExerciseVariantSorting.md) |  | 

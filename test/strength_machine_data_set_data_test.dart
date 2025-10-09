@@ -62,7 +62,7 @@ void main() {
       // TODO
     });
 
-    // String resistancePrecision
+    // ResistancePrecision resistancePrecision
     test('to test the property `resistancePrecision`', () async {
       // TODO
     });
@@ -72,7 +72,7 @@ void main() {
       // TODO
     });
 
-    // String forceUnit
+    // ForceUnit forceUnit
     test('to test the property `forceUnit`', () async {
       // TODO
     });

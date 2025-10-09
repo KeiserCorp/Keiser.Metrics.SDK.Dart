@@ -29,7 +29,7 @@ SessionPlanSequenceTemplateListResponse
                       .toList()),
               sessionPlanSequenceTemplatesMeta: $checkedConvert(
                   'sessionPlanSequenceTemplatesMeta',
-                  (v) => SessionPlansequenceTemplateMeta.fromJson(
+                  (v) => SessionPlanSequenceTemplateMeta.fromJson(
                       v as Map<String, dynamic>)),
             );
             return val;

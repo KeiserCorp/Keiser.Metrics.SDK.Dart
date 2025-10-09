@@ -9,7 +9,7 @@ import 'package:keiser_metrics_sdk/api.dart';
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **num** |  | 
-**side** | **String** |  | 
+**side** | [**Side**](Side.md) |  | 
 **count** | **num** |  | 
 **work** | **num** |  | 
 **completedAt** | [**DateTime**](DateTime.md) |  | 
@@ -20,7 +20,7 @@ Name | Type | Description | Notes
 **averageVelocity** | **num** |  | 
 **rangeOfMotion** | **num** |  | 
 **setPointForce** | **num** |  | 
-**forceUnit** | **String** |  | 
+**forceUnit** | [**ForceUnit**](ForceUnit.md) |  | 
 **startSinceEpoch** | **num** |  | 
 **endSinceEpoch** | **num** |  | 
 **addedMass** | **num** |  | 

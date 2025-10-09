@@ -10,8 +10,8 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **num** |  | 
 **epochAt** | [**DateTime**](DateTime.md) |  | 
-**type** | **String** |  | 
-**testSide** | **String** |  | [optional] 
+**type** | [**A500DataSetType**](A500DataSetType.md) |  | 
+**testSide** | [**TestSide**](TestSide.md) |  | [optional] 
 **leftTestResult** | [**A500TestResultData**](A500TestResultData.md) |  | [optional] 
 **rightTestResult** | [**A500TestResultData**](A500TestResultData.md) |  | [optional] 
 **a500RepDataPoints** | [**List&lt;A500RepDataPointData&gt;**](A500RepDataPointData.md) |  | [optional] 

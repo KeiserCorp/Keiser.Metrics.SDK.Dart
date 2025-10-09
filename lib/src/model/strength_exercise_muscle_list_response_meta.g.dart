@@ -58,7 +58,7 @@ Map<String, dynamic> _$StrengthExerciseMuscleListResponseMetaToJson(
 const _$MuscleTargetLevelEnumMap = {
   MuscleTargetLevel.primary: 'primary',
   MuscleTargetLevel.secondary: 'secondary',
-  MuscleTargetLevel.stabilizer: 'stabilizer',
+  MuscleTargetLevel.tertiary: 'tertiary',
 };
 
 const _$MuscleSortingEnumMap = {

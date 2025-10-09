@@ -12,7 +12,7 @@ void main() {
       // TODO
     });
 
-    // MuscleIdentifier muscle
+    // String muscle
     test('to test the property `muscle`', () async {
       // TODO
     });
@@ -27,7 +27,7 @@ void main() {
       // TODO
     });
 
-    // String targetLevel
+    // MuscleTargetLevel targetLevel
     test('to test the property `targetLevel`', () async {
       // TODO
     });

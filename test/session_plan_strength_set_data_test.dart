@@ -17,7 +17,7 @@ void main() {
       // TODO
     });
 
-    // String forceUnit
+    // ForceUnit forceUnit
     test('to test the property `forceUnit`', () async {
       // TODO
     });

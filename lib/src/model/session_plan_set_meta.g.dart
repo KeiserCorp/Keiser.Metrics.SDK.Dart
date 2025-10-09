@@ -11,16 +11,14 @@ SessionPlanSetMeta _$SessionPlanSetMetaFromJson(Map<String, dynamic> json) =>
       'SessionPlanSetMeta',
       json,
       ($checkedConvert) {
-        $checkKeys(
-          json,
-          requiredKeys: const ['name', 'type', 'from', 'to'],
-        );
         final val = SessionPlanSetMeta(
-          names: $checkedConvert('name', (v) => v as String),
+          names: $checkedConvert('name', (v) => v as String?),
           type: $checkedConvert('type',
-              (v) => $enumDecode(_$SessionPlanSetMetaTypeEnumEnumMap, v)),
-          from: $checkedConvert('from', (v) => DateTime.parse(v as String)),
-          to: $checkedConvert('to', (v) => DateTime.parse(v as String)),
+              (v) => $enumDecodeNullable(_$SessionPlanSetTypeEnumMap, v)),
+          from: $checkedConvert(
+              'from', (v) => v == null ? null : DateTime.parse(v as String)),
+          to: $checkedConvert(
+              'to', (v) => v == null ? null : DateTime.parse(v as String)),
           sort: $checkedConvert('sort', (v) => v as String?),
           ascending: $checkedConvert('ascending', (v) => v as bool?),
           limit: $checkedConvert('limit', (v) => v as num?),
@@ -33,12 +31,7 @@ SessionPlanSetMeta _$SessionPlanSetMetaFromJson(Map<String, dynamic> json) =>
     );
 
 Map<String, dynamic> _$SessionPlanSetMetaToJson(SessionPlanSetMeta instance) {
-  final val = <String, dynamic>{
-    'name': instance.names,
-    'type': _$SessionPlanSetMetaTypeEnumEnumMap[instance.type]!,
-    'from': instance.from.toIso8601String(),
-    'to': instance.to.toIso8601String(),
-  };
+  final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
     if (value != null) {
@@ -46,6 +39,10 @@ Map<String, dynamic> _$SessionPlanSetMetaToJson(SessionPlanSetMeta instance) {
     }
   }
 
+  writeNotNull('name', instance.names);
+  writeNotNull('type', _$SessionPlanSetTypeEnumMap[instance.type]);
+  writeNotNull('from', instance.from?.toIso8601String());
+  writeNotNull('to', instance.to?.toIso8601String());
   writeNotNull('sort', instance.sort);
   writeNotNull('ascending', instance.ascending);
   writeNotNull('limit', instance.limit);
@@ -54,9 +51,9 @@ Map<String, dynamic> _$SessionPlanSetMetaToJson(SessionPlanSetMeta instance) {
   return val;
 }
 
-const _$SessionPlanSetMetaTypeEnumEnumMap = {
-  SessionPlanSetMetaTypeEnum.strength: 'strength',
-  SessionPlanSetMetaTypeEnum.stretch: 'stretch',
-  SessionPlanSetMetaTypeEnum.cardio: 'cardio',
-  SessionPlanSetMetaTypeEnum.activity: 'activity',
+const _$SessionPlanSetTypeEnumMap = {
+  SessionPlanSetType.cardio: 'cardio',
+  SessionPlanSetType.strength: 'strength',
+  SessionPlanSetType.stretch: 'stretch',
+  SessionPlanSetType.activity: 'activity',
 };

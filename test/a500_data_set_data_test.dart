@@ -17,12 +17,12 @@ void main() {
       // TODO
     });
 
-    // String type
+    // A500DataSetType type
     test('to test the property `type`', () async {
       // TODO
     });
 
-    // String testSide
+    // TestSide testSide
     test('to test the property `testSide`', () async {
       // TODO
     });

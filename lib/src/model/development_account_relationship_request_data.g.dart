@@ -30,8 +30,7 @@ DevelopmentAccountRelationshipRequestData
               role: $checkedConvert(
                   'role',
                   (v) => $enumDecode(
-                      _$DevelopmentAccountRelationshipRequestDataRoleEnumEnumMap,
-                      v)),
+                      _$DevelopmentAccountRelationshipRoleEnumMap, v)),
               code: $checkedConvert('code', (v) => v as String?),
               user: $checkedConvert(
                   'user',
@@ -56,8 +55,7 @@ Map<String, dynamic> _$DevelopmentAccountRelationshipRequestDataToJson(
     'id': instance.id,
     'developmentAccountId': instance.developmentAccountId,
     'displayEmail': instance.displayEmail,
-    'role': _$DevelopmentAccountRelationshipRequestDataRoleEnumEnumMap[
-        instance.role]!,
+    'role': _$DevelopmentAccountRelationshipRoleEnumMap[instance.role]!,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -73,7 +71,7 @@ Map<String, dynamic> _$DevelopmentAccountRelationshipRequestDataToJson(
   return val;
 }
 
-const _$DevelopmentAccountRelationshipRequestDataRoleEnumEnumMap = {
-  DevelopmentAccountRelationshipRequestDataRoleEnum.owner: 'owner',
-  DevelopmentAccountRelationshipRequestDataRoleEnum.developer: 'developer',
+const _$DevelopmentAccountRelationshipRoleEnumMap = {
+  DevelopmentAccountRelationshipRole.owner: 'owner',
+  DevelopmentAccountRelationshipRole.developer: 'developer',
 };

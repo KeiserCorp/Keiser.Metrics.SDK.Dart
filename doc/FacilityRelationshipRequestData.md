@@ -15,7 +15,7 @@ Name | Type | Description | Notes
 **facilityApproval** | **bool** |  | 
 **member** | **bool** |  | 
 **memberIdentifier** | **String** |  | [optional] 
-**employeeRole** | **String** |  | [optional] 
+**employeeRole** | [**EmployeeRole**](EmployeeRole.md) |  | [optional] 
 **facility** | [**FacilityData**](FacilityData.md) |  | [optional] 
 **user** | [**UserData**](UserData.md) |  | [optional] 
 

@@ -18,13 +18,13 @@ class SessionPlanSequenceInstanceMeta {
   /// Returns a new [SessionPlanSequenceInstanceMeta] instance.
   const SessionPlanSequenceInstanceMeta({
 
-    required  this.names,
+     this.names,
 
-    required  this.description,
+     this.description,
 
-    required  this.from,
+     this.from,
 
-    required  this.to,
+     this.to,
 
      this.sort,
 
@@ -40,48 +40,48 @@ class SessionPlanSequenceInstanceMeta {
   @JsonKey(
     
     name: r'name',
-    required: true,
+    required: false,
     includeIfNull: false
   )
 
 
-  final String names;
+  final String? names;
 
 
 
   @JsonKey(
     
     name: r'description',
-    required: true,
+    required: false,
     includeIfNull: false
   )
 
 
-  final String description;
+  final String? description;
 
 
 
   @JsonKey(
     
     name: r'from',
-    required: true,
+    required: false,
     includeIfNull: false
   )
 
 
-  final String from;
+  final DateTime? from;
 
 
 
   @JsonKey(
     
     name: r'to',
-    required: true,
+    required: false,
     includeIfNull: false
   )
 
 
-  final String to;
+  final DateTime? to;
 
 
 

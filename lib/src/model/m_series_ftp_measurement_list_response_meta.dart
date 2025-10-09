@@ -48,7 +48,7 @@ class MSeriesFtpMeasurementListResponseMeta {
   )
 
 
-  final String? from;
+  final DateTime? from;
 
 
 
@@ -60,7 +60,7 @@ class MSeriesFtpMeasurementListResponseMeta {
   )
 
 
-  final String? to;
+  final DateTime? to;
 
 
 

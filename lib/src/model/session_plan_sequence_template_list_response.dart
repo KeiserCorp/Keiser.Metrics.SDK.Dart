@@ -3,7 +3,7 @@
 //
 
 // ignore_for_file: unused_element
-import 'package:keiser_metrics_sdk/src/model/session_plansequence_template_meta.dart';
+import 'package:keiser_metrics_sdk/src/model/session_plan_sequence_template_meta.dart';
 import 'package:keiser_metrics_sdk/src/model/session_plan_sequence_template_data.dart';
 import 'package:json_annotation/json_annotation.dart';
 
@@ -45,7 +45,7 @@ class SessionPlanSequenceTemplateListResponse {
   )
 
 
-  final SessionPlansequenceTemplateMeta sessionPlanSequenceTemplatesMeta;
+  final SessionPlanSequenceTemplateMeta sessionPlanSequenceTemplatesMeta;
 
 
 

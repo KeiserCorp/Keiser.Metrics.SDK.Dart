@@ -9,10 +9,10 @@ import 'package:keiser_metrics_sdk/api.dart';
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **num** |  | 
-**muscle** | [**MuscleIdentifier**](MuscleIdentifier.md) |  | 
+**muscle** | **String** |  | 
 **group** | [**MuscleGroup**](MuscleGroup.md) |  | [optional] 
 **area** | [**MuscleArea**](MuscleArea.md) |  | [optional] 
-**targetLevel** | **String** |  | 
+**targetLevel** | [**MuscleTargetLevel**](MuscleTargetLevel.md) |  | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

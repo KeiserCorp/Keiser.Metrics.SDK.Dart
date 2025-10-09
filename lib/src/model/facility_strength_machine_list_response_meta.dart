@@ -19,7 +19,7 @@ class FacilityStrengthMachineListResponseMeta {
   /// Returns a new [FacilityStrengthMachineListResponseMeta] instance.
   const FacilityStrengthMachineListResponseMeta({
 
-    required  this.model,
+     this.model,
 
      this.source_,
 
@@ -39,12 +39,12 @@ class FacilityStrengthMachineListResponseMeta {
   @JsonKey(
     
     name: r'model',
-    required: true,
+    required: false,
     includeIfNull: false
   )
 
 
-  final String model;
+  final String? model;
 
 
 

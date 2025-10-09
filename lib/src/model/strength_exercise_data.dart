@@ -5,8 +5,12 @@
 // ignore_for_file: unused_element
 import 'package:keiser_metrics_sdk/src/model/exercise_alias_data.dart';
 import 'package:keiser_metrics_sdk/src/model/muscle_data.dart';
+import 'package:keiser_metrics_sdk/src/model/strength_exercise_movement_dep.dart';
 import 'package:keiser_metrics_sdk/src/model/strength_machine_data.dart';
+import 'package:keiser_metrics_sdk/src/model/strength_exercise_movement.dart';
 import 'package:keiser_metrics_sdk/src/model/strength_exercise_variant_data.dart';
+import 'package:keiser_metrics_sdk/src/model/strength_exercise_plane.dart';
+import 'package:keiser_metrics_sdk/src/model/strength_exercise_category.dart';
 import 'package:json_annotation/json_annotation.dart';
 
 part 'strength_exercise_data.g.dart';
@@ -28,7 +32,7 @@ class StrengthExerciseData {
 
      this.movement,
 
-    required  this.humanMovement,
+     this.humanMovement,
 
     required  this.plane,
 
@@ -63,7 +67,7 @@ class StrengthExerciseData {
   )
 
 
-  final StrengthExerciseDataCategoryEnum category;
+  final StrengthExerciseCategory category;
 
 
 
@@ -75,19 +79,19 @@ class StrengthExerciseData {
   )
 
 
-  final StrengthExerciseDataMovementEnum? movement;
+  final StrengthExerciseMovementDEP? movement;
 
 
 
   @JsonKey(
     
     name: r'humanMovement',
-    required: true,
+    required: false,
     includeIfNull: false
   )
 
 
-  final StrengthExerciseDataHumanMovementEnum humanMovement;
+  final StrengthExerciseMovement? humanMovement;
 
 
 
@@ -99,7 +103,7 @@ class StrengthExerciseData {
   )
 
 
-  final StrengthExerciseDataPlaneEnum plane;
+  final StrengthExercisePlane plane;
 
 
 
@@ -199,48 +203,4 @@ class StrengthExerciseData {
   }
 
 }
-
-
-enum StrengthExerciseDataCategoryEnum {
-  @JsonValue(r'lowerBody')
-  lowerBody,
-  @JsonValue(r'upperBody')
-  upperBody,
-  @JsonValue(r'core')
-  core,
-  @JsonValue(r'explosive')
-  explosive,
-  @JsonValue(r'complex')
-  complex,
-}
-
-
-
-enum StrengthExerciseDataMovementEnum {
-  @JsonValue(r'isolation')
-  isolation,
-  @JsonValue(r'compound')
-  compound,
-}
-
-
-
-enum StrengthExerciseDataHumanMovementEnum {
-  @JsonValue(r'unilateral')
-  unilateral,
-  @JsonValue(r'bilateral')
-  bilateral,
-}
-
-
-
-enum StrengthExerciseDataPlaneEnum {
-  @JsonValue(r'sagittal')
-  sagittal,
-  @JsonValue(r'frontal')
-  frontal,
-  @JsonValue(r'transverse')
-  transverse,
-}
-
 

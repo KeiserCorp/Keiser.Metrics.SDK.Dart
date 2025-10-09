@@ -20,9 +20,7 @@ SessionPlanStrengthSetData _$SessionPlanStrengthSetDataFromJson(
           repetitionCount: $checkedConvert('repetitionCount', (v) => v as num),
           resistance: $checkedConvert('resistance', (v) => v as num),
           forceUnit: $checkedConvert(
-              'forceUnit',
-              (v) => $enumDecode(
-                  _$SessionPlanStrengthSetDataForceUnitEnumEnumMap, v)),
+              'forceUnit', (v) => $enumDecode(_$ForceUnitEnumMap, v)),
           strengthExercise: $checkedConvert(
               'strengthExercise',
               (v) => v == null
@@ -43,8 +41,7 @@ Map<String, dynamic> _$SessionPlanStrengthSetDataToJson(
   final val = <String, dynamic>{
     'repetitionCount': instance.repetitionCount,
     'resistance': instance.resistance,
-    'forceUnit':
-        _$SessionPlanStrengthSetDataForceUnitEnumEnumMap[instance.forceUnit]!,
+    'forceUnit': _$ForceUnitEnumMap[instance.forceUnit]!,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -58,9 +55,9 @@ Map<String, dynamic> _$SessionPlanStrengthSetDataToJson(
   return val;
 }
 
-const _$SessionPlanStrengthSetDataForceUnitEnumEnumMap = {
-  SessionPlanStrengthSetDataForceUnitEnum.lb: 'lb',
-  SessionPlanStrengthSetDataForceUnitEnum.kg: 'kg',
-  SessionPlanStrengthSetDataForceUnitEnum.ne: 'ne',
-  SessionPlanStrengthSetDataForceUnitEnum.er: 'er',
+const _$ForceUnitEnumMap = {
+  ForceUnit.lb: 'lb',
+  ForceUnit.kg: 'kg',
+  ForceUnit.ne: 'ne',
+  ForceUnit.er: 'er',
 };

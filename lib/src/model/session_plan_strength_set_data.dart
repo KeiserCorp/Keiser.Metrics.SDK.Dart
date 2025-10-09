@@ -5,6 +5,7 @@
 // ignore_for_file: unused_element
 import 'package:keiser_metrics_sdk/src/model/strength_exercise_data.dart';
 import 'package:keiser_metrics_sdk/src/model/strength_machine_data.dart';
+import 'package:keiser_metrics_sdk/src/model/force_unit.dart';
 import 'package:json_annotation/json_annotation.dart';
 
 part 'session_plan_strength_set_data.g.dart';
@@ -63,7 +64,7 @@ class SessionPlanStrengthSetData {
   )
 
 
-  final SessionPlanStrengthSetDataForceUnitEnum forceUnit;
+  final ForceUnit forceUnit;
 
 
 
@@ -117,17 +118,4 @@ class SessionPlanStrengthSetData {
   }
 
 }
-
-
-enum SessionPlanStrengthSetDataForceUnitEnum {
-  @JsonValue(r'lb')
-  lb,
-  @JsonValue(r'kg')
-  kg,
-  @JsonValue(r'ne')
-  ne,
-  @JsonValue(r'er')
-  er,
-}
-
 

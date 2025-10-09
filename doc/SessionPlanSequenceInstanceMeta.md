@@ -8,10 +8,10 @@ import 'package:keiser_metrics_sdk/api.dart';
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**names** | **String** |  | 
-**description** | **String** |  | 
-**from** | **String** |  | 
-**to** | **String** |  | 
+**names** | **String** |  | [optional] 
+**description** | **String** |  | [optional] 
+**from** | [**DateTime**](DateTime.md) |  | [optional] 
+**to** | [**DateTime**](DateTime.md) |  | [optional] 
 **sort** | **String** |  | [optional] 
 **ascending** | **bool** |  | [optional] 
 **limit** | **num** |  | [optional] 

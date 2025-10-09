@@ -12,24 +12,15 @@ SessionPlanTemplateMeta _$SessionPlanTemplateMetaFromJson(
       'SessionPlanTemplateMeta',
       json,
       ($checkedConvert) {
-        $checkKeys(
-          json,
-          requiredKeys: const [
-            'name',
-            'description',
-            'scheduleLength',
-            'public',
-            'from',
-            'to'
-          ],
-        );
         final val = SessionPlanTemplateMeta(
-          names: $checkedConvert('name', (v) => v as String),
-          description: $checkedConvert('description', (v) => v as String),
-          scheduleLength: $checkedConvert('scheduleLength', (v) => v as num),
-          public: $checkedConvert('public', (v) => v as bool),
-          from: $checkedConvert('from', (v) => DateTime.parse(v as String)),
-          to: $checkedConvert('to', (v) => DateTime.parse(v as String)),
+          names: $checkedConvert('name', (v) => v as String?),
+          description: $checkedConvert('description', (v) => v as String?),
+          scheduleLength: $checkedConvert('scheduleLength', (v) => v as num?),
+          public: $checkedConvert('public', (v) => v as bool?),
+          from: $checkedConvert(
+              'from', (v) => v == null ? null : DateTime.parse(v as String)),
+          to: $checkedConvert(
+              'to', (v) => v == null ? null : DateTime.parse(v as String)),
           sort: $checkedConvert('sort', (v) => v as String?),
           ascending: $checkedConvert('ascending', (v) => v as bool?),
           limit: $checkedConvert('limit', (v) => v as num?),
@@ -43,14 +34,7 @@ SessionPlanTemplateMeta _$SessionPlanTemplateMetaFromJson(
 
 Map<String, dynamic> _$SessionPlanTemplateMetaToJson(
     SessionPlanTemplateMeta instance) {
-  final val = <String, dynamic>{
-    'name': instance.names,
-    'description': instance.description,
-    'scheduleLength': instance.scheduleLength,
-    'public': instance.public,
-    'from': instance.from.toIso8601String(),
-    'to': instance.to.toIso8601String(),
-  };
+  final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
     if (value != null) {
@@ -58,6 +42,12 @@ Map<String, dynamic> _$SessionPlanTemplateMetaToJson(
     }
   }
 
+  writeNotNull('name', instance.names);
+  writeNotNull('description', instance.description);
+  writeNotNull('scheduleLength', instance.scheduleLength);
+  writeNotNull('public', instance.public);
+  writeNotNull('from', instance.from?.toIso8601String());
+  writeNotNull('to', instance.to?.toIso8601String());
   writeNotNull('sort', instance.sort);
   writeNotNull('ascending', instance.ascending);
   writeNotNull('limit', instance.limit);

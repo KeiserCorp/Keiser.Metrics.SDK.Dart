@@ -24,7 +24,7 @@ class SessionPlanSetInstanceData {
 
     required  this.id,
 
-    required  this.notes,
+     this.notes,
 
     required  this.completed,
 
@@ -54,12 +54,12 @@ class SessionPlanSetInstanceData {
   @JsonKey(
     
     name: r'notes',
-    required: true,
+    required: false,
     includeIfNull: false
   )
 
 
-  final String notes;
+  final String? notes;
 
 
 
@@ -170,12 +170,12 @@ class SessionPlanSetInstanceData {
 
 
 enum SessionPlanSetInstanceDataTypeEnum {
+  @JsonValue(r'cardio')
+  cardio,
   @JsonValue(r'strength')
   strength,
   @JsonValue(r'stretch')
   stretch,
-  @JsonValue(r'cardio')
-  cardio,
   @JsonValue(r'activity')
   activity,
 }

@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 **employee** | **bool** |  | [optional] 
 **names** | **String** |  | [optional] 
 **memberIdentifier** | **String** |  | [optional] 
-**employeeRole** | [**FacilityEmployeeRole**](FacilityEmployeeRole.md) |  | [optional] 
+**employeeRole** | [**EmployeeRole**](EmployeeRole.md) |  | [optional] 
 **includeSession** | **bool** |  | [optional] 
 **sort** | [**FacilityUserRelationshipSorting**](FacilityUserRelationshipSorting.md) |  | 
 **facilityId** | **num** |  | [optional] 

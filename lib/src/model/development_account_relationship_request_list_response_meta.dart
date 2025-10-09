@@ -25,7 +25,7 @@ class DevelopmentAccountRelationshipRequestListResponseMeta {
 
      this.email,
 
-    required  this.company,
+     this.company,
 
     required  this.sort,
 
@@ -77,12 +77,12 @@ class DevelopmentAccountRelationshipRequestListResponseMeta {
   @JsonKey(
     
     name: r'company',
-    required: true,
+    required: false,
     includeIfNull: false
   )
 
 
-  final String company;
+  final String? company;
 
 
 

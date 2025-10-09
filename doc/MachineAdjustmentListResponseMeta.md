@@ -9,7 +9,7 @@ import 'package:keiser_metrics_sdk/api.dart';
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **model** | **String** |  | [optional] 
-**sort** | **String** |  | 
+**sort** | [**MachineAdjustmentSorting**](MachineAdjustmentSorting.md) |  | 
 **ascending** | **bool** |  | [optional] 
 **limit** | **num** |  | [optional] 
 **offset** | **num** |  | [optional] 

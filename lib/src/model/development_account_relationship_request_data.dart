@@ -3,6 +3,7 @@
 //
 
 // ignore_for_file: unused_element
+import 'package:keiser_metrics_sdk/src/model/development_account_relationship_role.dart';
 import 'package:keiser_metrics_sdk/src/model/development_account_data.dart';
 import 'package:keiser_metrics_sdk/src/model/user_data.dart';
 import 'package:json_annotation/json_annotation.dart';
@@ -81,7 +82,7 @@ class DevelopmentAccountRelationshipRequestData {
   )
 
 
-  final DevelopmentAccountRelationshipRequestDataRoleEnum role;
+  final DevelopmentAccountRelationshipRole role;
 
 
 
@@ -165,13 +166,4 @@ class DevelopmentAccountRelationshipRequestData {
   }
 
 }
-
-
-enum DevelopmentAccountRelationshipRequestDataRoleEnum {
-  @JsonValue(r'owner')
-  owner,
-  @JsonValue(r'developer')
-  developer,
-}
-
 

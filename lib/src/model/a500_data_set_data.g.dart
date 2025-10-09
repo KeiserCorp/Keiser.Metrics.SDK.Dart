@@ -20,11 +20,9 @@ A500DataSetData _$A500DataSetDataFromJson(Map<String, dynamic> json) =>
           epochAt:
               $checkedConvert('epochAt', (v) => DateTime.parse(v as String)),
           type: $checkedConvert(
-              'type', (v) => $enumDecode(_$A500DataSetDataTypeEnumEnumMap, v)),
+              'type', (v) => $enumDecode(_$A500DataSetTypeEnumMap, v)),
           testSide: $checkedConvert(
-              'testSide',
-              (v) =>
-                  $enumDecodeNullable(_$A500DataSetDataTestSideEnumEnumMap, v)),
+              'testSide', (v) => $enumDecodeNullable(_$TestSideEnumMap, v)),
           leftTestResult: $checkedConvert(
               'leftTestResult',
               (v) => v == null
@@ -56,7 +54,7 @@ Map<String, dynamic> _$A500DataSetDataToJson(A500DataSetData instance) {
   final val = <String, dynamic>{
     'id': instance.id,
     'epochAt': instance.epochAt.toIso8601String(),
-    'type': _$A500DataSetDataTypeEnumEnumMap[instance.type]!,
+    'type': _$A500DataSetTypeEnumMap[instance.type]!,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -65,8 +63,7 @@ Map<String, dynamic> _$A500DataSetDataToJson(A500DataSetData instance) {
     }
   }
 
-  writeNotNull(
-      'testSide', _$A500DataSetDataTestSideEnumEnumMap[instance.testSide]);
+  writeNotNull('testSide', _$TestSideEnumMap[instance.testSide]);
   writeNotNull('leftTestResult', instance.leftTestResult?.toJson());
   writeNotNull('rightTestResult', instance.rightTestResult?.toJson());
   writeNotNull('a500RepDataPoints',
@@ -76,13 +73,13 @@ Map<String, dynamic> _$A500DataSetDataToJson(A500DataSetData instance) {
   return val;
 }
 
-const _$A500DataSetDataTypeEnumEnumMap = {
-  A500DataSetDataTypeEnum.normal: 'normal',
-  A500DataSetDataTypeEnum.test: 'test',
+const _$A500DataSetTypeEnumMap = {
+  A500DataSetType.normal: 'normal',
+  A500DataSetType.test: 'test',
 };
 
-const _$A500DataSetDataTestSideEnumEnumMap = {
-  A500DataSetDataTestSideEnum.left: 'left',
-  A500DataSetDataTestSideEnum.right: 'right',
-  A500DataSetDataTestSideEnum.both: 'both',
+const _$TestSideEnumMap = {
+  TestSide.left: 'left',
+  TestSide.right: 'right',
+  TestSide.both: 'both',
 };

@@ -9,7 +9,7 @@ import 'package:keiser_metrics_sdk/api.dart';
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **num** |  | 
-**variant** | **String** |  | 
+**variant** | [**CardioExerciseVariantType**](CardioExerciseVariantType.md) |  | 
 **instructionalImage** | **String** |  | [optional] 
 **instructionalVideo** | **String** |  | [optional] 
 **cardioExercise** | [**CardioExerciseData**](CardioExerciseData.md) |  | [optional] 

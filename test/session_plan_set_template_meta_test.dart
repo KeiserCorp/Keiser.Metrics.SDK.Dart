@@ -17,16 +17,6 @@ void main() {
       // TODO
     });
 
-    // DateTime from
-    test('to test the property `from`', () async {
-      // TODO
-    });
-
-    // DateTime to
-    test('to test the property `to`', () async {
-      // TODO
-    });
-
     // String sort
     test('to test the property `sort`', () async {
       // TODO

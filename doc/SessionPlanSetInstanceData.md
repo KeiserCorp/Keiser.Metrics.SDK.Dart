@@ -9,7 +9,7 @@ import 'package:keiser_metrics_sdk/api.dart';
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **num** |  | 
-**notes** | **String** |  | 
+**notes** | **String** |  | [optional] 
 **completed** | **bool** |  | 
 **type** | **String** |  | [optional] 
 **sessionPlanCardioSet** | [**SessionPlanCardioSetData**](SessionPlanCardioSetData.md) |  | [optional] 

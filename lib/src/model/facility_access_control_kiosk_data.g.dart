@@ -16,7 +16,6 @@ FacilityAccessControlKioskData _$FacilityAccessControlKioskDataFromJson(
           json,
           requiredKeys: const [
             'isKioskModeAllowed',
-            'isFingerprintAuthenticationAllowed',
             'primaryIdentification',
             'secondaryIdentification'
           ],
@@ -26,17 +25,14 @@ FacilityAccessControlKioskData _$FacilityAccessControlKioskDataFromJson(
               $checkedConvert('kioskModeAllowed', (v) => v as bool?),
           isKioskModeAllowed:
               $checkedConvert('isKioskModeAllowed', (v) => v as bool),
-          isFingerprintAuthenticationAllowed: $checkedConvert(
-              'isFingerprintAuthenticationAllowed', (v) => v as bool),
           primaryIdentification: $checkedConvert(
               'primaryIdentification',
               (v) => $enumDecode(
-                  _$FacilityAccessControlKioskDataPrimaryIdentificationEnumEnumMap,
-                  v)),
+                  _$FacilityAccessControlKioskPrimaryIdentificationEnumMap, v)),
           secondaryIdentification: $checkedConvert(
               'secondaryIdentification',
               (v) => $enumDecode(
-                  _$FacilityAccessControlKioskDataSecondaryIdentificationEnumEnumMap,
+                  _$FacilityAccessControlKioskSecondaryIdentificationEnumMap,
                   v)),
         );
         return val;
@@ -55,33 +51,29 @@ Map<String, dynamic> _$FacilityAccessControlKioskDataToJson(
 
   writeNotNull('kioskModeAllowed', instance.kioskModeAllowed);
   val['isKioskModeAllowed'] = instance.isKioskModeAllowed;
-  val['isFingerprintAuthenticationAllowed'] =
-      instance.isFingerprintAuthenticationAllowed;
   val['primaryIdentification'] =
-      _$FacilityAccessControlKioskDataPrimaryIdentificationEnumEnumMap[
+      _$FacilityAccessControlKioskPrimaryIdentificationEnumMap[
           instance.primaryIdentification]!;
   val['secondaryIdentification'] =
-      _$FacilityAccessControlKioskDataSecondaryIdentificationEnumEnumMap[
+      _$FacilityAccessControlKioskSecondaryIdentificationEnumMap[
           instance.secondaryIdentification]!;
   return val;
 }
 
-const _$FacilityAccessControlKioskDataPrimaryIdentificationEnumEnumMap = {
-  FacilityAccessControlKioskDataPrimaryIdentificationEnum.uuid: 'uuid',
-  FacilityAccessControlKioskDataPrimaryIdentificationEnum.memberIdentifier:
+const _$FacilityAccessControlKioskPrimaryIdentificationEnumMap = {
+  FacilityAccessControlKioskPrimaryIdentification.uuid: 'uuid',
+  FacilityAccessControlKioskPrimaryIdentification.memberIdentifier:
       'memberIdentifier',
-  FacilityAccessControlKioskDataPrimaryIdentificationEnum.emailAddress:
-      'emailAddress',
-  FacilityAccessControlKioskDataPrimaryIdentificationEnum.fullName: 'fullName',
+  FacilityAccessControlKioskPrimaryIdentification.emailAddress: 'emailAddress',
+  FacilityAccessControlKioskPrimaryIdentification.fullName: 'fullName',
 };
 
-const _$FacilityAccessControlKioskDataSecondaryIdentificationEnumEnumMap = {
-  FacilityAccessControlKioskDataSecondaryIdentificationEnum.uuid: 'uuid',
-  FacilityAccessControlKioskDataSecondaryIdentificationEnum.memberIdentifier:
+const _$FacilityAccessControlKioskSecondaryIdentificationEnumMap = {
+  FacilityAccessControlKioskSecondaryIdentification.none: 'none',
+  FacilityAccessControlKioskSecondaryIdentification.uuid: 'uuid',
+  FacilityAccessControlKioskSecondaryIdentification.memberIdentifier:
       'memberIdentifier',
-  FacilityAccessControlKioskDataSecondaryIdentificationEnum.none: 'none',
-  FacilityAccessControlKioskDataSecondaryIdentificationEnum.yearOfBirth:
-      'yearOfBirth',
-  FacilityAccessControlKioskDataSecondaryIdentificationEnum.memberSecret:
+  FacilityAccessControlKioskSecondaryIdentification.yearOfBirth: 'yearOfBirth',
+  FacilityAccessControlKioskSecondaryIdentification.memberSecret:
       'memberSecret',
 };

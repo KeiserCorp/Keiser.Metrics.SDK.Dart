@@ -41,7 +41,7 @@ class MSeriesAppSessionListResponseMeta {
   )
 
 
-  final String? from;
+  final DateTime? from;
 
 
 
@@ -53,7 +53,7 @@ class MSeriesAppSessionListResponseMeta {
   )
 
 
-  final String? to;
+  final DateTime? to;
 
 
 

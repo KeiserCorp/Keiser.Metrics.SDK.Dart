@@ -3,6 +3,7 @@
 //
 
 // ignore_for_file: unused_element
+import 'package:keiser_metrics_sdk/src/model/facility_license_type.dart';
 import 'package:keiser_metrics_sdk/src/model/facility_data.dart';
 import 'package:json_annotation/json_annotation.dart';
 
@@ -92,7 +93,7 @@ class FacilityLicenseData {
   )
 
 
-  final FacilityLicenseDataTypeEnum type;
+  final FacilityLicenseType type;
 
 
 
@@ -164,15 +165,4 @@ class FacilityLicenseData {
   }
 
 }
-
-
-enum FacilityLicenseDataTypeEnum {
-  @JsonValue(r'normal')
-  normal,
-  @JsonValue(r'test')
-  test,
-  @JsonValue(r'demo')
-  demo,
-}
-
 

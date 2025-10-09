@@ -115,7 +115,6 @@ import 'package:keiser_metrics_sdk/src/model/facility_strength_machine_utilizati
 import 'package:keiser_metrics_sdk/src/model/facility_user_relationship_list_response.dart';
 import 'package:keiser_metrics_sdk/src/model/facility_user_relationship_list_response_meta.dart';
 import 'package:keiser_metrics_sdk/src/model/facility_user_response.dart';
-import 'package:keiser_metrics_sdk/src/model/fingerprint_data.dart';
 import 'package:keiser_metrics_sdk/src/model/health_response.dart';
 import 'package:keiser_metrics_sdk/src/model/heart_rate_data_point_data.dart';
 import 'package:keiser_metrics_sdk/src/model/heart_rate_data_set_data.dart';
@@ -134,14 +133,6 @@ import 'package:keiser_metrics_sdk/src/model/m_series_app_session_export_respons
 import 'package:keiser_metrics_sdk/src/model/m_series_app_session_list_response.dart';
 import 'package:keiser_metrics_sdk/src/model/m_series_app_session_list_response_meta.dart';
 import 'package:keiser_metrics_sdk/src/model/m_series_app_session_response.dart';
-import 'package:keiser_metrics_sdk/src/model/m_series_challenge_data.dart';
-import 'package:keiser_metrics_sdk/src/model/m_series_challenge_list_response.dart';
-import 'package:keiser_metrics_sdk/src/model/m_series_challenge_list_response_meta.dart';
-import 'package:keiser_metrics_sdk/src/model/m_series_challenge_participant_data.dart';
-import 'package:keiser_metrics_sdk/src/model/m_series_challenge_participant_list_response.dart';
-import 'package:keiser_metrics_sdk/src/model/m_series_challenge_participant_list_response_meta.dart';
-import 'package:keiser_metrics_sdk/src/model/m_series_challenge_participant_response.dart';
-import 'package:keiser_metrics_sdk/src/model/m_series_challenge_response.dart';
 import 'package:keiser_metrics_sdk/src/model/m_series_data_point_data.dart';
 import 'package:keiser_metrics_sdk/src/model/m_series_data_set_data.dart';
 import 'package:keiser_metrics_sdk/src/model/m_series_data_set_list_response.dart';
@@ -165,6 +156,7 @@ import 'package:keiser_metrics_sdk/src/model/o_auth_service_list_response.dart';
 import 'package:keiser_metrics_sdk/src/model/o_auth_service_list_response_meta.dart';
 import 'package:keiser_metrics_sdk/src/model/o_auth_service_response.dart';
 import 'package:keiser_metrics_sdk/src/model/oauth_response.dart';
+import 'package:keiser_metrics_sdk/src/model/oauth_token_response.dart';
 import 'package:keiser_metrics_sdk/src/model/primary_email_address_data.dart';
 import 'package:keiser_metrics_sdk/src/model/primary_email_address_response.dart';
 import 'package:keiser_metrics_sdk/src/model/privileged_facility_relationship_request_list_response.dart';
@@ -195,6 +187,7 @@ import 'package:keiser_metrics_sdk/src/model/session_plan_sequence_meta.dart';
 import 'package:keiser_metrics_sdk/src/model/session_plan_sequence_response.dart';
 import 'package:keiser_metrics_sdk/src/model/session_plan_sequence_template_data.dart';
 import 'package:keiser_metrics_sdk/src/model/session_plan_sequence_template_list_response.dart';
+import 'package:keiser_metrics_sdk/src/model/session_plan_sequence_template_meta.dart';
 import 'package:keiser_metrics_sdk/src/model/session_plan_sequence_template_response.dart';
 import 'package:keiser_metrics_sdk/src/model/session_plan_set_data.dart';
 import 'package:keiser_metrics_sdk/src/model/session_plan_set_instance_data.dart';
@@ -214,7 +207,6 @@ import 'package:keiser_metrics_sdk/src/model/session_plan_template_data.dart';
 import 'package:keiser_metrics_sdk/src/model/session_plan_template_list_response.dart';
 import 'package:keiser_metrics_sdk/src/model/session_plan_template_meta.dart';
 import 'package:keiser_metrics_sdk/src/model/session_plan_template_response.dart';
-import 'package:keiser_metrics_sdk/src/model/session_plansequence_template_meta.dart';
 import 'package:keiser_metrics_sdk/src/model/session_response.dart';
 import 'package:keiser_metrics_sdk/src/model/session_start_response.dart';
 import 'package:keiser_metrics_sdk/src/model/status_response.dart';
@@ -294,8 +286,14 @@ final _regMap = RegExp(r'^Map<String,(.*)>$');
           return (valueString == 'true' || valueString == '1') as ReturnType;
         case 'double':
           return (value is double ? value : double.parse('$value')) as ReturnType;
+        case 'A500AppType':
+          
+          
         case 'A500DataSetData':
           return A500DataSetData.fromJson(value as Map<String, dynamic>) as ReturnType;
+        case 'A500DataSetType':
+          
+          
         case 'A500GetUserData':
           return A500GetUserData.fromJson(value as Map<String, dynamic>) as ReturnType;
         case 'A500GetUserResponse':
@@ -353,15 +351,24 @@ final _regMap = RegExp(r'^Map<String,(.*)>$');
         case 'CardioExerciseVariantSorting':
           
           
+        case 'CardioExerciseVariantType':
+          
+          
         case 'CardioMachineData':
           return CardioMachineData.fromJson(value as Map<String, dynamic>) as ReturnType;
         case 'CardioMachineListResponse':
           return CardioMachineListResponse.fromJson(value as Map<String, dynamic>) as ReturnType;
         case 'CardioMachineListResponseMeta':
           return CardioMachineListResponseMeta.fromJson(value as Map<String, dynamic>) as ReturnType;
+        case 'CardioMachineParseCode':
+          
+          
         case 'CardioMachineResponse':
           return CardioMachineResponse.fromJson(value as Map<String, dynamic>) as ReturnType;
         case 'CardioMachineSorting':
+          
+          
+        case 'CharacterType':
           
           
         case 'DevelopmentAccountData':
@@ -389,6 +396,9 @@ final _regMap = RegExp(r'^Map<String,(.*)>$');
           
         case 'DevelopmentAccountRelationshipResponse':
           return DevelopmentAccountRelationshipResponse.fromJson(value as Map<String, dynamic>) as ReturnType;
+        case 'DevelopmentAccountRelationshipRole':
+          
+          
         case 'DevelopmentAccountRelationshipSorting':
           
           
@@ -408,6 +418,9 @@ final _regMap = RegExp(r'^Map<String,(.*)>$');
         case 'EmailAddressSorting':
           
           
+        case 'EmployeeRole':
+          
+          
         case 'EndpointsData':
           return EndpointsData.fromJson(value as Map<String, dynamic>) as ReturnType;
         case 'EndpointsResponse':
@@ -425,6 +438,9 @@ final _regMap = RegExp(r'^Map<String,(.*)>$');
         case 'ExerciseAliasResponse':
           return ExerciseAliasResponse.fromJson(value as Map<String, dynamic>) as ReturnType;
         case 'ExerciseAliasSorting':
+          
+          
+        case 'ExerciseAliasType':
           
           
         case 'ExerciseOrdinalSetAssignmentData':
@@ -464,8 +480,14 @@ final _regMap = RegExp(r'^Map<String,(.*)>$');
           
         case 'FacilityAccessControlKioskData':
           return FacilityAccessControlKioskData.fromJson(value as Map<String, dynamic>) as ReturnType;
+        case 'FacilityAccessControlKioskPrimaryIdentification':
+          
+          
         case 'FacilityAccessControlKioskResponse':
           return FacilityAccessControlKioskResponse.fromJson(value as Map<String, dynamic>) as ReturnType;
+        case 'FacilityAccessControlKioskSecondaryIdentification':
+          
+          
         case 'FacilityAccessControlResponse':
           return FacilityAccessControlResponse.fromJson(value as Map<String, dynamic>) as ReturnType;
         case 'FacilityCardioMachineData':
@@ -482,9 +504,6 @@ final _regMap = RegExp(r'^Map<String,(.*)>$');
           return FacilityConfigurationResponse.fromJson(value as Map<String, dynamic>) as ReturnType;
         case 'FacilityData':
           return FacilityData.fromJson(value as Map<String, dynamic>) as ReturnType;
-        case 'FacilityEmployeeRole':
-          
-          
         case 'FacilityInBodyIntegrationData':
           return FacilityInBodyIntegrationData.fromJson(value as Map<String, dynamic>) as ReturnType;
         case 'FacilityInBodyIntegrationResponse':
@@ -500,6 +519,9 @@ final _regMap = RegExp(r'^Map<String,(.*)>$');
         case 'FacilityLicenseResponse':
           return FacilityLicenseResponse.fromJson(value as Map<String, dynamic>) as ReturnType;
         case 'FacilityLicenseSorting':
+          
+          
+        case 'FacilityLicenseType':
           
           
         case 'FacilityListResponse':
@@ -582,8 +604,9 @@ final _regMap = RegExp(r'^Map<String,(.*)>$');
           
         case 'FacilityUserResponse':
           return FacilityUserResponse.fromJson(value as Map<String, dynamic>) as ReturnType;
-        case 'FingerprintData':
-          return FingerprintData.fromJson(value as Map<String, dynamic>) as ReturnType;
+        case 'ForceUnit':
+          
+          
         case 'HealthResponse':
           return HealthResponse.fromJson(value as Map<String, dynamic>) as ReturnType;
         case 'HeartRateDataPointData':
@@ -612,6 +635,9 @@ final _regMap = RegExp(r'^Map<String,(.*)>$');
         case 'HeightMeasurementSorting':
           
           
+        case 'InBodyType':
+          
+          
         case 'KioskSessionResponse':
           return KioskSessionResponse.fromJson(value as Map<String, dynamic>) as ReturnType;
         case 'ListMeta':
@@ -626,31 +652,6 @@ final _regMap = RegExp(r'^Map<String,(.*)>$');
           return MSeriesAppSessionListResponseMeta.fromJson(value as Map<String, dynamic>) as ReturnType;
         case 'MSeriesAppSessionResponse':
           return MSeriesAppSessionResponse.fromJson(value as Map<String, dynamic>) as ReturnType;
-        case 'MSeriesChallengeData':
-          return MSeriesChallengeData.fromJson(value as Map<String, dynamic>) as ReturnType;
-        case 'MSeriesChallengeListResponse':
-          return MSeriesChallengeListResponse.fromJson(value as Map<String, dynamic>) as ReturnType;
-        case 'MSeriesChallengeListResponseMeta':
-          return MSeriesChallengeListResponseMeta.fromJson(value as Map<String, dynamic>) as ReturnType;
-        case 'MSeriesChallengeParticipantData':
-          return MSeriesChallengeParticipantData.fromJson(value as Map<String, dynamic>) as ReturnType;
-        case 'MSeriesChallengeParticipantListResponse':
-          return MSeriesChallengeParticipantListResponse.fromJson(value as Map<String, dynamic>) as ReturnType;
-        case 'MSeriesChallengeParticipantListResponseMeta':
-          return MSeriesChallengeParticipantListResponseMeta.fromJson(value as Map<String, dynamic>) as ReturnType;
-        case 'MSeriesChallengeParticipantResponse':
-          return MSeriesChallengeParticipantResponse.fromJson(value as Map<String, dynamic>) as ReturnType;
-        case 'MSeriesChallengeParticipantSorting':
-          
-          
-        case 'MSeriesChallengeRelationship':
-          
-          
-        case 'MSeriesChallengeResponse':
-          return MSeriesChallengeResponse.fromJson(value as Map<String, dynamic>) as ReturnType;
-        case 'MSeriesChallengeSorting':
-          
-          
         case 'MSeriesDataPointData':
           return MSeriesDataPointData.fromJson(value as Map<String, dynamic>) as ReturnType;
         case 'MSeriesDataSetData':
@@ -691,15 +692,15 @@ final _regMap = RegExp(r'^Map<String,(.*)>$');
           return MachineAdjustmentListResponseMeta.fromJson(value as Map<String, dynamic>) as ReturnType;
         case 'MachineAdjustmentResponse':
           return MachineAdjustmentResponse.fromJson(value as Map<String, dynamic>) as ReturnType;
+        case 'MachineAdjustmentSorting':
+          
+          
         case 'MuscleArea':
           
           
         case 'MuscleData':
           return MuscleData.fromJson(value as Map<String, dynamic>) as ReturnType;
         case 'MuscleGroup':
-          
-          
-        case 'MuscleIdentifier':
           
           
         case 'MuscleSorting':
@@ -721,6 +722,8 @@ final _regMap = RegExp(r'^Map<String,(.*)>$');
           
         case 'OauthResponse':
           return OauthResponse.fromJson(value as Map<String, dynamic>) as ReturnType;
+        case 'OauthTokenResponse':
+          return OauthTokenResponse.fromJson(value as Map<String, dynamic>) as ReturnType;
         case 'PrimaryEmailAddressData':
           return PrimaryEmailAddressData.fromJson(value as Map<String, dynamic>) as ReturnType;
         case 'PrimaryEmailAddressResponse':
@@ -738,6 +741,9 @@ final _regMap = RegExp(r'^Map<String,(.*)>$');
           return ProfileResponse.fromJson(value as Map<String, dynamic>) as ReturnType;
         case 'RedirectResponse':
           return RedirectResponse.fromJson(value as Map<String, dynamic>) as ReturnType;
+        case 'ResistancePrecision':
+          
+          
         case 'SessionData':
           return SessionData.fromJson(value as Map<String, dynamic>) as ReturnType;
         case 'SessionListResponse':
@@ -784,6 +790,8 @@ final _regMap = RegExp(r'^Map<String,(.*)>$');
           return SessionPlanSequenceTemplateData.fromJson(value as Map<String, dynamic>) as ReturnType;
         case 'SessionPlanSequenceTemplateListResponse':
           return SessionPlanSequenceTemplateListResponse.fromJson(value as Map<String, dynamic>) as ReturnType;
+        case 'SessionPlanSequenceTemplateMeta':
+          return SessionPlanSequenceTemplateMeta.fromJson(value as Map<String, dynamic>) as ReturnType;
         case 'SessionPlanSequenceTemplateResponse':
           return SessionPlanSequenceTemplateResponse.fromJson(value as Map<String, dynamic>) as ReturnType;
         case 'SessionPlanSetData':
@@ -806,6 +814,9 @@ final _regMap = RegExp(r'^Map<String,(.*)>$');
           return SessionPlanSetTemplateMeta.fromJson(value as Map<String, dynamic>) as ReturnType;
         case 'SessionPlanSetTemplateResponse':
           return SessionPlanSetTemplateResponse.fromJson(value as Map<String, dynamic>) as ReturnType;
+        case 'SessionPlanSetType':
+          
+          
         case 'SessionPlanStrengthSetData':
           return SessionPlanStrengthSetData.fromJson(value as Map<String, dynamic>) as ReturnType;
         case 'SessionPlanStrengthSetTemplateData':
@@ -822,8 +833,6 @@ final _regMap = RegExp(r'^Map<String,(.*)>$');
           return SessionPlanTemplateMeta.fromJson(value as Map<String, dynamic>) as ReturnType;
         case 'SessionPlanTemplateResponse':
           return SessionPlanTemplateResponse.fromJson(value as Map<String, dynamic>) as ReturnType;
-        case 'SessionPlansequenceTemplateMeta':
-          return SessionPlansequenceTemplateMeta.fromJson(value as Map<String, dynamic>) as ReturnType;
         case 'SessionResponse':
           return SessionResponse.fromJson(value as Map<String, dynamic>) as ReturnType;
         case 'SessionSorting':
@@ -831,6 +840,9 @@ final _regMap = RegExp(r'^Map<String,(.*)>$');
           
         case 'SessionStartResponse':
           return SessionStartResponse.fromJson(value as Map<String, dynamic>) as ReturnType;
+        case 'Side':
+          
+          
         case 'StatusResponse':
           return StatusResponse.fromJson(value as Map<String, dynamic>) as ReturnType;
         case 'StrengthExerciseCategory':
@@ -862,6 +874,9 @@ final _regMap = RegExp(r'^Map<String,(.*)>$');
         case 'StrengthExerciseSorting':
           
           
+        case 'StrengthExerciseVariantAttachment':
+          
+          
         case 'StrengthExerciseVariantData':
           return StrengthExerciseVariantData.fromJson(value as Map<String, dynamic>) as ReturnType;
         case 'StrengthExerciseVariantListResponse':
@@ -871,6 +886,12 @@ final _regMap = RegExp(r'^Map<String,(.*)>$');
         case 'StrengthExerciseVariantResponse':
           return StrengthExerciseVariantResponse.fromJson(value as Map<String, dynamic>) as ReturnType;
         case 'StrengthExerciseVariantSorting':
+          
+          
+        case 'StrengthExerciseVariantType':
+          
+          
+        case 'StrengthMachineAppType':
           
           
         case 'StrengthMachineData':
@@ -898,6 +919,9 @@ final _regMap = RegExp(r'^Map<String,(.*)>$');
           return StrengthMachineHistoryMeta.fromJson(value as Map<String, dynamic>) as ReturnType;
         case 'StrengthMachineInitializeResponse':
           return StrengthMachineInitializeResponse.fromJson(value as Map<String, dynamic>) as ReturnType;
+        case 'StrengthMachineLine':
+          
+          
         case 'StrengthMachineListResponse':
           return StrengthMachineListResponse.fromJson(value as Map<String, dynamic>) as ReturnType;
         case 'StrengthMachineListResponseMeta':
@@ -911,6 +935,9 @@ final _regMap = RegExp(r'^Map<String,(.*)>$');
         case 'StrengthMachineResponse':
           return StrengthMachineResponse.fromJson(value as Map<String, dynamic>) as ReturnType;
         case 'StrengthMachineSorting':
+          
+          
+        case 'StrengthTestType':
           
           
         case 'StretchExerciseData':
@@ -941,8 +968,14 @@ final _regMap = RegExp(r'^Map<String,(.*)>$');
         case 'StretchExerciseVariantSorting':
           
           
+        case 'StretchExerciseVariantType':
+          
+          
         case 'SubscriptionResponse':
           return SubscriptionResponse.fromJson(value as Map<String, dynamic>) as ReturnType;
+        case 'TestSide':
+          
+          
         case 'TimeResponse':
           return TimeResponse.fromJson(value as Map<String, dynamic>) as ReturnType;
         case 'UserApplicationAuthorizationData':

@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 **developmentAccountId** | **num** |  | [optional] 
 **userId** | **num** |  | [optional] 
 **email** | **String** |  | [optional] 
-**company** | **String** |  | 
+**company** | **String** |  | [optional] 
 **sort** | [**DevelopmentAccountRelationshipRequestSorting**](DevelopmentAccountRelationshipRequestSorting.md) |  | 
 **ascending** | **bool** |  | [optional] 
 **limit** | **num** |  | [optional] 

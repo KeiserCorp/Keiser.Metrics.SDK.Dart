@@ -29,7 +29,7 @@ class StrengthExerciseListResponseMeta {
 
      this.movement,
 
-    required  this.humanMovement,
+     this.humanMovement,
 
      this.plane,
 
@@ -83,12 +83,12 @@ class StrengthExerciseListResponseMeta {
   @JsonKey(
     
     name: r'humanMovement',
-    required: true,
+    required: false,
     includeIfNull: false
   )
 
 
-  final StrengthExerciseMovement humanMovement;
+  final StrengthExerciseMovement? humanMovement;
 
 
 

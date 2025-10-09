@@ -7,7 +7,7 @@ void main() {
   // TODO add properties to the entity
 
   group(FacilityInBodyIntegrationData, () {
-    // String type
+    // InBodyType type
     test('to test the property `type`', () async {
       // TODO
     });

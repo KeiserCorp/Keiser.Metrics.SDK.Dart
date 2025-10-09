@@ -3,6 +3,7 @@
 //
 
 // ignore_for_file: unused_element
+import 'package:keiser_metrics_sdk/src/model/machine_adjustment_sorting.dart';
 import 'package:json_annotation/json_annotation.dart';
 
 part 'machine_adjustment_list_response_meta.g.dart';
@@ -51,7 +52,7 @@ class MachineAdjustmentListResponseMeta {
   )
 
 
-  final MachineAdjustmentListResponseMetaSortEnum sort;
+  final MachineAdjustmentSorting sort;
 
 
 
@@ -131,11 +132,4 @@ class MachineAdjustmentListResponseMeta {
   }
 
 }
-
-
-enum MachineAdjustmentListResponseMetaSortEnum {
-  @JsonValue(r'import(/home/runner/work/Keiser.Metrics.API/Keiser.Metrics.API/src/models/MachineAdjustment).MachineAdjustmentSorting')
-  importLeftParenthesisSlashHomeSlashRunnerSlashWorkSlashKeiserPeriodMetricsPeriodAPISlashKeiserPeriodMetricsPeriodAPISlashSrcSlashModelsSlashMachineAdjustmentRightParenthesisPeriodMachineAdjustmentSorting,
-}
-
 

@@ -3,6 +3,8 @@
 //
 
 // ignore_for_file: unused_element
+import 'package:keiser_metrics_sdk/src/model/facility_access_control_kiosk_primary_identification.dart';
+import 'package:keiser_metrics_sdk/src/model/facility_access_control_kiosk_secondary_identification.dart';
 import 'package:json_annotation/json_annotation.dart';
 
 part 'facility_access_control_kiosk_data.g.dart';
@@ -21,8 +23,6 @@ class FacilityAccessControlKioskData {
      this.kioskModeAllowed,
 
     required  this.isKioskModeAllowed,
-
-    required  this.isFingerprintAuthenticationAllowed,
 
     required  this.primaryIdentification,
 
@@ -55,25 +55,13 @@ class FacilityAccessControlKioskData {
 
   @JsonKey(
     
-    name: r'isFingerprintAuthenticationAllowed',
-    required: true,
-    includeIfNull: false
-  )
-
-
-  final bool isFingerprintAuthenticationAllowed;
-
-
-
-  @JsonKey(
-    
     name: r'primaryIdentification',
     required: true,
     includeIfNull: false
   )
 
 
-  final FacilityAccessControlKioskDataPrimaryIdentificationEnum primaryIdentification;
+  final FacilityAccessControlKioskPrimaryIdentification primaryIdentification;
 
 
 
@@ -85,7 +73,7 @@ class FacilityAccessControlKioskData {
   )
 
 
-  final FacilityAccessControlKioskDataSecondaryIdentificationEnum secondaryIdentification;
+  final FacilityAccessControlKioskSecondaryIdentification secondaryIdentification;
 
 
 
@@ -93,7 +81,6 @@ class FacilityAccessControlKioskData {
   bool operator ==(Object other) => identical(this, other) || other is FacilityAccessControlKioskData &&
      other.kioskModeAllowed == kioskModeAllowed &&
      other.isKioskModeAllowed == isKioskModeAllowed &&
-     other.isFingerprintAuthenticationAllowed == isFingerprintAuthenticationAllowed &&
      other.primaryIdentification == primaryIdentification &&
      other.secondaryIdentification == secondaryIdentification;
 
@@ -101,7 +88,6 @@ class FacilityAccessControlKioskData {
   int get hashCode =>
     kioskModeAllowed.hashCode +
     isKioskModeAllowed.hashCode +
-    isFingerprintAuthenticationAllowed.hashCode +
     primaryIdentification.hashCode +
     secondaryIdentification.hashCode;
 
@@ -115,32 +101,4 @@ class FacilityAccessControlKioskData {
   }
 
 }
-
-
-enum FacilityAccessControlKioskDataPrimaryIdentificationEnum {
-  @JsonValue(r'uuid')
-  uuid,
-  @JsonValue(r'memberIdentifier')
-  memberIdentifier,
-  @JsonValue(r'emailAddress')
-  emailAddress,
-  @JsonValue(r'fullName')
-  fullName,
-}
-
-
-
-enum FacilityAccessControlKioskDataSecondaryIdentificationEnum {
-  @JsonValue(r'uuid')
-  uuid,
-  @JsonValue(r'memberIdentifier')
-  memberIdentifier,
-  @JsonValue(r'none')
-  none,
-  @JsonValue(r'yearOfBirth')
-  yearOfBirth,
-  @JsonValue(r'memberSecret')
-  memberSecret,
-}
-
 

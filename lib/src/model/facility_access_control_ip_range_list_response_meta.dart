@@ -58,7 +58,7 @@ class FacilityAccessControlIPRangeListResponseMeta {
   )
 
 
-  final String? from;
+  final DateTime? from;
 
 
 
@@ -70,7 +70,7 @@ class FacilityAccessControlIPRangeListResponseMeta {
   )
 
 
-  final String? to;
+  final DateTime? to;
 
 
 

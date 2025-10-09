@@ -9,9 +9,9 @@ import 'package:keiser_metrics_sdk/api.dart';
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **names** | **String** |  | [optional] 
-**key** | **String** |  | 
-**type** | **String** |  | 
-**accountId** | **String** |  | 
+**key** | **String** |  | [optional] 
+**type** | [**FacilityLicenseType**](FacilityLicenseType.md) |  | [optional] 
+**accountId** | **String** |  | [optional] 
 **sort** | [**FacilityLicenseSorting**](FacilityLicenseSorting.md) |  | 
 **ascending** | **bool** |  | [optional] 
 **limit** | **num** |  | [optional] 

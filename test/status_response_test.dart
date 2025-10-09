@@ -17,7 +17,7 @@ void main() {
       // TODO
     });
 
-    // num id
+    // String id
     test('to test the property `id`', () async {
       // TODO
     });
@@ -34,11 +34,6 @@ void main() {
 
     // String names
     test('to test the property `names`', () async {
-      // TODO
-    });
-
-    // String description
-    test('to test the property `description`', () async {
       // TODO
     });
 

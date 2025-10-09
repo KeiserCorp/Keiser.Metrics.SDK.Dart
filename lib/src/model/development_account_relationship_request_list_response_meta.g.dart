@@ -15,14 +15,14 @@ DevelopmentAccountRelationshipRequestListResponseMeta
           ($checkedConvert) {
             $checkKeys(
               json,
-              requiredKeys: const ['company', 'sort'],
+              requiredKeys: const ['sort'],
             );
             final val = DevelopmentAccountRelationshipRequestListResponseMeta(
               developmentAccountId:
                   $checkedConvert('developmentAccountId', (v) => v as num?),
               userId: $checkedConvert('userId', (v) => v as num?),
               email: $checkedConvert('email', (v) => v as String?),
-              company: $checkedConvert('company', (v) => v as String),
+              company: $checkedConvert('company', (v) => v as String?),
               sort: $checkedConvert(
                   'sort',
                   (v) => $enumDecode(
@@ -51,7 +51,7 @@ Map<String, dynamic>
   writeNotNull('developmentAccountId', instance.developmentAccountId);
   writeNotNull('userId', instance.userId);
   writeNotNull('email', instance.email);
-  val['company'] = instance.company;
+  writeNotNull('company', instance.company);
   val['sort'] =
       _$DevelopmentAccountRelationshipRequestSortingEnumMap[instance.sort]!;
   writeNotNull('ascending', instance.ascending);

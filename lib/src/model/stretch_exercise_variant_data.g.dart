@@ -18,10 +18,8 @@ StretchExerciseVariantData _$StretchExerciseVariantDataFromJson(
         );
         final val = StretchExerciseVariantData(
           id: $checkedConvert('id', (v) => v as num),
-          variant: $checkedConvert(
-              'variant',
-              (v) => $enumDecode(
-                  _$StretchExerciseVariantDataVariantEnumEnumMap, v)),
+          variant: $checkedConvert('variant',
+              (v) => $enumDecode(_$StretchExerciseVariantTypeEnumMap, v)),
           instructionalImage:
               $checkedConvert('instructionalImage', (v) => v as String?),
           instructionalVideo:
@@ -46,8 +44,7 @@ Map<String, dynamic> _$StretchExerciseVariantDataToJson(
     StretchExerciseVariantData instance) {
   final val = <String, dynamic>{
     'id': instance.id,
-    'variant':
-        _$StretchExerciseVariantDataVariantEnumEnumMap[instance.variant]!,
+    'variant': _$StretchExerciseVariantTypeEnumMap[instance.variant]!,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -64,6 +61,6 @@ Map<String, dynamic> _$StretchExerciseVariantDataToJson(
   return val;
 }
 
-const _$StretchExerciseVariantDataVariantEnumEnumMap = {
-  StretchExerciseVariantDataVariantEnum.normal: 'normal',
+const _$StretchExerciseVariantTypeEnumMap = {
+  StretchExerciseVariantType.normal: 'normal',
 };

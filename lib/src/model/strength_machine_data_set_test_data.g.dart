@@ -18,9 +18,7 @@ StrengthMachineDataSetTestData _$StrengthMachineDataSetTestDataFromJson(
         );
         final val = StrengthMachineDataSetTestData(
           type: $checkedConvert(
-              'type',
-              (v) => $enumDecode(
-                  _$StrengthMachineDataSetTestDataTypeEnumEnumMap, v)),
+              'type', (v) => $enumDecode(_$StrengthTestTypeEnumMap, v)),
           high: $checkedConvert(
               'high',
               (v) => StrengthMachineDataSetTestSubsetData.fromJson(
@@ -37,14 +35,14 @@ StrengthMachineDataSetTestData _$StrengthMachineDataSetTestDataFromJson(
 Map<String, dynamic> _$StrengthMachineDataSetTestDataToJson(
         StrengthMachineDataSetTestData instance) =>
     <String, dynamic>{
-      'type': _$StrengthMachineDataSetTestDataTypeEnumEnumMap[instance.type]!,
+      'type': _$StrengthTestTypeEnumMap[instance.type]!,
       'high': instance.high.toJson(),
       'low': instance.low.toJson(),
     };
 
-const _$StrengthMachineDataSetTestDataTypeEnumEnumMap = {
-  StrengthMachineDataSetTestDataTypeEnum.power6r: 'power6r',
-  StrengthMachineDataSetTestDataTypeEnum.a4206r: 'a4206r',
-  StrengthMachineDataSetTestDataTypeEnum.a42010r: 'a42010r',
-  StrengthMachineDataSetTestDataTypeEnum.a50010r: 'a50010r',
+const _$StrengthTestTypeEnumMap = {
+  StrengthTestType.power6r: 'power6r',
+  StrengthTestType.a4206r: 'a4206r',
+  StrengthTestType.a42010r: 'a42010r',
+  StrengthTestType.a50010r: 'a50010r',
 };

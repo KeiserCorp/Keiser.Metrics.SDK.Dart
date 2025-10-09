@@ -12,22 +12,22 @@ void main() {
       // TODO
     });
 
-    // String category
+    // StrengthExerciseCategory category
     test('to test the property `category`', () async {
       // TODO
     });
 
-    // String movement
+    // StrengthExerciseMovementDEP movement
     test('to test the property `movement`', () async {
       // TODO
     });
 
-    // String humanMovement
+    // StrengthExerciseMovement humanMovement
     test('to test the property `humanMovement`', () async {
       // TODO
     });
 
-    // String plane
+    // StrengthExercisePlane plane
     test('to test the property `plane`', () async {
       // TODO
     });

@@ -5,6 +5,7 @@
 // ignore_for_file: unused_element
 import 'package:keiser_metrics_sdk/src/model/stretch_exercise_data.dart';
 import 'package:keiser_metrics_sdk/src/model/exercise_ordinal_set_assignment_data.dart';
+import 'package:keiser_metrics_sdk/src/model/stretch_exercise_variant_type.dart';
 import 'package:json_annotation/json_annotation.dart';
 
 part 'stretch_exercise_variant_data.g.dart';
@@ -53,7 +54,7 @@ class StretchExerciseVariantData {
   )
 
 
-  final StretchExerciseVariantDataVariantEnum variant;
+  final StretchExerciseVariantType variant;
 
 
 
@@ -133,11 +134,4 @@ class StretchExerciseVariantData {
   }
 
 }
-
-
-enum StretchExerciseVariantDataVariantEnum {
-  @JsonValue(r'normal')
-  normal,
-}
-
 

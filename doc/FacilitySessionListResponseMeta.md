@@ -10,8 +10,8 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **open** | **bool** |  | [optional] 
 **names** | **String** |  | [optional] 
-**from** | **String** |  | [optional] 
-**to** | **String** |  | [optional] 
+**from** | [**DateTime**](DateTime.md) |  | [optional] 
+**to** | [**DateTime**](DateTime.md) |  | [optional] 
 **sort** | [**SessionSorting**](SessionSorting.md) |  | 
 **facilityId** | **num** |  | [optional] 
 **ascending** | **bool** |  | [optional] 

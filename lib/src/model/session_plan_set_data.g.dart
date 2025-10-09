@@ -13,15 +13,13 @@ SessionPlanSetData _$SessionPlanSetDataFromJson(Map<String, dynamic> json) =>
       ($checkedConvert) {
         $checkKeys(
           json,
-          requiredKeys: const ['id', 'notes'],
+          requiredKeys: const ['id'],
         );
         final val = SessionPlanSetData(
           id: $checkedConvert('id', (v) => v as num),
-          notes: $checkedConvert('notes', (v) => v as String),
-          type: $checkedConvert(
-              'type',
-              (v) =>
-                  $enumDecodeNullable(_$SessionPlanSetDataTypeEnumEnumMap, v)),
+          notes: $checkedConvert('notes', (v) => v as String?),
+          type: $checkedConvert('type',
+              (v) => $enumDecodeNullable(_$SessionPlanSetTypeEnumMap, v)),
           sessionPlanCardioSet: $checkedConvert(
               'sessionPlanCardioSet',
               (v) => v == null
@@ -54,7 +52,6 @@ SessionPlanSetData _$SessionPlanSetDataFromJson(Map<String, dynamic> json) =>
 Map<String, dynamic> _$SessionPlanSetDataToJson(SessionPlanSetData instance) {
   final val = <String, dynamic>{
     'id': instance.id,
-    'notes': instance.notes,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -63,7 +60,8 @@ Map<String, dynamic> _$SessionPlanSetDataToJson(SessionPlanSetData instance) {
     }
   }
 
-  writeNotNull('type', _$SessionPlanSetDataTypeEnumEnumMap[instance.type]);
+  writeNotNull('notes', instance.notes);
+  writeNotNull('type', _$SessionPlanSetTypeEnumMap[instance.type]);
   writeNotNull('sessionPlanCardioSet', instance.sessionPlanCardioSet?.toJson());
   writeNotNull(
       'sessionPlanStrengthSet', instance.sessionPlanStrengthSet?.toJson());
@@ -74,9 +72,9 @@ Map<String, dynamic> _$SessionPlanSetDataToJson(SessionPlanSetData instance) {
   return val;
 }
 
-const _$SessionPlanSetDataTypeEnumEnumMap = {
-  SessionPlanSetDataTypeEnum.strength: 'strength',
-  SessionPlanSetDataTypeEnum.stretch: 'stretch',
-  SessionPlanSetDataTypeEnum.cardio: 'cardio',
-  SessionPlanSetDataTypeEnum.activity: 'activity',
+const _$SessionPlanSetTypeEnumMap = {
+  SessionPlanSetType.cardio: 'cardio',
+  SessionPlanSetType.strength: 'strength',
+  SessionPlanSetType.stretch: 'stretch',
+  SessionPlanSetType.activity: 'activity',
 };

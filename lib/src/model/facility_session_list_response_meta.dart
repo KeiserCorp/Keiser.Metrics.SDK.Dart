@@ -72,7 +72,7 @@ class FacilitySessionListResponseMeta {
   )
 
 
-  final String? from;
+  final DateTime? from;
 
 
 
@@ -84,7 +84,7 @@ class FacilitySessionListResponseMeta {
   )
 
 
-  final String? to;
+  final DateTime? to;
 
 
 

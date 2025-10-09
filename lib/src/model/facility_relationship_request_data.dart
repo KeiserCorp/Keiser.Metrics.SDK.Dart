@@ -4,6 +4,7 @@
 
 // ignore_for_file: unused_element
 import 'package:keiser_metrics_sdk/src/model/facility_data.dart';
+import 'package:keiser_metrics_sdk/src/model/employee_role.dart';
 import 'package:keiser_metrics_sdk/src/model/user_data.dart';
 import 'package:json_annotation/json_annotation.dart';
 
@@ -133,7 +134,7 @@ class FacilityRelationshipRequestData {
   )
 
 
-  final FacilityRelationshipRequestDataEmployeeRoleEnum? employeeRole;
+  final EmployeeRole? employeeRole;
 
 
 
@@ -197,19 +198,4 @@ class FacilityRelationshipRequestData {
   }
 
 }
-
-
-enum FacilityRelationshipRequestDataEmployeeRoleEnum {
-  @JsonValue(r'admin')
-  admin,
-  @JsonValue(r'customerSupport')
-  customerSupport,
-  @JsonValue(r'trainer')
-  trainer,
-  @JsonValue(r'frontDesk')
-  frontDesk,
-  @JsonValue(r'maintenance')
-  maintenance,
-}
-
 

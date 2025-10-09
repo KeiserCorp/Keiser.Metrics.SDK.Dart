@@ -5,9 +5,11 @@
 // ignore_for_file: unused_element
 import 'package:keiser_metrics_sdk/src/model/a500_data_set_data.dart';
 import 'package:keiser_metrics_sdk/src/model/strength_machine_data_set_test_data.dart';
+import 'package:keiser_metrics_sdk/src/model/resistance_precision.dart';
 import 'package:keiser_metrics_sdk/src/model/strength_exercise_data.dart';
 import 'package:keiser_metrics_sdk/src/model/session_data.dart';
 import 'package:keiser_metrics_sdk/src/model/strength_machine_data.dart';
+import 'package:keiser_metrics_sdk/src/model/force_unit.dart';
 import 'package:keiser_metrics_sdk/src/model/facility_strength_machine_data.dart';
 import 'package:json_annotation/json_annotation.dart';
 
@@ -36,27 +38,27 @@ class StrengthMachineDataSetData {
 
     required  this.completedAt,
 
-    required  this.chest,
+     this.chest,
 
-    required  this.rom1,
+     this.rom1,
 
-    required  this.rom2,
+     this.rom2,
 
-    required  this.seat,
+     this.seat,
 
-    required  this.resistance,
+     this.resistance,
 
     required  this.resistancePrecision,
 
     required  this.repetitionCount,
 
-    required  this.forceUnit,
+     this.forceUnit,
 
      this.peakPower,
 
      this.peakVelocity,
 
-    required  this.work,
+     this.work,
 
      this.distance,
 
@@ -150,60 +152,60 @@ class StrengthMachineDataSetData {
   @JsonKey(
     
     name: r'chest',
-    required: true,
+    required: false,
     includeIfNull: false
   )
 
 
-  final num chest;
+  final num? chest;
 
 
 
   @JsonKey(
     
     name: r'rom1',
-    required: true,
+    required: false,
     includeIfNull: false
   )
 
 
-  final num rom1;
+  final num? rom1;
 
 
 
   @JsonKey(
     
     name: r'rom2',
-    required: true,
+    required: false,
     includeIfNull: false
   )
 
 
-  final num rom2;
+  final num? rom2;
 
 
 
   @JsonKey(
     
     name: r'seat',
-    required: true,
+    required: false,
     includeIfNull: false
   )
 
 
-  final num seat;
+  final num? seat;
 
 
 
   @JsonKey(
     
     name: r'resistance',
-    required: true,
+    required: false,
     includeIfNull: false
   )
 
 
-  final num resistance;
+  final num? resistance;
 
 
 
@@ -215,7 +217,7 @@ class StrengthMachineDataSetData {
   )
 
 
-  final StrengthMachineDataSetDataResistancePrecisionEnum resistancePrecision;
+  final ResistancePrecision resistancePrecision;
 
 
 
@@ -234,12 +236,12 @@ class StrengthMachineDataSetData {
   @JsonKey(
     
     name: r'forceUnit',
-    required: true,
+    required: false,
     includeIfNull: false
   )
 
 
-  final StrengthMachineDataSetDataForceUnitEnum forceUnit;
+  final ForceUnit? forceUnit;
 
 
 
@@ -270,12 +272,12 @@ class StrengthMachineDataSetData {
   @JsonKey(
     
     name: r'work',
-    required: true,
+    required: false,
     includeIfNull: false
   )
 
 
-  final num work;
+  final num? work;
 
 
 
@@ -441,26 +443,4 @@ class StrengthMachineDataSetData {
   }
 
 }
-
-
-enum StrengthMachineDataSetDataResistancePrecisionEnum {
-  @JsonValue(r'int')
-  int_,
-  @JsonValue(r'dec')
-  dec,
-}
-
-
-
-enum StrengthMachineDataSetDataForceUnitEnum {
-  @JsonValue(r'lb')
-  lb,
-  @JsonValue(r'kg')
-  kg,
-  @JsonValue(r'ne')
-  ne,
-  @JsonValue(r'er')
-  er,
-}
-
 

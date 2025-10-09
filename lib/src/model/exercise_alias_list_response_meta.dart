@@ -3,6 +3,7 @@
 //
 
 // ignore_for_file: unused_element
+import 'package:keiser_metrics_sdk/src/model/exercise_alias_type.dart';
 import 'package:keiser_metrics_sdk/src/model/exercise_alias_sorting.dart';
 import 'package:json_annotation/json_annotation.dart';
 
@@ -96,7 +97,7 @@ class ExerciseAliasListResponseMeta {
   )
 
 
-  final ExerciseAliasListResponseMetaTypeEnum? type;
+  final ExerciseAliasType? type;
 
 
 
@@ -196,15 +197,4 @@ class ExerciseAliasListResponseMeta {
   }
 
 }
-
-
-enum ExerciseAliasListResponseMetaTypeEnum {
-  @JsonValue(r'strength')
-  strength,
-  @JsonValue(r'stretch')
-  stretch,
-  @JsonValue(r'cardio')
-  cardio,
-}
-
 

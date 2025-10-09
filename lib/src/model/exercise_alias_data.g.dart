@@ -18,10 +18,8 @@ ExerciseAliasData _$ExerciseAliasDataFromJson(Map<String, dynamic> json) =>
         final val = ExerciseAliasData(
           id: $checkedConvert('id', (v) => v as num),
           alias: $checkedConvert('alias', (v) => v as String),
-          type: $checkedConvert(
-              'type',
-              (v) =>
-                  $enumDecodeNullable(_$ExerciseAliasDataTypeEnumEnumMap, v)),
+          type: $checkedConvert('type',
+              (v) => $enumDecodeNullable(_$ExerciseAliasTypeEnumMap, v)),
           strengthExercise: $checkedConvert(
               'strengthExercise',
               (v) => v == null
@@ -54,15 +52,15 @@ Map<String, dynamic> _$ExerciseAliasDataToJson(ExerciseAliasData instance) {
     }
   }
 
-  writeNotNull('type', _$ExerciseAliasDataTypeEnumEnumMap[instance.type]);
+  writeNotNull('type', _$ExerciseAliasTypeEnumMap[instance.type]);
   writeNotNull('strengthExercise', instance.strengthExercise?.toJson());
   writeNotNull('cardioExercise', instance.cardioExercise?.toJson());
   writeNotNull('stretchExercise', instance.stretchExercise?.toJson());
   return val;
 }
 
-const _$ExerciseAliasDataTypeEnumEnumMap = {
-  ExerciseAliasDataTypeEnum.strength: 'strength',
-  ExerciseAliasDataTypeEnum.stretch: 'stretch',
-  ExerciseAliasDataTypeEnum.cardio: 'cardio',
+const _$ExerciseAliasTypeEnumMap = {
+  ExerciseAliasType.cardio: 'cardio',
+  ExerciseAliasType.strength: 'strength',
+  ExerciseAliasType.stretch: 'stretch',
 };

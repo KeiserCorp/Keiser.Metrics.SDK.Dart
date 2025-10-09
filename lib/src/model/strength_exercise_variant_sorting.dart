@@ -13,4 +13,6 @@ enum StrengthExerciseVariantSorting {
   variant,
   @JsonValue(r'attachment')
   attachment,
+  @JsonValue(r'equipmentMechanicalMovement')
+  equipmentMechanicalMovement,
 }

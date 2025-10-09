@@ -21,7 +21,7 @@ UserFacilityRelationshipListResponseMeta
               member: $checkedConvert('member', (v) => v as bool?),
               employee: $checkedConvert('employee', (v) => v as bool?),
               employeeRole: $checkedConvert('employeeRole',
-                  (v) => $enumDecodeNullable(_$FacilityEmployeeRoleEnumMap, v)),
+                  (v) => $enumDecodeNullable(_$EmployeeRoleEnumMap, v)),
               sort: $checkedConvert(
                   'sort',
                   (v) =>
@@ -48,8 +48,7 @@ Map<String, dynamic> _$UserFacilityRelationshipListResponseMetaToJson(
 
   writeNotNull('member', instance.member);
   writeNotNull('employee', instance.employee);
-  writeNotNull(
-      'employeeRole', _$FacilityEmployeeRoleEnumMap[instance.employeeRole]);
+  writeNotNull('employeeRole', _$EmployeeRoleEnumMap[instance.employeeRole]);
   val['sort'] = _$UserFacilityRelationshipSortingEnumMap[instance.sort]!;
   writeNotNull('userId', instance.userId);
   writeNotNull('ascending', instance.ascending);
@@ -59,12 +58,12 @@ Map<String, dynamic> _$UserFacilityRelationshipListResponseMetaToJson(
   return val;
 }
 
-const _$FacilityEmployeeRoleEnumMap = {
-  FacilityEmployeeRole.admin: 'admin',
-  FacilityEmployeeRole.customerSupport: 'customerSupport',
-  FacilityEmployeeRole.trainer: 'trainer',
-  FacilityEmployeeRole.frontDesk: 'frontDesk',
-  FacilityEmployeeRole.maintenance: 'maintenance',
+const _$EmployeeRoleEnumMap = {
+  EmployeeRole.admin: 'admin',
+  EmployeeRole.customerSupport: 'customerSupport',
+  EmployeeRole.trainer: 'trainer',
+  EmployeeRole.frontDesk: 'frontDesk',
+  EmployeeRole.maintenance: 'maintenance',
 };
 
 const _$UserFacilityRelationshipSortingEnumMap = {

@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **cardioExerciseId** | **num** |  | [optional] 
 **cardioMachineId** | **num** |  | [optional] 
-**variant** | **String** |  | [optional] 
+**variant** | [**CardioExerciseVariantType**](CardioExerciseVariantType.md) |  | [optional] 
 **sort** | [**CardioExerciseVariantSorting**](CardioExerciseVariantSorting.md) |  | 
 **ascending** | **bool** |  | [optional] 
 **limit** | **num** |  | [optional] 

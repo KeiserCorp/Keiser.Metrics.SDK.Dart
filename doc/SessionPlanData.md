@@ -10,8 +10,8 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **num** |  | 
 **names** | **String** |  | 
-**description** | **String** |  | 
-**notes** | **String** |  | 
+**description** | **String** |  | [optional] 
+**notes** | **String** |  | [optional] 
 **startAt** | **String** |  | 
 **endAt** | **String** |  | [optional] 
 **active** | **bool** |  | 

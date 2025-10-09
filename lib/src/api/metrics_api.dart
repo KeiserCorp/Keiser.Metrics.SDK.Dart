@@ -40,6 +40,7 @@ import 'package:keiser_metrics_sdk/src/model/facility_access_control_ip_range_li
 import 'package:keiser_metrics_sdk/src/model/facility_access_control_ip_range_response.dart';
 import 'package:keiser_metrics_sdk/src/model/facility_access_control_kiosk_response.dart';
 import 'package:keiser_metrics_sdk/src/model/facility_access_control_response.dart';
+import 'package:keiser_metrics_sdk/src/model/facility_cardio_machine_list_response.dart';
 import 'package:keiser_metrics_sdk/src/model/facility_cardio_machine_response.dart';
 import 'package:keiser_metrics_sdk/src/model/facility_configuration_response.dart';
 import 'package:keiser_metrics_sdk/src/model/facility_in_body_integration_response.dart';
@@ -74,10 +75,6 @@ import 'package:keiser_metrics_sdk/src/model/kiosk_session_response.dart';
 import 'package:keiser_metrics_sdk/src/model/m_series_app_session_export_response.dart';
 import 'package:keiser_metrics_sdk/src/model/m_series_app_session_list_response.dart';
 import 'package:keiser_metrics_sdk/src/model/m_series_app_session_response.dart';
-import 'package:keiser_metrics_sdk/src/model/m_series_challenge_list_response.dart';
-import 'package:keiser_metrics_sdk/src/model/m_series_challenge_participant_list_response.dart';
-import 'package:keiser_metrics_sdk/src/model/m_series_challenge_participant_response.dart';
-import 'package:keiser_metrics_sdk/src/model/m_series_challenge_response.dart';
 import 'package:keiser_metrics_sdk/src/model/m_series_data_set_list_response.dart';
 import 'package:keiser_metrics_sdk/src/model/m_series_data_set_response.dart';
 import 'package:keiser_metrics_sdk/src/model/m_series_data_set_segment_response.dart';
@@ -89,6 +86,7 @@ import 'package:keiser_metrics_sdk/src/model/machine_adjustment_response.dart';
 import 'package:keiser_metrics_sdk/src/model/o_auth_service_list_response.dart';
 import 'package:keiser_metrics_sdk/src/model/o_auth_service_response.dart';
 import 'package:keiser_metrics_sdk/src/model/oauth_response.dart';
+import 'package:keiser_metrics_sdk/src/model/oauth_token_response.dart';
 import 'package:keiser_metrics_sdk/src/model/primary_email_address_response.dart';
 import 'package:keiser_metrics_sdk/src/model/privileged_facility_relationship_request_list_response.dart';
 import 'package:keiser_metrics_sdk/src/model/profile_response.dart';
@@ -482,7 +480,7 @@ class MetricsApi {
   /// Parameters:
   /// * [appType] - Allowed values: performance, elder, medical, commercial
   /// * [facilityStrengthMachineId] 
-  /// * [forceUnit] - Allowed values: lb, kg, ne, er, lb, kg, ne, er
+  /// * [forceUnit] - Allowed values: lb, kg, ne, er
   /// * [isFacilityConfigurationOverridden] 
   /// * [primaryFocus] - Allowed values: power, force, velocity, rom
   /// * [secondaryFocus] - Allowed values: power, force, velocity, rom
@@ -1728,7 +1726,7 @@ class MetricsApi {
     required String privacyUrl,
     required String termsUrl,
     String? address,
-    num? company,
+    String? company,
     String? websiteUrl,
     String? apiVersion,
   }) async {
@@ -3335,7 +3333,6 @@ class MetricsApi {
   ///
   /// Parameters:
   /// * [isKioskModeAllowed] 
-  /// * [isFingerprintAuthenticationAllowed] 
   /// * [primaryIdentification] - Allowed values: uuid, memberIdentifier, emailAddress, fullName
   /// * [secondaryIdentification] - Allowed values: none, uuid, memberIdentifier, yearOfBirth, memberSecret
   /// * [apiVersion] 
@@ -3343,7 +3340,6 @@ class MetricsApi {
   /// Returns a [Future] containing a [Response] with a [FacilityAccessControlKioskResponse] as data
   Future<FacilityAccessControlKioskResponse> facilityAccessControlKioskUpdate({ 
     required bool isKioskModeAllowed,
-    bool? isFingerprintAuthenticationAllowed,
     String? primaryIdentification,
     String? secondaryIdentification,
     String? apiVersion,
@@ -3357,7 +3353,6 @@ class MetricsApi {
     }
 
     final _queryParameters = <String, dynamic>{
-      if (isFingerprintAuthenticationAllowed != null) r'isFingerprintAuthenticationAllowed': _encodeQueryParameter(isFingerprintAuthenticationAllowed),
       r'isKioskModeAllowed': _encodeQueryParameter(isKioskModeAllowed),
       if (primaryIdentification != null) r'primaryIdentification': _encodeQueryParameter(primaryIdentification),
       if (secondaryIdentification != null) r'secondaryIdentification': _encodeQueryParameter(secondaryIdentification),
@@ -3441,6 +3436,53 @@ class MetricsApi {
     
   }
 
+  /// Create a facility cardio machine
+  /// 1
+  ///
+  /// Parameters:
+  /// * [cardioMachineId] 
+  /// * [model] 
+  /// * [serial] 
+  /// * [version] 
+  /// * [location] 
+  /// * [apiVersion] 
+  ///
+  /// Returns a [Future] containing a [Response] with a [FacilityCardioMachineResponse] as data
+  Future<FacilityCardioMachineResponse> facilityCardioMachineCreate({ 
+    required num cardioMachineId,
+    required String model,
+    required String serial,
+    required String version,
+    String? location,
+    String? apiVersion,
+  }) async {
+    final _path = r'/facility/cardio-machine';
+    final _action = 'facilityCardioMachine:create';
+    final _method = r'POST';
+
+    if (apiVersion == null) {
+      apiVersion = '1';
+    }
+
+    final _queryParameters = <String, dynamic>{
+      r'cardioMachineId': _encodeQueryParameter(cardioMachineId),
+      if (location != null) r'location': _encodeQueryParameter(location),
+      r'model': _encodeQueryParameter(model),
+      r'serial': _encodeQueryParameter(serial),
+      r'version': _encodeQueryParameter(version),
+      if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
+    };    
+    final _response = await connection.action(
+      path: _path,
+      action: _action,
+      method: _method,
+      queryParameters: _queryParameters,
+    );
+    final FacilityCardioMachineResponse _responseData = deserialize<FacilityCardioMachineResponse, FacilityCardioMachineResponse>(_response.data!, 'FacilityCardioMachineResponse', growable: true);
+    return _responseData;
+    
+  }
+
   /// Delete a facility cardio machine
   /// 1
   ///
@@ -3477,6 +3519,59 @@ class MetricsApi {
     return;
   }
 
+  /// List facility cardio machines
+  /// 1
+  ///
+  /// Parameters:
+  /// * [ascending] 
+  /// * [limit] 
+  /// * [location] 
+  /// * [model] 
+  /// * [offset] 
+  /// * [serial] 
+  /// * [sort] - Allowed values: id, name
+  /// * [apiVersion] 
+  ///
+  /// Returns a [Future] containing a [Response] with a [FacilityCardioMachineListResponse] as data
+  Future<FacilityCardioMachineListResponse> facilityCardioMachineList({ 
+    bool? ascending = true,
+    num? limit,
+    String? location,
+    String? model,
+    num? offset,
+    String? serial,
+    String? sort = 'id',
+    String? apiVersion,
+  }) async {
+    final _path = r'/facility/cardio-machine/list';
+    final _action = 'facilityCardioMachine:list';
+    final _method = r'GET';
+
+    if (apiVersion == null) {
+      apiVersion = '1';
+    }
+
+    final _queryParameters = <String, dynamic>{
+      if (ascending != null) r'ascending': _encodeQueryParameter(ascending),
+      if (limit != null) r'limit': _encodeQueryParameter(limit),
+      if (location != null) r'location': _encodeQueryParameter(location),
+      if (model != null) r'model': _encodeQueryParameter(model),
+      if (offset != null) r'offset': _encodeQueryParameter(offset),
+      if (serial != null) r'serial': _encodeQueryParameter(serial),
+      if (sort != null) r'sort': _encodeQueryParameter(sort),
+      if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
+    };    
+    final _response = await connection.action(
+      path: _path,
+      action: _action,
+      method: _method,
+      queryParameters: _queryParameters,
+    );
+    final FacilityCardioMachineListResponse _responseData = deserialize<FacilityCardioMachineListResponse, FacilityCardioMachineListResponse>(_response.data!, 'FacilityCardioMachineListResponse', growable: true);
+    return _responseData;
+    
+  }
+
   /// Show a facility cardio machine
   /// 1
   ///
@@ -3491,7 +3586,7 @@ class MetricsApi {
   }) async {
     final _path = r'/facility/cardio-machine';
     final _action = 'facilityCardioMachine:show';
-    final _method = r'POST';
+    final _method = r'GET';
 
     if (apiVersion == null) {
       apiVersion = '1';
@@ -3697,7 +3792,7 @@ class MetricsApi {
     String? website,
     String? apiVersion,
   }) async {
-    final _path = r'/facility ';
+    final _path = r'/facility';
     final _action = 'facility:create';
     final _method = r'POST';
 
@@ -4259,7 +4354,7 @@ class MetricsApi {
   Future<FacilityProfileResponse> facilityProfileUpdate({ 
     required String names,
     String? address,
-    num? city,
+    String? city,
     String? country,
     String? phone,
     String? postcode,
@@ -4304,7 +4399,7 @@ class MetricsApi {
   /// * [names] 
   /// * [birthday] 
   /// * [email] 
-  /// * [employeeRole] - Allowed values: admin, customerSupport, trainer, frontDesk, maintenance, machine, kiosk
+  /// * [employeeRole] - Allowed values: admin, customerSupport, trainer, frontDesk, maintenance
   /// * [gender] - Allowed values: m, f, o
   /// * [language] - Allowed values: af, ar, az, be, bg, ca, cs, cy, da, de, dv, el, en, eo, es, et, eu, fa, fi, fo, fr, gl, gu, he, hi, hr, hu, hy, id, is, it, ja, ka, kk, kn, ko, kok, ky, lt, lv, mi, mk, mn, mr, ms, mt, nb, nl, ns, pa, pl, ps, pt, qu, ro, ru, sa, se, sk, sl, sq, sv, sw, ta, te, th, tl, tn, tr, tt, ts, uk, ur, uz, vi, xh, zh, zu
   /// * [member] 
@@ -4401,7 +4496,7 @@ class MetricsApi {
   /// Parameters:
   /// * [ascending] 
   /// * [employee] 
-  /// * [employeeRole] - Allowed values: admin, customerSupport, trainer, frontDesk, maintenance, machine, kiosk
+  /// * [employeeRole] - Allowed values: admin, customerSupport, trainer, frontDesk, maintenance
   /// * [includeSession] 
   /// * [limit] 
   /// * [member] 
@@ -4532,7 +4627,7 @@ class MetricsApi {
   ///
   /// Parameters:
   /// * [id] 
-  /// * [employeeRole] - Allowed values: admin, customerSupport, trainer, frontDesk, maintenance, machine, kiosk
+  /// * [employeeRole] - Allowed values: admin, customerSupport, trainer, frontDesk, maintenance
   /// * [member] 
   /// * [memberIdentifier] 
   /// * [apiVersion] 
@@ -4578,7 +4673,7 @@ class MetricsApi {
   ///
   /// Parameters:
   /// * [email] 
-  /// * [employeeRole] - Allowed values: admin, customerSupport, trainer, frontDesk, maintenance, machine, kiosk
+  /// * [employeeRole] - Allowed values: admin, customerSupport, trainer, frontDesk, maintenance
   /// * [member] 
   /// * [memberIdentifier] 
   /// * [userId] 
@@ -4629,7 +4724,7 @@ class MetricsApi {
   /// * [memberIdentifier] 
   /// * [names] 
   /// * [offset] 
-  /// * [sort] - Allowed values: id, name, memberIdentifier, employeeRole
+  /// * [sort] - Allowed values: id, name
   /// * [userId] 
   /// * [apiVersion] 
   ///
@@ -4836,7 +4931,7 @@ class MetricsApi {
   /// * [limit] 
   /// * [names] 
   /// * [offset] 
-  /// * [sort] - Allowed values: id, name
+  /// * [sort] - Allowed values: id, name, memberIdentifier, employeeRole
   /// * [userId] 
   /// * [apiVersion] 
   ///
@@ -5044,7 +5139,7 @@ class MetricsApi {
   /// Parameters:
   /// * [ascending] 
   /// * [employee] 
-  /// * [employeeRole] - Allowed values: admin, customerSupport, trainer, frontDesk, maintenance, machine, kiosk
+  /// * [employeeRole] - Allowed values: admin, customerSupport, trainer, frontDesk, maintenance
   /// * [limit] 
   /// * [member] 
   /// * [offset] 
@@ -5218,7 +5313,7 @@ class MetricsApi {
   ///
   /// Parameters:
   /// * [from] 
-  /// * [group] - Allowed values: monthly, weekly, yearly
+  /// * [group] - Allowed values: monthly, yearly, weekly
   /// * [to] 
   /// * [apiVersion] 
   ///
@@ -5375,7 +5470,7 @@ class MetricsApi {
   /// * [names] 
   /// * [offset] 
   /// * [open] 
-  /// * [sort] - Allowed values: id, name, open, startedAt, endedAt
+  /// * [sort] - Allowed values: id, startedAt, endedAt, name, open
   /// * [to] 
   /// * [apiVersion] 
   ///
@@ -5775,6 +5870,55 @@ class MetricsApi {
     
   }
 
+  /// Create a facility strength machine
+  /// 1
+  ///
+  /// Parameters:
+  /// * [model] 
+  /// * [serial] 
+  /// * [strengthMachineId] 
+  /// * [version] 
+  /// * [location] 
+  /// * [apiVersion] 
+  ///
+  /// Returns a [Future] containing a [Response] with a [FacilityStrengthMachineResponse] as data
+  Future<FacilityStrengthMachineResponse> facilityStrengthMachineCreate({ 
+    required num model,
+    required String serial,
+    required num strengthMachineId,
+    required String version,
+    String? location,
+    String? apiVersion,
+  }) async {
+    final _path = r'/facility/strength-machine/{strengthMachineId}'.replaceAll('{' r'strengthMachineId' '}', strengthMachineId.toString());
+    final _action = 'facilityStrengthMachine:create';
+    final _method = r'POST';
+
+    if (apiVersion == null) {
+      apiVersion = '1';
+    }
+    final _socketParameters = <String, dynamic>{
+      r'strengthMachineId': _encodeQueryParameter(strengthMachineId),
+    };
+    final _queryParameters = <String, dynamic>{
+      if (location != null) r'location': _encodeQueryParameter(location),
+      r'model': _encodeQueryParameter(model),
+      r'serial': _encodeQueryParameter(serial),
+      r'version': _encodeQueryParameter(version),
+      if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
+    };    
+    final _response = await connection.action(
+      path: _path,
+      action: _action,
+      method: _method,
+      queryParameters: _queryParameters,
+      socketParameters: _socketParameters,
+    );
+    final FacilityStrengthMachineResponse _responseData = deserialize<FacilityStrengthMachineResponse, FacilityStrengthMachineResponse>(_response.data!, 'FacilityStrengthMachineResponse', growable: true);
+    return _responseData;
+    
+  }
+
   /// Creates facility strength machines using eChip data
   /// 1
   ///
@@ -5784,7 +5928,7 @@ class MetricsApi {
   ///
   /// Returns a [Future] containing a [Response] with a [FacilityStrengthMachineBulkCreateResponse] as data
   Future<FacilityStrengthMachineBulkCreateResponse> facilityStrengthMachineCreateEchip({ 
-    required num echipData,
+    required String echipData,
     String? apiVersion,
   }) async {
     final _path = r'/facility/strength-machine/echip';
@@ -7156,421 +7300,6 @@ class MetricsApi {
     
   }
 
-  /// Create a user mSeries Challenge
-  /// 1
-  ///
-  /// Parameters:
-  /// * [challengeType] - Allowed values: timeBased, goalBased
-  /// * [focus] - Allowed values: points, caloricBurn, distance, duration
-  /// * [isPublic] 
-  /// * [names] 
-  /// * [userLimit] 
-  /// * [endAt] 
-  /// * [goal] 
-  /// * [startAt] 
-  /// * [apiVersion] 
-  ///
-  /// Returns a [Future] containing a [Response] with a [MSeriesChallengeResponse] as data
-  Future<MSeriesChallengeResponse> mSeriesChallengeCreate({ 
-    required String challengeType,
-    required String focus,
-    required bool isPublic,
-    required String names,
-    required num userLimit,
-    DateTime? endAt,
-    num? goal,
-    DateTime? startAt,
-    String? apiVersion,
-  }) async {
-    final _path = r'/m-series/challenge';
-    final _action = 'mSeriesChallenge:create';
-    final _method = r'POST';
-
-    if (apiVersion == null) {
-      apiVersion = '1';
-    }
-
-    final _queryParameters = <String, dynamic>{
-      r'challengeType': _encodeQueryParameter(challengeType),
-      if (endAt != null) r'endAt': _encodeQueryParameter(endAt),
-      r'focus': _encodeQueryParameter(focus),
-      if (goal != null) r'goal': _encodeQueryParameter(goal),
-      r'isPublic': _encodeQueryParameter(isPublic),
-      r'name': _encodeQueryParameter(names),
-      if (startAt != null) r'startAt': _encodeQueryParameter(startAt),
-      r'userLimit': _encodeQueryParameter(userLimit),
-      if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
-    final _response = await connection.action(
-      path: _path,
-      action: _action,
-      method: _method,
-      queryParameters: _queryParameters,
-    );
-    final MSeriesChallengeResponse _responseData = deserialize<MSeriesChallengeResponse, MSeriesChallengeResponse>(_response.data!, 'MSeriesChallengeResponse', growable: true);
-    return _responseData;
-    
-  }
-
-  /// Delete a user&#39;s owned mSeries Challenge
-  /// 1
-  ///
-  /// Parameters:
-  /// * [id] 
-  /// * [apiVersion] 
-  ///
-  /// Returns a [Future]
-  Future<void> mSeriesChallengeDelete({ 
-    required num id,
-    String? apiVersion,
-  }) async {
-    final _path = r'/m-series/challenge/{id}'.replaceAll('{' r'id' '}', id.toString());
-    final _action = 'mSeriesChallenge:delete';
-    final _method = r'DELETE';
-
-    if (apiVersion == null) {
-      apiVersion = '1';
-    }
-    final _socketParameters = <String, dynamic>{
-      r'id': _encodeQueryParameter(id),
-    };
-    final _queryParameters = <String, dynamic>{
-      if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
-    await connection.action(
-      path: _path,
-      action: _action,
-      method: _method,
-      queryParameters: _queryParameters,
-      socketParameters: _socketParameters,
-    );
-
-    return;
-  }
-
-  /// List a user&#39;s owned or joined mSeries Challenges
-  /// 1
-  ///
-  /// Parameters:
-  /// * [ascending] 
-  /// * [from] 
-  /// * [isCompleted] 
-  /// * [limit] 
-  /// * [offset] 
-  /// * [relationship] - Allowed values: owned, joined
-  /// * [sort] - Allowed values: id, startAt, endAt, createdAt
-  /// * [to] 
-  /// * [userId] 
-  /// * [apiVersion] 
-  ///
-  /// Returns a [Future] containing a [Response] with a [MSeriesChallengeListResponse] as data
-  Future<MSeriesChallengeListResponse> mSeriesChallengeList({ 
-    bool? ascending = false,
-    DateTime? from,
-    bool? isCompleted = false,
-    num? limit,
-    num? offset,
-    String? relationship = 'joined',
-    String? sort = 'startAt',
-    DateTime? to,
-    num? userId,
-    String? apiVersion,
-  }) async {
-    final _path = r'/m-series/challenge/list';
-    final _action = 'mSeriesChallenge:list';
-    final _method = r'GET';
-
-    if (apiVersion == null) {
-      apiVersion = '1';
-    }
-
-    final _queryParameters = <String, dynamic>{
-      if (ascending != null) r'ascending': _encodeQueryParameter(ascending),
-      if (from != null) r'from': _encodeQueryParameter(from),
-      if (isCompleted != null) r'isCompleted': _encodeQueryParameter(isCompleted),
-      if (limit != null) r'limit': _encodeQueryParameter(limit),
-      if (offset != null) r'offset': _encodeQueryParameter(offset),
-      if (relationship != null) r'relationship': _encodeQueryParameter(relationship),
-      if (sort != null) r'sort': _encodeQueryParameter(sort),
-      if (to != null) r'to': _encodeQueryParameter(to),
-      if (userId != null) r'userId': _encodeQueryParameter(userId),
-      if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
-    final _response = await connection.action(
-      path: _path,
-      action: _action,
-      method: _method,
-      queryParameters: _queryParameters,
-    );
-    final MSeriesChallengeListResponse _responseData = deserialize<MSeriesChallengeListResponse, MSeriesChallengeListResponse>(_response.data!, 'MSeriesChallengeListResponse', growable: true);
-    return _responseData;
-    
-  }
-
-  /// Join Challenge
-  /// 1
-  ///
-  /// Parameters:
-  /// * [joinCode] 
-  /// * [userId] 
-  /// * [apiVersion] 
-  ///
-  /// Returns a [Future] containing a [Response] with a [MSeriesChallengeParticipantResponse] as data
-  Future<MSeriesChallengeParticipantResponse> mSeriesChallengeParticipantCreate({ 
-    required String joinCode,
-    num? userId,
-    String? apiVersion,
-  }) async {
-    final _path = r'/m-series/challenge/participant';
-    final _action = 'mSeriesChallengeParticipant:create';
-    final _method = r'POST';
-
-    if (apiVersion == null) {
-      apiVersion = '1';
-    }
-
-    final _queryParameters = <String, dynamic>{
-      r'joinCode': _encodeQueryParameter(joinCode),
-      if (userId != null) r'userId': _encodeQueryParameter(userId),
-      if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
-    final _response = await connection.action(
-      path: _path,
-      action: _action,
-      method: _method,
-      queryParameters: _queryParameters,
-    );
-    final MSeriesChallengeParticipantResponse _responseData = deserialize<MSeriesChallengeParticipantResponse, MSeriesChallengeParticipantResponse>(_response.data!, 'MSeriesChallengeParticipantResponse', growable: true);
-    return _responseData;
-    
-  }
-
-  /// Leave Challenge
-  /// 1
-  ///
-  /// Parameters:
-  /// * [mSeriesChallengeId] 
-  /// * [userId] 
-  /// * [apiVersion] 
-  ///
-  /// Returns a [Future]
-  Future<void> mSeriesChallengeParticipantDelete({ 
-    required num mSeriesChallengeId,
-    num? userId,
-    String? apiVersion,
-  }) async {
-    final _path = r'/m-series/challenge/{mSeriesChallengeId}/participant'.replaceAll('{' r'mSeriesChallengeId' '}', mSeriesChallengeId.toString());
-    final _action = 'mSeriesChallengeParticipant:delete';
-    final _method = r'DELETE';
-
-    if (apiVersion == null) {
-      apiVersion = '1';
-    }
-    final _socketParameters = <String, dynamic>{
-      r'mSeriesChallengeId': _encodeQueryParameter(mSeriesChallengeId),
-    };
-    final _queryParameters = <String, dynamic>{
-      if (userId != null) r'userId': _encodeQueryParameter(userId),
-      if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
-    await connection.action(
-      path: _path,
-      action: _action,
-      method: _method,
-      queryParameters: _queryParameters,
-      socketParameters: _socketParameters,
-    );
-
-    return;
-  }
-
-  /// Search for mSeries Challenge Participants
-  /// 1
-  ///
-  /// Parameters:
-  /// * [nameSearchQuery] 
-  /// * [ascending] 
-  /// * [joinCode] 
-  /// * [limit] 
-  /// * [mSeriesChallengeId] 
-  /// * [offset] 
-  /// * [sort] - Allowed values: id, name, joinedAt
-  /// * [userId] 
-  /// * [apiVersion] 
-  ///
-  /// Returns a [Future] containing a [Response] with a [MSeriesChallengeParticipantListResponse] as data
-  Future<MSeriesChallengeParticipantListResponse> mSeriesChallengeParticipantList({ 
-    required String nameSearchQuery,
-    bool? ascending = true,
-    String? joinCode,
-    num? limit,
-    num? mSeriesChallengeId,
-    num? offset,
-    String? sort = 'name',
-    num? userId,
-    String? apiVersion,
-  }) async {
-    final _path = r'/m-series/challenge/participant/list';
-    final _action = 'mSeriesChallengeParticipant:list';
-    final _method = r'GET';
-
-    if (apiVersion == null) {
-      apiVersion = '1';
-    }
-
-    final _queryParameters = <String, dynamic>{
-      if (ascending != null) r'ascending': _encodeQueryParameter(ascending),
-      if (joinCode != null) r'joinCode': _encodeQueryParameter(joinCode),
-      if (limit != null) r'limit': _encodeQueryParameter(limit),
-      if (mSeriesChallengeId != null) r'mSeriesChallengeId': _encodeQueryParameter(mSeriesChallengeId),
-      r'nameSearchQuery': _encodeQueryParameter(nameSearchQuery),
-      if (offset != null) r'offset': _encodeQueryParameter(offset),
-      if (sort != null) r'sort': _encodeQueryParameter(sort),
-      if (userId != null) r'userId': _encodeQueryParameter(userId),
-      if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
-    final _response = await connection.action(
-      path: _path,
-      action: _action,
-      method: _method,
-      queryParameters: _queryParameters,
-    );
-    final MSeriesChallengeParticipantListResponse _responseData = deserialize<MSeriesChallengeParticipantListResponse, MSeriesChallengeParticipantListResponse>(_response.data!, 'MSeriesChallengeParticipantListResponse', growable: true);
-    return _responseData;
-    
-  }
-
-  /// Show a user&#39;s mSeries User Challenge Participant Record
-  /// 1
-  ///
-  /// Parameters:
-  /// * [joinCode] 
-  /// * [mSeriesChallengeId] 
-  /// * [mSeriesChallengeParticipantId] 
-  /// * [userId] 
-  /// * [apiVersion] 
-  ///
-  /// Returns a [Future] containing a [Response] with a [MSeriesChallengeParticipantResponse] as data
-  Future<MSeriesChallengeParticipantResponse> mSeriesChallengeParticipantShow({ 
-    String? joinCode,
-    num? mSeriesChallengeId,
-    num? mSeriesChallengeParticipantId,
-    num? userId,
-    String? apiVersion,
-  }) async {
-    final _path = r'/m-series/challenge/participant';
-    final _action = 'mSeriesChallengeParticipant:show';
-    final _method = r'GET';
-
-    if (apiVersion == null) {
-      apiVersion = '1';
-    }
-
-    final _queryParameters = <String, dynamic>{
-      if (joinCode != null) r'joinCode': _encodeQueryParameter(joinCode),
-      if (mSeriesChallengeId != null) r'mSeriesChallengeId': _encodeQueryParameter(mSeriesChallengeId),
-      if (mSeriesChallengeParticipantId != null) r'mSeriesChallengeParticipantId': _encodeQueryParameter(mSeriesChallengeParticipantId),
-      if (userId != null) r'userId': _encodeQueryParameter(userId),
-      if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
-    final _response = await connection.action(
-      path: _path,
-      action: _action,
-      method: _method,
-      queryParameters: _queryParameters,
-    );
-    final MSeriesChallengeParticipantResponse _responseData = deserialize<MSeriesChallengeParticipantResponse, MSeriesChallengeParticipantResponse>(_response.data!, 'MSeriesChallengeParticipantResponse', growable: true);
-    return _responseData;
-    
-  }
-
-  /// Show a user mSeries Challenge
-  /// 1
-  ///
-  /// Parameters:
-  /// * [id] 
-  /// * [joinCode] 
-  /// * [userId] 
-  /// * [apiVersion] 
-  ///
-  /// Returns a [Future] containing a [Response] with a [MSeriesChallengeResponse] as data
-  Future<MSeriesChallengeResponse> mSeriesChallengeShow({ 
-    num? id,
-    String? joinCode,
-    num? userId,
-    String? apiVersion,
-  }) async {
-    final _path = r'/m-series/challenge';
-    final _action = 'mSeriesChallenge:show';
-    final _method = r'GET';
-
-    if (apiVersion == null) {
-      apiVersion = '1';
-    }
-
-    final _queryParameters = <String, dynamic>{
-      if (id != null) r'id': _encodeQueryParameter(id),
-      if (joinCode != null) r'joinCode': _encodeQueryParameter(joinCode),
-      if (userId != null) r'userId': _encodeQueryParameter(userId),
-      if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
-    final _response = await connection.action(
-      path: _path,
-      action: _action,
-      method: _method,
-      queryParameters: _queryParameters,
-    );
-    final MSeriesChallengeResponse _responseData = deserialize<MSeriesChallengeResponse, MSeriesChallengeResponse>(_response.data!, 'MSeriesChallengeResponse', growable: true);
-    return _responseData;
-    
-  }
-
-  /// Update a user mSeries Challenge
-  /// 1
-  ///
-  /// Parameters:
-  /// * [id] 
-  /// * [isPublic] 
-  /// * [names] 
-  /// * [userLimit] 
-  /// * [apiVersion] 
-  ///
-  /// Returns a [Future] containing a [Response] with a [MSeriesChallengeResponse] as data
-  Future<MSeriesChallengeResponse> mSeriesChallengeUpdate({ 
-    required num id,
-    bool? isPublic,
-    String? names,
-    num? userLimit,
-    String? apiVersion,
-  }) async {
-    final _path = r'/m-series/challenge/{id}'.replaceAll('{' r'id' '}', id.toString());
-    final _action = 'mSeriesChallenge:update';
-    final _method = r'PUT';
-
-    if (apiVersion == null) {
-      apiVersion = '1';
-    }
-    final _socketParameters = <String, dynamic>{
-      r'id': _encodeQueryParameter(id),
-    };
-    final _queryParameters = <String, dynamic>{
-      if (isPublic != null) r'isPublic': _encodeQueryParameter(isPublic),
-      if (names != null) r'name': _encodeQueryParameter(names),
-      if (userLimit != null) r'userLimit': _encodeQueryParameter(userLimit),
-      if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
-    final _response = await connection.action(
-      path: _path,
-      action: _action,
-      method: _method,
-      queryParameters: _queryParameters,
-      socketParameters: _socketParameters,
-    );
-    final MSeriesChallengeResponse _responseData = deserialize<MSeriesChallengeResponse, MSeriesChallengeResponse>(_response.data!, 'MSeriesChallengeResponse', growable: true);
-    return _responseData;
-    
-  }
-
   /// Create a user M Series data set
   /// 1
   ///
@@ -8473,7 +8202,7 @@ class MetricsApi {
   ///
   /// Parameters:
   /// * [redirect] 
-  /// * [service] - Allowed values: google, facebook, apple, strava, trainingpeaks
+  /// * [service] - Allowed values: apple, google, facebook, strava, trainingpeaks
   /// * [type] - Allowed values: login, connect
   /// * [apiVersion] 
   ///
@@ -8644,13 +8373,13 @@ class MetricsApi {
   /// Parameters:
   /// * [clientIdentifier] 
   /// * [clientSecret] 
-  /// * [grantType] - Allowed values: authorization_code, refresh_token
+  /// * [grantType] 
   /// * [authorizationCode] 
   /// * [refreshToken] 
   /// * [apiVersion] 
   ///
-  /// Returns a [Future]
-  Future<void> oauthToken({ 
+  /// Returns a [Future] containing a [Response] with a [OauthTokenResponse] as data
+  Future<OauthTokenResponse> oauthToken({ 
     required String clientIdentifier,
     required String clientSecret,
     required String grantType,
@@ -8674,14 +8403,15 @@ class MetricsApi {
       if (refreshToken != null) r'refreshToken': _encodeQueryParameter(refreshToken),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
     };    
-    await connection.action(
+    final _response = await connection.action(
       path: _path,
       action: _action,
       method: _method,
       queryParameters: _queryParameters,
     );
-
-    return;
+    final OauthTokenResponse _responseData = deserialize<OauthTokenResponse, OauthTokenResponse>(_response.data!, 'OauthTokenResponse', growable: true);
+    return _responseData;
+    
   }
 
   /// Show a user&#39;s primary email address id
@@ -8968,7 +8698,7 @@ class MetricsApi {
   /// * [offset] 
   /// * [open] 
   /// * [requireExtendedDataType] - Allowed values: mSeries, strength, heartRate, session, workout
-  /// * [sort] - Allowed values: id, startedAt, endedAt
+  /// * [sort] - Allowed values: id, startedAt, endedAt, name, open
   /// * [to] 
   /// * [userId] 
   /// * [apiVersion] 
@@ -10208,7 +9938,7 @@ class MetricsApi {
     return;
   }
 
-  /// Show a session plan set intance
+  /// Show a session plan set instance
   /// 1
   ///
   /// Parameters:
@@ -10350,7 +10080,7 @@ class MetricsApi {
   /// Parameters:
   /// * [completed] 
   /// * [id] 
-  /// * [completedForceUnit] 
+  /// * [completedForceUnit] - Allowed values: lb, kg, ne, er
   /// * [completedRepetitionCount] 
   /// * [completedResistance] 
   /// * [strengthMachineDataSetId] 
@@ -10361,7 +10091,7 @@ class MetricsApi {
   Future<SessionPlanSetInstanceResponse> sessionPlanSetInstanceUpdateStrength({ 
     required bool completed,
     required num id,
-    num? completedForceUnit,
+    String? completedForceUnit,
     num? completedRepetitionCount,
     num? completedResistance,
     num? strengthMachineDataSetId,
@@ -10447,10 +10177,12 @@ class MetricsApi {
   ///
   /// Parameters:
   /// * [ascending] 
+  /// * [from] 
   /// * [limit] 
   /// * [names] 
   /// * [offset] 
   /// * [sort] - Allowed values: id, name
+  /// * [to] 
   /// * [type] - Allowed values: cardio, strength, stretch, activity
   /// * [userId] 
   /// * [apiVersion] 
@@ -10458,10 +10190,12 @@ class MetricsApi {
   /// Returns a [Future] containing a [Response] with a [SessionPlanSetListResponse] as data
   Future<SessionPlanSetListResponse> sessionPlanSetList({ 
     bool? ascending = true,
+    DateTime? from,
     num? limit,
     String? names,
     num? offset,
     String? sort = 'id',
+    DateTime? to,
     String? type,
     num? userId,
     String? apiVersion,
@@ -10476,10 +10210,12 @@ class MetricsApi {
 
     final _queryParameters = <String, dynamic>{
       if (ascending != null) r'ascending': _encodeQueryParameter(ascending),
+      if (from != null) r'from': _encodeQueryParameter(from),
       if (limit != null) r'limit': _encodeQueryParameter(limit),
       if (names != null) r'name': _encodeQueryParameter(names),
       if (offset != null) r'offset': _encodeQueryParameter(offset),
       if (sort != null) r'sort': _encodeQueryParameter(sort),
+      if (to != null) r'to': _encodeQueryParameter(to),
       if (type != null) r'type': _encodeQueryParameter(type),
       if (userId != null) r'userId': _encodeQueryParameter(userId),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
@@ -11506,12 +11242,14 @@ class MetricsApi {
   /// Parameters:
   /// * [ascending] 
   /// * [description] 
+  /// * [from] 
   /// * [limit] 
   /// * [names] 
   /// * [offset] 
   /// * [public] 
   /// * [scheduleLength] 
   /// * [sort] - Allowed values: id, name, scheduleLength, public
+  /// * [to] 
   /// * [userId] 
   /// * [apiVersion] 
   ///
@@ -11519,12 +11257,14 @@ class MetricsApi {
   Future<SessionPlanTemplateListResponse> sessionPlanTemplateList({ 
     bool? ascending = true,
     String? description,
+    DateTime? from,
     num? limit,
     String? names,
     num? offset,
     bool? public,
-    bool? scheduleLength,
+    num? scheduleLength,
     String? sort = 'id',
+    DateTime? to,
     num? userId,
     String? apiVersion,
   }) async {
@@ -11539,12 +11279,14 @@ class MetricsApi {
     final _queryParameters = <String, dynamic>{
       if (ascending != null) r'ascending': _encodeQueryParameter(ascending),
       if (description != null) r'description': _encodeQueryParameter(description),
+      if (from != null) r'from': _encodeQueryParameter(from),
       if (limit != null) r'limit': _encodeQueryParameter(limit),
       if (names != null) r'name': _encodeQueryParameter(names),
       if (offset != null) r'offset': _encodeQueryParameter(offset),
       if (public != null) r'public': _encodeQueryParameter(public),
       if (scheduleLength != null) r'scheduleLength': _encodeQueryParameter(scheduleLength),
       if (sort != null) r'sort': _encodeQueryParameter(sort),
+      if (to != null) r'to': _encodeQueryParameter(to),
       if (userId != null) r'userId': _encodeQueryParameter(userId),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
     };    
@@ -11821,7 +11563,7 @@ class MetricsApi {
     num? userId,
     String? apiVersion,
   }) async {
-    final _path = r'/session:subscribe';
+    final _path = r'/session/subscribe';
     final _action = 'session:subscribe';
     final _method = r'GET';
 
@@ -11853,7 +11595,7 @@ class MetricsApi {
   /// * [defaultExerciseAlias] 
   /// * [humanMovement] - Allowed values: unilateral, bilateral
   /// * [plane] - Allowed values: sagittal, frontal, transverse
-  /// * [movement] - Allowed values: compound, isolation
+  /// * [movement] - Allowed values: isolation, compound
   /// * [apiVersion] 
   ///
   /// Returns a [Future] containing a [Response] with a [StrengthExerciseResponse] as data
@@ -11937,7 +11679,7 @@ class MetricsApi {
   /// * [defaultAlias] 
   /// * [humanMovement] - Allowed values: unilateral, bilateral
   /// * [limit] 
-  /// * [movement] - Allowed values: compound, isolation
+  /// * [movement] - Allowed values: isolation, compound
   /// * [offset] 
   /// * [plane] - Allowed values: sagittal, frontal, transverse
   /// * [sort] - Allowed values: id, defaultAlias, category, movement, plane, humanMovement
@@ -12239,7 +11981,7 @@ class MetricsApi {
   /// * [humanMovement] - Allowed values: unilateral, bilateral
   /// * [id] 
   /// * [plane] - Allowed values: sagittal, frontal, transverse
-  /// * [movement] - Allowed values: compound, isolation
+  /// * [movement] - Allowed values: isolation, compound
   /// * [apiVersion] 
   ///
   /// Returns a [Future] containing a [Response] with a [StrengthExerciseResponse] as data
@@ -14011,7 +13753,7 @@ class MetricsApi {
   ///
   /// Returns a [Future] containing a [Response] with a [UserResponse] as data
   Future<UserResponse> userCreate({ 
-    required num email,
+    required String email,
     required String password,
     bool? refreshable,
     String? apiVersion,
@@ -14052,7 +13794,7 @@ class MetricsApi {
   ///
   /// Returns a [Future]
   Future<void> userCreateBasic({ 
-    required num email,
+    required String email,
     required String password,
     bool? refreshable,
     String? apiVersion,

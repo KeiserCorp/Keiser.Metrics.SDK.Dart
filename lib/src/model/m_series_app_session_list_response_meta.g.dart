@@ -13,8 +13,10 @@ MSeriesAppSessionListResponseMeta _$MSeriesAppSessionListResponseMetaFromJson(
       json,
       ($checkedConvert) {
         final val = MSeriesAppSessionListResponseMeta(
-          from: $checkedConvert('from', (v) => v as String?),
-          to: $checkedConvert('to', (v) => v as String?),
+          from: $checkedConvert(
+              'from', (v) => v == null ? null : DateTime.parse(v as String)),
+          to: $checkedConvert(
+              'to', (v) => v == null ? null : DateTime.parse(v as String)),
           sort: $checkedConvert('sort', (v) => v as String?),
           ascending: $checkedConvert('ascending', (v) => v as bool?),
           limit: $checkedConvert('limit', (v) => v as num?),
@@ -35,8 +37,8 @@ Map<String, dynamic> _$MSeriesAppSessionListResponseMetaToJson(
     }
   }
 
-  writeNotNull('from', instance.from);
-  writeNotNull('to', instance.to);
+  writeNotNull('from', instance.from?.toIso8601String());
+  writeNotNull('to', instance.to?.toIso8601String());
   writeNotNull('sort', instance.sort);
   writeNotNull('ascending', instance.ascending);
   writeNotNull('limit', instance.limit);

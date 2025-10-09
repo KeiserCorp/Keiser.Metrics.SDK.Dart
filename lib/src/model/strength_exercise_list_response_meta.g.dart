@@ -14,7 +14,7 @@ StrengthExerciseListResponseMeta _$StrengthExerciseListResponseMetaFromJson(
       ($checkedConvert) {
         $checkKeys(
           json,
-          requiredKeys: const ['humanMovement', 'sort'],
+          requiredKeys: const ['sort'],
         );
         final val = StrengthExerciseListResponseMeta(
           defaultAlias: $checkedConvert('defaultAlias', (v) => v as String?),
@@ -25,7 +25,7 @@ StrengthExerciseListResponseMeta _$StrengthExerciseListResponseMetaFromJson(
               (v) =>
                   $enumDecodeNullable(_$StrengthExerciseMovementDEPEnumMap, v)),
           humanMovement: $checkedConvert('humanMovement',
-              (v) => $enumDecode(_$StrengthExerciseMovementEnumMap, v)),
+              (v) => $enumDecodeNullable(_$StrengthExerciseMovementEnumMap, v)),
           plane: $checkedConvert('plane',
               (v) => $enumDecodeNullable(_$StrengthExercisePlaneEnumMap, v)),
           sort: $checkedConvert(
@@ -54,8 +54,8 @@ Map<String, dynamic> _$StrengthExerciseListResponseMetaToJson(
       'category', _$StrengthExerciseCategoryEnumMap[instance.category]);
   writeNotNull(
       'movement', _$StrengthExerciseMovementDEPEnumMap[instance.movement]);
-  val['humanMovement'] =
-      _$StrengthExerciseMovementEnumMap[instance.humanMovement]!;
+  writeNotNull('humanMovement',
+      _$StrengthExerciseMovementEnumMap[instance.humanMovement]);
   writeNotNull('plane', _$StrengthExercisePlaneEnumMap[instance.plane]);
   val['sort'] = _$StrengthExerciseSortingEnumMap[instance.sort]!;
   writeNotNull('ascending', instance.ascending);
@@ -95,4 +95,5 @@ const _$StrengthExerciseSortingEnumMap = {
   StrengthExerciseSorting.category: 'category',
   StrengthExerciseSorting.movement: 'movement',
   StrengthExerciseSorting.plane: 'plane',
+  StrengthExerciseSorting.humanMovement: 'humanMovement',
 };
