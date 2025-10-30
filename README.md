@@ -13,7 +13,7 @@ This SDK facilitates communication between a client system (_ie: phone app, webs
 To use the package from [pub.dev](https://pub.dev), please include the following in pubspec.yaml
 ```yaml
 dependencies:
-  keiser_metrics_sdk: 5.1.1
+  keiser_metrics_sdk: 5.1.2
 ```
 
 ### Github
