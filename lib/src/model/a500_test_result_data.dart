@@ -20,29 +20,29 @@ class A500TestResultData {
 
     required  this.id,
 
-    required  this.averageVelocityLineM,
+     this.averageVelocityLineM,
 
-    required  this.averageVelocityLineB,
+     this.averageVelocityLineB,
 
-    required  this.averagePowerParabolaA,
+     this.averagePowerParabolaA,
 
-    required  this.averagePowerParabolaH,
+     this.averagePowerParabolaH,
 
-    required  this.averagePowerParabolaK,
+     this.averagePowerParabolaK,
 
-    required  this.averageSlopeChanges,
+     this.averageSlopeChanges,
 
-    required  this.peakVelocityLineM,
+     this.peakVelocityLineM,
 
-    required  this.peakVelocityLineB,
+     this.peakVelocityLineB,
 
-    required  this.peakPowerParabolaA,
+     this.peakPowerParabolaA,
 
-    required  this.peakPowerParabolaH,
+     this.peakPowerParabolaH,
 
-    required  this.peakPowerParabolaK,
+     this.peakPowerParabolaK,
 
-    required  this.peakSlopeChanges,
+     this.peakSlopeChanges,
   });
 
   @JsonKey(
@@ -60,144 +60,144 @@ class A500TestResultData {
   @JsonKey(
     
     name: r'averageVelocityLineM',
-    required: true,
+    required: false,
     includeIfNull: false
   )
 
 
-  final num averageVelocityLineM;
+  final num? averageVelocityLineM;
 
 
 
   @JsonKey(
     
     name: r'averageVelocityLineB',
-    required: true,
+    required: false,
     includeIfNull: false
   )
 
 
-  final num averageVelocityLineB;
+  final num? averageVelocityLineB;
 
 
 
   @JsonKey(
     
     name: r'averagePowerParabolaA',
-    required: true,
+    required: false,
     includeIfNull: false
   )
 
 
-  final num averagePowerParabolaA;
+  final num? averagePowerParabolaA;
 
 
 
   @JsonKey(
     
     name: r'averagePowerParabolaH',
-    required: true,
+    required: false,
     includeIfNull: false
   )
 
 
-  final num averagePowerParabolaH;
+  final num? averagePowerParabolaH;
 
 
 
   @JsonKey(
     
     name: r'averagePowerParabolaK',
-    required: true,
+    required: false,
     includeIfNull: false
   )
 
 
-  final num averagePowerParabolaK;
+  final num? averagePowerParabolaK;
 
 
 
   @JsonKey(
     
     name: r'averageSlopeChanges',
-    required: true,
+    required: false,
     includeIfNull: false
   )
 
 
-  final num averageSlopeChanges;
+  final num? averageSlopeChanges;
 
 
 
   @JsonKey(
     
     name: r'peakVelocityLineM',
-    required: true,
+    required: false,
     includeIfNull: false
   )
 
 
-  final num peakVelocityLineM;
+  final num? peakVelocityLineM;
 
 
 
   @JsonKey(
     
     name: r'peakVelocityLineB',
-    required: true,
+    required: false,
     includeIfNull: false
   )
 
 
-  final num peakVelocityLineB;
+  final num? peakVelocityLineB;
 
 
 
   @JsonKey(
     
     name: r'peakPowerParabolaA',
-    required: true,
+    required: false,
     includeIfNull: false
   )
 
 
-  final num peakPowerParabolaA;
+  final num? peakPowerParabolaA;
 
 
 
   @JsonKey(
     
     name: r'peakPowerParabolaH',
-    required: true,
+    required: false,
     includeIfNull: false
   )
 
 
-  final num peakPowerParabolaH;
+  final num? peakPowerParabolaH;
 
 
 
   @JsonKey(
     
     name: r'peakPowerParabolaK',
-    required: true,
+    required: false,
     includeIfNull: false
   )
 
 
-  final num peakPowerParabolaK;
+  final num? peakPowerParabolaK;
 
 
 
   @JsonKey(
     
     name: r'peakSlopeChanges',
-    required: true,
+    required: false,
     includeIfNull: false
   )
 
 
-  final num peakSlopeChanges;
+  final num? peakSlopeChanges;
 
 
 

@@ -13,7 +13,7 @@ This SDK facilitates communication between a client system (_ie: phone app, webs
 To use the package from [pub.dev](https://pub.dev), please include the following in pubspec.yaml
 ```yaml
 dependencies:
-  keiser_metrics_sdk: 5.1.4
+  keiser_metrics_sdk: 5.3.3
 ```
 
 ### Github
@@ -64,7 +64,7 @@ try {
 
 ## Documentation for API Endpoints
 
-All URIs are relative to *https://metrics-api-v3.keiser.com/api*
+All URIs are relative to *https://metrics-api.keiser.com/api*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -211,7 +211,7 @@ Method | HTTP request | Description
 [**facilityStrengthMachineDelete**](doc/MetricsApi.md#facilitystrengthmachinedelete) | **DELETE** /facility/strength-machine/{id} | Delete a facility strength machine
 [**facilityStrengthMachineInitializerOTP**](doc/MetricsApi.md#facilitystrengthmachineinitializerotp) | **GET** /facility/strength-machine/initializer-otp | Show facility strength machine initializer token
 [**facilityStrengthMachineInitializerToken**](doc/MetricsApi.md#facilitystrengthmachineinitializertoken) | **GET** /facility/strength-machine/initializer-token | Show facility strength machine initializer token
-[**facilityStrengthMachineList**](doc/MetricsApi.md#facilitystrengthmachinelist) | **GET** /facility/strength-machine/list | List facility strength machines
+[**facilityStrengthMachineList**](doc/MetricsApi.md#facilitystrengthmachinelist) | **GET** /facility/strength-machine/list | List facility strength machines (requires maintenance access)
 [**facilityStrengthMachineMaintenanceRecordCreate**](doc/MetricsApi.md#facilitystrengthmachinemaintenancerecordcreate) | **POST** /facility/strength-machine/maintenance-record | Create a maintenance record for facility strength machine
 [**facilityStrengthMachineMaintenanceRecordDelete**](doc/MetricsApi.md#facilitystrengthmachinemaintenancerecorddelete) | **DELETE** /facility/strength-machine/maintenance-record/{id} | Delete a maintenance record for facility strength machine
 [**facilityStrengthMachineMaintenanceRecordList**](doc/MetricsApi.md#facilitystrengthmachinemaintenancerecordlist) | **GET** /facility/strength-machine/maintenance-record/list | List maintenance records for facility strength machines
@@ -257,6 +257,7 @@ Method | HTTP request | Description
 [**machineAdjustmentList**](doc/MetricsApi.md#machineadjustmentlist) | **GET** /user/machine-adjustment/list | List user machine adjustments
 [**machineAdjustmentShow**](doc/MetricsApi.md#machineadjustmentshow) | **GET** /user/machine-adjustment | Shows a users machine adjustments
 [**machineAdjustmentUpdate**](doc/MetricsApi.md#machineadjustmentupdate) | **PUT** /user/machine-adjustment/{id} | Update a users machine adjustments
+[**metaServiceStatus**](doc/MetricsApi.md#metaservicestatus) | **GET** /meta/service-status | Returns current service maintenance status
 [**oauthAuthorize**](doc/MetricsApi.md#oauthauthorize) | **POST** /oauth/authorize | Authorizes a third party application
 [**oauthDeauthorize**](doc/MetricsApi.md#oauthdeauthorize) | **DELETE** /oauth/deauthorize | Deauthorizes an oauth user
 [**oauthInitiate**](doc/MetricsApi.md#oauthinitiate) | **POST** /oauth/initiate/{service} | Initiates OAuth access request and return parameters
@@ -587,6 +588,7 @@ Method | HTTP request | Description
  - [MachineAdjustmentListResponseMeta](doc/MachineAdjustmentListResponseMeta.md)
  - [MachineAdjustmentResponse](doc/MachineAdjustmentResponse.md)
  - [MachineAdjustmentSorting](doc/MachineAdjustmentSorting.md)
+ - [MaintenanceStatus](doc/MaintenanceStatus.md)
  - [MuscleArea](doc/MuscleArea.md)
  - [MuscleData](doc/MuscleData.md)
  - [MuscleGroup](doc/MuscleGroup.md)
@@ -608,6 +610,7 @@ Method | HTTP request | Description
  - [ProfileResponse](doc/ProfileResponse.md)
  - [RedirectResponse](doc/RedirectResponse.md)
  - [ResistancePrecision](doc/ResistancePrecision.md)
+ - [ServiceStatusResponse](doc/ServiceStatusResponse.md)
  - [SessionData](doc/SessionData.md)
  - [SessionListResponse](doc/SessionListResponse.md)
  - [SessionListResponseMeta](doc/SessionListResponseMeta.md)

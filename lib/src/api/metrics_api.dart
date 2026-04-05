@@ -91,6 +91,7 @@ import 'package:keiser_metrics_sdk/src/model/primary_email_address_response.dart
 import 'package:keiser_metrics_sdk/src/model/privileged_facility_relationship_request_list_response.dart';
 import 'package:keiser_metrics_sdk/src/model/profile_response.dart';
 import 'package:keiser_metrics_sdk/src/model/redirect_response.dart';
+import 'package:keiser_metrics_sdk/src/model/service_status_response.dart';
 import 'package:keiser_metrics_sdk/src/model/session_list_response.dart';
 import 'package:keiser_metrics_sdk/src/model/session_plan_list_response.dart';
 import 'package:keiser_metrics_sdk/src/model/session_plan_response.dart';
@@ -3329,7 +3330,7 @@ class MetricsApi {
   }
 
   /// Update the facility access control kiosk entity
-  /// 2
+  /// 1
   ///
   /// Parameters:
   /// * [isKioskModeAllowed] 
@@ -3349,7 +3350,7 @@ class MetricsApi {
     final _method = r'PUT';
 
     if (apiVersion == null) {
-      apiVersion = '2';
+      apiVersion = '1';
     }
 
     final _queryParameters = <String, dynamic>{
@@ -6054,7 +6055,7 @@ class MetricsApi {
     
   }
 
-  /// List facility strength machines
+  /// List facility strength machines (requires maintenance access)
   /// 1
   ///
   /// Parameters:
@@ -6979,7 +6980,7 @@ class MetricsApi {
   }
 
   /// Create a user session using M Series app data
-  /// 2
+  /// 1
   ///
   /// Parameters:
   /// * [averageCadence] 
@@ -7043,7 +7044,7 @@ class MetricsApi {
     final _method = r'POST';
 
     if (apiVersion == null) {
-      apiVersion = '2';
+      apiVersion = '1';
     }
 
     final _queryParameters = <String, dynamic>{
@@ -7260,7 +7261,7 @@ class MetricsApi {
   }
 
   /// Show a user&#39;s session generated using M Series app data
-  /// 2
+  /// 1
   ///
   /// Parameters:
   /// * [graph] 
@@ -7280,7 +7281,7 @@ class MetricsApi {
     final _method = r'GET';
 
     if (apiVersion == null) {
-      apiVersion = '2';
+      apiVersion = '1';
     }
 
     final _queryParameters = <String, dynamic>{
@@ -8115,6 +8116,38 @@ class MetricsApi {
       socketParameters: _socketParameters,
     );
     final MachineAdjustmentResponse _responseData = deserialize<MachineAdjustmentResponse, MachineAdjustmentResponse>(_response.data!, 'MachineAdjustmentResponse', growable: true);
+    return _responseData;
+    
+  }
+
+  /// Returns current service maintenance status
+  /// 1
+  ///
+  /// Parameters:
+  /// * [apiVersion] 
+  ///
+  /// Returns a [Future] containing a [Response] with a [ServiceStatusResponse] as data
+  Future<ServiceStatusResponse> metaServiceStatus({ 
+    String? apiVersion,
+  }) async {
+    final _path = r'/meta/service-status';
+    final _action = 'meta:serviceStatus';
+    final _method = r'GET';
+
+    if (apiVersion == null) {
+      apiVersion = '1';
+    }
+
+    final _queryParameters = <String, dynamic>{
+      if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
+    };    
+    final _response = await connection.action(
+      path: _path,
+      action: _action,
+      method: _method,
+      queryParameters: _queryParameters,
+    );
+    final ServiceStatusResponse _responseData = deserialize<ServiceStatusResponse, ServiceStatusResponse>(_response.data!, 'ServiceStatusResponse', growable: true);
     return _responseData;
     
   }
@@ -12960,7 +12993,7 @@ class MetricsApi {
   /// Returns a [Future] containing a [Response] with a [StretchExerciseListResponse] as data
   Future<StretchExerciseListResponse> stretchExerciseList({ 
     bool? ascending = true,
-    num? defaultAlias,
+    String? defaultAlias,
     num? limit,
     num? offset,
     String? sort = 'id',

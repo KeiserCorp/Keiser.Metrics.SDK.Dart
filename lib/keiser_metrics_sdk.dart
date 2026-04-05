@@ -194,6 +194,7 @@ export 'package:keiser_metrics_sdk/src/model/machine_adjustment_list_response.da
 export 'package:keiser_metrics_sdk/src/model/machine_adjustment_list_response_meta.dart';
 export 'package:keiser_metrics_sdk/src/model/machine_adjustment_response.dart';
 export 'package:keiser_metrics_sdk/src/model/machine_adjustment_sorting.dart';
+export 'package:keiser_metrics_sdk/src/model/maintenance_status.dart';
 export 'package:keiser_metrics_sdk/src/model/muscle_area.dart';
 export 'package:keiser_metrics_sdk/src/model/muscle_data.dart';
 export 'package:keiser_metrics_sdk/src/model/muscle_group.dart';
@@ -215,6 +216,7 @@ export 'package:keiser_metrics_sdk/src/model/profile_data.dart';
 export 'package:keiser_metrics_sdk/src/model/profile_response.dart';
 export 'package:keiser_metrics_sdk/src/model/redirect_response.dart';
 export 'package:keiser_metrics_sdk/src/model/resistance_precision.dart';
+export 'package:keiser_metrics_sdk/src/model/service_status_response.dart';
 export 'package:keiser_metrics_sdk/src/model/session_data.dart';
 export 'package:keiser_metrics_sdk/src/model/session_list_response.dart';
 export 'package:keiser_metrics_sdk/src/model/session_list_response_meta.dart';

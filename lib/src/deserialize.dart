@@ -150,6 +150,7 @@ import 'package:keiser_metrics_sdk/src/model/machine_adjustment_data.dart';
 import 'package:keiser_metrics_sdk/src/model/machine_adjustment_list_response.dart';
 import 'package:keiser_metrics_sdk/src/model/machine_adjustment_list_response_meta.dart';
 import 'package:keiser_metrics_sdk/src/model/machine_adjustment_response.dart';
+import 'package:keiser_metrics_sdk/src/model/maintenance_status.dart';
 import 'package:keiser_metrics_sdk/src/model/muscle_data.dart';
 import 'package:keiser_metrics_sdk/src/model/o_auth_service_data.dart';
 import 'package:keiser_metrics_sdk/src/model/o_auth_service_list_response.dart';
@@ -164,6 +165,7 @@ import 'package:keiser_metrics_sdk/src/model/privileged_facility_relationship_re
 import 'package:keiser_metrics_sdk/src/model/profile_data.dart';
 import 'package:keiser_metrics_sdk/src/model/profile_response.dart';
 import 'package:keiser_metrics_sdk/src/model/redirect_response.dart';
+import 'package:keiser_metrics_sdk/src/model/service_status_response.dart';
 import 'package:keiser_metrics_sdk/src/model/session_data.dart';
 import 'package:keiser_metrics_sdk/src/model/session_list_response.dart';
 import 'package:keiser_metrics_sdk/src/model/session_list_response_meta.dart';
@@ -695,6 +697,8 @@ final _regMap = RegExp(r'^Map<String,(.*)>$');
         case 'MachineAdjustmentSorting':
           
           
+        case 'MaintenanceStatus':
+          return MaintenanceStatus.fromJson(value as Map<String, dynamic>) as ReturnType;
         case 'MuscleArea':
           
           
@@ -744,6 +748,8 @@ final _regMap = RegExp(r'^Map<String,(.*)>$');
         case 'ResistancePrecision':
           
           
+        case 'ServiceStatusResponse':
+          return ServiceStatusResponse.fromJson(value as Map<String, dynamic>) as ReturnType;
         case 'SessionData':
           return SessionData.fromJson(value as Map<String, dynamic>) as ReturnType;
         case 'SessionListResponse':

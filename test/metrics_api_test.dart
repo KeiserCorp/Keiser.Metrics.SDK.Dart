@@ -702,7 +702,7 @@ void main() {
 
     // Update the facility access control kiosk entity
     //
-    // 2
+    // 1
     //
     //Future<FacilityAccessControlKioskResponse> facilityAccessControlKioskUpdate(bool isKioskModeAllowed, { String primaryIdentification, String secondaryIdentification, String apiVersion }) async
     test('test facilityAccessControlKioskUpdate', () async {
@@ -1294,7 +1294,7 @@ void main() {
       // TODO
     });
 
-    // List facility strength machines
+    // List facility strength machines (requires maintenance access)
     //
     // 1
     //
@@ -1494,7 +1494,7 @@ void main() {
 
     // Create a user session using M Series app data
     //
-    // 2
+    // 1
     //
     //Future<MSeriesAppSessionResponse> mSeriesAppSessionCreate(num averageCadence, num averagePower, num averageWattsPerKilogram, String broadcastData, num buildMajor, num buildMinor, num caloricBurn, num cardioMachineId, num distance, num duration, DateTime endedAt, num energyOutput, num maxCadence, num maxPower, num maxWattsPerKilogram, num metricHeight, num metricWeight, num ordinalId, String source_, DateTime startedAt, { num averageMetabolicEquivalent, String segmentData, num stepCount, num targetFtp, num userId, String apiVersion }) async
     test('test mSeriesAppSessionCreate', () async {
@@ -1539,7 +1539,7 @@ void main() {
 
     // Show a user's session generated using M Series app data
     //
-    // 2
+    // 1
     //
     //Future<MSeriesAppSessionResponse> mSeriesAppSessionShow({ num graph, num id, num userId, String apiVersion }) async
     test('test mSeriesAppSessionShow', () async {
@@ -1705,6 +1705,15 @@ void main() {
     //
     //Future<MachineAdjustmentResponse> machineAdjustmentUpdate(num id, { String leftPosition, String rightPosition, String seat, String start, String stop, num userId, String apiVersion }) async
     test('test machineAdjustmentUpdate', () async {
+      // TODO
+    });
+
+    // Returns current service maintenance status
+    //
+    // 1
+    //
+    //Future<ServiceStatusResponse> metaServiceStatus({ String apiVersion }) async
+    test('test metaServiceStatus', () async {
       // TODO
     });
 
@@ -2648,7 +2657,7 @@ void main() {
     //
     // 1
     //
-    //Future<StretchExerciseListResponse> stretchExerciseList({ bool ascending, num defaultAlias, num limit, num offset, String sort, String apiVersion }) async
+    //Future<StretchExerciseListResponse> stretchExerciseList({ bool ascending, String defaultAlias, num limit, num offset, String sort, String apiVersion }) async
     test('test stretchExerciseList', () async {
       // TODO
     });
