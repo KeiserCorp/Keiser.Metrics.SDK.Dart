@@ -7,7 +7,7 @@ void main() {
   // TODO add properties to the entity
 
   group(SessionPlanCardioSetTemplateData, () {
-    // num duration
+    // String duration
     test('to test the property `duration`', () async {
       // TODO
     });

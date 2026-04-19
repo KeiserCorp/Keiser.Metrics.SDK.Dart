@@ -17,7 +17,7 @@ SessionPlanCardioSetTemplateData _$SessionPlanCardioSetTemplateDataFromJson(
           requiredKeys: const ['duration', 'distance', 'caloricBurn'],
         );
         final val = SessionPlanCardioSetTemplateData(
-          duration: $checkedConvert('duration', (v) => v as num),
+          duration: $checkedConvert('duration', (v) => v as String),
           distance: $checkedConvert('distance', (v) => v as num),
           caloricBurn: $checkedConvert('caloricBurn', (v) => v as num),
           cardioExercise: $checkedConvert(

@@ -39,7 +39,7 @@ class SessionPlanCardioSetTemplateData {
   )
 
 
-  final num duration;
+  final String duration;
 
 
 

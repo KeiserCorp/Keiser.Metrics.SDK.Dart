@@ -112,7 +112,7 @@ void main() {
       // TODO
     });
 
-    // num initialOffset
+    // String initialOffset
     test('to test the property `initialOffset`', () async {
       // TODO
     });

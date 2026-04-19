@@ -348,7 +348,7 @@ class MSeriesDataSetData {
   )
 
 
-  final num? initialOffset;
+  final String? initialOffset;
 
 
 

@@ -8,7 +8,7 @@ import 'package:keiser_metrics_sdk/api.dart';
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**duration** | **num** |  | 
+**duration** | **String** |  | 
 **distance** | **num** |  | 
 **caloricBurn** | **num** |  | 
 **cardioExercise** | [**CardioExerciseData**](CardioExerciseData.md) |  | [optional] 
