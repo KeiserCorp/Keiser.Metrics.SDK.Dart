@@ -17,7 +17,11 @@ SessionStartResponse _$SessionStartResponseFromJson(
           requiredKeys: const ['echipData'],
         );
         final val = SessionStartResponse(
-          echipData: $checkedConvert('echipData', (v) => v as Object),
+          echipData: $checkedConvert(
+              'echipData',
+              (v) => (v as Map<String, dynamic>).map(
+                    (k, e) => MapEntry(k, e as Object),
+                  )),
           session: $checkedConvert(
               'session',
               (v) => v == null

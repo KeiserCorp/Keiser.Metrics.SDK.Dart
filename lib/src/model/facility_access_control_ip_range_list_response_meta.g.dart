@@ -62,5 +62,5 @@ Map<String, dynamic> _$FacilityAccessControlIPRangeListResponseMetaToJson(
 
 const _$FacilityAccessControlIPRangeSortingEnumMap = {
   FacilityAccessControlIPRangeSorting.id: 'id',
-  FacilityAccessControlIPRangeSorting.names: 'name',
+  FacilityAccessControlIPRangeSorting.name: 'name',
 };

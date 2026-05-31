@@ -10,9 +10,15 @@ enum FacilityUserRelationshipSorting {
   @JsonValue(r'id')
   id,
   @JsonValue(r'name')
-  names,
+  name,
+  @JsonValue(r'firstName')
+  firstName,
+  @JsonValue(r'lastName')
+  lastName,
   @JsonValue(r'memberIdentifier')
   memberIdentifier,
   @JsonValue(r'employeeRole')
   employeeRole,
+  @JsonValue(r'pinCode')
+  pinCode,
 }

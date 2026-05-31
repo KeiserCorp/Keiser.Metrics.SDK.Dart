@@ -13,7 +13,7 @@ This SDK facilitates communication between a client system (_ie: phone app, webs
 To use the package from [pub.dev](https://pub.dev), please include the following in pubspec.yaml
 ```yaml
 dependencies:
-  keiser_metrics_sdk: 5.3.18
+  keiser_metrics_sdk: 5.4.0
 ```
 
 ### Github
@@ -157,6 +157,14 @@ Method | HTTP request | Description
 [**facilityConfigurationSubscribe**](doc/MetricsApi.md#facilityconfigurationsubscribe) | **GET** /facilityConfiguration/subscribe | Subscribe to facility configuration
 [**facilityConfigurationUpdate**](doc/MetricsApi.md#facilityconfigurationupdate) | **PUT** /facility/configuration | Update a facility configuration
 [**facilityCreate**](doc/MetricsApi.md#facilitycreate) | **POST** /facility | Create a facility
+[**facilityDisplayConfigurationShow**](doc/MetricsApi.md#facilitydisplayconfigurationshow) | **GET** /facility-display-configuration | Show a facility display configuration
+[**facilityDisplayConfigurationSubscribe**](doc/MetricsApi.md#facilitydisplayconfigurationsubscribe) | **GET** /facility-display-configuration/subscribe | Subscribe to facility display configuration
+[**facilityDisplayConfigurationUpdate**](doc/MetricsApi.md#facilitydisplayconfigurationupdate) | **PUT** /facility-display-configuration | Update a facility display configuration
+[**facilityHubClaim**](doc/MetricsApi.md#facilityhubclaim) | **POST** /facility/hub/claim | Claim a registered hub for a facility using its pairing code
+[**facilityHubDelete**](doc/MetricsApi.md#facilityhubdelete) | **DELETE** /facility/hub/{facilityHubId} | Delete a facility hub and revoke its tokens
+[**facilityHubLinkStatus**](doc/MetricsApi.md#facilityhublinkstatus) | **GET** /facility/hub/link-status | Check the status of a hub link pairing code
+[**facilityHubList**](doc/MetricsApi.md#facilityhublist) | **GET** /facility/hub/list | List hubs for a facility
+[**facilityHubUpdate**](doc/MetricsApi.md#facilityhubupdate) | **PUT** /facility/hub/{facilityHubId} | Update a facility hub
 [**facilityInBodyIntegrationCreate**](doc/MetricsApi.md#facilityinbodyintegrationcreate) | **POST** /facility/inbody-integration | Create a facility InBody integration
 [**facilityInBodyIntegrationDelete**](doc/MetricsApi.md#facilityinbodyintegrationdelete) | **DELETE** /facility/inbody-integration | Delete a facility InBody integration
 [**facilityInBodyIntegrationShow**](doc/MetricsApi.md#facilityinbodyintegrationshow) | **GET** /facility/inbody-integration | Show a facility InBody integration settings
@@ -169,6 +177,10 @@ Method | HTTP request | Description
 [**facilityLicenseList**](doc/MetricsApi.md#facilitylicenselist) | **GET** /facility/license/list | List facility licenses
 [**facilityLicenseShow**](doc/MetricsApi.md#facilitylicenseshow) | **GET** /facility/license | Show a facility license
 [**facilityList**](doc/MetricsApi.md#facilitylist) | **GET** /facility/list | List facilities
+[**facilityPinDelete**](doc/MetricsApi.md#facilitypindelete) | **DELETE** /facility/pin | Remove the facility member identifier (PIN)
+[**facilityPinLogin**](doc/MetricsApi.md#facilitypinlogin) | **POST** /facility/pin/login | Login a facility user using a PIN
+[**facilityPinShow**](doc/MetricsApi.md#facilitypinshow) | **GET** /facility/pin | Show the facility PIN for a user
+[**facilityPinUpdate**](doc/MetricsApi.md#facilitypinupdate) | **PUT** /facility/pin | Set or update a facility member identifier (PIN)
 [**facilityProfileShow**](doc/MetricsApi.md#facilityprofileshow) | **GET** /facility/profile | Show facility profile
 [**facilityProfileUpdate**](doc/MetricsApi.md#facilityprofileupdate) | **PUT** /facility/profile | Update a facility profile
 [**facilityRelationshipFacilityCreate**](doc/MetricsApi.md#facilityrelationshipfacilitycreate) | **POST** /facility/relationship | Create a user with a facility relationship
@@ -177,6 +189,15 @@ Method | HTTP request | Description
 [**facilityRelationshipFacilityShow**](doc/MetricsApi.md#facilityrelationshipfacilityshow) | **GET** /facility/relationship | Show a facility&#39;s user relationship
 [**facilityRelationshipFacilitySubscribe**](doc/MetricsApi.md#facilityrelationshipfacilitysubscribe) | **GET** /facilityRelationship/facilitySubscribe | Subscribe to changes to facility relationship
 [**facilityRelationshipFacilityUpdate**](doc/MetricsApi.md#facilityrelationshipfacilityupdate) | **PUT** /facility/relationship/{id} | Update a facility&#39;s user relationship
+[**facilityRelationshipNovaMemberBulkCreate**](doc/MetricsApi.md#facilityrelationshipnovamemberbulkcreate) | **POST** /facility/relationship/nova/member/bulk | Bulk-create Nova-style members within the session facility from a CSV file
+[**facilityRelationshipNovaMemberCreate**](doc/MetricsApi.md#facilityrelationshipnovamembercreate) | **POST** /facility/relationship/nova/member | Create a Nova-style member (no email, no credential) within the session facility
+[**facilityRelationshipNovaMemberDelete**](doc/MetricsApi.md#facilityrelationshipnovamemberdelete) | **DELETE** /facility/relationship/nova/member/{facilityRelationshipId} | Fully delete a Nova member
+[**facilityRelationshipNovaMemberUpdate**](doc/MetricsApi.md#facilityrelationshipnovamemberupdate) | **PUT** /facility/relationship/nova/member/{facilityRelationshipId} | Update a Nova member relationship and profile fields
+[**facilityRelationshipNovaStaffDeactivate**](doc/MetricsApi.md#facilityrelationshipnovastaffdeactivate) | **POST** /facility/relationship/nova/staff/{facilityRelationshipId}/deactivate | Deactivate a facility relationship
+[**facilityRelationshipNovaStaffDelete**](doc/MetricsApi.md#facilityrelationshipnovastaffdelete) | **DELETE** /facility/relationship/nova/staff/{facilityRelationshipId} | Fully delete a Nova staff member (account purge).
+[**facilityRelationshipNovaStaffInvite**](doc/MetricsApi.md#facilityrelationshipnovastaffinvite) | **POST** /facility/relationship/nova/staff/invite | Invite a nova staff member by email
+[**facilityRelationshipNovaStaffReactivate**](doc/MetricsApi.md#facilityrelationshipnovastaffreactivate) | **POST** /facility/relationship/nova/staff/{facilityRelationshipId}/reactivate | Reactivate a facility relationship
+[**facilityRelationshipNovaStaffUpdate**](doc/MetricsApi.md#facilityrelationshipnovastaffupdate) | **PUT** /facility/relationship/nova/staff/{facilityRelationshipId} | Update a Nova staff relationship and profile fields
 [**facilityRelationshipRequestFacilityCreate**](doc/MetricsApi.md#facilityrelationshiprequestfacilitycreate) | **POST** /facility/relationship-request | Create a facility relationship request (Facility to User)
 [**facilityRelationshipRequestFacilityList**](doc/MetricsApi.md#facilityrelationshiprequestfacilitylist) | **GET** /facility/relationship-request/list | List facility relationship requests (User to Facility)
 [**facilityRelationshipRequestFacilityShow**](doc/MetricsApi.md#facilityrelationshiprequestfacilityshow) | **GET** /facility/relationship-request | Show a facility relationship request (User to Facility)
@@ -203,15 +224,17 @@ Method | HTTP request | Description
 [**facilitySessionSubscribe**](doc/MetricsApi.md#facilitysessionsubscribe) | **GET** /facilitySession/subscribe | Subscribe to changes to a facilities&#39;s session
 [**facilitySessionUpdate**](doc/MetricsApi.md#facilitysessionupdate) | **PUT** /facility/session/{echipId} | Update a user session from a facility using an eChip Id
 [**facilityShow**](doc/MetricsApi.md#facilityshow) | **GET** /facility | Show a facility
+[**facilityStrengthMachineBlacklist**](doc/MetricsApi.md#facilitystrengthmachineblacklist) | **POST** /facility/strength-machine/{id}/blacklist | Blacklist a facility strength machine&#39;s tokens
 [**facilityStrengthMachineConfigurationShow**](doc/MetricsApi.md#facilitystrengthmachineconfigurationshow) | **GET** /facility/strength-machine/configuration | Show a facility strength machine default configuration
 [**facilityStrengthMachineConfigurationSubscribe**](doc/MetricsApi.md#facilitystrengthmachineconfigurationsubscribe) | **GET** /facilityStrengthMachineConfiguration/subscribe | Subscribe to changes to facility strength machine configuration
 [**facilityStrengthMachineConfigurationUpdate**](doc/MetricsApi.md#facilitystrengthmachineconfigurationupdate) | **PUT** /facility/strength-machine/configuration | Update a facility strength machine configuration
-[**facilityStrengthMachineCreate**](doc/MetricsApi.md#facilitystrengthmachinecreate) | **POST** /facility/strength-machine/{strengthMachineId} | Create a facility strength machine
+[**facilityStrengthMachineCreate**](doc/MetricsApi.md#facilitystrengthmachinecreate) | **POST** /facility/strength-machine | Create a facility strength machine
 [**facilityStrengthMachineCreateEchip**](doc/MetricsApi.md#facilitystrengthmachinecreateechip) | **POST** /facility/strength-machine/echip | Creates facility strength machines using eChip data
 [**facilityStrengthMachineDelete**](doc/MetricsApi.md#facilitystrengthmachinedelete) | **DELETE** /facility/strength-machine/{id} | Delete a facility strength machine
 [**facilityStrengthMachineInitializerOTP**](doc/MetricsApi.md#facilitystrengthmachineinitializerotp) | **GET** /facility/strength-machine/initializer-otp | Show facility strength machine initializer token
 [**facilityStrengthMachineInitializerToken**](doc/MetricsApi.md#facilitystrengthmachineinitializertoken) | **GET** /facility/strength-machine/initializer-token | Show facility strength machine initializer token
 [**facilityStrengthMachineList**](doc/MetricsApi.md#facilitystrengthmachinelist) | **GET** /facility/strength-machine/list | List facility strength machines (requires maintenance access)
+[**facilityStrengthMachineMachineStartSession**](doc/MetricsApi.md#facilitystrengthmachinemachinestartsession) | **POST** /facility/strength-machine/machine/start-session | Exchange a machine initialization token for a short-lived machine session token
 [**facilityStrengthMachineMaintenanceRecordCreate**](doc/MetricsApi.md#facilitystrengthmachinemaintenancerecordcreate) | **POST** /facility/strength-machine/maintenance-record | Create a maintenance record for facility strength machine
 [**facilityStrengthMachineMaintenanceRecordDelete**](doc/MetricsApi.md#facilitystrengthmachinemaintenancerecorddelete) | **DELETE** /facility/strength-machine/maintenance-record/{id} | Delete a maintenance record for facility strength machine
 [**facilityStrengthMachineMaintenanceRecordList**](doc/MetricsApi.md#facilitystrengthmachinemaintenancerecordlist) | **GET** /facility/strength-machine/maintenance-record/list | List maintenance records for facility strength machines
@@ -252,11 +275,13 @@ Method | HTTP request | Description
 [**mSeriesFtpMeasurementList**](doc/MetricsApi.md#mseriesftpmeasurementlist) | **GET** /m-series/ftp-measurement/list | List a user&#39;s M Series FTP measurements
 [**mSeriesFtpMeasurementShow**](doc/MetricsApi.md#mseriesftpmeasurementshow) | **GET** /m-series/ftp-measurement | Show a user&#39;s M Series FTP measurement
 [**mSeriesProfileStatsShow**](doc/MetricsApi.md#mseriesprofilestatsshow) | **GET** /m-series/profile-stats | Show a user&#39;s M Series data set
-[**machineAdjustmentCreate**](doc/MetricsApi.md#machineadjustmentcreate) | **POST** /user/machine-adjustment | Create a user machine adjustment
-[**machineAdjustmentDelete**](doc/MetricsApi.md#machineadjustmentdelete) | **DELETE** /user/machine-adjustment/{id} | Delete a users machine adjustment
-[**machineAdjustmentList**](doc/MetricsApi.md#machineadjustmentlist) | **GET** /user/machine-adjustment/list | List user machine adjustments
-[**machineAdjustmentShow**](doc/MetricsApi.md#machineadjustmentshow) | **GET** /user/machine-adjustment | Shows a users machine adjustments
-[**machineAdjustmentUpdate**](doc/MetricsApi.md#machineadjustmentupdate) | **PUT** /user/machine-adjustment/{id} | Update a users machine adjustments
+[**machineClaimClaim**](doc/MetricsApi.md#machineclaimclaim) | **POST** /machine-claim/claim | Claim a single machine for a facility
+[**machineClaimConfirm**](doc/MetricsApi.md#machineclaimconfirm) | **POST** /machine-claim/confirm | Confirm a claimed machine and receive permanent token
+[**machineClaimList**](doc/MetricsApi.md#machineclaimlist) | **GET** /machine-claim/list | List machine claims for a facility
+[**machineClaimRegister**](doc/MetricsApi.md#machineclaimregister) | **POST** /machine-claim/register | Register a machine for facility claiming
+[**machineClaimShow**](doc/MetricsApi.md#machineclaimshow) | **GET** /machine-claim/show | Show a machine claim for a facility
+[**machineClaimStatus**](doc/MetricsApi.md#machineclaimstatus) | **GET** /machine-claim/status | Check claim status for a machine
+[**machineClaimUnclaim**](doc/MetricsApi.md#machineclaimunclaim) | **DELETE** /machine-claim/unclaim | Unclaim a machine that has not yet been confirmed
 [**metaServiceStatus**](doc/MetricsApi.md#metaservicestatus) | **GET** /meta/service-status | Returns current service maintenance status
 [**oauthAuthorize**](doc/MetricsApi.md#oauthauthorize) | **POST** /oauth/authorize | Authorizes a third party application
 [**oauthDeauthorize**](doc/MetricsApi.md#oauthdeauthorize) | **DELETE** /oauth/deauthorize | Deauthorizes an oauth user
@@ -352,8 +377,10 @@ Method | HTTP request | Description
 [**strengthMachineDataSetDelete**](doc/MetricsApi.md#strengthmachinedatasetdelete) | **DELETE** /strength-machine-data-set/{id} | Delete a strength machine data set
 [**strengthMachineDataSetExport**](doc/MetricsApi.md#strengthmachinedatasetexport) | **GET** /strength-machine-data-set/{id}/export/{format} | Export an A500 strength machine data set
 [**strengthMachineDataSetExportFlat**](doc/MetricsApi.md#strengthmachinedatasetexportflat) | **GET** /user/{userId}/strength-machine-data-set/export/{filename} | Export an A500 strength machine data set as a flat file
+[**strengthMachineDataSetFacilityDelete**](doc/MetricsApi.md#strengthmachinedatasetfacilitydelete) | **DELETE** /facility/strength-machine-data-set/{id} | Delete a strength machine data set
 [**strengthMachineDataSetList**](doc/MetricsApi.md#strengthmachinedatasetlist) | **GET** /strength-machine-data-set/list | List strength machine data sets
 [**strengthMachineDataSetShow**](doc/MetricsApi.md#strengthmachinedatasetshow) | **GET** /strength-machine-data-set | Show a strength machine data set
+[**strengthMachineDataSetShowLastSetMetaData**](doc/MetricsApi.md#strengthmachinedatasetshowlastsetmetadata) | **GET** /strength-machine-data-set/last-set-meta-data | Show metadata from the last recorded set on a strength machine
 [**strengthMachineDataSetSubscribe**](doc/MetricsApi.md#strengthmachinedatasetsubscribe) | **GET** /strengthMachineDataSet/subscribe | Subscribe to strength machine data set changes
 [**strengthMachineDataSetUpdate**](doc/MetricsApi.md#strengthmachinedatasetupdate) | **PUT** /strength-machine-data-set/{id}/{sessionId} | Update a strength machine data set
 [**strengthMachineHistoryList**](doc/MetricsApi.md#strengthmachinehistorylist) | **GET** /strength-machine-history | List strength machines used by user
@@ -388,6 +415,11 @@ Method | HTTP request | Description
 [**userInBodyIntegrationDelete**](doc/MetricsApi.md#userinbodyintegrationdelete) | **DELETE** /user/{userId}/inbody-integration | Delete a user InBody integration
 [**userInBodyIntegrationShow**](doc/MetricsApi.md#userinbodyintegrationshow) | **GET** /user/{userId}/inbody-integration | Show a user InBody integration settings
 [**userInBodyIntegrationSync**](doc/MetricsApi.md#userinbodyintegrationsync) | **GET** /user/{userId}/inbody-integration/sync | Request a sync of user InBody data
+[**userSessionDisplayConfigurationCreate**](doc/MetricsApi.md#usersessiondisplayconfigurationcreate) | **POST** /user-session-display-configuration | Create a user session display configuration
+[**userSessionDisplayConfigurationDelete**](doc/MetricsApi.md#usersessiondisplayconfigurationdelete) | **DELETE** /user-session-display-configuration | Delete a user session display configuration
+[**userSessionDisplayConfigurationList**](doc/MetricsApi.md#usersessiondisplayconfigurationlist) | **GET** /user-session-display-configuration/list | List a user&#39;s session display configurations
+[**userSessionDisplayConfigurationShow**](doc/MetricsApi.md#usersessiondisplayconfigurationshow) | **GET** /user-session-display-configuration | Show a user session display configuration
+[**userSessionDisplayConfigurationUpdate**](doc/MetricsApi.md#usersessiondisplayconfigurationupdate) | **PUT** /user-session-display-configuration | Update a user session display configuration
 [**userShow**](doc/MetricsApi.md#usershow) | **GET** /user | Show a user
 [**userSubscribe**](doc/MetricsApi.md#usersubscribe) | **GET** /user/subscribe | Subscribe to changes to a user
 [**weightMeasurementCreate**](doc/MetricsApi.md#weightmeasurementcreate) | **POST** /user/weight-measurement | Create a user weight measurement
@@ -397,10 +429,17 @@ Method | HTTP request | Description
 [**weightMeasurementList**](doc/MetricsApi.md#weightmeasurementlist) | **GET** /user/weight-measurement/list | List a user&#39;s weight measurements
 [**weightMeasurementShow**](doc/MetricsApi.md#weightmeasurementshow) | **GET** /user/weight-measurement | Show a user&#39;s weight measurement
 [**weightMeasurementSubscribe**](doc/MetricsApi.md#weightmeasurementsubscribe) | **GET** /weightMeasurement/subscribe | Subscribe to changes to user&#39;s weight measurements
+[**workoutSetBulkExport**](doc/MetricsApi.md#workoutsetbulkexport) | **GET** /workout-set/bulk-export | Export many A400 workout sets across a date range as a zip of reps.csv + time_series.csv
+[**workoutSetCreate**](doc/MetricsApi.md#workoutsetcreate) | **POST** /workout-set | Create a workout set from an Apollo Display device (machine-token auth).
+[**workoutSetExport**](doc/MetricsApi.md#workoutsetexport) | **GET** /workout-set/export | Export one A400 workout set as a zip of reps.csv + time_series.csv
+[**workoutSetList**](doc/MetricsApi.md#workoutsetlist) | **GET** /workout-set/list | List A400 workout sets for a facility
+[**workoutSetShow**](doc/MetricsApi.md#workoutsetshow) | **GET** /workout-set | Show an A400 workout set
+[**workoutSetUpdate**](doc/MetricsApi.md#workoutsetupdate) | **PUT** /workout-set | Update an existing workout set from an Apollo Display device (machine-token auth).
 
 
 ## Documentation For Models
 
+ - [A400DataSetData](doc/A400DataSetData.md)
  - [A500AppType](doc/A500AppType.md)
  - [A500DataSetData](doc/A500DataSetData.md)
  - [A500DataSetType](doc/A500DataSetType.md)
@@ -439,6 +478,7 @@ Method | HTTP request | Description
  - [CardioMachineResponse](doc/CardioMachineResponse.md)
  - [CardioMachineSorting](doc/CardioMachineSorting.md)
  - [CharacterType](doc/CharacterType.md)
+ - [CsvNovaMemberEntryResult](doc/CsvNovaMemberEntryResult.md)
  - [DevelopmentAccountData](doc/DevelopmentAccountData.md)
  - [DevelopmentAccountListResponse](doc/DevelopmentAccountListResponse.md)
  - [DevelopmentAccountListResponseMeta](doc/DevelopmentAccountListResponseMeta.md)
@@ -455,6 +495,9 @@ Method | HTTP request | Description
  - [DevelopmentAccountRelationshipSorting](doc/DevelopmentAccountRelationshipSorting.md)
  - [DevelopmentAccountResponse](doc/DevelopmentAccountResponse.md)
  - [DevelopmentAccountSorting](doc/DevelopmentAccountSorting.md)
+ - [DisplayDataMode](doc/DisplayDataMode.md)
+ - [DisplayFocusMode](doc/DisplayFocusMode.md)
+ - [DisplayUnit](doc/DisplayUnit.md)
  - [EmailAddressData](doc/EmailAddressData.md)
  - [EmailAddressListResponse](doc/EmailAddressListResponse.md)
  - [EmailAddressListResponseMeta](doc/EmailAddressListResponseMeta.md)
@@ -465,6 +508,7 @@ Method | HTTP request | Description
  - [EndpointsResponse](doc/EndpointsResponse.md)
  - [ErrorData](doc/ErrorData.md)
  - [ErrorResponse](doc/ErrorResponse.md)
+ - [Exercise](doc/Exercise.md)
  - [ExerciseAliasData](doc/ExerciseAliasData.md)
  - [ExerciseAliasListResponse](doc/ExerciseAliasListResponse.md)
  - [ExerciseAliasListResponseMeta](doc/ExerciseAliasListResponseMeta.md)
@@ -499,6 +543,17 @@ Method | HTTP request | Description
  - [FacilityConfigurationData](doc/FacilityConfigurationData.md)
  - [FacilityConfigurationResponse](doc/FacilityConfigurationResponse.md)
  - [FacilityData](doc/FacilityData.md)
+ - [FacilityDisplayConfigurationData](doc/FacilityDisplayConfigurationData.md)
+ - [FacilityDisplayConfigurationResponse](doc/FacilityDisplayConfigurationResponse.md)
+ - [FacilityDisplayOperatingSchedule](doc/FacilityDisplayOperatingSchedule.md)
+ - [FacilityDisplayOperatingScheduleEntry](doc/FacilityDisplayOperatingScheduleEntry.md)
+ - [FacilityDisplayOperatingScheduleTime](doc/FacilityDisplayOperatingScheduleTime.md)
+ - [FacilityHubData](doc/FacilityHubData.md)
+ - [FacilityHubLinkStatusResponse](doc/FacilityHubLinkStatusResponse.md)
+ - [FacilityHubListMeta](doc/FacilityHubListMeta.md)
+ - [FacilityHubListResponse](doc/FacilityHubListResponse.md)
+ - [FacilityHubSorting](doc/FacilityHubSorting.md)
+ - [FacilityHubUpdateResponse](doc/FacilityHubUpdateResponse.md)
  - [FacilityInBodyIntegrationData](doc/FacilityInBodyIntegrationData.md)
  - [FacilityInBodyIntegrationResponse](doc/FacilityInBodyIntegrationResponse.md)
  - [FacilityKioskTokenResponse](doc/FacilityKioskTokenResponse.md)
@@ -510,9 +565,12 @@ Method | HTTP request | Description
  - [FacilityLicenseType](doc/FacilityLicenseType.md)
  - [FacilityListResponse](doc/FacilityListResponse.md)
  - [FacilityListResponseMeta](doc/FacilityListResponseMeta.md)
+ - [FacilityPinLoginRelationshipData](doc/FacilityPinLoginRelationshipData.md)
+ - [FacilityPinLoginResponse](doc/FacilityPinLoginResponse.md)
  - [FacilityProfileData](doc/FacilityProfileData.md)
  - [FacilityProfileResponse](doc/FacilityProfileResponse.md)
  - [FacilityRelationshipData](doc/FacilityRelationshipData.md)
+ - [FacilityRelationshipNovaStaffInviteResponse](doc/FacilityRelationshipNovaStaffInviteResponse.md)
  - [FacilityRelationshipRequestData](doc/FacilityRelationshipRequestData.md)
  - [FacilityRelationshipRequestListResponse](doc/FacilityRelationshipRequestListResponse.md)
  - [FacilityRelationshipRequestListResponseMeta](doc/FacilityRelationshipRequestListResponseMeta.md)
@@ -538,6 +596,7 @@ Method | HTTP request | Description
  - [FacilityStrengthMachineMaintenanceRecordsMeta](doc/FacilityStrengthMachineMaintenanceRecordsMeta.md)
  - [FacilityStrengthMachineResponse](doc/FacilityStrengthMachineResponse.md)
  - [FacilityStrengthMachineSorting](doc/FacilityStrengthMachineSorting.md)
+ - [FacilityStrengthMachineStartSessionResponse](doc/FacilityStrengthMachineStartSessionResponse.md)
  - [FacilityStrengthMachineUtilizationInstanceData](doc/FacilityStrengthMachineUtilizationInstanceData.md)
  - [FacilityStrengthMachineUtilizationInstanceListResponse](doc/FacilityStrengthMachineUtilizationInstanceListResponse.md)
  - [FacilityStrengthMachineUtilizationInstanceResponse](doc/FacilityStrengthMachineUtilizationInstanceResponse.md)
@@ -560,6 +619,9 @@ Method | HTTP request | Description
  - [HeightMeasurementListResponseMeta](doc/HeightMeasurementListResponseMeta.md)
  - [HeightMeasurementResponse](doc/HeightMeasurementResponse.md)
  - [HeightMeasurementSorting](doc/HeightMeasurementSorting.md)
+ - [HubLinkClaimResponse](doc/HubLinkClaimResponse.md)
+ - [HubLinkData](doc/HubLinkData.md)
+ - [HubLinkStatus](doc/HubLinkStatus.md)
  - [InBodyType](doc/InBodyType.md)
  - [KioskSessionResponse](doc/KioskSessionResponse.md)
  - [ListMeta](doc/ListMeta.md)
@@ -583,17 +645,27 @@ Method | HTTP request | Description
  - [MSeriesFtpMeasurementSorting](doc/MSeriesFtpMeasurementSorting.md)
  - [MSeriesProfileStatsData](doc/MSeriesProfileStatsData.md)
  - [MSeriesProfileStatsResponse](doc/MSeriesProfileStatsResponse.md)
- - [MachineAdjustmentData](doc/MachineAdjustmentData.md)
- - [MachineAdjustmentListResponse](doc/MachineAdjustmentListResponse.md)
- - [MachineAdjustmentListResponseMeta](doc/MachineAdjustmentListResponseMeta.md)
- - [MachineAdjustmentResponse](doc/MachineAdjustmentResponse.md)
- - [MachineAdjustmentSorting](doc/MachineAdjustmentSorting.md)
+ - [MachineClaimClaimResponse](doc/MachineClaimClaimResponse.md)
+ - [MachineClaimConfirmResponse](doc/MachineClaimConfirmResponse.md)
+ - [MachineClaimData](doc/MachineClaimData.md)
+ - [MachineClaimListMeta](doc/MachineClaimListMeta.md)
+ - [MachineClaimListResponse](doc/MachineClaimListResponse.md)
+ - [MachineClaimRegisterResponse](doc/MachineClaimRegisterResponse.md)
+ - [MachineClaimShowResponse](doc/MachineClaimShowResponse.md)
+ - [MachineClaimSorting](doc/MachineClaimSorting.md)
+ - [MachineClaimStatus](doc/MachineClaimStatus.md)
+ - [MachineClaimStatusResponse](doc/MachineClaimStatusResponse.md)
+ - [MachineClaimUnclaimResponse](doc/MachineClaimUnclaimResponse.md)
+ - [MachineWorkoutSetResponseData](doc/MachineWorkoutSetResponseData.md)
  - [MaintenanceStatus](doc/MaintenanceStatus.md)
+ - [MotionDataPoint](doc/MotionDataPoint.md)
  - [MuscleArea](doc/MuscleArea.md)
  - [MuscleData](doc/MuscleData.md)
  - [MuscleGroup](doc/MuscleGroup.md)
  - [MuscleSorting](doc/MuscleSorting.md)
  - [MuscleTargetLevel](doc/MuscleTargetLevel.md)
+ - [NovaMemberBulkCreateResponse](doc/NovaMemberBulkCreateResponse.md)
+ - [NovaMemberCsvErrorCode](doc/NovaMemberCsvErrorCode.md)
  - [OAuthServiceData](doc/OAuthServiceData.md)
  - [OAuthServiceListResponse](doc/OAuthServiceListResponse.md)
  - [OAuthServiceListResponseMeta](doc/OAuthServiceListResponseMeta.md)
@@ -601,6 +673,7 @@ Method | HTTP request | Description
  - [OAuthServiceSorting](doc/OAuthServiceSorting.md)
  - [OauthResponse](doc/OauthResponse.md)
  - [OauthTokenResponse](doc/OauthTokenResponse.md)
+ - [PowerRegression](doc/PowerRegression.md)
  - [PrimaryEmailAddressData](doc/PrimaryEmailAddressData.md)
  - [PrimaryEmailAddressResponse](doc/PrimaryEmailAddressResponse.md)
  - [PrivilegedFacilityRelationshipRequestListResponse](doc/PrivilegedFacilityRelationshipRequestListResponse.md)
@@ -658,7 +731,9 @@ Method | HTTP request | Description
  - [SessionResponse](doc/SessionResponse.md)
  - [SessionSorting](doc/SessionSorting.md)
  - [SessionStartResponse](doc/SessionStartResponse.md)
+ - [SetType](doc/SetType.md)
  - [Side](doc/Side.md)
+ - [SixRepTestData](doc/SixRepTestData.md)
  - [StatusResponse](doc/StatusResponse.md)
  - [StrengthExerciseCategory](doc/StrengthExerciseCategory.md)
  - [StrengthExerciseData](doc/StrengthExerciseData.md)
@@ -692,10 +767,13 @@ Method | HTTP request | Description
  - [StrengthMachineHistoryListResponse](doc/StrengthMachineHistoryListResponse.md)
  - [StrengthMachineHistoryMeta](doc/StrengthMachineHistoryMeta.md)
  - [StrengthMachineInitializeResponse](doc/StrengthMachineInitializeResponse.md)
+ - [StrengthMachineLastSetMetaData](doc/StrengthMachineLastSetMetaData.md)
+ - [StrengthMachineLastSetMetaDataResponse](doc/StrengthMachineLastSetMetaDataResponse.md)
  - [StrengthMachineLine](doc/StrengthMachineLine.md)
  - [StrengthMachineListResponse](doc/StrengthMachineListResponse.md)
  - [StrengthMachineListResponseMeta](doc/StrengthMachineListResponseMeta.md)
  - [StrengthMachineModelData](doc/StrengthMachineModelData.md)
+ - [StrengthMachineModelNumberData](doc/StrengthMachineModelNumberData.md)
  - [StrengthMachineProfileStatsData](doc/StrengthMachineProfileStatsData.md)
  - [StrengthMachineProfileStatsResponse](doc/StrengthMachineProfileStatsResponse.md)
  - [StrengthMachineResponse](doc/StrengthMachineResponse.md)
@@ -716,8 +794,11 @@ Method | HTTP request | Description
  - [StretchExerciseVariantSorting](doc/StretchExerciseVariantSorting.md)
  - [StretchExerciseVariantType](doc/StretchExerciseVariantType.md)
  - [SubscriptionResponse](doc/SubscriptionResponse.md)
+ - [TenRepTestData](doc/TenRepTestData.md)
+ - [TenRepTestSideResults](doc/TenRepTestSideResults.md)
  - [TestSide](doc/TestSide.md)
  - [TimeResponse](doc/TimeResponse.md)
+ - [TimeZone](doc/TimeZone.md)
  - [UserApplicationAuthorizationData](doc/UserApplicationAuthorizationData.md)
  - [UserApplicationAuthorizationDeveloperListResponse](doc/UserApplicationAuthorizationDeveloperListResponse.md)
  - [UserApplicationAuthorizationMeta](doc/UserApplicationAuthorizationMeta.md)
@@ -730,11 +811,22 @@ Method | HTTP request | Description
  - [UserInBodyIntegrationData](doc/UserInBodyIntegrationData.md)
  - [UserInBodyIntegrationResponse](doc/UserInBodyIntegrationResponse.md)
  - [UserResponse](doc/UserResponse.md)
+ - [UserSessionDisplayConfigurationData](doc/UserSessionDisplayConfigurationData.md)
+ - [UserSessionDisplayConfigurationListResponse](doc/UserSessionDisplayConfigurationListResponse.md)
+ - [UserSessionDisplayConfigurationListResponseMeta](doc/UserSessionDisplayConfigurationListResponseMeta.md)
+ - [UserSessionDisplayConfigurationResponse](doc/UserSessionDisplayConfigurationResponse.md)
+ - [UserSessionDisplayConfigurationSorting](doc/UserSessionDisplayConfigurationSorting.md)
+ - [Value](doc/Value.md)
+ - [VelocityRegression](doc/VelocityRegression.md)
  - [WeightMeasurementData](doc/WeightMeasurementData.md)
  - [WeightMeasurementListResponse](doc/WeightMeasurementListResponse.md)
  - [WeightMeasurementListResponseMeta](doc/WeightMeasurementListResponseMeta.md)
  - [WeightMeasurementResponse](doc/WeightMeasurementResponse.md)
  - [WeightMeasurementSorting](doc/WeightMeasurementSorting.md)
+ - [WorkoutSetPositionDataEvent](doc/WorkoutSetPositionDataEvent.md)
+ - [WorkoutSetRepDataPoint](doc/WorkoutSetRepDataPoint.md)
+ - [WorkoutSetResponse](doc/WorkoutSetResponse.md)
+ - [WorkoutSetSideData](doc/WorkoutSetSideData.md)
  - [Zones](doc/Zones.md)
 
 

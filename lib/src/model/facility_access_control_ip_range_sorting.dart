@@ -10,5 +10,5 @@ enum FacilityAccessControlIPRangeSorting {
   @JsonValue(r'id')
   id,
   @JsonValue(r'name')
-  names,
+  name,
 }

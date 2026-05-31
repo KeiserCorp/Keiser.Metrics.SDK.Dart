@@ -35,6 +35,8 @@ class FacilityRelationshipRequestData {
 
      this.memberIdentifier,
 
+     this.pinCode,
+
      this.employeeRole,
 
      this.facility,
@@ -128,6 +130,18 @@ class FacilityRelationshipRequestData {
 
   @JsonKey(
     
+    name: r'pinCode',
+    required: false,
+    includeIfNull: false
+  )
+
+
+  final String? pinCode;
+
+
+
+  @JsonKey(
+    
     name: r'employeeRole',
     required: false,
     includeIfNull: false
@@ -171,6 +185,7 @@ class FacilityRelationshipRequestData {
      other.facilityApproval == facilityApproval &&
      other.member == member &&
      other.memberIdentifier == memberIdentifier &&
+     other.pinCode == pinCode &&
      other.employeeRole == employeeRole &&
      other.facility == facility &&
      other.user == user;
@@ -184,6 +199,7 @@ class FacilityRelationshipRequestData {
     facilityApproval.hashCode +
     member.hashCode +
     memberIdentifier.hashCode +
+    pinCode.hashCode +
     employeeRole.hashCode +
     facility.hashCode +
     user.hashCode;

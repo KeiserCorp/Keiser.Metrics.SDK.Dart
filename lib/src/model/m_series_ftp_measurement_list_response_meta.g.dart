@@ -64,5 +64,5 @@ Map<String, dynamic> _$MSeriesFtpMeasurementListResponseMetaToJson(
 const _$MSeriesFtpMeasurementSortingEnumMap = {
   MSeriesFtpMeasurementSorting.id: 'id',
   MSeriesFtpMeasurementSorting.takenAt: 'takenAt',
-  MSeriesFtpMeasurementSorting.source_: 'source',
+  MSeriesFtpMeasurementSorting.source: 'source',
 };

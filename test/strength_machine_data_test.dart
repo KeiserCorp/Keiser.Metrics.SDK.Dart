@@ -42,6 +42,11 @@ void main() {
       // TODO
     });
 
+    // List<StrengthMachineModelNumberData> modelNumbers
+    test('to test the property `modelNumbers`', () async {
+      // TODO
+    });
+
     // List<StrengthMachineModelData> models
     test('to test the property `models`', () async {
       // TODO

@@ -49,6 +49,10 @@ StrengthMachineDataSetData _$StrengthMachineDataSetDataFromJson(
           work: $checkedConvert('work', (v) => v as num?),
           distance: $checkedConvert('distance', (v) => v as num?),
           addedWeight: $checkedConvert('addedWeight', (v) => v as num?),
+          clientSetId: $checkedConvert('clientSetId', (v) => v as String?),
+          setNumber: $checkedConvert('setNumber', (v) => v as num?),
+          startedAt: $checkedConvert('startedAt',
+              (v) => v == null ? null : DateTime.parse(v as String)),
           test: $checkedConvert(
               'test',
               (v) => v == null
@@ -70,11 +74,21 @@ StrengthMachineDataSetData _$StrengthMachineDataSetDataFromJson(
               (v) => v == null
                   ? null
                   : A500DataSetData.fromJson(v as Map<String, dynamic>)),
+          a400DataSet: $checkedConvert(
+              'a400DataSet',
+              (v) => v == null
+                  ? null
+                  : A400DataSetData.fromJson(v as Map<String, dynamic>)),
           session: $checkedConvert(
               'session',
               (v) => v == null
                   ? null
                   : SessionData.fromJson(v as Map<String, dynamic>)),
+          profile: $checkedConvert(
+              'profile',
+              (v) => v == null
+                  ? null
+                  : ProfileData.fromJson(v as Map<String, dynamic>)),
           facilityStrengthMachine: $checkedConvert(
               'facilityStrengthMachine',
               (v) => v == null
@@ -117,18 +131,23 @@ Map<String, dynamic> _$StrengthMachineDataSetDataToJson(
   writeNotNull('work', instance.work);
   writeNotNull('distance', instance.distance);
   writeNotNull('addedWeight', instance.addedWeight);
+  writeNotNull('clientSetId', instance.clientSetId);
+  writeNotNull('setNumber', instance.setNumber);
+  writeNotNull('startedAt', instance.startedAt?.toIso8601String());
   writeNotNull('test', instance.test?.toJson());
   writeNotNull('strengthMachine', instance.strengthMachine?.toJson());
   writeNotNull('strengthExercise', instance.strengthExercise?.toJson());
   writeNotNull('a500DataSet', instance.a500DataSet?.toJson());
+  writeNotNull('a400DataSet', instance.a400DataSet?.toJson());
   writeNotNull('session', instance.session?.toJson());
+  writeNotNull('profile', instance.profile?.toJson());
   writeNotNull(
       'facilityStrengthMachine', instance.facilityStrengthMachine?.toJson());
   return val;
 }
 
 const _$ResistancePrecisionEnumMap = {
-  ResistancePrecision.int_: 'int',
+  ResistancePrecision.int: 'int',
   ResistancePrecision.dec: 'dec',
 };
 

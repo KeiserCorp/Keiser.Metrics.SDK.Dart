@@ -15,6 +15,7 @@ Name | Type | Description | Notes
 **dualSided** | **bool** |  | 
 **defaultStrengthExerciseId** | **num** |  | [optional] 
 **defaultStrengthExercise** | [**StrengthExerciseData**](StrengthExerciseData.md) |  | [optional] 
+**modelNumbers** | [**List&lt;StrengthMachineModelNumberData&gt;**](StrengthMachineModelNumberData.md) |  | [optional] 
 **models** | [**List&lt;StrengthMachineModelData&gt;**](StrengthMachineModelData.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

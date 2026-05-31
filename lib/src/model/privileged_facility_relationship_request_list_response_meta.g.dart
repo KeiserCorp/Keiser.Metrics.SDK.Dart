@@ -59,7 +59,7 @@ Map<String, dynamic>
 
 const _$PrivilegedFacilityRelationshipRequestSortingEnumMap = {
   PrivilegedFacilityRelationshipRequestSorting.id: 'id',
-  PrivilegedFacilityRelationshipRequestSorting.names: 'name',
+  PrivilegedFacilityRelationshipRequestSorting.name: 'name',
   PrivilegedFacilityRelationshipRequestSorting.memberIdentifier:
       'memberIdentifier',
   PrivilegedFacilityRelationshipRequestSorting.employeeRole: 'employeeRole',

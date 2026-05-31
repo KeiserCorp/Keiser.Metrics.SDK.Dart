@@ -7,6 +7,11 @@ void main() {
   // TODO add properties to the entity
 
   group(StrengthMachineDataSetListResponseMeta, () {
+    // String query
+    test('to test the property `query`', () async {
+      // TODO
+    });
+
     // DateTime from
     test('to test the property `from`', () async {
       // TODO

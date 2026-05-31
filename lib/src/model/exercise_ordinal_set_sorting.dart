@@ -10,7 +10,7 @@ enum ExerciseOrdinalSetSorting {
   @JsonValue(r'id')
   id,
   @JsonValue(r'name')
-  names,
+  name,
   @JsonValue(r'code')
   code,
 }

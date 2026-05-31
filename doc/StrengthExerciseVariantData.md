@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 **id** | **num** |  | 
 **variant** | [**StrengthExerciseVariantType**](StrengthExerciseVariantType.md) |  | 
 **attachment** | [**StrengthExerciseVariantAttachment**](StrengthExerciseVariantAttachment.md) |  | [optional] 
-**equipmentMechanicalMovement** | [**StrengthExerciseMovement**](StrengthExerciseMovement.md) |  | 
+**equipmentMechanicalMovement** | [**StrengthExerciseMovement**](StrengthExerciseMovement.md) |  | [optional] 
 **instructionalImage** | **String** |  | [optional] 
 **instructionalVideo** | **String** |  | [optional] 
 **strengthExercise** | [**StrengthExerciseData**](StrengthExerciseData.md) |  | [optional] 

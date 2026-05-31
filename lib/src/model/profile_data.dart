@@ -24,6 +24,10 @@ class ProfileData {
 
      this.names,
 
+     this.firstName,
+
+     this.lastName,
+
      this.birthday,
 
      this.gender,
@@ -66,6 +70,30 @@ class ProfileData {
 
 
   final String? names;
+
+
+
+  @JsonKey(
+    
+    name: r'firstName',
+    required: false,
+    includeIfNull: false
+  )
+
+
+  final String? firstName;
+
+
+
+  @JsonKey(
+    
+    name: r'lastName',
+    required: false,
+    includeIfNull: false
+  )
+
+
+  final String? lastName;
 
 
 
@@ -122,6 +150,8 @@ class ProfileData {
      other.userId == userId &&
      other.updatedAt == updatedAt &&
      other.names == names &&
+     other.firstName == firstName &&
+     other.lastName == lastName &&
      other.birthday == birthday &&
      other.gender == gender &&
      other.language == language &&
@@ -132,6 +162,8 @@ class ProfileData {
     userId.hashCode +
     updatedAt.hashCode +
     names.hashCode +
+    firstName.hashCode +
+    lastName.hashCode +
     birthday.hashCode +
     gender.hashCode +
     language.hashCode +

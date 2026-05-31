@@ -18,6 +18,7 @@ StrengthMachineDataSetListResponseMeta
               requiredKeys: const ['sort'],
             );
             final val = StrengthMachineDataSetListResponseMeta(
+              query: $checkedConvert('query', (v) => v as String?),
               from: $checkedConvert('from',
                   (v) => v == null ? null : DateTime.parse(v as String)),
               to: $checkedConvert(
@@ -46,6 +47,7 @@ Map<String, dynamic> _$StrengthMachineDataSetListResponseMetaToJson(
     }
   }
 
+  writeNotNull('query', instance.query);
   writeNotNull('from', instance.from?.toIso8601String());
   writeNotNull('to', instance.to?.toIso8601String());
   val['sort'] = _$StrengthMachineDataSetSortingEnumMap[instance.sort]!;

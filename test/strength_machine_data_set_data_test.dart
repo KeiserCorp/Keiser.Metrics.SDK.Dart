@@ -102,6 +102,21 @@ void main() {
       // TODO
     });
 
+    // String clientSetId
+    test('to test the property `clientSetId`', () async {
+      // TODO
+    });
+
+    // num setNumber
+    test('to test the property `setNumber`', () async {
+      // TODO
+    });
+
+    // DateTime startedAt
+    test('to test the property `startedAt`', () async {
+      // TODO
+    });
+
     // StrengthMachineDataSetTestData test
     test('to test the property `test`', () async {
       // TODO
@@ -122,8 +137,18 @@ void main() {
       // TODO
     });
 
+    // A400DataSetData a400DataSet
+    test('to test the property `a400DataSet`', () async {
+      // TODO
+    });
+
     // SessionData session
     test('to test the property `session`', () async {
+      // TODO
+    });
+
+    // ProfileData profile
+    test('to test the property `profile`', () async {
       // TODO
     });
 

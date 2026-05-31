@@ -18,6 +18,8 @@ ProfileData _$ProfileDataFromJson(Map<String, dynamic> json) => $checkedCreate(
           userId: $checkedConvert('userId', (v) => v as num),
           updatedAt: $checkedConvert('updatedAt', (v) => v as String?),
           names: $checkedConvert('name', (v) => v as String?),
+          firstName: $checkedConvert('firstName', (v) => v as String?),
+          lastName: $checkedConvert('lastName', (v) => v as String?),
           birthday: $checkedConvert('birthday', (v) => v as String?),
           gender: $checkedConvert('gender', (v) => v as String?),
           language: $checkedConvert('language', (v) => v as String?),
@@ -41,6 +43,8 @@ Map<String, dynamic> _$ProfileDataToJson(ProfileData instance) {
 
   writeNotNull('updatedAt', instance.updatedAt);
   writeNotNull('name', instance.names);
+  writeNotNull('firstName', instance.firstName);
+  writeNotNull('lastName', instance.lastName);
   writeNotNull('birthday', instance.birthday);
   writeNotNull('gender', instance.gender);
   writeNotNull('language', instance.language);

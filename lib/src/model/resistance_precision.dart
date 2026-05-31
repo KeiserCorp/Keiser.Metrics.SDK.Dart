@@ -8,7 +8,7 @@ import 'package:json_annotation/json_annotation.dart';
 
 enum ResistancePrecision {
   @JsonValue(r'int')
-  int_,
+  int,
   @JsonValue(r'dec')
   dec,
 }

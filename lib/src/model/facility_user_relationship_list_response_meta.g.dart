@@ -77,7 +77,10 @@ const _$EmployeeRoleEnumMap = {
 
 const _$FacilityUserRelationshipSortingEnumMap = {
   FacilityUserRelationshipSorting.id: 'id',
-  FacilityUserRelationshipSorting.names: 'name',
+  FacilityUserRelationshipSorting.name: 'name',
+  FacilityUserRelationshipSorting.firstName: 'firstName',
+  FacilityUserRelationshipSorting.lastName: 'lastName',
   FacilityUserRelationshipSorting.memberIdentifier: 'memberIdentifier',
   FacilityUserRelationshipSorting.employeeRole: 'employeeRole',
+  FacilityUserRelationshipSorting.pinCode: 'pinCode',
 };

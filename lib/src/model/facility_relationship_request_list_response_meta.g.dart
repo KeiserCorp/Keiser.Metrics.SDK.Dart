@@ -59,5 +59,5 @@ Map<String, dynamic> _$FacilityRelationshipRequestListResponseMetaToJson(
 
 const _$FacilityRelationshipRequestSortingEnumMap = {
   FacilityRelationshipRequestSorting.id: 'id',
-  FacilityRelationshipRequestSorting.names: 'name',
+  FacilityRelationshipRequestSorting.name: 'name',
 };

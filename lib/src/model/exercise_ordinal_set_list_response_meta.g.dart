@@ -53,6 +53,6 @@ Map<String, dynamic> _$ExerciseOrdinalSetListResponseMetaToJson(
 
 const _$ExerciseOrdinalSetSortingEnumMap = {
   ExerciseOrdinalSetSorting.id: 'id',
-  ExerciseOrdinalSetSorting.names: 'name',
+  ExerciseOrdinalSetSorting.name: 'name',
   ExerciseOrdinalSetSorting.code: 'code',
 };

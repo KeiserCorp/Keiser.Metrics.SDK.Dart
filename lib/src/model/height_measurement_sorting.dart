@@ -10,7 +10,7 @@ enum HeightMeasurementSorting {
   @JsonValue(r'id')
   id,
   @JsonValue(r'source')
-  source_,
+  source,
   @JsonValue(r'takenAt')
   takenAt,
 }

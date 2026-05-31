@@ -56,6 +56,6 @@ Map<String, dynamic> _$HeightMeasurementListResponseMetaToJson(
 
 const _$HeightMeasurementSortingEnumMap = {
   HeightMeasurementSorting.id: 'id',
-  HeightMeasurementSorting.source_: 'source',
+  HeightMeasurementSorting.source: 'source',
   HeightMeasurementSorting.takenAt: 'takenAt',
 };

@@ -11,6 +11,8 @@ Name | Type | Description | Notes
 **userId** | **num** |  | 
 **updatedAt** | **String** |  | [optional] 
 **names** | **String** |  | [optional] 
+**firstName** | **String** |  | [optional] 
+**lastName** | **String** |  | [optional] 
 **birthday** | **String** |  | [optional] 
 **gender** | **String** |  | [optional] 
 **language** | **String** |  | [optional] 

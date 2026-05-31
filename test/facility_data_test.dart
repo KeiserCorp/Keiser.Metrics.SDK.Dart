@@ -17,6 +17,11 @@ void main() {
       // TODO
     });
 
+    // bool isActive
+    test('to test the property `isActive`', () async {
+      // TODO
+    });
+
     // FacilityProfileData facilityProfile
     test('to test the property `facilityProfile`', () async {
       // TODO
@@ -24,6 +29,11 @@ void main() {
 
     // FacilityConfigurationData facilityConfiguration
     test('to test the property `facilityConfiguration`', () async {
+      // TODO
+    });
+
+    // FacilityDisplayConfigurationData facilityDisplayConfiguration
+    test('to test the property `facilityDisplayConfiguration`', () async {
       // TODO
     });
 

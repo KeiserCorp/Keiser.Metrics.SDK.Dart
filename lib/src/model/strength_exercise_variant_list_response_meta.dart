@@ -4,6 +4,7 @@
 
 // ignore_for_file: unused_element
 import 'package:keiser_metrics_sdk/src/model/strength_exercise_variant_sorting.dart';
+import 'package:keiser_metrics_sdk/src/model/strength_machine_line.dart';
 import 'package:keiser_metrics_sdk/src/model/strength_exercise_variant_type.dart';
 import 'package:json_annotation/json_annotation.dart';
 
@@ -23,6 +24,10 @@ class StrengthExerciseVariantListResponseMeta {
      this.strengthExerciseId,
 
      this.strengthMachineId,
+
+     this.machineModel,
+
+     this.line,
 
      this.variant,
 
@@ -62,6 +67,30 @@ class StrengthExerciseVariantListResponseMeta {
 
 
   final num? strengthMachineId;
+
+
+
+  @JsonKey(
+    
+    name: r'machineModel',
+    required: false,
+    includeIfNull: false
+  )
+
+
+  final String? machineModel;
+
+
+
+  @JsonKey(
+    
+    name: r'line',
+    required: false,
+    includeIfNull: false
+  )
+
+
+  final StrengthMachineLine? line;
 
 
 
@@ -165,6 +194,8 @@ class StrengthExerciseVariantListResponseMeta {
   bool operator ==(Object other) => identical(this, other) || other is StrengthExerciseVariantListResponseMeta &&
      other.strengthExerciseId == strengthExerciseId &&
      other.strengthMachineId == strengthMachineId &&
+     other.machineModel == machineModel &&
+     other.line == line &&
      other.variant == variant &&
      other.attachment == attachment &&
      other.equipmentMechanicalMovement == equipmentMechanicalMovement &&
@@ -178,6 +209,8 @@ class StrengthExerciseVariantListResponseMeta {
   int get hashCode =>
     strengthExerciseId.hashCode +
     strengthMachineId.hashCode +
+    machineModel.hashCode +
+    line.hashCode +
     variant.hashCode +
     attachment.hashCode +
     equipmentMechanicalMovement.hashCode +

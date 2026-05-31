@@ -1,3 +1,4 @@
+import 'package:keiser_metrics_sdk/src/model/a400_data_set_data.dart';
 import 'package:keiser_metrics_sdk/src/model/a500_data_set_data.dart';
 import 'package:keiser_metrics_sdk/src/model/a500_get_user_data.dart';
 import 'package:keiser_metrics_sdk/src/model/a500_get_user_response.dart';
@@ -27,6 +28,7 @@ import 'package:keiser_metrics_sdk/src/model/cardio_machine_data.dart';
 import 'package:keiser_metrics_sdk/src/model/cardio_machine_list_response.dart';
 import 'package:keiser_metrics_sdk/src/model/cardio_machine_list_response_meta.dart';
 import 'package:keiser_metrics_sdk/src/model/cardio_machine_response.dart';
+import 'package:keiser_metrics_sdk/src/model/csv_nova_member_entry_result.dart';
 import 'package:keiser_metrics_sdk/src/model/development_account_data.dart';
 import 'package:keiser_metrics_sdk/src/model/development_account_list_response.dart';
 import 'package:keiser_metrics_sdk/src/model/development_account_list_response_meta.dart';
@@ -47,6 +49,7 @@ import 'package:keiser_metrics_sdk/src/model/endpoints_data.dart';
 import 'package:keiser_metrics_sdk/src/model/endpoints_response.dart';
 import 'package:keiser_metrics_sdk/src/model/error_data.dart';
 import 'package:keiser_metrics_sdk/src/model/error_response.dart';
+import 'package:keiser_metrics_sdk/src/model/exercise.dart';
 import 'package:keiser_metrics_sdk/src/model/exercise_alias_data.dart';
 import 'package:keiser_metrics_sdk/src/model/exercise_alias_list_response.dart';
 import 'package:keiser_metrics_sdk/src/model/exercise_alias_list_response_meta.dart';
@@ -74,6 +77,16 @@ import 'package:keiser_metrics_sdk/src/model/facility_cardio_machine_response.da
 import 'package:keiser_metrics_sdk/src/model/facility_configuration_data.dart';
 import 'package:keiser_metrics_sdk/src/model/facility_configuration_response.dart';
 import 'package:keiser_metrics_sdk/src/model/facility_data.dart';
+import 'package:keiser_metrics_sdk/src/model/facility_display_configuration_data.dart';
+import 'package:keiser_metrics_sdk/src/model/facility_display_configuration_response.dart';
+import 'package:keiser_metrics_sdk/src/model/facility_display_operating_schedule.dart';
+import 'package:keiser_metrics_sdk/src/model/facility_display_operating_schedule_entry.dart';
+import 'package:keiser_metrics_sdk/src/model/facility_display_operating_schedule_time.dart';
+import 'package:keiser_metrics_sdk/src/model/facility_hub_data.dart';
+import 'package:keiser_metrics_sdk/src/model/facility_hub_link_status_response.dart';
+import 'package:keiser_metrics_sdk/src/model/facility_hub_list_meta.dart';
+import 'package:keiser_metrics_sdk/src/model/facility_hub_list_response.dart';
+import 'package:keiser_metrics_sdk/src/model/facility_hub_update_response.dart';
 import 'package:keiser_metrics_sdk/src/model/facility_in_body_integration_data.dart';
 import 'package:keiser_metrics_sdk/src/model/facility_in_body_integration_response.dart';
 import 'package:keiser_metrics_sdk/src/model/facility_kiosk_token_response.dart';
@@ -83,9 +96,12 @@ import 'package:keiser_metrics_sdk/src/model/facility_license_list_response_meta
 import 'package:keiser_metrics_sdk/src/model/facility_license_response.dart';
 import 'package:keiser_metrics_sdk/src/model/facility_list_response.dart';
 import 'package:keiser_metrics_sdk/src/model/facility_list_response_meta.dart';
+import 'package:keiser_metrics_sdk/src/model/facility_pin_login_relationship_data.dart';
+import 'package:keiser_metrics_sdk/src/model/facility_pin_login_response.dart';
 import 'package:keiser_metrics_sdk/src/model/facility_profile_data.dart';
 import 'package:keiser_metrics_sdk/src/model/facility_profile_response.dart';
 import 'package:keiser_metrics_sdk/src/model/facility_relationship_data.dart';
+import 'package:keiser_metrics_sdk/src/model/facility_relationship_nova_staff_invite_response.dart';
 import 'package:keiser_metrics_sdk/src/model/facility_relationship_request_data.dart';
 import 'package:keiser_metrics_sdk/src/model/facility_relationship_request_list_response.dart';
 import 'package:keiser_metrics_sdk/src/model/facility_relationship_request_list_response_meta.dart';
@@ -108,6 +124,7 @@ import 'package:keiser_metrics_sdk/src/model/facility_strength_machine_maintenan
 import 'package:keiser_metrics_sdk/src/model/facility_strength_machine_maintenance_record_response.dart';
 import 'package:keiser_metrics_sdk/src/model/facility_strength_machine_maintenance_records_meta.dart';
 import 'package:keiser_metrics_sdk/src/model/facility_strength_machine_response.dart';
+import 'package:keiser_metrics_sdk/src/model/facility_strength_machine_start_session_response.dart';
 import 'package:keiser_metrics_sdk/src/model/facility_strength_machine_utilization_instance_data.dart';
 import 'package:keiser_metrics_sdk/src/model/facility_strength_machine_utilization_instance_list_response.dart';
 import 'package:keiser_metrics_sdk/src/model/facility_strength_machine_utilization_instance_response.dart';
@@ -126,6 +143,8 @@ import 'package:keiser_metrics_sdk/src/model/height_measurement_data.dart';
 import 'package:keiser_metrics_sdk/src/model/height_measurement_list_response.dart';
 import 'package:keiser_metrics_sdk/src/model/height_measurement_list_response_meta.dart';
 import 'package:keiser_metrics_sdk/src/model/height_measurement_response.dart';
+import 'package:keiser_metrics_sdk/src/model/hub_link_claim_response.dart';
+import 'package:keiser_metrics_sdk/src/model/hub_link_data.dart';
 import 'package:keiser_metrics_sdk/src/model/kiosk_session_response.dart';
 import 'package:keiser_metrics_sdk/src/model/list_meta.dart';
 import 'package:keiser_metrics_sdk/src/model/m_series_app_session_data.dart';
@@ -146,18 +165,27 @@ import 'package:keiser_metrics_sdk/src/model/m_series_ftp_measurement_list_respo
 import 'package:keiser_metrics_sdk/src/model/m_series_ftp_measurement_response.dart';
 import 'package:keiser_metrics_sdk/src/model/m_series_profile_stats_data.dart';
 import 'package:keiser_metrics_sdk/src/model/m_series_profile_stats_response.dart';
-import 'package:keiser_metrics_sdk/src/model/machine_adjustment_data.dart';
-import 'package:keiser_metrics_sdk/src/model/machine_adjustment_list_response.dart';
-import 'package:keiser_metrics_sdk/src/model/machine_adjustment_list_response_meta.dart';
-import 'package:keiser_metrics_sdk/src/model/machine_adjustment_response.dart';
+import 'package:keiser_metrics_sdk/src/model/machine_claim_claim_response.dart';
+import 'package:keiser_metrics_sdk/src/model/machine_claim_confirm_response.dart';
+import 'package:keiser_metrics_sdk/src/model/machine_claim_data.dart';
+import 'package:keiser_metrics_sdk/src/model/machine_claim_list_meta.dart';
+import 'package:keiser_metrics_sdk/src/model/machine_claim_list_response.dart';
+import 'package:keiser_metrics_sdk/src/model/machine_claim_register_response.dart';
+import 'package:keiser_metrics_sdk/src/model/machine_claim_show_response.dart';
+import 'package:keiser_metrics_sdk/src/model/machine_claim_status_response.dart';
+import 'package:keiser_metrics_sdk/src/model/machine_claim_unclaim_response.dart';
+import 'package:keiser_metrics_sdk/src/model/machine_workout_set_response_data.dart';
 import 'package:keiser_metrics_sdk/src/model/maintenance_status.dart';
+import 'package:keiser_metrics_sdk/src/model/motion_data_point.dart';
 import 'package:keiser_metrics_sdk/src/model/muscle_data.dart';
+import 'package:keiser_metrics_sdk/src/model/nova_member_bulk_create_response.dart';
 import 'package:keiser_metrics_sdk/src/model/o_auth_service_data.dart';
 import 'package:keiser_metrics_sdk/src/model/o_auth_service_list_response.dart';
 import 'package:keiser_metrics_sdk/src/model/o_auth_service_list_response_meta.dart';
 import 'package:keiser_metrics_sdk/src/model/o_auth_service_response.dart';
 import 'package:keiser_metrics_sdk/src/model/oauth_response.dart';
 import 'package:keiser_metrics_sdk/src/model/oauth_token_response.dart';
+import 'package:keiser_metrics_sdk/src/model/power_regression.dart';
 import 'package:keiser_metrics_sdk/src/model/primary_email_address_data.dart';
 import 'package:keiser_metrics_sdk/src/model/primary_email_address_response.dart';
 import 'package:keiser_metrics_sdk/src/model/privileged_facility_relationship_request_list_response.dart';
@@ -211,6 +239,7 @@ import 'package:keiser_metrics_sdk/src/model/session_plan_template_meta.dart';
 import 'package:keiser_metrics_sdk/src/model/session_plan_template_response.dart';
 import 'package:keiser_metrics_sdk/src/model/session_response.dart';
 import 'package:keiser_metrics_sdk/src/model/session_start_response.dart';
+import 'package:keiser_metrics_sdk/src/model/six_rep_test_data.dart';
 import 'package:keiser_metrics_sdk/src/model/status_response.dart';
 import 'package:keiser_metrics_sdk/src/model/strength_exercise_data.dart';
 import 'package:keiser_metrics_sdk/src/model/strength_exercise_list_response.dart';
@@ -234,9 +263,12 @@ import 'package:keiser_metrics_sdk/src/model/strength_machine_data_set_test_subs
 import 'package:keiser_metrics_sdk/src/model/strength_machine_history_list_response.dart';
 import 'package:keiser_metrics_sdk/src/model/strength_machine_history_meta.dart';
 import 'package:keiser_metrics_sdk/src/model/strength_machine_initialize_response.dart';
+import 'package:keiser_metrics_sdk/src/model/strength_machine_last_set_meta_data.dart';
+import 'package:keiser_metrics_sdk/src/model/strength_machine_last_set_meta_data_response.dart';
 import 'package:keiser_metrics_sdk/src/model/strength_machine_list_response.dart';
 import 'package:keiser_metrics_sdk/src/model/strength_machine_list_response_meta.dart';
 import 'package:keiser_metrics_sdk/src/model/strength_machine_model_data.dart';
+import 'package:keiser_metrics_sdk/src/model/strength_machine_model_number_data.dart';
 import 'package:keiser_metrics_sdk/src/model/strength_machine_profile_stats_data.dart';
 import 'package:keiser_metrics_sdk/src/model/strength_machine_profile_stats_response.dart';
 import 'package:keiser_metrics_sdk/src/model/strength_machine_response.dart';
@@ -252,6 +284,8 @@ import 'package:keiser_metrics_sdk/src/model/stretch_exercise_variant_list_respo
 import 'package:keiser_metrics_sdk/src/model/stretch_exercise_variant_list_response_meta.dart';
 import 'package:keiser_metrics_sdk/src/model/stretch_exercise_variant_response.dart';
 import 'package:keiser_metrics_sdk/src/model/subscription_response.dart';
+import 'package:keiser_metrics_sdk/src/model/ten_rep_test_data.dart';
+import 'package:keiser_metrics_sdk/src/model/ten_rep_test_side_results.dart';
 import 'package:keiser_metrics_sdk/src/model/time_response.dart';
 import 'package:keiser_metrics_sdk/src/model/user_application_authorization_data.dart';
 import 'package:keiser_metrics_sdk/src/model/user_application_authorization_developer_list_response.dart';
@@ -264,10 +298,20 @@ import 'package:keiser_metrics_sdk/src/model/user_facility_relationship_list_res
 import 'package:keiser_metrics_sdk/src/model/user_in_body_integration_data.dart';
 import 'package:keiser_metrics_sdk/src/model/user_in_body_integration_response.dart';
 import 'package:keiser_metrics_sdk/src/model/user_response.dart';
+import 'package:keiser_metrics_sdk/src/model/user_session_display_configuration_data.dart';
+import 'package:keiser_metrics_sdk/src/model/user_session_display_configuration_list_response.dart';
+import 'package:keiser_metrics_sdk/src/model/user_session_display_configuration_list_response_meta.dart';
+import 'package:keiser_metrics_sdk/src/model/user_session_display_configuration_response.dart';
+import 'package:keiser_metrics_sdk/src/model/value.dart';
+import 'package:keiser_metrics_sdk/src/model/velocity_regression.dart';
 import 'package:keiser_metrics_sdk/src/model/weight_measurement_data.dart';
 import 'package:keiser_metrics_sdk/src/model/weight_measurement_list_response.dart';
 import 'package:keiser_metrics_sdk/src/model/weight_measurement_list_response_meta.dart';
 import 'package:keiser_metrics_sdk/src/model/weight_measurement_response.dart';
+import 'package:keiser_metrics_sdk/src/model/workout_set_position_data_event.dart';
+import 'package:keiser_metrics_sdk/src/model/workout_set_rep_data_point.dart';
+import 'package:keiser_metrics_sdk/src/model/workout_set_response.dart';
+import 'package:keiser_metrics_sdk/src/model/workout_set_side_data.dart';
 import 'package:keiser_metrics_sdk/src/model/zones.dart';
 
 final _regList = RegExp(r'^List<(.*)>$');
@@ -288,6 +332,8 @@ final _regMap = RegExp(r'^Map<String,(.*)>$');
           return (valueString == 'true' || valueString == '1') as ReturnType;
         case 'double':
           return (value is double ? value : double.parse('$value')) as ReturnType;
+        case 'A400DataSetData':
+          return A400DataSetData.fromJson(value as Map<String, dynamic>) as ReturnType;
         case 'A500AppType':
           
           
@@ -373,6 +419,8 @@ final _regMap = RegExp(r'^Map<String,(.*)>$');
         case 'CharacterType':
           
           
+        case 'CsvNovaMemberEntryResult':
+          return CsvNovaMemberEntryResult.fromJson(value as Map<String, dynamic>) as ReturnType;
         case 'DevelopmentAccountData':
           return DevelopmentAccountData.fromJson(value as Map<String, dynamic>) as ReturnType;
         case 'DevelopmentAccountListResponse':
@@ -409,6 +457,15 @@ final _regMap = RegExp(r'^Map<String,(.*)>$');
         case 'DevelopmentAccountSorting':
           
           
+        case 'DisplayDataMode':
+          
+          
+        case 'DisplayFocusMode':
+          
+          
+        case 'DisplayUnit':
+          
+          
         case 'EmailAddressData':
           return EmailAddressData.fromJson(value as Map<String, dynamic>) as ReturnType;
         case 'EmailAddressListResponse':
@@ -431,6 +488,8 @@ final _regMap = RegExp(r'^Map<String,(.*)>$');
           return ErrorData.fromJson(value as Map<String, dynamic>) as ReturnType;
         case 'ErrorResponse':
           return ErrorResponse.fromJson(value as Map<String, dynamic>) as ReturnType;
+        case 'Exercise':
+          return Exercise.fromJson(value as Map<String, dynamic>) as ReturnType;
         case 'ExerciseAliasData':
           return ExerciseAliasData.fromJson(value as Map<String, dynamic>) as ReturnType;
         case 'ExerciseAliasListResponse':
@@ -506,6 +565,29 @@ final _regMap = RegExp(r'^Map<String,(.*)>$');
           return FacilityConfigurationResponse.fromJson(value as Map<String, dynamic>) as ReturnType;
         case 'FacilityData':
           return FacilityData.fromJson(value as Map<String, dynamic>) as ReturnType;
+        case 'FacilityDisplayConfigurationData':
+          return FacilityDisplayConfigurationData.fromJson(value as Map<String, dynamic>) as ReturnType;
+        case 'FacilityDisplayConfigurationResponse':
+          return FacilityDisplayConfigurationResponse.fromJson(value as Map<String, dynamic>) as ReturnType;
+        case 'FacilityDisplayOperatingSchedule':
+          return FacilityDisplayOperatingSchedule.fromJson(value as Map<String, dynamic>) as ReturnType;
+        case 'FacilityDisplayOperatingScheduleEntry':
+          return FacilityDisplayOperatingScheduleEntry.fromJson(value as Map<String, dynamic>) as ReturnType;
+        case 'FacilityDisplayOperatingScheduleTime':
+          return FacilityDisplayOperatingScheduleTime.fromJson(value as Map<String, dynamic>) as ReturnType;
+        case 'FacilityHubData':
+          return FacilityHubData.fromJson(value as Map<String, dynamic>) as ReturnType;
+        case 'FacilityHubLinkStatusResponse':
+          return FacilityHubLinkStatusResponse.fromJson(value as Map<String, dynamic>) as ReturnType;
+        case 'FacilityHubListMeta':
+          return FacilityHubListMeta.fromJson(value as Map<String, dynamic>) as ReturnType;
+        case 'FacilityHubListResponse':
+          return FacilityHubListResponse.fromJson(value as Map<String, dynamic>) as ReturnType;
+        case 'FacilityHubSorting':
+          
+          
+        case 'FacilityHubUpdateResponse':
+          return FacilityHubUpdateResponse.fromJson(value as Map<String, dynamic>) as ReturnType;
         case 'FacilityInBodyIntegrationData':
           return FacilityInBodyIntegrationData.fromJson(value as Map<String, dynamic>) as ReturnType;
         case 'FacilityInBodyIntegrationResponse':
@@ -530,12 +612,18 @@ final _regMap = RegExp(r'^Map<String,(.*)>$');
           return FacilityListResponse.fromJson(value as Map<String, dynamic>) as ReturnType;
         case 'FacilityListResponseMeta':
           return FacilityListResponseMeta.fromJson(value as Map<String, dynamic>) as ReturnType;
+        case 'FacilityPinLoginRelationshipData':
+          return FacilityPinLoginRelationshipData.fromJson(value as Map<String, dynamic>) as ReturnType;
+        case 'FacilityPinLoginResponse':
+          return FacilityPinLoginResponse.fromJson(value as Map<String, dynamic>) as ReturnType;
         case 'FacilityProfileData':
           return FacilityProfileData.fromJson(value as Map<String, dynamic>) as ReturnType;
         case 'FacilityProfileResponse':
           return FacilityProfileResponse.fromJson(value as Map<String, dynamic>) as ReturnType;
         case 'FacilityRelationshipData':
           return FacilityRelationshipData.fromJson(value as Map<String, dynamic>) as ReturnType;
+        case 'FacilityRelationshipNovaStaffInviteResponse':
+          return FacilityRelationshipNovaStaffInviteResponse.fromJson(value as Map<String, dynamic>) as ReturnType;
         case 'FacilityRelationshipRequestData':
           return FacilityRelationshipRequestData.fromJson(value as Map<String, dynamic>) as ReturnType;
         case 'FacilityRelationshipRequestListResponse':
@@ -589,6 +677,8 @@ final _regMap = RegExp(r'^Map<String,(.*)>$');
         case 'FacilityStrengthMachineSorting':
           
           
+        case 'FacilityStrengthMachineStartSessionResponse':
+          return FacilityStrengthMachineStartSessionResponse.fromJson(value as Map<String, dynamic>) as ReturnType;
         case 'FacilityStrengthMachineUtilizationInstanceData':
           return FacilityStrengthMachineUtilizationInstanceData.fromJson(value as Map<String, dynamic>) as ReturnType;
         case 'FacilityStrengthMachineUtilizationInstanceListResponse':
@@ -635,6 +725,13 @@ final _regMap = RegExp(r'^Map<String,(.*)>$');
         case 'HeightMeasurementResponse':
           return HeightMeasurementResponse.fromJson(value as Map<String, dynamic>) as ReturnType;
         case 'HeightMeasurementSorting':
+          
+          
+        case 'HubLinkClaimResponse':
+          return HubLinkClaimResponse.fromJson(value as Map<String, dynamic>) as ReturnType;
+        case 'HubLinkData':
+          return HubLinkData.fromJson(value as Map<String, dynamic>) as ReturnType;
+        case 'HubLinkStatus':
           
           
         case 'InBodyType':
@@ -686,19 +783,36 @@ final _regMap = RegExp(r'^Map<String,(.*)>$');
           return MSeriesProfileStatsData.fromJson(value as Map<String, dynamic>) as ReturnType;
         case 'MSeriesProfileStatsResponse':
           return MSeriesProfileStatsResponse.fromJson(value as Map<String, dynamic>) as ReturnType;
-        case 'MachineAdjustmentData':
-          return MachineAdjustmentData.fromJson(value as Map<String, dynamic>) as ReturnType;
-        case 'MachineAdjustmentListResponse':
-          return MachineAdjustmentListResponse.fromJson(value as Map<String, dynamic>) as ReturnType;
-        case 'MachineAdjustmentListResponseMeta':
-          return MachineAdjustmentListResponseMeta.fromJson(value as Map<String, dynamic>) as ReturnType;
-        case 'MachineAdjustmentResponse':
-          return MachineAdjustmentResponse.fromJson(value as Map<String, dynamic>) as ReturnType;
-        case 'MachineAdjustmentSorting':
+        case 'MachineClaimClaimResponse':
+          return MachineClaimClaimResponse.fromJson(value as Map<String, dynamic>) as ReturnType;
+        case 'MachineClaimConfirmResponse':
+          return MachineClaimConfirmResponse.fromJson(value as Map<String, dynamic>) as ReturnType;
+        case 'MachineClaimData':
+          return MachineClaimData.fromJson(value as Map<String, dynamic>) as ReturnType;
+        case 'MachineClaimListMeta':
+          return MachineClaimListMeta.fromJson(value as Map<String, dynamic>) as ReturnType;
+        case 'MachineClaimListResponse':
+          return MachineClaimListResponse.fromJson(value as Map<String, dynamic>) as ReturnType;
+        case 'MachineClaimRegisterResponse':
+          return MachineClaimRegisterResponse.fromJson(value as Map<String, dynamic>) as ReturnType;
+        case 'MachineClaimShowResponse':
+          return MachineClaimShowResponse.fromJson(value as Map<String, dynamic>) as ReturnType;
+        case 'MachineClaimSorting':
           
           
+        case 'MachineClaimStatus':
+          
+          
+        case 'MachineClaimStatusResponse':
+          return MachineClaimStatusResponse.fromJson(value as Map<String, dynamic>) as ReturnType;
+        case 'MachineClaimUnclaimResponse':
+          return MachineClaimUnclaimResponse.fromJson(value as Map<String, dynamic>) as ReturnType;
+        case 'MachineWorkoutSetResponseData':
+          return MachineWorkoutSetResponseData.fromJson(value as Map<String, dynamic>) as ReturnType;
         case 'MaintenanceStatus':
           return MaintenanceStatus.fromJson(value as Map<String, dynamic>) as ReturnType;
+        case 'MotionDataPoint':
+          return MotionDataPoint.fromJson(value as Map<String, dynamic>) as ReturnType;
         case 'MuscleArea':
           
           
@@ -711,6 +825,11 @@ final _regMap = RegExp(r'^Map<String,(.*)>$');
           
           
         case 'MuscleTargetLevel':
+          
+          
+        case 'NovaMemberBulkCreateResponse':
+          return NovaMemberBulkCreateResponse.fromJson(value as Map<String, dynamic>) as ReturnType;
+        case 'NovaMemberCsvErrorCode':
           
           
         case 'OAuthServiceData':
@@ -728,6 +847,8 @@ final _regMap = RegExp(r'^Map<String,(.*)>$');
           return OauthResponse.fromJson(value as Map<String, dynamic>) as ReturnType;
         case 'OauthTokenResponse':
           return OauthTokenResponse.fromJson(value as Map<String, dynamic>) as ReturnType;
+        case 'PowerRegression':
+          return PowerRegression.fromJson(value as Map<String, dynamic>) as ReturnType;
         case 'PrimaryEmailAddressData':
           return PrimaryEmailAddressData.fromJson(value as Map<String, dynamic>) as ReturnType;
         case 'PrimaryEmailAddressResponse':
@@ -846,9 +967,14 @@ final _regMap = RegExp(r'^Map<String,(.*)>$');
           
         case 'SessionStartResponse':
           return SessionStartResponse.fromJson(value as Map<String, dynamic>) as ReturnType;
+        case 'SetType':
+          
+          
         case 'Side':
           
           
+        case 'SixRepTestData':
+          return SixRepTestData.fromJson(value as Map<String, dynamic>) as ReturnType;
         case 'StatusResponse':
           return StatusResponse.fromJson(value as Map<String, dynamic>) as ReturnType;
         case 'StrengthExerciseCategory':
@@ -925,6 +1051,10 @@ final _regMap = RegExp(r'^Map<String,(.*)>$');
           return StrengthMachineHistoryMeta.fromJson(value as Map<String, dynamic>) as ReturnType;
         case 'StrengthMachineInitializeResponse':
           return StrengthMachineInitializeResponse.fromJson(value as Map<String, dynamic>) as ReturnType;
+        case 'StrengthMachineLastSetMetaData':
+          return StrengthMachineLastSetMetaData.fromJson(value as Map<String, dynamic>) as ReturnType;
+        case 'StrengthMachineLastSetMetaDataResponse':
+          return StrengthMachineLastSetMetaDataResponse.fromJson(value as Map<String, dynamic>) as ReturnType;
         case 'StrengthMachineLine':
           
           
@@ -934,6 +1064,8 @@ final _regMap = RegExp(r'^Map<String,(.*)>$');
           return StrengthMachineListResponseMeta.fromJson(value as Map<String, dynamic>) as ReturnType;
         case 'StrengthMachineModelData':
           return StrengthMachineModelData.fromJson(value as Map<String, dynamic>) as ReturnType;
+        case 'StrengthMachineModelNumberData':
+          return StrengthMachineModelNumberData.fromJson(value as Map<String, dynamic>) as ReturnType;
         case 'StrengthMachineProfileStatsData':
           return StrengthMachineProfileStatsData.fromJson(value as Map<String, dynamic>) as ReturnType;
         case 'StrengthMachineProfileStatsResponse':
@@ -979,11 +1111,18 @@ final _regMap = RegExp(r'^Map<String,(.*)>$');
           
         case 'SubscriptionResponse':
           return SubscriptionResponse.fromJson(value as Map<String, dynamic>) as ReturnType;
+        case 'TenRepTestData':
+          return TenRepTestData.fromJson(value as Map<String, dynamic>) as ReturnType;
+        case 'TenRepTestSideResults':
+          return TenRepTestSideResults.fromJson(value as Map<String, dynamic>) as ReturnType;
         case 'TestSide':
           
           
         case 'TimeResponse':
           return TimeResponse.fromJson(value as Map<String, dynamic>) as ReturnType;
+        case 'TimeZone':
+          
+          
         case 'UserApplicationAuthorizationData':
           return UserApplicationAuthorizationData.fromJson(value as Map<String, dynamic>) as ReturnType;
         case 'UserApplicationAuthorizationDeveloperListResponse':
@@ -1009,6 +1148,21 @@ final _regMap = RegExp(r'^Map<String,(.*)>$');
           return UserInBodyIntegrationResponse.fromJson(value as Map<String, dynamic>) as ReturnType;
         case 'UserResponse':
           return UserResponse.fromJson(value as Map<String, dynamic>) as ReturnType;
+        case 'UserSessionDisplayConfigurationData':
+          return UserSessionDisplayConfigurationData.fromJson(value as Map<String, dynamic>) as ReturnType;
+        case 'UserSessionDisplayConfigurationListResponse':
+          return UserSessionDisplayConfigurationListResponse.fromJson(value as Map<String, dynamic>) as ReturnType;
+        case 'UserSessionDisplayConfigurationListResponseMeta':
+          return UserSessionDisplayConfigurationListResponseMeta.fromJson(value as Map<String, dynamic>) as ReturnType;
+        case 'UserSessionDisplayConfigurationResponse':
+          return UserSessionDisplayConfigurationResponse.fromJson(value as Map<String, dynamic>) as ReturnType;
+        case 'UserSessionDisplayConfigurationSorting':
+          
+          
+        case 'Value':
+          return Value.fromJson(value as Map<String, dynamic>) as ReturnType;
+        case 'VelocityRegression':
+          return VelocityRegression.fromJson(value as Map<String, dynamic>) as ReturnType;
         case 'WeightMeasurementData':
           return WeightMeasurementData.fromJson(value as Map<String, dynamic>) as ReturnType;
         case 'WeightMeasurementListResponse':
@@ -1020,6 +1174,14 @@ final _regMap = RegExp(r'^Map<String,(.*)>$');
         case 'WeightMeasurementSorting':
           
           
+        case 'WorkoutSetPositionDataEvent':
+          return WorkoutSetPositionDataEvent.fromJson(value as Map<String, dynamic>) as ReturnType;
+        case 'WorkoutSetRepDataPoint':
+          return WorkoutSetRepDataPoint.fromJson(value as Map<String, dynamic>) as ReturnType;
+        case 'WorkoutSetResponse':
+          return WorkoutSetResponse.fromJson(value as Map<String, dynamic>) as ReturnType;
+        case 'WorkoutSetSideData':
+          return WorkoutSetSideData.fromJson(value as Map<String, dynamic>) as ReturnType;
         case 'Zones':
           return Zones.fromJson(value as Map<String, dynamic>) as ReturnType;
         default:

@@ -60,6 +60,6 @@ const _$SessionSortingEnumMap = {
   SessionSorting.id: 'id',
   SessionSorting.startedAt: 'startedAt',
   SessionSorting.endedAt: 'endedAt',
-  SessionSorting.names: 'name',
+  SessionSorting.name: 'name',
   SessionSorting.open: 'open',
 };

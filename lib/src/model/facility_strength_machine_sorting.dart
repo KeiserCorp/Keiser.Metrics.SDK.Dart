@@ -11,4 +11,6 @@ enum FacilityStrengthMachineSorting {
   id,
   @JsonValue(r'model')
   model,
+  @JsonValue(r'name')
+  name,
 }

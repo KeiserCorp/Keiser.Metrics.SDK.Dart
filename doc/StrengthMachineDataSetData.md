@@ -27,11 +27,16 @@ Name | Type | Description | Notes
 **work** | **num** |  | [optional] 
 **distance** | **num** |  | [optional] 
 **addedWeight** | **num** |  | [optional] 
+**clientSetId** | **String** |  | [optional] 
+**setNumber** | **num** |  | [optional] 
+**startedAt** | [**DateTime**](DateTime.md) |  | [optional] 
 **test** | [**StrengthMachineDataSetTestData**](StrengthMachineDataSetTestData.md) |  | [optional] 
 **strengthMachine** | [**StrengthMachineData**](StrengthMachineData.md) |  | [optional] 
 **strengthExercise** | [**StrengthExerciseData**](StrengthExerciseData.md) |  | [optional] 
 **a500DataSet** | [**A500DataSetData**](A500DataSetData.md) |  | [optional] 
+**a400DataSet** | [**A400DataSetData**](A400DataSetData.md) |  | [optional] 
 **session** | [**SessionData**](SessionData.md) |  | [optional] 
+**profile** | [**ProfileData**](ProfileData.md) |  | [optional] 
 **facilityStrengthMachine** | [**FacilityStrengthMachineData**](FacilityStrengthMachineData.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

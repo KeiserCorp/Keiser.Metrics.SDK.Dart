@@ -14,7 +14,7 @@ StrengthExerciseVariantData _$StrengthExerciseVariantDataFromJson(
       ($checkedConvert) {
         $checkKeys(
           json,
-          requiredKeys: const ['id', 'variant', 'equipmentMechanicalMovement'],
+          requiredKeys: const ['id', 'variant'],
         );
         final val = StrengthExerciseVariantData(
           id: $checkedConvert('id', (v) => v as num),
@@ -26,7 +26,7 @@ StrengthExerciseVariantData _$StrengthExerciseVariantDataFromJson(
                   _$StrengthExerciseVariantAttachmentEnumMap, v)),
           equipmentMechanicalMovement: $checkedConvert(
               'equipmentMechanicalMovement',
-              (v) => $enumDecode(_$StrengthExerciseMovementEnumMap, v)),
+              (v) => $enumDecodeNullable(_$StrengthExerciseMovementEnumMap, v)),
           instructionalImage:
               $checkedConvert('instructionalImage', (v) => v as String?),
           instructionalVideo:
@@ -67,8 +67,8 @@ Map<String, dynamic> _$StrengthExerciseVariantDataToJson(
 
   writeNotNull('attachment',
       _$StrengthExerciseVariantAttachmentEnumMap[instance.attachment]);
-  val['equipmentMechanicalMovement'] =
-      _$StrengthExerciseMovementEnumMap[instance.equipmentMechanicalMovement]!;
+  writeNotNull('equipmentMechanicalMovement',
+      _$StrengthExerciseMovementEnumMap[instance.equipmentMechanicalMovement]);
   writeNotNull('instructionalImage', instance.instructionalImage);
   writeNotNull('instructionalVideo', instance.instructionalVideo);
   writeNotNull('strengthExercise', instance.strengthExercise?.toJson());

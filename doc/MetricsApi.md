@@ -98,6 +98,14 @@ Method | HTTP request | Description
 [**facilityConfigurationSubscribe**](MetricsApi.md#facilityconfigurationsubscribe) | **GET** /facilityConfiguration/subscribe | Subscribe to facility configuration
 [**facilityConfigurationUpdate**](MetricsApi.md#facilityconfigurationupdate) | **PUT** /facility/configuration | Update a facility configuration
 [**facilityCreate**](MetricsApi.md#facilitycreate) | **POST** /facility | Create a facility
+[**facilityDisplayConfigurationShow**](MetricsApi.md#facilitydisplayconfigurationshow) | **GET** /facility-display-configuration | Show a facility display configuration
+[**facilityDisplayConfigurationSubscribe**](MetricsApi.md#facilitydisplayconfigurationsubscribe) | **GET** /facility-display-configuration/subscribe | Subscribe to facility display configuration
+[**facilityDisplayConfigurationUpdate**](MetricsApi.md#facilitydisplayconfigurationupdate) | **PUT** /facility-display-configuration | Update a facility display configuration
+[**facilityHubClaim**](MetricsApi.md#facilityhubclaim) | **POST** /facility/hub/claim | Claim a registered hub for a facility using its pairing code
+[**facilityHubDelete**](MetricsApi.md#facilityhubdelete) | **DELETE** /facility/hub/{facilityHubId} | Delete a facility hub and revoke its tokens
+[**facilityHubLinkStatus**](MetricsApi.md#facilityhublinkstatus) | **GET** /facility/hub/link-status | Check the status of a hub link pairing code
+[**facilityHubList**](MetricsApi.md#facilityhublist) | **GET** /facility/hub/list | List hubs for a facility
+[**facilityHubUpdate**](MetricsApi.md#facilityhubupdate) | **PUT** /facility/hub/{facilityHubId} | Update a facility hub
 [**facilityInBodyIntegrationCreate**](MetricsApi.md#facilityinbodyintegrationcreate) | **POST** /facility/inbody-integration | Create a facility InBody integration
 [**facilityInBodyIntegrationDelete**](MetricsApi.md#facilityinbodyintegrationdelete) | **DELETE** /facility/inbody-integration | Delete a facility InBody integration
 [**facilityInBodyIntegrationShow**](MetricsApi.md#facilityinbodyintegrationshow) | **GET** /facility/inbody-integration | Show a facility InBody integration settings
@@ -110,6 +118,10 @@ Method | HTTP request | Description
 [**facilityLicenseList**](MetricsApi.md#facilitylicenselist) | **GET** /facility/license/list | List facility licenses
 [**facilityLicenseShow**](MetricsApi.md#facilitylicenseshow) | **GET** /facility/license | Show a facility license
 [**facilityList**](MetricsApi.md#facilitylist) | **GET** /facility/list | List facilities
+[**facilityPinDelete**](MetricsApi.md#facilitypindelete) | **DELETE** /facility/pin | Remove the facility member identifier (PIN)
+[**facilityPinLogin**](MetricsApi.md#facilitypinlogin) | **POST** /facility/pin/login | Login a facility user using a PIN
+[**facilityPinShow**](MetricsApi.md#facilitypinshow) | **GET** /facility/pin | Show the facility PIN for a user
+[**facilityPinUpdate**](MetricsApi.md#facilitypinupdate) | **PUT** /facility/pin | Set or update a facility member identifier (PIN)
 [**facilityProfileShow**](MetricsApi.md#facilityprofileshow) | **GET** /facility/profile | Show facility profile
 [**facilityProfileUpdate**](MetricsApi.md#facilityprofileupdate) | **PUT** /facility/profile | Update a facility profile
 [**facilityRelationshipFacilityCreate**](MetricsApi.md#facilityrelationshipfacilitycreate) | **POST** /facility/relationship | Create a user with a facility relationship
@@ -118,6 +130,15 @@ Method | HTTP request | Description
 [**facilityRelationshipFacilityShow**](MetricsApi.md#facilityrelationshipfacilityshow) | **GET** /facility/relationship | Show a facility&#39;s user relationship
 [**facilityRelationshipFacilitySubscribe**](MetricsApi.md#facilityrelationshipfacilitysubscribe) | **GET** /facilityRelationship/facilitySubscribe | Subscribe to changes to facility relationship
 [**facilityRelationshipFacilityUpdate**](MetricsApi.md#facilityrelationshipfacilityupdate) | **PUT** /facility/relationship/{id} | Update a facility&#39;s user relationship
+[**facilityRelationshipNovaMemberBulkCreate**](MetricsApi.md#facilityrelationshipnovamemberbulkcreate) | **POST** /facility/relationship/nova/member/bulk | Bulk-create Nova-style members within the session facility from a CSV file
+[**facilityRelationshipNovaMemberCreate**](MetricsApi.md#facilityrelationshipnovamembercreate) | **POST** /facility/relationship/nova/member | Create a Nova-style member (no email, no credential) within the session facility
+[**facilityRelationshipNovaMemberDelete**](MetricsApi.md#facilityrelationshipnovamemberdelete) | **DELETE** /facility/relationship/nova/member/{facilityRelationshipId} | Fully delete a Nova member
+[**facilityRelationshipNovaMemberUpdate**](MetricsApi.md#facilityrelationshipnovamemberupdate) | **PUT** /facility/relationship/nova/member/{facilityRelationshipId} | Update a Nova member relationship and profile fields
+[**facilityRelationshipNovaStaffDeactivate**](MetricsApi.md#facilityrelationshipnovastaffdeactivate) | **POST** /facility/relationship/nova/staff/{facilityRelationshipId}/deactivate | Deactivate a facility relationship
+[**facilityRelationshipNovaStaffDelete**](MetricsApi.md#facilityrelationshipnovastaffdelete) | **DELETE** /facility/relationship/nova/staff/{facilityRelationshipId} | Fully delete a Nova staff member (account purge).
+[**facilityRelationshipNovaStaffInvite**](MetricsApi.md#facilityrelationshipnovastaffinvite) | **POST** /facility/relationship/nova/staff/invite | Invite a nova staff member by email
+[**facilityRelationshipNovaStaffReactivate**](MetricsApi.md#facilityrelationshipnovastaffreactivate) | **POST** /facility/relationship/nova/staff/{facilityRelationshipId}/reactivate | Reactivate a facility relationship
+[**facilityRelationshipNovaStaffUpdate**](MetricsApi.md#facilityrelationshipnovastaffupdate) | **PUT** /facility/relationship/nova/staff/{facilityRelationshipId} | Update a Nova staff relationship and profile fields
 [**facilityRelationshipRequestFacilityCreate**](MetricsApi.md#facilityrelationshiprequestfacilitycreate) | **POST** /facility/relationship-request | Create a facility relationship request (Facility to User)
 [**facilityRelationshipRequestFacilityList**](MetricsApi.md#facilityrelationshiprequestfacilitylist) | **GET** /facility/relationship-request/list | List facility relationship requests (User to Facility)
 [**facilityRelationshipRequestFacilityShow**](MetricsApi.md#facilityrelationshiprequestfacilityshow) | **GET** /facility/relationship-request | Show a facility relationship request (User to Facility)
@@ -144,15 +165,17 @@ Method | HTTP request | Description
 [**facilitySessionSubscribe**](MetricsApi.md#facilitysessionsubscribe) | **GET** /facilitySession/subscribe | Subscribe to changes to a facilities&#39;s session
 [**facilitySessionUpdate**](MetricsApi.md#facilitysessionupdate) | **PUT** /facility/session/{echipId} | Update a user session from a facility using an eChip Id
 [**facilityShow**](MetricsApi.md#facilityshow) | **GET** /facility | Show a facility
+[**facilityStrengthMachineBlacklist**](MetricsApi.md#facilitystrengthmachineblacklist) | **POST** /facility/strength-machine/{id}/blacklist | Blacklist a facility strength machine&#39;s tokens
 [**facilityStrengthMachineConfigurationShow**](MetricsApi.md#facilitystrengthmachineconfigurationshow) | **GET** /facility/strength-machine/configuration | Show a facility strength machine default configuration
 [**facilityStrengthMachineConfigurationSubscribe**](MetricsApi.md#facilitystrengthmachineconfigurationsubscribe) | **GET** /facilityStrengthMachineConfiguration/subscribe | Subscribe to changes to facility strength machine configuration
 [**facilityStrengthMachineConfigurationUpdate**](MetricsApi.md#facilitystrengthmachineconfigurationupdate) | **PUT** /facility/strength-machine/configuration | Update a facility strength machine configuration
-[**facilityStrengthMachineCreate**](MetricsApi.md#facilitystrengthmachinecreate) | **POST** /facility/strength-machine/{strengthMachineId} | Create a facility strength machine
+[**facilityStrengthMachineCreate**](MetricsApi.md#facilitystrengthmachinecreate) | **POST** /facility/strength-machine | Create a facility strength machine
 [**facilityStrengthMachineCreateEchip**](MetricsApi.md#facilitystrengthmachinecreateechip) | **POST** /facility/strength-machine/echip | Creates facility strength machines using eChip data
 [**facilityStrengthMachineDelete**](MetricsApi.md#facilitystrengthmachinedelete) | **DELETE** /facility/strength-machine/{id} | Delete a facility strength machine
 [**facilityStrengthMachineInitializerOTP**](MetricsApi.md#facilitystrengthmachineinitializerotp) | **GET** /facility/strength-machine/initializer-otp | Show facility strength machine initializer token
 [**facilityStrengthMachineInitializerToken**](MetricsApi.md#facilitystrengthmachineinitializertoken) | **GET** /facility/strength-machine/initializer-token | Show facility strength machine initializer token
 [**facilityStrengthMachineList**](MetricsApi.md#facilitystrengthmachinelist) | **GET** /facility/strength-machine/list | List facility strength machines (requires maintenance access)
+[**facilityStrengthMachineMachineStartSession**](MetricsApi.md#facilitystrengthmachinemachinestartsession) | **POST** /facility/strength-machine/machine/start-session | Exchange a machine initialization token for a short-lived machine session token
 [**facilityStrengthMachineMaintenanceRecordCreate**](MetricsApi.md#facilitystrengthmachinemaintenancerecordcreate) | **POST** /facility/strength-machine/maintenance-record | Create a maintenance record for facility strength machine
 [**facilityStrengthMachineMaintenanceRecordDelete**](MetricsApi.md#facilitystrengthmachinemaintenancerecorddelete) | **DELETE** /facility/strength-machine/maintenance-record/{id} | Delete a maintenance record for facility strength machine
 [**facilityStrengthMachineMaintenanceRecordList**](MetricsApi.md#facilitystrengthmachinemaintenancerecordlist) | **GET** /facility/strength-machine/maintenance-record/list | List maintenance records for facility strength machines
@@ -193,11 +216,13 @@ Method | HTTP request | Description
 [**mSeriesFtpMeasurementList**](MetricsApi.md#mseriesftpmeasurementlist) | **GET** /m-series/ftp-measurement/list | List a user&#39;s M Series FTP measurements
 [**mSeriesFtpMeasurementShow**](MetricsApi.md#mseriesftpmeasurementshow) | **GET** /m-series/ftp-measurement | Show a user&#39;s M Series FTP measurement
 [**mSeriesProfileStatsShow**](MetricsApi.md#mseriesprofilestatsshow) | **GET** /m-series/profile-stats | Show a user&#39;s M Series data set
-[**machineAdjustmentCreate**](MetricsApi.md#machineadjustmentcreate) | **POST** /user/machine-adjustment | Create a user machine adjustment
-[**machineAdjustmentDelete**](MetricsApi.md#machineadjustmentdelete) | **DELETE** /user/machine-adjustment/{id} | Delete a users machine adjustment
-[**machineAdjustmentList**](MetricsApi.md#machineadjustmentlist) | **GET** /user/machine-adjustment/list | List user machine adjustments
-[**machineAdjustmentShow**](MetricsApi.md#machineadjustmentshow) | **GET** /user/machine-adjustment | Shows a users machine adjustments
-[**machineAdjustmentUpdate**](MetricsApi.md#machineadjustmentupdate) | **PUT** /user/machine-adjustment/{id} | Update a users machine adjustments
+[**machineClaimClaim**](MetricsApi.md#machineclaimclaim) | **POST** /machine-claim/claim | Claim a single machine for a facility
+[**machineClaimConfirm**](MetricsApi.md#machineclaimconfirm) | **POST** /machine-claim/confirm | Confirm a claimed machine and receive permanent token
+[**machineClaimList**](MetricsApi.md#machineclaimlist) | **GET** /machine-claim/list | List machine claims for a facility
+[**machineClaimRegister**](MetricsApi.md#machineclaimregister) | **POST** /machine-claim/register | Register a machine for facility claiming
+[**machineClaimShow**](MetricsApi.md#machineclaimshow) | **GET** /machine-claim/show | Show a machine claim for a facility
+[**machineClaimStatus**](MetricsApi.md#machineclaimstatus) | **GET** /machine-claim/status | Check claim status for a machine
+[**machineClaimUnclaim**](MetricsApi.md#machineclaimunclaim) | **DELETE** /machine-claim/unclaim | Unclaim a machine that has not yet been confirmed
 [**metaServiceStatus**](MetricsApi.md#metaservicestatus) | **GET** /meta/service-status | Returns current service maintenance status
 [**oauthAuthorize**](MetricsApi.md#oauthauthorize) | **POST** /oauth/authorize | Authorizes a third party application
 [**oauthDeauthorize**](MetricsApi.md#oauthdeauthorize) | **DELETE** /oauth/deauthorize | Deauthorizes an oauth user
@@ -293,8 +318,10 @@ Method | HTTP request | Description
 [**strengthMachineDataSetDelete**](MetricsApi.md#strengthmachinedatasetdelete) | **DELETE** /strength-machine-data-set/{id} | Delete a strength machine data set
 [**strengthMachineDataSetExport**](MetricsApi.md#strengthmachinedatasetexport) | **GET** /strength-machine-data-set/{id}/export/{format} | Export an A500 strength machine data set
 [**strengthMachineDataSetExportFlat**](MetricsApi.md#strengthmachinedatasetexportflat) | **GET** /user/{userId}/strength-machine-data-set/export/{filename} | Export an A500 strength machine data set as a flat file
+[**strengthMachineDataSetFacilityDelete**](MetricsApi.md#strengthmachinedatasetfacilitydelete) | **DELETE** /facility/strength-machine-data-set/{id} | Delete a strength machine data set
 [**strengthMachineDataSetList**](MetricsApi.md#strengthmachinedatasetlist) | **GET** /strength-machine-data-set/list | List strength machine data sets
 [**strengthMachineDataSetShow**](MetricsApi.md#strengthmachinedatasetshow) | **GET** /strength-machine-data-set | Show a strength machine data set
+[**strengthMachineDataSetShowLastSetMetaData**](MetricsApi.md#strengthmachinedatasetshowlastsetmetadata) | **GET** /strength-machine-data-set/last-set-meta-data | Show metadata from the last recorded set on a strength machine
 [**strengthMachineDataSetSubscribe**](MetricsApi.md#strengthmachinedatasetsubscribe) | **GET** /strengthMachineDataSet/subscribe | Subscribe to strength machine data set changes
 [**strengthMachineDataSetUpdate**](MetricsApi.md#strengthmachinedatasetupdate) | **PUT** /strength-machine-data-set/{id}/{sessionId} | Update a strength machine data set
 [**strengthMachineHistoryList**](MetricsApi.md#strengthmachinehistorylist) | **GET** /strength-machine-history | List strength machines used by user
@@ -329,6 +356,11 @@ Method | HTTP request | Description
 [**userInBodyIntegrationDelete**](MetricsApi.md#userinbodyintegrationdelete) | **DELETE** /user/{userId}/inbody-integration | Delete a user InBody integration
 [**userInBodyIntegrationShow**](MetricsApi.md#userinbodyintegrationshow) | **GET** /user/{userId}/inbody-integration | Show a user InBody integration settings
 [**userInBodyIntegrationSync**](MetricsApi.md#userinbodyintegrationsync) | **GET** /user/{userId}/inbody-integration/sync | Request a sync of user InBody data
+[**userSessionDisplayConfigurationCreate**](MetricsApi.md#usersessiondisplayconfigurationcreate) | **POST** /user-session-display-configuration | Create a user session display configuration
+[**userSessionDisplayConfigurationDelete**](MetricsApi.md#usersessiondisplayconfigurationdelete) | **DELETE** /user-session-display-configuration | Delete a user session display configuration
+[**userSessionDisplayConfigurationList**](MetricsApi.md#usersessiondisplayconfigurationlist) | **GET** /user-session-display-configuration/list | List a user&#39;s session display configurations
+[**userSessionDisplayConfigurationShow**](MetricsApi.md#usersessiondisplayconfigurationshow) | **GET** /user-session-display-configuration | Show a user session display configuration
+[**userSessionDisplayConfigurationUpdate**](MetricsApi.md#usersessiondisplayconfigurationupdate) | **PUT** /user-session-display-configuration | Update a user session display configuration
 [**userShow**](MetricsApi.md#usershow) | **GET** /user | Show a user
 [**userSubscribe**](MetricsApi.md#usersubscribe) | **GET** /user/subscribe | Subscribe to changes to a user
 [**weightMeasurementCreate**](MetricsApi.md#weightmeasurementcreate) | **POST** /user/weight-measurement | Create a user weight measurement
@@ -338,6 +370,12 @@ Method | HTTP request | Description
 [**weightMeasurementList**](MetricsApi.md#weightmeasurementlist) | **GET** /user/weight-measurement/list | List a user&#39;s weight measurements
 [**weightMeasurementShow**](MetricsApi.md#weightmeasurementshow) | **GET** /user/weight-measurement | Show a user&#39;s weight measurement
 [**weightMeasurementSubscribe**](MetricsApi.md#weightmeasurementsubscribe) | **GET** /weightMeasurement/subscribe | Subscribe to changes to user&#39;s weight measurements
+[**workoutSetBulkExport**](MetricsApi.md#workoutsetbulkexport) | **GET** /workout-set/bulk-export | Export many A400 workout sets across a date range as a zip of reps.csv + time_series.csv
+[**workoutSetCreate**](MetricsApi.md#workoutsetcreate) | **POST** /workout-set | Create a workout set from an Apollo Display device (machine-token auth).
+[**workoutSetExport**](MetricsApi.md#workoutsetexport) | **GET** /workout-set/export | Export one A400 workout set as a zip of reps.csv + time_series.csv
+[**workoutSetList**](MetricsApi.md#workoutsetlist) | **GET** /workout-set/list | List A400 workout sets for a facility
+[**workoutSetShow**](MetricsApi.md#workoutsetshow) | **GET** /workout-set | Show an A400 workout set
+[**workoutSetUpdate**](MetricsApi.md#workoutsetupdate) | **PUT** /workout-set | Update an existing workout set from an Apollo Display device (machine-token auth).
 
 
 # **a500CreateSet**
@@ -4891,6 +4929,425 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **facilityDisplayConfigurationShow**
+> FacilityDisplayConfigurationResponse facilityDisplayConfigurationShow(apiVersion)
+
+Show a facility display configuration
+
+1
+
+### Example
+```dart
+import 'package:keiser_metrics_sdk/api.dart';
+// TODO Configure HTTP basic authorization: bearerAuth
+//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').username = 'YOUR_USERNAME'
+//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').password = 'YOUR_PASSWORD';
+
+final api = MetricsApi metricsApi = MetricsApi();
+final String apiVersion = apiVersion_example; // String | 
+
+try {
+    final response = metricsApi.facilityDisplayConfigurationShow(apiVersion);
+    print(response);
+} catch on DioError (e) {
+    print('Exception when calling MetricsApi->facilityDisplayConfigurationShow: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **apiVersion** | **String**|  | [optional] 
+
+### Return type
+
+[**FacilityDisplayConfigurationResponse**](FacilityDisplayConfigurationResponse.md)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **facilityDisplayConfigurationSubscribe**
+> SubscriptionResponse facilityDisplayConfigurationSubscribe(apiVersion)
+
+Subscribe to facility display configuration
+
+1
+
+### Example
+```dart
+import 'package:keiser_metrics_sdk/api.dart';
+// TODO Configure HTTP basic authorization: bearerAuth
+//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').username = 'YOUR_USERNAME'
+//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').password = 'YOUR_PASSWORD';
+
+final api = MetricsApi metricsApi = MetricsApi();
+final String apiVersion = apiVersion_example; // String | 
+
+try {
+    final response = metricsApi.facilityDisplayConfigurationSubscribe(apiVersion);
+    print(response);
+} catch on DioError (e) {
+    print('Exception when calling MetricsApi->facilityDisplayConfigurationSubscribe: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **apiVersion** | **String**|  | [optional] 
+
+### Return type
+
+[**SubscriptionResponse**](SubscriptionResponse.md)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **facilityDisplayConfigurationUpdate**
+> FacilityDisplayConfigurationResponse facilityDisplayConfigurationUpdate(addedMass, dataMode, defaultBrightness, focusMode, isTorqueEnabled, machinesEnabled, operatingSchedule, operatingScheduleEnabled, performanceDropOff, qrCodeEnabled, secondsDelay, shouldForceExercise, showReviewScreen, signoutDelay, timeZone, unit, apiVersion)
+
+Update a facility display configuration
+
+1
+
+### Example
+```dart
+import 'package:keiser_metrics_sdk/api.dart';
+// TODO Configure HTTP basic authorization: bearerAuth
+//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').username = 'YOUR_USERNAME'
+//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').password = 'YOUR_PASSWORD';
+
+final api = MetricsApi metricsApi = MetricsApi();
+final num addedMass = 8.14; // num | 
+final String dataMode = dataMode_example; // String | Allowed values: power, velocity
+final num defaultBrightness = 8.14; // num | 
+final String focusMode = focusMode_example; // String | Allowed values: mean, peak
+final bool isTorqueEnabled = true; // bool | 
+final bool machinesEnabled = true; // bool | 
+final String operatingSchedule = operatingSchedule_example; // String | 
+final bool operatingScheduleEnabled = true; // bool | 
+final num performanceDropOff = 8.14; // num | 
+final bool qrCodeEnabled = true; // bool | 
+final num secondsDelay = 8.14; // num | 
+final bool shouldForceExercise = true; // bool | 
+final bool showReviewScreen = true; // bool | 
+final num signoutDelay = 8.14; // num | 
+final String timeZone = timeZone_example; // String | Allowed values: Africa/Abidjan, Africa/Accra, Africa/Addis_Ababa, Africa/Algiers, Africa/Asmara, Africa/Asmera, Africa/Bamako, Africa/Bangui, Africa/Banjul, Africa/Bissau, Africa/Blantyre, Africa/Brazzaville, Africa/Bujumbura, Africa/Cairo, Africa/Casablanca, Africa/Ceuta, Africa/Conakry, Africa/Dakar, Africa/Dar_es_Salaam, Africa/Djibouti, Africa/Douala, Africa/El_Aaiun, Africa/Freetown, Africa/Gaborone, Africa/Harare, Africa/Johannesburg, Africa/Juba, Africa/Kampala, Africa/Khartoum, Africa/Kigali, Africa/Kinshasa, Africa/Lagos, Africa/Libreville, Africa/Lome, Africa/Luanda, Africa/Lubumbashi, Africa/Lusaka, Africa/Malabo, Africa/Maputo, Africa/Maseru, Africa/Mbabane, Africa/Mogadishu, Africa/Monrovia, Africa/Nairobi, Africa/Ndjamena, Africa/Niamey, Africa/Nouakchott, Africa/Ouagadougou, Africa/Porto-Novo, Africa/Sao_Tome, Africa/Timbuktu, Africa/Tripoli, Africa/Tunis, Africa/Windhoek, America/Adak, America/Anchorage, America/Anguilla, America/Antigua, America/Araguaina, America/Argentina/Buenos_Aires, America/Argentina/Catamarca, America/Argentina/ComodRivadavia, America/Argentina/Cordoba, America/Argentina/Jujuy, America/Argentina/La_Rioja, America/Argentina/Mendoza, America/Argentina/Rio_Gallegos, America/Argentina/Salta, America/Argentina/San_Juan, America/Argentina/San_Luis, America/Argentina/Tucuman, America/Argentina/Ushuaia, America/Aruba, America/Asuncion, America/Atikokan, America/Atka, America/Bahia, America/Bahia_Banderas, America/Barbados, America/Belem, America/Belize, America/Blanc-Sablon, America/Boa_Vista, America/Bogota, America/Boise, America/Buenos_Aires, America/Cambridge_Bay, America/Campo_Grande, America/Cancun, America/Caracas, America/Catamarca, America/Cayenne, America/Cayman, America/Chicago, America/Chihuahua, America/Coral_Harbour, America/Cordoba, America/Costa_Rica, America/Creston, America/Cuiaba, America/Curacao, America/Danmarkshavn, America/Dawson, America/Dawson_Creek, America/Denver, America/Detroit, America/Dominica, America/Edmonton, America/Eirunepe, America/El_Salvador, America/Ensenada, America/Fort_Nelson, America/Fort_Wayne, America/Fortaleza, America/Glace_Bay, America/Godthab, America/Goose_Bay, America/Grand_Turk, America/Grenada, America/Guadeloupe, America/Guatemala, America/Guayaquil, America/Guyana, America/Halifax, America/Havana, America/Hermosillo, America/Indiana/Indianapolis, America/Indiana/Knox, America/Indiana/Marengo, America/Indiana/Petersburg, America/Indiana/Tell_City, America/Indiana/Vevay, America/Indiana/Vincennes, America/Indiana/Winamac, America/Indianapolis, America/Inuvik, America/Iqaluit, America/Jamaica, America/Jujuy, America/Juneau, America/Kentucky/Louisville, America/Kentucky/Monticello, America/Knox_IN, America/Kralendijk, America/La_Paz, America/Lima, America/Los_Angeles, America/Louisville, America/Lower_Princes, America/Maceio, America/Managua, America/Manaus, America/Marigot, America/Martinique, America/Matamoros, America/Mazatlan, America/Mendoza, America/Menominee, America/Merida, America/Metlakatla, America/Mexico_City, America/Miquelon, America/Moncton, America/Monterrey, America/Montevideo, America/Montreal, America/Montserrat, America/Nassau, America/New_York, America/Nipigon, America/Nome, America/Noronha, America/North_Dakota/Beulah, America/North_Dakota/Center, America/North_Dakota/New_Salem, America/Ojinaga, America/Panama, America/Pangnirtung, America/Paramaribo, America/Phoenix, America/Port-au-Prince, America/Port_of_Spain, America/Porto_Acre, America/Porto_Velho, America/Puerto_Rico, America/Rainy_River, America/Rankin_Inlet, America/Recife, America/Regina, America/Resolute, America/Rio_Branco, America/Rosario, America/Santa_Isabel, America/Santarem, America/Santiago, America/Santo_Domingo, America/Sao_Paulo, America/Scoresbysund, America/Shiprock, America/Sitka, America/St_Barthelemy, America/St_Johns, America/St_Kitts, America/St_Lucia, America/St_Thomas, America/St_Vincent, America/Swift_Current, America/Tegucigalpa, America/Thule, America/Thunder_Bay, America/Tijuana, America/Toronto, America/Tortola, America/Vancouver, America/Virgin, America/Whitehorse, America/Winnipeg, America/Yakutat, America/Yellowknife, Antarctica/Casey, Antarctica/Davis, Antarctica/DumontDUrville, Antarctica/Macquarie, Antarctica/Mawson, Antarctica/McMurdo, Antarctica/Palmer, Antarctica/Rothera, Antarctica/South_Pole, Antarctica/Syowa, Antarctica/Troll, Antarctica/Vostok, Arctic/Longyearbyen, Asia/Aden, Asia/Almaty, Asia/Amman, Asia/Anadyr, Asia/Aqtau, Asia/Aqtobe, Asia/Ashgabat, Asia/Ashkhabad, Asia/Atyrau, Asia/Baghdad, Asia/Bahrain, Asia/Baku, Asia/Bangkok, Asia/Barnaul, Asia/Beirut, Asia/Bishkek, Asia/Brunei, Asia/Calcutta, Asia/Chita, Asia/Choibalsan, Asia/Chongqing, Asia/Chungking, Asia/Colombo, Asia/Dacca, Asia/Damascus, Asia/Dhaka, Asia/Dili, Asia/Dubai, Asia/Dushanbe, Asia/Famagusta, Asia/Gaza, Asia/Hanoi, Asia/Harbin, Asia/Hebron, Asia/Ho_Chi_Minh, Asia/Hong_Kong, Asia/Hovd, Asia/Irkutsk, Asia/Istanbul, Asia/Jakarta, Asia/Jayapura, Asia/Jerusalem, Asia/Kabul, Asia/Kamchatka, Asia/Karachi, Asia/Kashgar, Asia/Kathmandu, Asia/Katmandu, Asia/Khandyga, Asia/Kolkata, Asia/Krasnoyarsk, Asia/Kuala_Lumpur, Asia/Kuching, Asia/Kuwait, Asia/Macao, Asia/Macau, Asia/Magadan, Asia/Makassar, Asia/Manila, Asia/Muscat, Asia/Nicosia, Asia/Novokuznetsk, Asia/Novosibirsk, Asia/Omsk, Asia/Oral, Asia/Phnom_Penh, Asia/Pontianak, Asia/Pyongyang, Asia/Qatar, Asia/Qyzylorda, Asia/Rangoon, Asia/Riyadh, Asia/Saigon, Asia/Sakhalin, Asia/Samarkand, Asia/Seoul, Asia/Shanghai, Asia/Singapore, Asia/Srednekolymsk, Asia/Taipei, Asia/Tashkent, Asia/Tbilisi, Asia/Tehran, Asia/Tel_Aviv, Asia/Thimbu, Asia/Thimphu, Asia/Tokyo, Asia/Tomsk, Asia/Ujung_Pandang, Asia/Ulaanbaatar, Asia/Ulan_Bator, Asia/Urumqi, Asia/Ust-Nera, Asia/Vientiane, Asia/Vladivostok, Asia/Yakutsk, Asia/Yangon, Asia/Yekaterinburg, Asia/Yerevan, Atlantic/Azores, Atlantic/Bermuda, Atlantic/Canary, Atlantic/Cape_Verde, Atlantic/Faeroe, Atlantic/Faroe, Atlantic/Jan_Mayen, Atlantic/Madeira, Atlantic/Reykjavik, Atlantic/South_Georgia, Atlantic/St_Helena, Atlantic/Stanley, Australia/ACT, Australia/Adelaide, Australia/Brisbane, Australia/Broken_Hill, Australia/Canberra, Australia/Currie, Australia/Darwin, Australia/Eucla, Australia/Hobart, Australia/LHI, Australia/Lindeman, Australia/Lord_Howe, Australia/Melbourne, Australia/NSW, Australia/North, Australia/Perth, Australia/Queensland, Australia/South, Australia/Sydney, Australia/Tasmania, Australia/Victoria, Australia/West, Australia/Yancowinna, Brazil/Acre, Brazil/DeNoronha, Brazil/East, Brazil/West, CET, CST6CDT, Canada/Atlantic, Canada/Central, Canada/East-Saskatchewan, Canada/Eastern, Canada/Mountain, Canada/Newfoundland, Canada/Pacific, Canada/Saskatchewan, Canada/Yukon, Chile/Continental, Chile/EasterIsland, Cuba, EET, EST, EST5EDT, Egypt, Eire, Etc/GMT, Etc/GMT+0, Etc/GMT+1, Etc/GMT+10, Etc/GMT+11, Etc/GMT+12, Etc/GMT+2, Etc/GMT+3, Etc/GMT+4, Etc/GMT+5, Etc/GMT+6, Etc/GMT+7, Etc/GMT+8, Etc/GMT+9, Etc/GMT-0, Etc/GMT-1, Etc/GMT-10, Etc/GMT-11, Etc/GMT-12, Etc/GMT-13, Etc/GMT-14, Etc/GMT-2, Etc/GMT-3, Etc/GMT-4, Etc/GMT-5, Etc/GMT-6, Etc/GMT-7, Etc/GMT-8, Etc/GMT-9, Etc/GMT0, Etc/Greenwich, Etc/UCT, Etc/UTC, Etc/Universal, Etc/Zulu, Europe/Amsterdam, Europe/Andorra, Europe/Astrakhan, Europe/Athens, Europe/Belfast, Europe/Belgrade, Europe/Berlin, Europe/Bratislava, Europe/Brussels, Europe/Bucharest, Europe/Budapest, Europe/Busingen, Europe/Chisinau, Europe/Copenhagen, Europe/Dublin, Europe/Gibraltar, Europe/Guernsey, Europe/Helsinki, Europe/Isle_of_Man, Europe/Istanbul, Europe/Jersey, Europe/Kaliningrad, Europe/Kiev, Europe/Kirov, Europe/Lisbon, Europe/Ljubljana, Europe/London, Europe/Luxembourg, Europe/Madrid, Europe/Malta, Europe/Mariehamn, Europe/Minsk, Europe/Monaco, Europe/Moscow, Europe/Nicosia, Europe/Oslo, Europe/Paris, Europe/Podgorica, Europe/Prague, Europe/Riga, Europe/Rome, Europe/Samara, Europe/San_Marino, Europe/Sarajevo, Europe/Saratov, Europe/Simferopol, Europe/Skopje, Europe/Sofia, Europe/Stockholm, Europe/Tallinn, Europe/Tirane, Europe/Tiraspol, Europe/Ulyanovsk, Europe/Uzhgorod, Europe/Vaduz, Europe/Vatican, Europe/Vienna, Europe/Vilnius, Europe/Volgograd, Europe/Warsaw, Europe/Zagreb, Europe/Zaporozhye, Europe/Zurich, GB, GB-Eire, GMT, GMT+0, GMT-0, GMT0, Greenwich, HST, Hongkong, Iceland, Indian/Antananarivo, Indian/Chagos, Indian/Christmas, Indian/Cocos, Indian/Comoro, Indian/Kerguelen, Indian/Mahe, Indian/Maldives, Indian/Mauritius, Indian/Mayotte, Indian/Reunion, Iran, Israel, Jamaica, Japan, Kwajalein, Libya, MET, MST, MST7MDT, Mexico/BajaNorte, Mexico/BajaSur, Mexico/General, NZ, NZ-CHAT, Navajo, PRC, PST8PDT, Pacific/Apia, Pacific/Auckland, Pacific/Bougainville, Pacific/Chatham, Pacific/Chuuk, Pacific/Easter, Pacific/Efate, Pacific/Enderbury, Pacific/Fakaofo, Pacific/Fiji, Pacific/Funafuti, Pacific/Galapagos, Pacific/Gambier, Pacific/Guadalcanal, Pacific/Guam, Pacific/Honolulu, Pacific/Johnston, Pacific/Kiritimati, Pacific/Kosrae, Pacific/Kwajalein, Pacific/Majuro, Pacific/Marquesas, Pacific/Midway, Pacific/Nauru, Pacific/Niue, Pacific/Norfolk, Pacific/Noumea, Pacific/Pago_Pago, Pacific/Palau, Pacific/Pitcairn, Pacific/Pohnpei, Pacific/Ponape, Pacific/Port_Moresby, Pacific/Rarotonga, Pacific/Saipan, Pacific/Samoa, Pacific/Tahiti, Pacific/Tarawa, Pacific/Tongatapu, Pacific/Truk, Pacific/Wake, Pacific/Wallis, Pacific/Yap, Poland, Portugal, ROC, ROK, Singapore, Turkey, UCT, US/Alaska, US/Aleutian, US/Arizona, US/Central, US/East-Indiana, US/Eastern, US/Hawaii, US/Indiana-Starke, US/Michigan, US/Mountain, US/Pacific, US/Samoa, UTC, Universal, W-SU, WET, Zulu
+final String unit = unit_example; // String | Allowed values: metric, imperial, si
+final String apiVersion = apiVersion_example; // String | 
+
+try {
+    final response = metricsApi.facilityDisplayConfigurationUpdate(addedMass, dataMode, defaultBrightness, focusMode, isTorqueEnabled, machinesEnabled, operatingSchedule, operatingScheduleEnabled, performanceDropOff, qrCodeEnabled, secondsDelay, shouldForceExercise, showReviewScreen, signoutDelay, timeZone, unit, apiVersion);
+    print(response);
+} catch on DioError (e) {
+    print('Exception when calling MetricsApi->facilityDisplayConfigurationUpdate: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **addedMass** | **num**|  | [optional] 
+ **dataMode** | **String**| Allowed values: power, velocity | [optional] 
+ **defaultBrightness** | **num**|  | [optional] 
+ **focusMode** | **String**| Allowed values: mean, peak | [optional] 
+ **isTorqueEnabled** | **bool**|  | [optional] 
+ **machinesEnabled** | **bool**|  | [optional] 
+ **operatingSchedule** | **String**|  | [optional] 
+ **operatingScheduleEnabled** | **bool**|  | [optional] 
+ **performanceDropOff** | **num**|  | [optional] 
+ **qrCodeEnabled** | **bool**|  | [optional] 
+ **secondsDelay** | **num**|  | [optional] 
+ **shouldForceExercise** | **bool**|  | [optional] 
+ **showReviewScreen** | **bool**|  | [optional] 
+ **signoutDelay** | **num**|  | [optional] 
+ **timeZone** | **String**| Allowed values: Africa/Abidjan, Africa/Accra, Africa/Addis_Ababa, Africa/Algiers, Africa/Asmara, Africa/Asmera, Africa/Bamako, Africa/Bangui, Africa/Banjul, Africa/Bissau, Africa/Blantyre, Africa/Brazzaville, Africa/Bujumbura, Africa/Cairo, Africa/Casablanca, Africa/Ceuta, Africa/Conakry, Africa/Dakar, Africa/Dar_es_Salaam, Africa/Djibouti, Africa/Douala, Africa/El_Aaiun, Africa/Freetown, Africa/Gaborone, Africa/Harare, Africa/Johannesburg, Africa/Juba, Africa/Kampala, Africa/Khartoum, Africa/Kigali, Africa/Kinshasa, Africa/Lagos, Africa/Libreville, Africa/Lome, Africa/Luanda, Africa/Lubumbashi, Africa/Lusaka, Africa/Malabo, Africa/Maputo, Africa/Maseru, Africa/Mbabane, Africa/Mogadishu, Africa/Monrovia, Africa/Nairobi, Africa/Ndjamena, Africa/Niamey, Africa/Nouakchott, Africa/Ouagadougou, Africa/Porto-Novo, Africa/Sao_Tome, Africa/Timbuktu, Africa/Tripoli, Africa/Tunis, Africa/Windhoek, America/Adak, America/Anchorage, America/Anguilla, America/Antigua, America/Araguaina, America/Argentina/Buenos_Aires, America/Argentina/Catamarca, America/Argentina/ComodRivadavia, America/Argentina/Cordoba, America/Argentina/Jujuy, America/Argentina/La_Rioja, America/Argentina/Mendoza, America/Argentina/Rio_Gallegos, America/Argentina/Salta, America/Argentina/San_Juan, America/Argentina/San_Luis, America/Argentina/Tucuman, America/Argentina/Ushuaia, America/Aruba, America/Asuncion, America/Atikokan, America/Atka, America/Bahia, America/Bahia_Banderas, America/Barbados, America/Belem, America/Belize, America/Blanc-Sablon, America/Boa_Vista, America/Bogota, America/Boise, America/Buenos_Aires, America/Cambridge_Bay, America/Campo_Grande, America/Cancun, America/Caracas, America/Catamarca, America/Cayenne, America/Cayman, America/Chicago, America/Chihuahua, America/Coral_Harbour, America/Cordoba, America/Costa_Rica, America/Creston, America/Cuiaba, America/Curacao, America/Danmarkshavn, America/Dawson, America/Dawson_Creek, America/Denver, America/Detroit, America/Dominica, America/Edmonton, America/Eirunepe, America/El_Salvador, America/Ensenada, America/Fort_Nelson, America/Fort_Wayne, America/Fortaleza, America/Glace_Bay, America/Godthab, America/Goose_Bay, America/Grand_Turk, America/Grenada, America/Guadeloupe, America/Guatemala, America/Guayaquil, America/Guyana, America/Halifax, America/Havana, America/Hermosillo, America/Indiana/Indianapolis, America/Indiana/Knox, America/Indiana/Marengo, America/Indiana/Petersburg, America/Indiana/Tell_City, America/Indiana/Vevay, America/Indiana/Vincennes, America/Indiana/Winamac, America/Indianapolis, America/Inuvik, America/Iqaluit, America/Jamaica, America/Jujuy, America/Juneau, America/Kentucky/Louisville, America/Kentucky/Monticello, America/Knox_IN, America/Kralendijk, America/La_Paz, America/Lima, America/Los_Angeles, America/Louisville, America/Lower_Princes, America/Maceio, America/Managua, America/Manaus, America/Marigot, America/Martinique, America/Matamoros, America/Mazatlan, America/Mendoza, America/Menominee, America/Merida, America/Metlakatla, America/Mexico_City, America/Miquelon, America/Moncton, America/Monterrey, America/Montevideo, America/Montreal, America/Montserrat, America/Nassau, America/New_York, America/Nipigon, America/Nome, America/Noronha, America/North_Dakota/Beulah, America/North_Dakota/Center, America/North_Dakota/New_Salem, America/Ojinaga, America/Panama, America/Pangnirtung, America/Paramaribo, America/Phoenix, America/Port-au-Prince, America/Port_of_Spain, America/Porto_Acre, America/Porto_Velho, America/Puerto_Rico, America/Rainy_River, America/Rankin_Inlet, America/Recife, America/Regina, America/Resolute, America/Rio_Branco, America/Rosario, America/Santa_Isabel, America/Santarem, America/Santiago, America/Santo_Domingo, America/Sao_Paulo, America/Scoresbysund, America/Shiprock, America/Sitka, America/St_Barthelemy, America/St_Johns, America/St_Kitts, America/St_Lucia, America/St_Thomas, America/St_Vincent, America/Swift_Current, America/Tegucigalpa, America/Thule, America/Thunder_Bay, America/Tijuana, America/Toronto, America/Tortola, America/Vancouver, America/Virgin, America/Whitehorse, America/Winnipeg, America/Yakutat, America/Yellowknife, Antarctica/Casey, Antarctica/Davis, Antarctica/DumontDUrville, Antarctica/Macquarie, Antarctica/Mawson, Antarctica/McMurdo, Antarctica/Palmer, Antarctica/Rothera, Antarctica/South_Pole, Antarctica/Syowa, Antarctica/Troll, Antarctica/Vostok, Arctic/Longyearbyen, Asia/Aden, Asia/Almaty, Asia/Amman, Asia/Anadyr, Asia/Aqtau, Asia/Aqtobe, Asia/Ashgabat, Asia/Ashkhabad, Asia/Atyrau, Asia/Baghdad, Asia/Bahrain, Asia/Baku, Asia/Bangkok, Asia/Barnaul, Asia/Beirut, Asia/Bishkek, Asia/Brunei, Asia/Calcutta, Asia/Chita, Asia/Choibalsan, Asia/Chongqing, Asia/Chungking, Asia/Colombo, Asia/Dacca, Asia/Damascus, Asia/Dhaka, Asia/Dili, Asia/Dubai, Asia/Dushanbe, Asia/Famagusta, Asia/Gaza, Asia/Hanoi, Asia/Harbin, Asia/Hebron, Asia/Ho_Chi_Minh, Asia/Hong_Kong, Asia/Hovd, Asia/Irkutsk, Asia/Istanbul, Asia/Jakarta, Asia/Jayapura, Asia/Jerusalem, Asia/Kabul, Asia/Kamchatka, Asia/Karachi, Asia/Kashgar, Asia/Kathmandu, Asia/Katmandu, Asia/Khandyga, Asia/Kolkata, Asia/Krasnoyarsk, Asia/Kuala_Lumpur, Asia/Kuching, Asia/Kuwait, Asia/Macao, Asia/Macau, Asia/Magadan, Asia/Makassar, Asia/Manila, Asia/Muscat, Asia/Nicosia, Asia/Novokuznetsk, Asia/Novosibirsk, Asia/Omsk, Asia/Oral, Asia/Phnom_Penh, Asia/Pontianak, Asia/Pyongyang, Asia/Qatar, Asia/Qyzylorda, Asia/Rangoon, Asia/Riyadh, Asia/Saigon, Asia/Sakhalin, Asia/Samarkand, Asia/Seoul, Asia/Shanghai, Asia/Singapore, Asia/Srednekolymsk, Asia/Taipei, Asia/Tashkent, Asia/Tbilisi, Asia/Tehran, Asia/Tel_Aviv, Asia/Thimbu, Asia/Thimphu, Asia/Tokyo, Asia/Tomsk, Asia/Ujung_Pandang, Asia/Ulaanbaatar, Asia/Ulan_Bator, Asia/Urumqi, Asia/Ust-Nera, Asia/Vientiane, Asia/Vladivostok, Asia/Yakutsk, Asia/Yangon, Asia/Yekaterinburg, Asia/Yerevan, Atlantic/Azores, Atlantic/Bermuda, Atlantic/Canary, Atlantic/Cape_Verde, Atlantic/Faeroe, Atlantic/Faroe, Atlantic/Jan_Mayen, Atlantic/Madeira, Atlantic/Reykjavik, Atlantic/South_Georgia, Atlantic/St_Helena, Atlantic/Stanley, Australia/ACT, Australia/Adelaide, Australia/Brisbane, Australia/Broken_Hill, Australia/Canberra, Australia/Currie, Australia/Darwin, Australia/Eucla, Australia/Hobart, Australia/LHI, Australia/Lindeman, Australia/Lord_Howe, Australia/Melbourne, Australia/NSW, Australia/North, Australia/Perth, Australia/Queensland, Australia/South, Australia/Sydney, Australia/Tasmania, Australia/Victoria, Australia/West, Australia/Yancowinna, Brazil/Acre, Brazil/DeNoronha, Brazil/East, Brazil/West, CET, CST6CDT, Canada/Atlantic, Canada/Central, Canada/East-Saskatchewan, Canada/Eastern, Canada/Mountain, Canada/Newfoundland, Canada/Pacific, Canada/Saskatchewan, Canada/Yukon, Chile/Continental, Chile/EasterIsland, Cuba, EET, EST, EST5EDT, Egypt, Eire, Etc/GMT, Etc/GMT+0, Etc/GMT+1, Etc/GMT+10, Etc/GMT+11, Etc/GMT+12, Etc/GMT+2, Etc/GMT+3, Etc/GMT+4, Etc/GMT+5, Etc/GMT+6, Etc/GMT+7, Etc/GMT+8, Etc/GMT+9, Etc/GMT-0, Etc/GMT-1, Etc/GMT-10, Etc/GMT-11, Etc/GMT-12, Etc/GMT-13, Etc/GMT-14, Etc/GMT-2, Etc/GMT-3, Etc/GMT-4, Etc/GMT-5, Etc/GMT-6, Etc/GMT-7, Etc/GMT-8, Etc/GMT-9, Etc/GMT0, Etc/Greenwich, Etc/UCT, Etc/UTC, Etc/Universal, Etc/Zulu, Europe/Amsterdam, Europe/Andorra, Europe/Astrakhan, Europe/Athens, Europe/Belfast, Europe/Belgrade, Europe/Berlin, Europe/Bratislava, Europe/Brussels, Europe/Bucharest, Europe/Budapest, Europe/Busingen, Europe/Chisinau, Europe/Copenhagen, Europe/Dublin, Europe/Gibraltar, Europe/Guernsey, Europe/Helsinki, Europe/Isle_of_Man, Europe/Istanbul, Europe/Jersey, Europe/Kaliningrad, Europe/Kiev, Europe/Kirov, Europe/Lisbon, Europe/Ljubljana, Europe/London, Europe/Luxembourg, Europe/Madrid, Europe/Malta, Europe/Mariehamn, Europe/Minsk, Europe/Monaco, Europe/Moscow, Europe/Nicosia, Europe/Oslo, Europe/Paris, Europe/Podgorica, Europe/Prague, Europe/Riga, Europe/Rome, Europe/Samara, Europe/San_Marino, Europe/Sarajevo, Europe/Saratov, Europe/Simferopol, Europe/Skopje, Europe/Sofia, Europe/Stockholm, Europe/Tallinn, Europe/Tirane, Europe/Tiraspol, Europe/Ulyanovsk, Europe/Uzhgorod, Europe/Vaduz, Europe/Vatican, Europe/Vienna, Europe/Vilnius, Europe/Volgograd, Europe/Warsaw, Europe/Zagreb, Europe/Zaporozhye, Europe/Zurich, GB, GB-Eire, GMT, GMT+0, GMT-0, GMT0, Greenwich, HST, Hongkong, Iceland, Indian/Antananarivo, Indian/Chagos, Indian/Christmas, Indian/Cocos, Indian/Comoro, Indian/Kerguelen, Indian/Mahe, Indian/Maldives, Indian/Mauritius, Indian/Mayotte, Indian/Reunion, Iran, Israel, Jamaica, Japan, Kwajalein, Libya, MET, MST, MST7MDT, Mexico/BajaNorte, Mexico/BajaSur, Mexico/General, NZ, NZ-CHAT, Navajo, PRC, PST8PDT, Pacific/Apia, Pacific/Auckland, Pacific/Bougainville, Pacific/Chatham, Pacific/Chuuk, Pacific/Easter, Pacific/Efate, Pacific/Enderbury, Pacific/Fakaofo, Pacific/Fiji, Pacific/Funafuti, Pacific/Galapagos, Pacific/Gambier, Pacific/Guadalcanal, Pacific/Guam, Pacific/Honolulu, Pacific/Johnston, Pacific/Kiritimati, Pacific/Kosrae, Pacific/Kwajalein, Pacific/Majuro, Pacific/Marquesas, Pacific/Midway, Pacific/Nauru, Pacific/Niue, Pacific/Norfolk, Pacific/Noumea, Pacific/Pago_Pago, Pacific/Palau, Pacific/Pitcairn, Pacific/Pohnpei, Pacific/Ponape, Pacific/Port_Moresby, Pacific/Rarotonga, Pacific/Saipan, Pacific/Samoa, Pacific/Tahiti, Pacific/Tarawa, Pacific/Tongatapu, Pacific/Truk, Pacific/Wake, Pacific/Wallis, Pacific/Yap, Poland, Portugal, ROC, ROK, Singapore, Turkey, UCT, US/Alaska, US/Aleutian, US/Arizona, US/Central, US/East-Indiana, US/Eastern, US/Hawaii, US/Indiana-Starke, US/Michigan, US/Mountain, US/Pacific, US/Samoa, UTC, Universal, W-SU, WET, Zulu | [optional] 
+ **unit** | **String**| Allowed values: metric, imperial, si | [optional] 
+ **apiVersion** | **String**|  | [optional] 
+
+### Return type
+
+[**FacilityDisplayConfigurationResponse**](FacilityDisplayConfigurationResponse.md)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **facilityHubClaim**
+> HubLinkClaimResponse facilityHubClaim(linkCode, apiVersion)
+
+Claim a registered hub for a facility using its pairing code
+
+1
+
+### Example
+```dart
+import 'package:keiser_metrics_sdk/api.dart';
+// TODO Configure HTTP basic authorization: bearerAuth
+//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').username = 'YOUR_USERNAME'
+//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').password = 'YOUR_PASSWORD';
+
+final api = MetricsApi metricsApi = MetricsApi();
+final String linkCode = linkCode_example; // String | 
+final String apiVersion = apiVersion_example; // String | 
+
+try {
+    final response = metricsApi.facilityHubClaim(linkCode, apiVersion);
+    print(response);
+} catch on DioError (e) {
+    print('Exception when calling MetricsApi->facilityHubClaim: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **linkCode** | **String**|  | 
+ **apiVersion** | **String**|  | [optional] 
+
+### Return type
+
+[**HubLinkClaimResponse**](HubLinkClaimResponse.md)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **facilityHubDelete**
+> facilityHubDelete(facilityHubId, apiVersion)
+
+Delete a facility hub and revoke its tokens
+
+1
+
+### Example
+```dart
+import 'package:keiser_metrics_sdk/api.dart';
+// TODO Configure HTTP basic authorization: bearerAuth
+//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').username = 'YOUR_USERNAME'
+//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').password = 'YOUR_PASSWORD';
+
+final api = MetricsApi metricsApi = MetricsApi();
+final num facilityHubId = 8.14; // num | 
+final String apiVersion = apiVersion_example; // String | 
+
+try {
+    metricsApi.facilityHubDelete(facilityHubId, apiVersion);
+} catch on DioError (e) {
+    print('Exception when calling MetricsApi->facilityHubDelete: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **facilityHubId** | **num**|  | 
+ **apiVersion** | **String**|  | [optional] 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **facilityHubLinkStatus**
+> FacilityHubLinkStatusResponse facilityHubLinkStatus(hubLinkId, apiVersion)
+
+Check the status of a hub link pairing code
+
+1
+
+### Example
+```dart
+import 'package:keiser_metrics_sdk/api.dart';
+// TODO Configure HTTP basic authorization: bearerAuth
+//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').username = 'YOUR_USERNAME'
+//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').password = 'YOUR_PASSWORD';
+
+final api = MetricsApi metricsApi = MetricsApi();
+final num hubLinkId = 8.14; // num | 
+final String apiVersion = apiVersion_example; // String | 
+
+try {
+    final response = metricsApi.facilityHubLinkStatus(hubLinkId, apiVersion);
+    print(response);
+} catch on DioError (e) {
+    print('Exception when calling MetricsApi->facilityHubLinkStatus: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **hubLinkId** | **num**|  | 
+ **apiVersion** | **String**|  | [optional] 
+
+### Return type
+
+[**FacilityHubLinkStatusResponse**](FacilityHubLinkStatusResponse.md)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **facilityHubList**
+> FacilityHubListResponse facilityHubList(ascending, limit, offset, query, sort, apiVersion)
+
+List hubs for a facility
+
+1
+
+### Example
+```dart
+import 'package:keiser_metrics_sdk/api.dart';
+// TODO Configure HTTP basic authorization: bearerAuth
+//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').username = 'YOUR_USERNAME'
+//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').password = 'YOUR_PASSWORD';
+
+final api = MetricsApi metricsApi = MetricsApi();
+final bool ascending = true; // bool | 
+final num limit = 8.14; // num | 
+final num offset = 8.14; // num | 
+final String query = query_example; // String | 
+final String sort = sort_example; // String | 
+final String apiVersion = apiVersion_example; // String | 
+
+try {
+    final response = metricsApi.facilityHubList(ascending, limit, offset, query, sort, apiVersion);
+    print(response);
+} catch on DioError (e) {
+    print('Exception when calling MetricsApi->facilityHubList: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **ascending** | **bool**|  | [optional] [default to false]
+ **limit** | **num**|  | [optional] 
+ **offset** | **num**|  | [optional] 
+ **query** | **String**|  | [optional] 
+ **sort** | **String**|  | [optional] [default to 'id']
+ **apiVersion** | **String**|  | [optional] 
+
+### Return type
+
+[**FacilityHubListResponse**](FacilityHubListResponse.md)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **facilityHubUpdate**
+> FacilityHubUpdateResponse facilityHubUpdate(facilityHubId, names, apiVersion)
+
+Update a facility hub
+
+1
+
+### Example
+```dart
+import 'package:keiser_metrics_sdk/api.dart';
+// TODO Configure HTTP basic authorization: bearerAuth
+//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').username = 'YOUR_USERNAME'
+//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').password = 'YOUR_PASSWORD';
+
+final api = MetricsApi metricsApi = MetricsApi();
+final num facilityHubId = 8.14; // num | 
+final String names = names_example; // String | 
+final String apiVersion = apiVersion_example; // String | 
+
+try {
+    final response = metricsApi.facilityHubUpdate(facilityHubId, names, apiVersion);
+    print(response);
+} catch on DioError (e) {
+    print('Exception when calling MetricsApi->facilityHubUpdate: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **facilityHubId** | **num**|  | 
+ **names** | **String**|  | 
+ **apiVersion** | **String**|  | [optional] 
+
+### Return type
+
+[**FacilityHubUpdateResponse**](FacilityHubUpdateResponse.md)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **facilityInBodyIntegrationCreate**
 > FacilityInBodyIntegrationResponse facilityInBodyIntegrationCreate(type, account, key, apiVersion)
 
@@ -5445,19 +5902,19 @@ import 'package:keiser_metrics_sdk/api.dart';
 //defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').password = 'YOUR_PASSWORD';
 
 final api = MetricsApi metricsApi = MetricsApi();
-final num address = 8.14; // num | 
+final String address = address_example; // String | 
 final bool ascending = true; // bool | 
-final num city = 8.14; // num | 
-final num country = 8.14; // num | 
+final String city = city_example; // String | 
+final String country = country_example; // String | 
 final num limit = 8.14; // num | 
-final num names = 8.14; // num | 
+final String names = names_example; // String | 
 final num offset = 8.14; // num | 
 final num page = 8.14; // num | 
-final num phone = 8.14; // num | 
-final num postcode = 8.14; // num | 
+final String phone = phone_example; // String | 
+final String postcode = postcode_example; // String | 
 final num quantity = 8.14; // num | 
 final String sort = sort_example; // String | Allowed values: id, name
-final num state = 8.14; // num | 
+final String state = state_example; // String | 
 final String apiVersion = apiVersion_example; // String | 
 
 try {
@@ -5472,24 +5929,218 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **address** | **num**|  | [optional] 
+ **address** | **String**|  | [optional] 
  **ascending** | **bool**|  | [optional] [default to true]
- **city** | **num**|  | [optional] 
- **country** | **num**|  | [optional] 
+ **city** | **String**|  | [optional] 
+ **country** | **String**|  | [optional] 
  **limit** | **num**|  | [optional] 
- **names** | **num**|  | [optional] 
+ **names** | **String**|  | [optional] 
  **offset** | **num**|  | [optional] 
  **page** | **num**|  | [optional] 
- **phone** | **num**|  | [optional] 
- **postcode** | **num**|  | [optional] 
+ **phone** | **String**|  | [optional] 
+ **postcode** | **String**|  | [optional] 
  **quantity** | **num**|  | [optional] 
  **sort** | **String**| Allowed values: id, name | [optional] [default to 'id']
- **state** | **num**|  | [optional] 
+ **state** | **String**|  | [optional] 
  **apiVersion** | **String**|  | [optional] 
 
 ### Return type
 
 [**FacilityListResponse**](FacilityListResponse.md)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **facilityPinDelete**
+> FacilityRelationshipResponse facilityPinDelete(userId, apiVersion)
+
+Remove the facility member identifier (PIN)
+
+1
+
+### Example
+```dart
+import 'package:keiser_metrics_sdk/api.dart';
+// TODO Configure HTTP basic authorization: bearerAuth
+//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').username = 'YOUR_USERNAME'
+//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').password = 'YOUR_PASSWORD';
+
+final api = MetricsApi metricsApi = MetricsApi();
+final num userId = 8.14; // num | 
+final String apiVersion = apiVersion_example; // String | 
+
+try {
+    final response = metricsApi.facilityPinDelete(userId, apiVersion);
+    print(response);
+} catch on DioError (e) {
+    print('Exception when calling MetricsApi->facilityPinDelete: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **userId** | **num**|  | 
+ **apiVersion** | **String**|  | [optional] 
+
+### Return type
+
+[**FacilityRelationshipResponse**](FacilityRelationshipResponse.md)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **facilityPinLogin**
+> FacilityPinLoginResponse facilityPinLogin(pin, apiVersion)
+
+Login a facility user using a PIN
+
+1
+
+### Example
+```dart
+import 'package:keiser_metrics_sdk/api.dart';
+// TODO Configure HTTP basic authorization: bearerAuth
+//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').username = 'YOUR_USERNAME'
+//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').password = 'YOUR_PASSWORD';
+
+final api = MetricsApi metricsApi = MetricsApi();
+final String pin = pin_example; // String | 
+final String apiVersion = apiVersion_example; // String | 
+
+try {
+    final response = metricsApi.facilityPinLogin(pin, apiVersion);
+    print(response);
+} catch on DioError (e) {
+    print('Exception when calling MetricsApi->facilityPinLogin: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pin** | **String**|  | 
+ **apiVersion** | **String**|  | [optional] 
+
+### Return type
+
+[**FacilityPinLoginResponse**](FacilityPinLoginResponse.md)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **facilityPinShow**
+> FacilityRelationshipResponse facilityPinShow(userId, apiVersion)
+
+Show the facility PIN for a user
+
+1
+
+### Example
+```dart
+import 'package:keiser_metrics_sdk/api.dart';
+// TODO Configure HTTP basic authorization: bearerAuth
+//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').username = 'YOUR_USERNAME'
+//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').password = 'YOUR_PASSWORD';
+
+final api = MetricsApi metricsApi = MetricsApi();
+final num userId = 8.14; // num | 
+final String apiVersion = apiVersion_example; // String | 
+
+try {
+    final response = metricsApi.facilityPinShow(userId, apiVersion);
+    print(response);
+} catch on DioError (e) {
+    print('Exception when calling MetricsApi->facilityPinShow: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **userId** | **num**|  | 
+ **apiVersion** | **String**|  | [optional] 
+
+### Return type
+
+[**FacilityRelationshipResponse**](FacilityRelationshipResponse.md)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **facilityPinUpdate**
+> FacilityRelationshipResponse facilityPinUpdate(pin, userId, apiVersion)
+
+Set or update a facility member identifier (PIN)
+
+1
+
+### Example
+```dart
+import 'package:keiser_metrics_sdk/api.dart';
+// TODO Configure HTTP basic authorization: bearerAuth
+//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').username = 'YOUR_USERNAME'
+//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').password = 'YOUR_PASSWORD';
+
+final api = MetricsApi metricsApi = MetricsApi();
+final String pin = pin_example; // String | 
+final num userId = 8.14; // num | 
+final String apiVersion = apiVersion_example; // String | 
+
+try {
+    final response = metricsApi.facilityPinUpdate(pin, userId, apiVersion);
+    print(response);
+} catch on DioError (e) {
+    print('Exception when calling MetricsApi->facilityPinUpdate: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pin** | **String**|  | 
+ **userId** | **num**|  | 
+ **apiVersion** | **String**|  | [optional] 
+
+### Return type
+
+[**FacilityRelationshipResponse**](FacilityRelationshipResponse.md)
 
 ### Authorization
 
@@ -5749,7 +6400,7 @@ final bool member = true; // bool |
 final String memberIdentifier = memberIdentifier_example; // String | 
 final String names = names_example; // String | 
 final num offset = 8.14; // num | 
-final String sort = sort_example; // String | Allowed values: id, name, memberIdentifier, employeeRole
+final String sort = sort_example; // String | Allowed values: id, name, firstName, lastName, memberIdentifier, employeeRole, pinCode
 final String apiVersion = apiVersion_example; // String | 
 
 try {
@@ -5773,7 +6424,7 @@ Name | Type | Description  | Notes
  **memberIdentifier** | **String**|  | [optional] 
  **names** | **String**|  | [optional] 
  **offset** | **num**|  | [optional] 
- **sort** | **String**| Allowed values: id, name, memberIdentifier, employeeRole | [optional] [default to 'id']
+ **sort** | **String**| Allowed values: id, name, firstName, lastName, memberIdentifier, employeeRole, pinCode | [optional] [default to 'id']
  **apiVersion** | **String**|  | [optional] 
 
 ### Return type
@@ -5924,6 +6575,484 @@ Name | Type | Description  | Notes
  **employeeRole** | **String**| Allowed values: admin, customerSupport, trainer, frontDesk, maintenance | [optional] 
  **member** | **bool**|  | [optional] 
  **memberIdentifier** | **String**|  | [optional] 
+ **apiVersion** | **String**|  | [optional] 
+
+### Return type
+
+[**FacilityRelationshipResponse**](FacilityRelationshipResponse.md)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **facilityRelationshipNovaMemberBulkCreate**
+> NovaMemberBulkCreateResponse facilityRelationshipNovaMemberBulkCreate(csv, apiVersion)
+
+Bulk-create Nova-style members within the session facility from a CSV file
+
+1
+
+### Example
+```dart
+import 'package:keiser_metrics_sdk/api.dart';
+// TODO Configure HTTP basic authorization: bearerAuth
+//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').username = 'YOUR_USERNAME'
+//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').password = 'YOUR_PASSWORD';
+
+final api = MetricsApi metricsApi = MetricsApi();
+final MultipartFile csv = BINARY_DATA_HERE; // MultipartFile | CSV file containing nova member rows
+final String apiVersion = apiVersion_example; // String | 
+
+try {
+    final response = metricsApi.facilityRelationshipNovaMemberBulkCreate(csv, apiVersion);
+    print(response);
+} catch on DioError (e) {
+    print('Exception when calling MetricsApi->facilityRelationshipNovaMemberBulkCreate: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **csv** | **MultipartFile**| CSV file containing nova member rows | 
+ **apiVersion** | **String**|  | [optional] 
+
+### Return type
+
+[**NovaMemberBulkCreateResponse**](NovaMemberBulkCreateResponse.md)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: multipart/form-data
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **facilityRelationshipNovaMemberCreate**
+> FacilityRelationshipResponse facilityRelationshipNovaMemberCreate(firstName, lastName, birthday, externalIdentifier, gender, metricHeight, metricWeight, pinCode, apiVersion)
+
+Create a Nova-style member (no email, no credential) within the session facility
+
+1
+
+### Example
+```dart
+import 'package:keiser_metrics_sdk/api.dart';
+// TODO Configure HTTP basic authorization: bearerAuth
+//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').username = 'YOUR_USERNAME'
+//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').password = 'YOUR_PASSWORD';
+
+final api = MetricsApi metricsApi = MetricsApi();
+final String firstName = firstName_example; // String | 
+final String lastName = lastName_example; // String | 
+final DateTime birthday = 2013-10-20T19:20:30+01:00; // DateTime | 
+final String externalIdentifier = externalIdentifier_example; // String | 
+final String gender = gender_example; // String | Allowed values: m, f, o
+final num metricHeight = 8.14; // num | 
+final num metricWeight = 8.14; // num | 
+final String pinCode = pinCode_example; // String | 
+final String apiVersion = apiVersion_example; // String | 
+
+try {
+    final response = metricsApi.facilityRelationshipNovaMemberCreate(firstName, lastName, birthday, externalIdentifier, gender, metricHeight, metricWeight, pinCode, apiVersion);
+    print(response);
+} catch on DioError (e) {
+    print('Exception when calling MetricsApi->facilityRelationshipNovaMemberCreate: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **firstName** | **String**|  | 
+ **lastName** | **String**|  | 
+ **birthday** | **DateTime**|  | [optional] 
+ **externalIdentifier** | **String**|  | [optional] 
+ **gender** | **String**| Allowed values: m, f, o | [optional] 
+ **metricHeight** | **num**|  | [optional] 
+ **metricWeight** | **num**|  | [optional] 
+ **pinCode** | **String**|  | [optional] 
+ **apiVersion** | **String**|  | [optional] 
+
+### Return type
+
+[**FacilityRelationshipResponse**](FacilityRelationshipResponse.md)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **facilityRelationshipNovaMemberDelete**
+> facilityRelationshipNovaMemberDelete(facilityRelationshipId, apiVersion)
+
+Fully delete a Nova member
+
+1
+
+### Example
+```dart
+import 'package:keiser_metrics_sdk/api.dart';
+// TODO Configure HTTP basic authorization: bearerAuth
+//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').username = 'YOUR_USERNAME'
+//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').password = 'YOUR_PASSWORD';
+
+final api = MetricsApi metricsApi = MetricsApi();
+final num facilityRelationshipId = 8.14; // num | 
+final String apiVersion = apiVersion_example; // String | 
+
+try {
+    metricsApi.facilityRelationshipNovaMemberDelete(facilityRelationshipId, apiVersion);
+} catch on DioError (e) {
+    print('Exception when calling MetricsApi->facilityRelationshipNovaMemberDelete: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **facilityRelationshipId** | **num**|  | 
+ **apiVersion** | **String**|  | [optional] 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **facilityRelationshipNovaMemberUpdate**
+> FacilityRelationshipResponse facilityRelationshipNovaMemberUpdate(facilityRelationshipId, birthday, externalIdentifier, firstName, gender, lastName, metricHeight, metricWeight, pinCode, apiVersion)
+
+Update a Nova member relationship and profile fields
+
+1
+
+### Example
+```dart
+import 'package:keiser_metrics_sdk/api.dart';
+// TODO Configure HTTP basic authorization: bearerAuth
+//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').username = 'YOUR_USERNAME'
+//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').password = 'YOUR_PASSWORD';
+
+final api = MetricsApi metricsApi = MetricsApi();
+final num facilityRelationshipId = 8.14; // num | 
+final DateTime birthday = 2013-10-20T19:20:30+01:00; // DateTime | 
+final String externalIdentifier = externalIdentifier_example; // String | 
+final String firstName = firstName_example; // String | 
+final String gender = gender_example; // String | Allowed values: m, f, o
+final String lastName = lastName_example; // String | 
+final num metricHeight = 8.14; // num | 
+final num metricWeight = 8.14; // num | 
+final String pinCode = pinCode_example; // String | 
+final String apiVersion = apiVersion_example; // String | 
+
+try {
+    final response = metricsApi.facilityRelationshipNovaMemberUpdate(facilityRelationshipId, birthday, externalIdentifier, firstName, gender, lastName, metricHeight, metricWeight, pinCode, apiVersion);
+    print(response);
+} catch on DioError (e) {
+    print('Exception when calling MetricsApi->facilityRelationshipNovaMemberUpdate: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **facilityRelationshipId** | **num**|  | 
+ **birthday** | **DateTime**|  | [optional] 
+ **externalIdentifier** | **String**|  | [optional] 
+ **firstName** | **String**|  | [optional] 
+ **gender** | **String**| Allowed values: m, f, o | [optional] 
+ **lastName** | **String**|  | [optional] 
+ **metricHeight** | **num**|  | [optional] 
+ **metricWeight** | **num**|  | [optional] 
+ **pinCode** | **String**|  | [optional] 
+ **apiVersion** | **String**|  | [optional] 
+
+### Return type
+
+[**FacilityRelationshipResponse**](FacilityRelationshipResponse.md)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **facilityRelationshipNovaStaffDeactivate**
+> facilityRelationshipNovaStaffDeactivate(facilityRelationshipId, apiVersion)
+
+Deactivate a facility relationship
+
+1
+
+### Example
+```dart
+import 'package:keiser_metrics_sdk/api.dart';
+// TODO Configure HTTP basic authorization: bearerAuth
+//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').username = 'YOUR_USERNAME'
+//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').password = 'YOUR_PASSWORD';
+
+final api = MetricsApi metricsApi = MetricsApi();
+final num facilityRelationshipId = 8.14; // num | 
+final String apiVersion = apiVersion_example; // String | 
+
+try {
+    metricsApi.facilityRelationshipNovaStaffDeactivate(facilityRelationshipId, apiVersion);
+} catch on DioError (e) {
+    print('Exception when calling MetricsApi->facilityRelationshipNovaStaffDeactivate: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **facilityRelationshipId** | **num**|  | 
+ **apiVersion** | **String**|  | [optional] 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **facilityRelationshipNovaStaffDelete**
+> facilityRelationshipNovaStaffDelete(facilityRelationshipId, apiVersion)
+
+Fully delete a Nova staff member (account purge).
+
+1
+
+### Example
+```dart
+import 'package:keiser_metrics_sdk/api.dart';
+// TODO Configure HTTP basic authorization: bearerAuth
+//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').username = 'YOUR_USERNAME'
+//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').password = 'YOUR_PASSWORD';
+
+final api = MetricsApi metricsApi = MetricsApi();
+final num facilityRelationshipId = 8.14; // num | 
+final String apiVersion = apiVersion_example; // String | 
+
+try {
+    metricsApi.facilityRelationshipNovaStaffDelete(facilityRelationshipId, apiVersion);
+} catch on DioError (e) {
+    print('Exception when calling MetricsApi->facilityRelationshipNovaStaffDelete: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **facilityRelationshipId** | **num**|  | 
+ **apiVersion** | **String**|  | [optional] 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **facilityRelationshipNovaStaffInvite**
+> FacilityRelationshipNovaStaffInviteResponse facilityRelationshipNovaStaffInvite(email, employeeRole, apiVersion)
+
+Invite a nova staff member by email
+
+1
+
+### Example
+```dart
+import 'package:keiser_metrics_sdk/api.dart';
+// TODO Configure HTTP basic authorization: bearerAuth
+//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').username = 'YOUR_USERNAME'
+//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').password = 'YOUR_PASSWORD';
+
+final api = MetricsApi metricsApi = MetricsApi();
+final String email = email_example; // String | 
+final String employeeRole = employeeRole_example; // String | Allowed values: admin, customerSupport, trainer, frontDesk, maintenance
+final String apiVersion = apiVersion_example; // String | 
+
+try {
+    final response = metricsApi.facilityRelationshipNovaStaffInvite(email, employeeRole, apiVersion);
+    print(response);
+} catch on DioError (e) {
+    print('Exception when calling MetricsApi->facilityRelationshipNovaStaffInvite: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **email** | **String**|  | 
+ **employeeRole** | **String**| Allowed values: admin, customerSupport, trainer, frontDesk, maintenance | 
+ **apiVersion** | **String**|  | [optional] 
+
+### Return type
+
+[**FacilityRelationshipNovaStaffInviteResponse**](FacilityRelationshipNovaStaffInviteResponse.md)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **facilityRelationshipNovaStaffReactivate**
+> facilityRelationshipNovaStaffReactivate(facilityRelationshipId, apiVersion)
+
+Reactivate a facility relationship
+
+1
+
+### Example
+```dart
+import 'package:keiser_metrics_sdk/api.dart';
+// TODO Configure HTTP basic authorization: bearerAuth
+//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').username = 'YOUR_USERNAME'
+//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').password = 'YOUR_PASSWORD';
+
+final api = MetricsApi metricsApi = MetricsApi();
+final num facilityRelationshipId = 8.14; // num | 
+final String apiVersion = apiVersion_example; // String | 
+
+try {
+    metricsApi.facilityRelationshipNovaStaffReactivate(facilityRelationshipId, apiVersion);
+} catch on DioError (e) {
+    print('Exception when calling MetricsApi->facilityRelationshipNovaStaffReactivate: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **facilityRelationshipId** | **num**|  | 
+ **apiVersion** | **String**|  | [optional] 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **facilityRelationshipNovaStaffUpdate**
+> FacilityRelationshipResponse facilityRelationshipNovaStaffUpdate(facilityRelationshipId, birthday, employeeRole, externalIdentifier, firstName, gender, lastName, metricHeight, metricWeight, pinCode, apiVersion)
+
+Update a Nova staff relationship and profile fields
+
+1
+
+### Example
+```dart
+import 'package:keiser_metrics_sdk/api.dart';
+// TODO Configure HTTP basic authorization: bearerAuth
+//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').username = 'YOUR_USERNAME'
+//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').password = 'YOUR_PASSWORD';
+
+final api = MetricsApi metricsApi = MetricsApi();
+final num facilityRelationshipId = 8.14; // num | 
+final DateTime birthday = 2013-10-20T19:20:30+01:00; // DateTime | 
+final String employeeRole = employeeRole_example; // String | Allowed values: admin, customerSupport, trainer, frontDesk, maintenance
+final String externalIdentifier = externalIdentifier_example; // String | 
+final String firstName = firstName_example; // String | 
+final String gender = gender_example; // String | Allowed values: m, f, o
+final String lastName = lastName_example; // String | 
+final num metricHeight = 8.14; // num | 
+final num metricWeight = 8.14; // num | 
+final String pinCode = pinCode_example; // String | 
+final String apiVersion = apiVersion_example; // String | 
+
+try {
+    final response = metricsApi.facilityRelationshipNovaStaffUpdate(facilityRelationshipId, birthday, employeeRole, externalIdentifier, firstName, gender, lastName, metricHeight, metricWeight, pinCode, apiVersion);
+    print(response);
+} catch on DioError (e) {
+    print('Exception when calling MetricsApi->facilityRelationshipNovaStaffUpdate: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **facilityRelationshipId** | **num**|  | 
+ **birthday** | **DateTime**|  | [optional] 
+ **employeeRole** | **String**| Allowed values: admin, customerSupport, trainer, frontDesk, maintenance | [optional] 
+ **externalIdentifier** | **String**|  | [optional] 
+ **firstName** | **String**|  | [optional] 
+ **gender** | **String**| Allowed values: m, f, o | [optional] 
+ **lastName** | **String**|  | [optional] 
+ **metricHeight** | **num**|  | [optional] 
+ **metricWeight** | **num**|  | [optional] 
+ **pinCode** | **String**|  | [optional] 
  **apiVersion** | **String**|  | [optional] 
 
 ### Return type
@@ -7296,6 +8425,53 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **facilityStrengthMachineBlacklist**
+> facilityStrengthMachineBlacklist(id, apiVersion)
+
+Blacklist a facility strength machine's tokens
+
+1
+
+### Example
+```dart
+import 'package:keiser_metrics_sdk/api.dart';
+// TODO Configure HTTP basic authorization: bearerAuth
+//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').username = 'YOUR_USERNAME'
+//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').password = 'YOUR_PASSWORD';
+
+final api = MetricsApi metricsApi = MetricsApi();
+final num id = 8.14; // num | 
+final String apiVersion = apiVersion_example; // String | 
+
+try {
+    metricsApi.facilityStrengthMachineBlacklist(id, apiVersion);
+} catch on DioError (e) {
+    print('Exception when calling MetricsApi->facilityStrengthMachineBlacklist: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **num**|  | 
+ **apiVersion** | **String**|  | [optional] 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **facilityStrengthMachineConfigurationShow**
 > FacilityStrengthMachineConfigurationResponse facilityStrengthMachineConfigurationShow(apiVersion)
 
@@ -7447,11 +8623,11 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **facilityStrengthMachineCreate**
-> FacilityStrengthMachineResponse facilityStrengthMachineCreate(model, serial, strengthMachineId, version, location, apiVersion)
+> FacilityStrengthMachineResponse facilityStrengthMachineCreate(line, model, serial, version, location, apiVersion)
 
 Create a facility strength machine
 
-1
+2
 
 ### Example
 ```dart
@@ -7461,15 +8637,15 @@ import 'package:keiser_metrics_sdk/api.dart';
 //defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').password = 'YOUR_PASSWORD';
 
 final api = MetricsApi metricsApi = MetricsApi();
-final num model = 8.14; // num | 
+final String line = line_example; // String | 
+final String model = model_example; // String | 
 final String serial = serial_example; // String | 
-final num strengthMachineId = 8.14; // num | 
 final String version = version_example; // String | 
 final String location = location_example; // String | 
 final String apiVersion = apiVersion_example; // String | 
 
 try {
-    final response = metricsApi.facilityStrengthMachineCreate(model, serial, strengthMachineId, version, location, apiVersion);
+    final response = metricsApi.facilityStrengthMachineCreate(line, model, serial, version, location, apiVersion);
     print(response);
 } catch on DioError (e) {
     print('Exception when calling MetricsApi->facilityStrengthMachineCreate: $e\n');
@@ -7480,9 +8656,9 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **model** | **num**|  | 
+ **line** | **String**|  | 
+ **model** | **String**|  | 
  **serial** | **String**|  | 
- **strengthMachineId** | **num**|  | 
  **version** | **String**|  | 
  **location** | **String**|  | [optional] 
  **apiVersion** | **String**|  | [optional] 
@@ -7690,7 +8866,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **facilityStrengthMachineList**
-> FacilityStrengthMachineListResponse facilityStrengthMachineList(ascending, limit, model, offset, sort, apiVersion)
+> FacilityStrengthMachineListResponse facilityStrengthMachineList(ascending, limit, model, offset, query, sort, apiVersion)
 
 List facility strength machines (requires maintenance access)
 
@@ -7708,11 +8884,12 @@ final bool ascending = true; // bool |
 final num limit = 8.14; // num | 
 final num model = 8.14; // num | 
 final num offset = 8.14; // num | 
-final String sort = sort_example; // String | Allowed values: id, model
+final String query = query_example; // String | 
+final String sort = sort_example; // String | Allowed values: id, model, name
 final String apiVersion = apiVersion_example; // String | 
 
 try {
-    final response = metricsApi.facilityStrengthMachineList(ascending, limit, model, offset, sort, apiVersion);
+    final response = metricsApi.facilityStrengthMachineList(ascending, limit, model, offset, query, sort, apiVersion);
     print(response);
 } catch on DioError (e) {
     print('Exception when calling MetricsApi->facilityStrengthMachineList: $e\n');
@@ -7727,12 +8904,59 @@ Name | Type | Description  | Notes
  **limit** | **num**|  | [optional] 
  **model** | **num**|  | [optional] 
  **offset** | **num**|  | [optional] 
- **sort** | **String**| Allowed values: id, model | [optional] [default to 'model']
+ **query** | **String**|  | [optional] 
+ **sort** | **String**| Allowed values: id, model, name | [optional] [default to 'model']
  **apiVersion** | **String**|  | [optional] 
 
 ### Return type
 
 [**FacilityStrengthMachineListResponse**](FacilityStrengthMachineListResponse.md)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **facilityStrengthMachineMachineStartSession**
+> FacilityStrengthMachineStartSessionResponse facilityStrengthMachineMachineStartSession(apiVersion)
+
+Exchange a machine initialization token for a short-lived machine session token
+
+1
+
+### Example
+```dart
+import 'package:keiser_metrics_sdk/api.dart';
+// TODO Configure HTTP basic authorization: bearerAuth
+//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').username = 'YOUR_USERNAME'
+//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').password = 'YOUR_PASSWORD';
+
+final api = MetricsApi metricsApi = MetricsApi();
+final String apiVersion = apiVersion_example; // String | 
+
+try {
+    final response = metricsApi.facilityStrengthMachineMachineStartSession(apiVersion);
+    print(response);
+} catch on DioError (e) {
+    print('Exception when calling MetricsApi->facilityStrengthMachineMachineStartSession: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **apiVersion** | **String**|  | [optional] 
+
+### Return type
+
+[**FacilityStrengthMachineStartSessionResponse**](FacilityStrengthMachineStartSessionResponse.md)
 
 ### Authorization
 
@@ -9903,10 +11127,10 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **machineAdjustmentCreate**
-> MachineAdjustmentResponse machineAdjustmentCreate(model, leftPosition, rightPosition, seat, start, stop, userId, apiVersion)
+# **machineClaimClaim**
+> MachineClaimClaimResponse machineClaimClaim(claimCode, apiVersion)
 
-Create a user machine adjustment
+Claim a single machine for a facility
 
 1
 
@@ -9918,20 +11142,14 @@ import 'package:keiser_metrics_sdk/api.dart';
 //defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').password = 'YOUR_PASSWORD';
 
 final api = MetricsApi metricsApi = MetricsApi();
-final String model = model_example; // String | 
-final String leftPosition = leftPosition_example; // String | 
-final String rightPosition = rightPosition_example; // String | 
-final String seat = seat_example; // String | 
-final String start = start_example; // String | 
-final String stop = stop_example; // String | 
-final num userId = 8.14; // num | 
+final String claimCode = claimCode_example; // String | 
 final String apiVersion = apiVersion_example; // String | 
 
 try {
-    final response = metricsApi.machineAdjustmentCreate(model, leftPosition, rightPosition, seat, start, stop, userId, apiVersion);
+    final response = metricsApi.machineClaimClaim(claimCode, apiVersion);
     print(response);
 } catch on DioError (e) {
-    print('Exception when calling MetricsApi->machineAdjustmentCreate: $e\n');
+    print('Exception when calling MetricsApi->machineClaimClaim: $e\n');
 }
 ```
 
@@ -9939,18 +11157,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **model** | **String**|  | 
- **leftPosition** | **String**|  | [optional] 
- **rightPosition** | **String**|  | [optional] 
- **seat** | **String**|  | [optional] 
- **start** | **String**|  | [optional] 
- **stop** | **String**|  | [optional] 
- **userId** | **num**|  | [optional] 
+ **claimCode** | **String**|  | 
  **apiVersion** | **String**|  | [optional] 
 
 ### Return type
 
-[**MachineAdjustmentResponse**](MachineAdjustmentResponse.md)
+[**MachineClaimClaimResponse**](MachineClaimClaimResponse.md)
 
 ### Authorization
 
@@ -9963,29 +11175,26 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **machineAdjustmentDelete**
-> machineAdjustmentDelete(id, userId, apiVersion)
+# **machineClaimConfirm**
+> MachineClaimConfirmResponse machineClaimConfirm(claimAccessCode, apiVersion)
 
-Delete a users machine adjustment
+Confirm a claimed machine and receive permanent token
 
 1
 
 ### Example
 ```dart
 import 'package:keiser_metrics_sdk/api.dart';
-// TODO Configure HTTP basic authorization: bearerAuth
-//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').username = 'YOUR_USERNAME'
-//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').password = 'YOUR_PASSWORD';
 
 final api = MetricsApi metricsApi = MetricsApi();
-final num id = 8.14; // num | 
-final num userId = 8.14; // num | 
+final String claimAccessCode = claimAccessCode_example; // String | 
 final String apiVersion = apiVersion_example; // String | 
 
 try {
-    metricsApi.machineAdjustmentDelete(id, userId, apiVersion);
+    final response = metricsApi.machineClaimConfirm(claimAccessCode, apiVersion);
+    print(response);
 } catch on DioError (e) {
-    print('Exception when calling MetricsApi->machineAdjustmentDelete: $e\n');
+    print('Exception when calling MetricsApi->machineClaimConfirm: $e\n');
 }
 ```
 
@@ -9993,29 +11202,28 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **num**|  | 
- **userId** | **num**|  | [optional] 
+ **claimAccessCode** | **String**|  | 
  **apiVersion** | **String**|  | [optional] 
 
 ### Return type
 
-void (empty response body)
+[**MachineClaimConfirmResponse**](MachineClaimConfirmResponse.md)
 
 ### Authorization
 
-[bearerAuth](../README.md#bearerAuth)
+No authorization required
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **machineAdjustmentList**
-> MachineAdjustmentListResponse machineAdjustmentList(ascending, limit, model, offset, sort, userId, apiVersion)
+# **machineClaimList**
+> MachineClaimListResponse machineClaimList(ascending, limit, offset, sort, status, apiVersion)
 
-List user machine adjustments
+List machine claims for a facility
 
 1
 
@@ -10029,17 +11237,16 @@ import 'package:keiser_metrics_sdk/api.dart';
 final api = MetricsApi metricsApi = MetricsApi();
 final bool ascending = true; // bool | 
 final num limit = 8.14; // num | 
-final String model = model_example; // String | 
 final num offset = 8.14; // num | 
-final String sort = sort_example; // String | Allowed values: id
-final num userId = 8.14; // num | 
+final String sort = sort_example; // String | Allowed values: id, createdAt
+final String status = status_example; // String | 
 final String apiVersion = apiVersion_example; // String | 
 
 try {
-    final response = metricsApi.machineAdjustmentList(ascending, limit, model, offset, sort, userId, apiVersion);
+    final response = metricsApi.machineClaimList(ascending, limit, offset, sort, status, apiVersion);
     print(response);
 } catch on DioError (e) {
-    print('Exception when calling MetricsApi->machineAdjustmentList: $e\n');
+    print('Exception when calling MetricsApi->machineClaimList: $e\n');
 }
 ```
 
@@ -10047,17 +11254,16 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **ascending** | **bool**|  | [optional] [default to true]
+ **ascending** | **bool**|  | [optional] [default to false]
  **limit** | **num**|  | [optional] 
- **model** | **String**|  | [optional] 
  **offset** | **num**|  | [optional] 
- **sort** | **String**| Allowed values: id | [optional] [default to 'id']
- **userId** | **num**|  | [optional] 
+ **sort** | **String**| Allowed values: id, createdAt | [optional] [default to 'id']
+ **status** | **String**|  | [optional] 
  **apiVersion** | **String**|  | [optional] 
 
 ### Return type
 
-[**MachineAdjustmentListResponse**](MachineAdjustmentListResponse.md)
+[**MachineClaimListResponse**](MachineClaimListResponse.md)
 
 ### Authorization
 
@@ -10070,10 +11276,69 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **machineAdjustmentShow**
-> MachineAdjustmentResponse machineAdjustmentShow(id, userId, apiVersion)
+# **machineClaimRegister**
+> MachineClaimRegisterResponse machineClaimRegister(displayUUID, firmwareVersion, leftCylinderSerial, line, machineModel, mainBoardSerial, softwareVersion, rightCylinderSerial, apiVersion)
 
-Shows a users machine adjustments
+Register a machine for facility claiming
+
+1
+
+### Example
+```dart
+import 'package:keiser_metrics_sdk/api.dart';
+
+final api = MetricsApi metricsApi = MetricsApi();
+final String displayUUID = displayUUID_example; // String | 
+final String firmwareVersion = firmwareVersion_example; // String | 
+final String leftCylinderSerial = leftCylinderSerial_example; // String | 
+final String line = line_example; // String | 
+final String machineModel = machineModel_example; // String | 
+final String mainBoardSerial = mainBoardSerial_example; // String | 
+final String softwareVersion = softwareVersion_example; // String | 
+final String rightCylinderSerial = rightCylinderSerial_example; // String | 
+final String apiVersion = apiVersion_example; // String | 
+
+try {
+    final response = metricsApi.machineClaimRegister(displayUUID, firmwareVersion, leftCylinderSerial, line, machineModel, mainBoardSerial, softwareVersion, rightCylinderSerial, apiVersion);
+    print(response);
+} catch on DioError (e) {
+    print('Exception when calling MetricsApi->machineClaimRegister: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **displayUUID** | **String**|  | 
+ **firmwareVersion** | **String**|  | 
+ **leftCylinderSerial** | **String**|  | 
+ **line** | **String**|  | 
+ **machineModel** | **String**|  | 
+ **mainBoardSerial** | **String**|  | 
+ **softwareVersion** | **String**|  | 
+ **rightCylinderSerial** | **String**|  | [optional] 
+ **apiVersion** | **String**|  | [optional] 
+
+### Return type
+
+[**MachineClaimRegisterResponse**](MachineClaimRegisterResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **machineClaimShow**
+> MachineClaimShowResponse machineClaimShow(machineClaimId, apiVersion)
+
+Show a machine claim for a facility
 
 1
 
@@ -10085,15 +11350,14 @@ import 'package:keiser_metrics_sdk/api.dart';
 //defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').password = 'YOUR_PASSWORD';
 
 final api = MetricsApi metricsApi = MetricsApi();
-final num id = 8.14; // num | 
-final num userId = 8.14; // num | 
+final num machineClaimId = 8.14; // num | 
 final String apiVersion = apiVersion_example; // String | 
 
 try {
-    final response = metricsApi.machineAdjustmentShow(id, userId, apiVersion);
+    final response = metricsApi.machineClaimShow(machineClaimId, apiVersion);
     print(response);
 } catch on DioError (e) {
-    print('Exception when calling MetricsApi->machineAdjustmentShow: $e\n');
+    print('Exception when calling MetricsApi->machineClaimShow: $e\n');
 }
 ```
 
@@ -10101,13 +11365,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **num**|  | 
- **userId** | **num**|  | [optional] 
+ **machineClaimId** | **num**|  | 
  **apiVersion** | **String**|  | [optional] 
 
 ### Return type
 
-[**MachineAdjustmentResponse**](MachineAdjustmentResponse.md)
+[**MachineClaimShowResponse**](MachineClaimShowResponse.md)
 
 ### Authorization
 
@@ -10120,10 +11383,55 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **machineAdjustmentUpdate**
-> MachineAdjustmentResponse machineAdjustmentUpdate(id, leftPosition, rightPosition, seat, start, stop, userId, apiVersion)
+# **machineClaimStatus**
+> MachineClaimStatusResponse machineClaimStatus(claimAccessCode, apiVersion)
 
-Update a users machine adjustments
+Check claim status for a machine
+
+1
+
+### Example
+```dart
+import 'package:keiser_metrics_sdk/api.dart';
+
+final api = MetricsApi metricsApi = MetricsApi();
+final String claimAccessCode = claimAccessCode_example; // String | 
+final String apiVersion = apiVersion_example; // String | 
+
+try {
+    final response = metricsApi.machineClaimStatus(claimAccessCode, apiVersion);
+    print(response);
+} catch on DioError (e) {
+    print('Exception when calling MetricsApi->machineClaimStatus: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **claimAccessCode** | **String**|  | 
+ **apiVersion** | **String**|  | [optional] 
+
+### Return type
+
+[**MachineClaimStatusResponse**](MachineClaimStatusResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **machineClaimUnclaim**
+> MachineClaimUnclaimResponse machineClaimUnclaim(machineClaimId, apiVersion)
+
+Unclaim a machine that has not yet been confirmed
 
 1
 
@@ -10135,20 +11443,14 @@ import 'package:keiser_metrics_sdk/api.dart';
 //defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').password = 'YOUR_PASSWORD';
 
 final api = MetricsApi metricsApi = MetricsApi();
-final num id = 8.14; // num | 
-final String leftPosition = leftPosition_example; // String | 
-final String rightPosition = rightPosition_example; // String | 
-final String seat = seat_example; // String | 
-final String start = start_example; // String | 
-final String stop = stop_example; // String | 
-final num userId = 8.14; // num | 
+final num machineClaimId = 8.14; // num | 
 final String apiVersion = apiVersion_example; // String | 
 
 try {
-    final response = metricsApi.machineAdjustmentUpdate(id, leftPosition, rightPosition, seat, start, stop, userId, apiVersion);
+    final response = metricsApi.machineClaimUnclaim(machineClaimId, apiVersion);
     print(response);
 } catch on DioError (e) {
-    print('Exception when calling MetricsApi->machineAdjustmentUpdate: $e\n');
+    print('Exception when calling MetricsApi->machineClaimUnclaim: $e\n');
 }
 ```
 
@@ -10156,18 +11458,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **num**|  | 
- **leftPosition** | **String**|  | [optional] 
- **rightPosition** | **String**|  | [optional] 
- **seat** | **String**|  | [optional] 
- **start** | **String**|  | [optional] 
- **stop** | **String**|  | [optional] 
- **userId** | **num**|  | [optional] 
+ **machineClaimId** | **num**|  | 
  **apiVersion** | **String**|  | [optional] 
 
 ### Return type
 
-[**MachineAdjustmentResponse**](MachineAdjustmentResponse.md)
+[**MachineClaimUnclaimResponse**](MachineClaimUnclaimResponse.md)
 
 ### Authorization
 
@@ -14931,7 +16227,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **strengthExerciseVariantList**
-> StrengthExerciseVariantListResponse strengthExerciseVariantList(ascending, attachment, equipmentMechanicalMovement, limit, offset, sort, strengthExerciseId, strengthMachineId, variant, apiVersion)
+> StrengthExerciseVariantListResponse strengthExerciseVariantList(ascending, attachment, equipmentMechanicalMovement, limit, line, machineModel, offset, sort, strengthExerciseId, strengthMachineId, variant, apiVersion)
 
 List strength exercise variants
 
@@ -14949,6 +16245,8 @@ final bool ascending = true; // bool |
 final String attachment = attachment_example; // String | Allowed values: bar, rope, singleHandles, doubleHandles, ankleStrap, thighStrap, belt, dip, pullUpBar
 final String equipmentMechanicalMovement = equipmentMechanicalMovement_example; // String | Allowed values: unilateral, bilateral
 final num limit = 8.14; // num | 
+final String line = line_example; // String | 
+final String machineModel = machineModel_example; // String | 
 final num offset = 8.14; // num | 
 final String sort = sort_example; // String | Allowed values: id, variant, attachment, equipmentMechanicalMovement
 final num strengthExerciseId = 8.14; // num | 
@@ -14957,7 +16255,7 @@ final String variant = variant_example; // String | Allowed values: normal, sing
 final String apiVersion = apiVersion_example; // String | 
 
 try {
-    final response = metricsApi.strengthExerciseVariantList(ascending, attachment, equipmentMechanicalMovement, limit, offset, sort, strengthExerciseId, strengthMachineId, variant, apiVersion);
+    final response = metricsApi.strengthExerciseVariantList(ascending, attachment, equipmentMechanicalMovement, limit, line, machineModel, offset, sort, strengthExerciseId, strengthMachineId, variant, apiVersion);
     print(response);
 } catch on DioError (e) {
     print('Exception when calling MetricsApi->strengthExerciseVariantList: $e\n');
@@ -14972,6 +16270,8 @@ Name | Type | Description  | Notes
  **attachment** | **String**| Allowed values: bar, rope, singleHandles, doubleHandles, ankleStrap, thighStrap, belt, dip, pullUpBar | [optional] 
  **equipmentMechanicalMovement** | **String**| Allowed values: unilateral, bilateral | [optional] 
  **limit** | **num**|  | [optional] 
+ **line** | **String**|  | [optional] 
+ **machineModel** | **String**|  | [optional] 
  **offset** | **num**|  | [optional] 
  **sort** | **String**| Allowed values: id, variant, attachment, equipmentMechanicalMovement | [optional] [default to 'id']
  **strengthExerciseId** | **num**|  | [optional] 
@@ -15390,6 +16690,55 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **strengthMachineDataSetFacilityDelete**
+> strengthMachineDataSetFacilityDelete(id, userId, apiVersion)
+
+Delete a strength machine data set
+
+1
+
+### Example
+```dart
+import 'package:keiser_metrics_sdk/api.dart';
+// TODO Configure HTTP basic authorization: bearerAuth
+//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').username = 'YOUR_USERNAME'
+//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').password = 'YOUR_PASSWORD';
+
+final api = MetricsApi metricsApi = MetricsApi();
+final num id = 8.14; // num | 
+final num userId = 8.14; // num | 
+final String apiVersion = apiVersion_example; // String | 
+
+try {
+    metricsApi.strengthMachineDataSetFacilityDelete(id, userId, apiVersion);
+} catch on DioError (e) {
+    print('Exception when calling MetricsApi->strengthMachineDataSetFacilityDelete: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **num**|  | 
+ **userId** | **num**|  | 
+ **apiVersion** | **String**|  | [optional] 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **strengthMachineDataSetList**
 > StrengthMachineDataSetListResponse strengthMachineDataSetList(ascending, from, limit, offset, sort, strengthMachineId, to, userId, apiVersion)
 
@@ -15490,6 +16839,54 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**StrengthMachineDataSetResponse**](StrengthMachineDataSetResponse.md)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **strengthMachineDataSetShowLastSetMetaData**
+> StrengthMachineLastSetMetaDataResponse strengthMachineDataSetShowLastSetMetaData(userId, apiVersion)
+
+Show metadata from the last recorded set on a strength machine
+
+1
+
+### Example
+```dart
+import 'package:keiser_metrics_sdk/api.dart';
+// TODO Configure HTTP basic authorization: bearerAuth
+//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').username = 'YOUR_USERNAME'
+//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').password = 'YOUR_PASSWORD';
+
+final api = MetricsApi metricsApi = MetricsApi();
+final num userId = 8.14; // num | 
+final String apiVersion = apiVersion_example; // String | 
+
+try {
+    final response = metricsApi.strengthMachineDataSetShowLastSetMetaData(userId, apiVersion);
+    print(response);
+} catch on DioError (e) {
+    print('Exception when calling MetricsApi->strengthMachineDataSetShowLastSetMetaData: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **userId** | **num**|  | 
+ **apiVersion** | **String**|  | [optional] 
+
+### Return type
+
+[**StrengthMachineLastSetMetaDataResponse**](StrengthMachineLastSetMetaDataResponse.md)
 
 ### Authorization
 
@@ -17237,6 +18634,273 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **userSessionDisplayConfigurationCreate**
+> UserSessionDisplayConfigurationResponse userSessionDisplayConfigurationCreate(dataMode, focusMode, names, addedMass, performanceDropOff, secondsDelay, apiVersion)
+
+Create a user session display configuration
+
+1
+
+### Example
+```dart
+import 'package:keiser_metrics_sdk/api.dart';
+// TODO Configure HTTP basic authorization: bearerAuth
+//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').username = 'YOUR_USERNAME'
+//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').password = 'YOUR_PASSWORD';
+
+final api = MetricsApi metricsApi = MetricsApi();
+final String dataMode = dataMode_example; // String | Allowed values: power, velocity
+final String focusMode = focusMode_example; // String | Allowed values: mean, peak
+final String names = names_example; // String | 
+final num addedMass = 8.14; // num | 
+final num performanceDropOff = 8.14; // num | 
+final num secondsDelay = 8.14; // num | 
+final String apiVersion = apiVersion_example; // String | 
+
+try {
+    final response = metricsApi.userSessionDisplayConfigurationCreate(dataMode, focusMode, names, addedMass, performanceDropOff, secondsDelay, apiVersion);
+    print(response);
+} catch on DioError (e) {
+    print('Exception when calling MetricsApi->userSessionDisplayConfigurationCreate: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **dataMode** | **String**| Allowed values: power, velocity | 
+ **focusMode** | **String**| Allowed values: mean, peak | 
+ **names** | **String**|  | 
+ **addedMass** | **num**|  | [optional] 
+ **performanceDropOff** | **num**|  | [optional] 
+ **secondsDelay** | **num**|  | [optional] 
+ **apiVersion** | **String**|  | [optional] 
+
+### Return type
+
+[**UserSessionDisplayConfigurationResponse**](UserSessionDisplayConfigurationResponse.md)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **userSessionDisplayConfigurationDelete**
+> userSessionDisplayConfigurationDelete(id, apiVersion)
+
+Delete a user session display configuration
+
+1
+
+### Example
+```dart
+import 'package:keiser_metrics_sdk/api.dart';
+// TODO Configure HTTP basic authorization: bearerAuth
+//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').username = 'YOUR_USERNAME'
+//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').password = 'YOUR_PASSWORD';
+
+final api = MetricsApi metricsApi = MetricsApi();
+final num id = 8.14; // num | 
+final String apiVersion = apiVersion_example; // String | 
+
+try {
+    metricsApi.userSessionDisplayConfigurationDelete(id, apiVersion);
+} catch on DioError (e) {
+    print('Exception when calling MetricsApi->userSessionDisplayConfigurationDelete: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **num**|  | 
+ **apiVersion** | **String**|  | [optional] 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **userSessionDisplayConfigurationList**
+> UserSessionDisplayConfigurationListResponse userSessionDisplayConfigurationList(ascending, limit, offset, sort, apiVersion)
+
+List a user's session display configurations
+
+1
+
+### Example
+```dart
+import 'package:keiser_metrics_sdk/api.dart';
+// TODO Configure HTTP basic authorization: bearerAuth
+//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').username = 'YOUR_USERNAME'
+//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').password = 'YOUR_PASSWORD';
+
+final api = MetricsApi metricsApi = MetricsApi();
+final bool ascending = true; // bool | 
+final num limit = 8.14; // num | 
+final num offset = 8.14; // num | 
+final String sort = sort_example; // String | Allowed values: id, name
+final String apiVersion = apiVersion_example; // String | 
+
+try {
+    final response = metricsApi.userSessionDisplayConfigurationList(ascending, limit, offset, sort, apiVersion);
+    print(response);
+} catch on DioError (e) {
+    print('Exception when calling MetricsApi->userSessionDisplayConfigurationList: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **ascending** | **bool**|  | [optional] [default to true]
+ **limit** | **num**|  | [optional] 
+ **offset** | **num**|  | [optional] 
+ **sort** | **String**| Allowed values: id, name | [optional] [default to 'name']
+ **apiVersion** | **String**|  | [optional] 
+
+### Return type
+
+[**UserSessionDisplayConfigurationListResponse**](UserSessionDisplayConfigurationListResponse.md)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **userSessionDisplayConfigurationShow**
+> UserSessionDisplayConfigurationResponse userSessionDisplayConfigurationShow(id, apiVersion)
+
+Show a user session display configuration
+
+1
+
+### Example
+```dart
+import 'package:keiser_metrics_sdk/api.dart';
+// TODO Configure HTTP basic authorization: bearerAuth
+//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').username = 'YOUR_USERNAME'
+//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').password = 'YOUR_PASSWORD';
+
+final api = MetricsApi metricsApi = MetricsApi();
+final num id = 8.14; // num | 
+final String apiVersion = apiVersion_example; // String | 
+
+try {
+    final response = metricsApi.userSessionDisplayConfigurationShow(id, apiVersion);
+    print(response);
+} catch on DioError (e) {
+    print('Exception when calling MetricsApi->userSessionDisplayConfigurationShow: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **num**|  | 
+ **apiVersion** | **String**|  | [optional] 
+
+### Return type
+
+[**UserSessionDisplayConfigurationResponse**](UserSessionDisplayConfigurationResponse.md)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **userSessionDisplayConfigurationUpdate**
+> UserSessionDisplayConfigurationResponse userSessionDisplayConfigurationUpdate(id, addedMass, dataMode, focusMode, names, performanceDropOff, secondsDelay, apiVersion)
+
+Update a user session display configuration
+
+1
+
+### Example
+```dart
+import 'package:keiser_metrics_sdk/api.dart';
+// TODO Configure HTTP basic authorization: bearerAuth
+//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').username = 'YOUR_USERNAME'
+//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').password = 'YOUR_PASSWORD';
+
+final api = MetricsApi metricsApi = MetricsApi();
+final num id = 8.14; // num | 
+final num addedMass = 8.14; // num | 
+final String dataMode = dataMode_example; // String | Allowed values: power, velocity
+final String focusMode = focusMode_example; // String | Allowed values: mean, peak
+final String names = names_example; // String | 
+final num performanceDropOff = 8.14; // num | 
+final num secondsDelay = 8.14; // num | 
+final String apiVersion = apiVersion_example; // String | 
+
+try {
+    final response = metricsApi.userSessionDisplayConfigurationUpdate(id, addedMass, dataMode, focusMode, names, performanceDropOff, secondsDelay, apiVersion);
+    print(response);
+} catch on DioError (e) {
+    print('Exception when calling MetricsApi->userSessionDisplayConfigurationUpdate: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **num**|  | 
+ **addedMass** | **num**|  | [optional] 
+ **dataMode** | **String**| Allowed values: power, velocity | [optional] 
+ **focusMode** | **String**| Allowed values: mean, peak | [optional] 
+ **names** | **String**|  | [optional] 
+ **performanceDropOff** | **num**|  | [optional] 
+ **secondsDelay** | **num**|  | [optional] 
+ **apiVersion** | **String**|  | [optional] 
+
+### Return type
+
+[**UserSessionDisplayConfigurationResponse**](UserSessionDisplayConfigurationResponse.md)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **userShow**
 > UserResponse userShow(userId, apiVersion)
 
@@ -17694,6 +19358,326 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **workoutSetBulkExport**
+> workoutSetBulkExport(from, to, userId, apiVersion)
+
+Export many A400 workout sets across a date range as a zip of reps.csv + time_series.csv
+
+1
+
+### Example
+```dart
+import 'package:keiser_metrics_sdk/api.dart';
+// TODO Configure HTTP basic authorization: bearerAuth
+//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').username = 'YOUR_USERNAME'
+//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').password = 'YOUR_PASSWORD';
+
+final api = MetricsApi metricsApi = MetricsApi();
+final DateTime from = 2013-10-20T19:20:30+01:00; // DateTime | 
+final DateTime to = 2013-10-20T19:20:30+01:00; // DateTime | 
+final num userId = 8.14; // num | 
+final String apiVersion = apiVersion_example; // String | 
+
+try {
+    metricsApi.workoutSetBulkExport(from, to, userId, apiVersion);
+} catch on DioError (e) {
+    print('Exception when calling MetricsApi->workoutSetBulkExport: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **from** | **DateTime**|  | 
+ **to** | **DateTime**|  | 
+ **userId** | **num**|  | [optional] 
+ **apiVersion** | **String**|  | [optional] 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **workoutSetCreate**
+> StrengthMachineDataSetResponse workoutSetCreate(clientSetId, userId, startedAt, workoutSetData, apiVersion, exerciseId)
+
+Create a workout set from an Apollo Display device (machine-token auth).
+
+1
+
+### Example
+```dart
+import 'package:keiser_metrics_sdk/api.dart';
+// TODO Configure HTTP basic authorization: bearerAuth
+//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').username = 'YOUR_USERNAME'
+//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').password = 'YOUR_PASSWORD';
+
+final api = MetricsApi metricsApi = MetricsApi();
+final String clientSetId = clientSetId_example; // String | 
+final num userId = 8.14; // num | 
+final DateTime startedAt = 2013-10-20T19:20:30+01:00; // DateTime | 
+final MultipartFile workoutSetData = BINARY_DATA_HERE; // MultipartFile | gzip-compressed JSON (application/gzip)
+final String apiVersion = apiVersion_example; // String | 
+final num exerciseId = 8.14; // num | 
+
+try {
+    final response = metricsApi.workoutSetCreate(clientSetId, userId, startedAt, workoutSetData, apiVersion, exerciseId);
+    print(response);
+} catch on DioError (e) {
+    print('Exception when calling MetricsApi->workoutSetCreate: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **clientSetId** | **String**|  | 
+ **userId** | **num**|  | 
+ **startedAt** | **DateTime**|  | 
+ **workoutSetData** | **MultipartFile**| gzip-compressed JSON (application/gzip) | 
+ **apiVersion** | **String**|  | [optional] 
+ **exerciseId** | **num**|  | [optional] 
+
+### Return type
+
+[**StrengthMachineDataSetResponse**](StrengthMachineDataSetResponse.md)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: multipart/form-data
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **workoutSetExport**
+> workoutSetExport(id, apiVersion)
+
+Export one A400 workout set as a zip of reps.csv + time_series.csv
+
+1
+
+### Example
+```dart
+import 'package:keiser_metrics_sdk/api.dart';
+// TODO Configure HTTP basic authorization: bearerAuth
+//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').username = 'YOUR_USERNAME'
+//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').password = 'YOUR_PASSWORD';
+
+final api = MetricsApi metricsApi = MetricsApi();
+final num id = 8.14; // num | 
+final String apiVersion = apiVersion_example; // String | 
+
+try {
+    metricsApi.workoutSetExport(id, apiVersion);
+} catch on DioError (e) {
+    print('Exception when calling MetricsApi->workoutSetExport: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **num**|  | 
+ **apiVersion** | **String**|  | [optional] 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **workoutSetList**
+> StrengthMachineDataSetListResponse workoutSetList(ascending, from, limit, offset, query, sort, strengthMachineId, to, userId, apiVersion)
+
+List A400 workout sets for a facility
+
+1
+
+### Example
+```dart
+import 'package:keiser_metrics_sdk/api.dart';
+// TODO Configure HTTP basic authorization: bearerAuth
+//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').username = 'YOUR_USERNAME'
+//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').password = 'YOUR_PASSWORD';
+
+final api = MetricsApi metricsApi = MetricsApi();
+final bool ascending = true; // bool | 
+final DateTime from = 2013-10-20T19:20:30+01:00; // DateTime | 
+final num limit = 8.14; // num | 
+final num offset = 8.14; // num | 
+final String query = query_example; // String | 
+final String sort = sort_example; // String | Allowed values: id, completedAt
+final num strengthMachineId = 8.14; // num | 
+final DateTime to = 2013-10-20T19:20:30+01:00; // DateTime | 
+final num userId = 8.14; // num | 
+final String apiVersion = apiVersion_example; // String | 
+
+try {
+    final response = metricsApi.workoutSetList(ascending, from, limit, offset, query, sort, strengthMachineId, to, userId, apiVersion);
+    print(response);
+} catch on DioError (e) {
+    print('Exception when calling MetricsApi->workoutSetList: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **ascending** | **bool**|  | [optional] [default to false]
+ **from** | **DateTime**|  | [optional] 
+ **limit** | **num**|  | [optional] 
+ **offset** | **num**|  | [optional] 
+ **query** | **String**|  | [optional] 
+ **sort** | **String**| Allowed values: id, completedAt | [optional] [default to 'completedAt']
+ **strengthMachineId** | **num**|  | [optional] 
+ **to** | **DateTime**|  | [optional] 
+ **userId** | **num**|  | [optional] 
+ **apiVersion** | **String**|  | [optional] 
+
+### Return type
+
+[**StrengthMachineDataSetListResponse**](StrengthMachineDataSetListResponse.md)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **workoutSetShow**
+> WorkoutSetResponse workoutSetShow(id, apiVersion)
+
+Show an A400 workout set
+
+1
+
+### Example
+```dart
+import 'package:keiser_metrics_sdk/api.dart';
+// TODO Configure HTTP basic authorization: bearerAuth
+//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').username = 'YOUR_USERNAME'
+//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').password = 'YOUR_PASSWORD';
+
+final api = MetricsApi metricsApi = MetricsApi();
+final num id = 8.14; // num | 
+final String apiVersion = apiVersion_example; // String | 
+
+try {
+    final response = metricsApi.workoutSetShow(id, apiVersion);
+    print(response);
+} catch on DioError (e) {
+    print('Exception when calling MetricsApi->workoutSetShow: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **num**|  | 
+ **apiVersion** | **String**|  | [optional] 
+
+### Return type
+
+[**WorkoutSetResponse**](WorkoutSetResponse.md)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **workoutSetUpdate**
+> StrengthMachineDataSetResponse workoutSetUpdate(strengthMachineDataSetId, userId, workoutSetData, apiVersion, exerciseId)
+
+Update an existing workout set from an Apollo Display device (machine-token auth).
+
+1
+
+### Example
+```dart
+import 'package:keiser_metrics_sdk/api.dart';
+// TODO Configure HTTP basic authorization: bearerAuth
+//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').username = 'YOUR_USERNAME'
+//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').password = 'YOUR_PASSWORD';
+
+final api = MetricsApi metricsApi = MetricsApi();
+final num strengthMachineDataSetId = 8.14; // num | 
+final num userId = 8.14; // num | 
+final MultipartFile workoutSetData = BINARY_DATA_HERE; // MultipartFile | gzip-compressed JSON (application/gzip)
+final String apiVersion = apiVersion_example; // String | 
+final num exerciseId = 8.14; // num | 
+
+try {
+    final response = metricsApi.workoutSetUpdate(strengthMachineDataSetId, userId, workoutSetData, apiVersion, exerciseId);
+    print(response);
+} catch on DioError (e) {
+    print('Exception when calling MetricsApi->workoutSetUpdate: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **strengthMachineDataSetId** | **num**|  | 
+ **userId** | **num**|  | 
+ **workoutSetData** | **MultipartFile**| gzip-compressed JSON (application/gzip) | 
+ **apiVersion** | **String**|  | [optional] 
+ **exerciseId** | **num**|  | [optional] 
+
+### Return type
+
+[**StrengthMachineDataSetResponse**](StrengthMachineDataSetResponse.md)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: multipart/form-data
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)

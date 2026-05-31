@@ -6,6 +6,7 @@
 import 'package:keiser_metrics_sdk/src/model/strength_exercise_data.dart';
 import 'package:keiser_metrics_sdk/src/model/strength_machine_line.dart';
 import 'package:keiser_metrics_sdk/src/model/strength_machine_model_data.dart';
+import 'package:keiser_metrics_sdk/src/model/strength_machine_model_number_data.dart';
 import 'package:json_annotation/json_annotation.dart';
 
 part 'strength_machine_data.g.dart';
@@ -34,6 +35,8 @@ class StrengthMachineData {
      this.defaultStrengthExerciseId,
 
      this.defaultStrengthExercise,
+
+     this.modelNumbers,
 
      this.models,
   });
@@ -124,6 +127,18 @@ class StrengthMachineData {
 
   @JsonKey(
     
+    name: r'modelNumbers',
+    required: false,
+    includeIfNull: false
+  )
+
+
+  final List<StrengthMachineModelNumberData>? modelNumbers;
+
+
+
+  @JsonKey(
+    
     name: r'models',
     required: false,
     includeIfNull: false
@@ -143,6 +158,7 @@ class StrengthMachineData {
      other.dualSided == dualSided &&
      other.defaultStrengthExerciseId == defaultStrengthExerciseId &&
      other.defaultStrengthExercise == defaultStrengthExercise &&
+     other.modelNumbers == modelNumbers &&
      other.models == models;
 
   @override
@@ -154,6 +170,7 @@ class StrengthMachineData {
     dualSided.hashCode +
     defaultStrengthExerciseId.hashCode +
     defaultStrengthExercise.hashCode +
+    modelNumbers.hashCode +
     models.hashCode;
 
   factory StrengthMachineData.fromJson(Map<String, dynamic> json) => _$StrengthMachineDataFromJson(json);

@@ -13,8 +13,11 @@ Name | Type | Description | Notes
 **facilityId** | **num** |  | 
 **member** | **bool** |  | 
 **memberIdentifier** | **String** |  | [optional] 
+**pinCode** | **String** |  | [optional] 
+**externalIdentifier** | **String** |  | [optional] 
 **hasSecretSet** | **bool** |  | 
 **employeeRole** | [**EmployeeRole**](EmployeeRole.md) |  | [optional] 
+**deactivatedAt** | **String** |  | 
 **facility** | [**FacilityData**](FacilityData.md) |  | [optional] 
 **user** | [**FacilitySessionUserData**](FacilitySessionUserData.md) |  | [optional] 
 

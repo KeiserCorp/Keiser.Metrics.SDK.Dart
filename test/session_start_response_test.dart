@@ -7,7 +7,7 @@ void main() {
   // TODO add properties to the entity
 
   group(SessionStartResponse, () {
-    // Object echipData
+    // Map<String, Object> echipData
     test('to test the property `echipData`', () async {
       // TODO
     });

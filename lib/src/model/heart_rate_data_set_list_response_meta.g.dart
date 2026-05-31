@@ -61,7 +61,7 @@ const _$HeartRateDataSetSortingEnumMap = {
   HeartRateDataSetSorting.id: 'id',
   HeartRateDataSetSorting.startedAt: 'startedAt',
   HeartRateDataSetSorting.endedAt: 'endedAt',
-  HeartRateDataSetSorting.source_: 'source',
+  HeartRateDataSetSorting.source: 'source',
   HeartRateDataSetSorting.maxHeartRate: 'maxHeartRate',
   HeartRateDataSetSorting.averageHeartRate: 'averageHeartRate',
 };

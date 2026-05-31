@@ -6,10 +6,12 @@
 import 'package:keiser_metrics_sdk/src/model/a500_data_set_data.dart';
 import 'package:keiser_metrics_sdk/src/model/strength_machine_data_set_test_data.dart';
 import 'package:keiser_metrics_sdk/src/model/resistance_precision.dart';
+import 'package:keiser_metrics_sdk/src/model/profile_data.dart';
 import 'package:keiser_metrics_sdk/src/model/strength_exercise_data.dart';
 import 'package:keiser_metrics_sdk/src/model/session_data.dart';
 import 'package:keiser_metrics_sdk/src/model/strength_machine_data.dart';
 import 'package:keiser_metrics_sdk/src/model/force_unit.dart';
+import 'package:keiser_metrics_sdk/src/model/a400_data_set_data.dart';
 import 'package:keiser_metrics_sdk/src/model/facility_strength_machine_data.dart';
 import 'package:json_annotation/json_annotation.dart';
 
@@ -64,6 +66,12 @@ class StrengthMachineDataSetData {
 
      this.addedWeight,
 
+     this.clientSetId,
+
+     this.setNumber,
+
+     this.startedAt,
+
      this.test,
 
      this.strengthMachine,
@@ -72,7 +80,11 @@ class StrengthMachineDataSetData {
 
      this.a500DataSet,
 
+     this.a400DataSet,
+
      this.session,
+
+     this.profile,
 
      this.facilityStrengthMachine,
   });
@@ -307,6 +319,42 @@ class StrengthMachineDataSetData {
 
   @JsonKey(
     
+    name: r'clientSetId',
+    required: false,
+    includeIfNull: false
+  )
+
+
+  final String? clientSetId;
+
+
+
+  @JsonKey(
+    
+    name: r'setNumber',
+    required: false,
+    includeIfNull: false
+  )
+
+
+  final num? setNumber;
+
+
+
+  @JsonKey(
+    
+    name: r'startedAt',
+    required: false,
+    includeIfNull: false
+  )
+
+
+  final DateTime? startedAt;
+
+
+
+  @JsonKey(
+    
     name: r'test',
     required: false,
     includeIfNull: false
@@ -355,6 +403,18 @@ class StrengthMachineDataSetData {
 
   @JsonKey(
     
+    name: r'a400DataSet',
+    required: false,
+    includeIfNull: false
+  )
+
+
+  final A400DataSetData? a400DataSet;
+
+
+
+  @JsonKey(
+    
     name: r'session',
     required: false,
     includeIfNull: false
@@ -362,6 +422,18 @@ class StrengthMachineDataSetData {
 
 
   final SessionData? session;
+
+
+
+  @JsonKey(
+    
+    name: r'profile',
+    required: false,
+    includeIfNull: false
+  )
+
+
+  final ProfileData? profile;
 
 
 
@@ -398,11 +470,16 @@ class StrengthMachineDataSetData {
      other.work == work &&
      other.distance == distance &&
      other.addedWeight == addedWeight &&
+     other.clientSetId == clientSetId &&
+     other.setNumber == setNumber &&
+     other.startedAt == startedAt &&
      other.test == test &&
      other.strengthMachine == strengthMachine &&
      other.strengthExercise == strengthExercise &&
      other.a500DataSet == a500DataSet &&
+     other.a400DataSet == a400DataSet &&
      other.session == session &&
+     other.profile == profile &&
      other.facilityStrengthMachine == facilityStrengthMachine;
 
   @override
@@ -426,11 +503,16 @@ class StrengthMachineDataSetData {
     work.hashCode +
     distance.hashCode +
     addedWeight.hashCode +
+    clientSetId.hashCode +
+    setNumber.hashCode +
+    startedAt.hashCode +
     test.hashCode +
     strengthMachine.hashCode +
     strengthExercise.hashCode +
     a500DataSet.hashCode +
+    a400DataSet.hashCode +
     session.hashCode +
+    profile.hashCode +
     facilityStrengthMachine.hashCode;
 
   factory StrengthMachineDataSetData.fromJson(Map<String, dynamic> json) => _$StrengthMachineDataSetDataFromJson(json);

@@ -17,6 +17,16 @@ void main() {
       // TODO
     });
 
+    // String machineModel
+    test('to test the property `machineModel`', () async {
+      // TODO
+    });
+
+    // StrengthMachineLine line
+    test('to test the property `line`', () async {
+      // TODO
+    });
+
     // StrengthExerciseVariantType variant
     test('to test the property `variant`', () async {
       // TODO

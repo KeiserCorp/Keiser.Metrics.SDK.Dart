@@ -36,7 +36,7 @@ class SessionStartResponse {
   )
 
 
-  final Object echipData;
+  final Map<String, Object> echipData;
 
 
 

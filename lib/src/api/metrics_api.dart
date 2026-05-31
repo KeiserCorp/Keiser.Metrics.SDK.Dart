@@ -43,12 +43,18 @@ import 'package:keiser_metrics_sdk/src/model/facility_access_control_response.da
 import 'package:keiser_metrics_sdk/src/model/facility_cardio_machine_list_response.dart';
 import 'package:keiser_metrics_sdk/src/model/facility_cardio_machine_response.dart';
 import 'package:keiser_metrics_sdk/src/model/facility_configuration_response.dart';
+import 'package:keiser_metrics_sdk/src/model/facility_display_configuration_response.dart';
+import 'package:keiser_metrics_sdk/src/model/facility_hub_link_status_response.dart';
+import 'package:keiser_metrics_sdk/src/model/facility_hub_list_response.dart';
+import 'package:keiser_metrics_sdk/src/model/facility_hub_update_response.dart';
 import 'package:keiser_metrics_sdk/src/model/facility_in_body_integration_response.dart';
 import 'package:keiser_metrics_sdk/src/model/facility_kiosk_token_response.dart';
 import 'package:keiser_metrics_sdk/src/model/facility_license_list_response.dart';
 import 'package:keiser_metrics_sdk/src/model/facility_license_response.dart';
 import 'package:keiser_metrics_sdk/src/model/facility_list_response.dart';
+import 'package:keiser_metrics_sdk/src/model/facility_pin_login_response.dart';
 import 'package:keiser_metrics_sdk/src/model/facility_profile_response.dart';
+import 'package:keiser_metrics_sdk/src/model/facility_relationship_nova_staff_invite_response.dart';
 import 'package:keiser_metrics_sdk/src/model/facility_relationship_request_list_response.dart';
 import 'package:keiser_metrics_sdk/src/model/facility_relationship_request_response.dart';
 import 'package:keiser_metrics_sdk/src/model/facility_relationship_response.dart';
@@ -62,6 +68,7 @@ import 'package:keiser_metrics_sdk/src/model/facility_strength_machine_list_resp
 import 'package:keiser_metrics_sdk/src/model/facility_strength_machine_maintenance_record_list_response.dart';
 import 'package:keiser_metrics_sdk/src/model/facility_strength_machine_maintenance_record_response.dart';
 import 'package:keiser_metrics_sdk/src/model/facility_strength_machine_response.dart';
+import 'package:keiser_metrics_sdk/src/model/facility_strength_machine_start_session_response.dart';
 import 'package:keiser_metrics_sdk/src/model/facility_strength_machine_utilization_instance_list_response.dart';
 import 'package:keiser_metrics_sdk/src/model/facility_strength_machine_utilization_instance_response.dart';
 import 'package:keiser_metrics_sdk/src/model/facility_user_relationship_list_response.dart';
@@ -71,6 +78,7 @@ import 'package:keiser_metrics_sdk/src/model/heart_rate_data_set_list_response.d
 import 'package:keiser_metrics_sdk/src/model/heart_rate_data_set_response.dart';
 import 'package:keiser_metrics_sdk/src/model/height_measurement_list_response.dart';
 import 'package:keiser_metrics_sdk/src/model/height_measurement_response.dart';
+import 'package:keiser_metrics_sdk/src/model/hub_link_claim_response.dart';
 import 'package:keiser_metrics_sdk/src/model/kiosk_session_response.dart';
 import 'package:keiser_metrics_sdk/src/model/m_series_app_session_export_response.dart';
 import 'package:keiser_metrics_sdk/src/model/m_series_app_session_list_response.dart';
@@ -81,8 +89,14 @@ import 'package:keiser_metrics_sdk/src/model/m_series_data_set_segment_response.
 import 'package:keiser_metrics_sdk/src/model/m_series_ftp_measurement_list_response.dart';
 import 'package:keiser_metrics_sdk/src/model/m_series_ftp_measurement_response.dart';
 import 'package:keiser_metrics_sdk/src/model/m_series_profile_stats_response.dart';
-import 'package:keiser_metrics_sdk/src/model/machine_adjustment_list_response.dart';
-import 'package:keiser_metrics_sdk/src/model/machine_adjustment_response.dart';
+import 'package:keiser_metrics_sdk/src/model/machine_claim_claim_response.dart';
+import 'package:keiser_metrics_sdk/src/model/machine_claim_confirm_response.dart';
+import 'package:keiser_metrics_sdk/src/model/machine_claim_list_response.dart';
+import 'package:keiser_metrics_sdk/src/model/machine_claim_register_response.dart';
+import 'package:keiser_metrics_sdk/src/model/machine_claim_show_response.dart';
+import 'package:keiser_metrics_sdk/src/model/machine_claim_status_response.dart';
+import 'package:keiser_metrics_sdk/src/model/machine_claim_unclaim_response.dart';
+import 'package:keiser_metrics_sdk/src/model/nova_member_bulk_create_response.dart';
 import 'package:keiser_metrics_sdk/src/model/o_auth_service_list_response.dart';
 import 'package:keiser_metrics_sdk/src/model/o_auth_service_response.dart';
 import 'package:keiser_metrics_sdk/src/model/oauth_response.dart';
@@ -122,6 +136,7 @@ import 'package:keiser_metrics_sdk/src/model/strength_machine_data_set_list_resp
 import 'package:keiser_metrics_sdk/src/model/strength_machine_data_set_response.dart';
 import 'package:keiser_metrics_sdk/src/model/strength_machine_history_list_response.dart';
 import 'package:keiser_metrics_sdk/src/model/strength_machine_initialize_response.dart';
+import 'package:keiser_metrics_sdk/src/model/strength_machine_last_set_meta_data_response.dart';
 import 'package:keiser_metrics_sdk/src/model/strength_machine_list_response.dart';
 import 'package:keiser_metrics_sdk/src/model/strength_machine_profile_stats_response.dart';
 import 'package:keiser_metrics_sdk/src/model/strength_machine_response.dart';
@@ -139,10 +154,13 @@ import 'package:keiser_metrics_sdk/src/model/user_application_authorization_user
 import 'package:keiser_metrics_sdk/src/model/user_facility_relationship_list_response.dart';
 import 'package:keiser_metrics_sdk/src/model/user_in_body_integration_response.dart';
 import 'package:keiser_metrics_sdk/src/model/user_response.dart';
+import 'package:keiser_metrics_sdk/src/model/user_session_display_configuration_list_response.dart';
+import 'package:keiser_metrics_sdk/src/model/user_session_display_configuration_response.dart';
 import 'package:keiser_metrics_sdk/src/model/weight_measurement_list_response.dart';
 import 'package:keiser_metrics_sdk/src/model/weight_measurement_response.dart';
+import 'package:keiser_metrics_sdk/src/model/workout_set_response.dart';
+import 'package:dio/dio.dart' show FormData, MultipartFile;
 import 'package:keiser_metrics_connection/keiser_metrics_connection.dart';
-/* import 'package:dio/dio.dart' show MultipartFile; */
 
 dynamic _encodeQueryParameter( dynamic value) {
   return value is DateTime ? value.toIso8601String() : value;
@@ -210,13 +228,14 @@ class MetricsApi {
       r'resistancePrecision': _encodeQueryParameter(resistancePrecision),
       r'setData': _encodeQueryParameter(setData),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
       method: _method,
       queryParameters: _queryParameters,
     );
+    
     final StrengthMachineDataSetResponse _responseData = deserialize<StrengthMachineDataSetResponse, StrengthMachineDataSetResponse>(_response.data!, 'StrengthMachineDataSetResponse', growable: true);
     return _responseData;
     
@@ -248,13 +267,14 @@ class MetricsApi {
       r'repetitionCount': _encodeQueryParameter(repetitionCount),
       r'takenAt': _encodeQueryParameter(takenAt),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     await connection.action(
       path: _path,
       action: _action,
       method: _method,
       queryParameters: _queryParameters,
     );
+    
 
     return;
   }
@@ -294,13 +314,14 @@ class MetricsApi {
       r'memberIdentifier': _encodeQueryParameter(memberIdentifier),
       r'model': _encodeQueryParameter(model),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
       method: _method,
       queryParameters: _queryParameters,
     );
+    
     final A500GetUserResponse _responseData = deserialize<A500GetUserResponse, A500GetUserResponse>(_response.data!, 'A500GetUserResponse', growable: true);
     return _responseData;
     
@@ -347,13 +368,14 @@ class MetricsApi {
       if (rightCylinderSerial != null) r'rightCylinderSerial': _encodeQueryParameter(rightCylinderSerial),
       r'softwareVersion': _encodeQueryParameter(softwareVersion),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
       method: _method,
       queryParameters: _queryParameters,
     );
+    
     final StrengthMachineInitializeResponse _responseData = deserialize<StrengthMachineInitializeResponse, StrengthMachineInitializeResponse>(_response.data!, 'StrengthMachineInitializeResponse', growable: true);
     return _responseData;
     
@@ -383,7 +405,7 @@ class MetricsApi {
     };
     final _queryParameters = <String, dynamic>{
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
@@ -391,6 +413,7 @@ class MetricsApi {
       queryParameters: _queryParameters,
       socketParameters: _socketParameters,
     );
+    
     final A500MachineStateResponse _responseData = deserialize<A500MachineStateResponse, A500MachineStateResponse>(_response.data!, 'A500MachineStateResponse', growable: true);
     return _responseData;
     
@@ -419,13 +442,14 @@ class MetricsApi {
     final _queryParameters = <String, dynamic>{
       if (facilityStrengthMachineId != null) r'facilityStrengthMachineId': _encodeQueryParameter(facilityStrengthMachineId),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
       method: _method,
       queryParameters: _queryParameters,
     );
+    
     final SubscriptionResponse _responseData = deserialize<SubscriptionResponse, SubscriptionResponse>(_response.data!, 'SubscriptionResponse', growable: true);
     return _responseData;
     
@@ -463,13 +487,14 @@ class MetricsApi {
       r'facilityId': _encodeQueryParameter(facilityId),
       r'model': _encodeQueryParameter(model),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
       method: _method,
       queryParameters: _queryParameters,
     );
+    
     final FacilityStrengthMachineResponse _responseData = deserialize<FacilityStrengthMachineResponse, FacilityStrengthMachineResponse>(_response.data!, 'FacilityStrengthMachineResponse', growable: true);
     return _responseData;
     
@@ -514,7 +539,7 @@ class MetricsApi {
       r'primaryFocus': _encodeQueryParameter(primaryFocus),
       r'secondaryFocus': _encodeQueryParameter(secondaryFocus),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
@@ -522,6 +547,7 @@ class MetricsApi {
       queryParameters: _queryParameters,
       socketParameters: _socketParameters,
     );
+    
     final A500MachineStateResponse _responseData = deserialize<A500MachineStateResponse, A500MachineStateResponse>(_response.data!, 'A500MachineStateResponse', growable: true);
     return _responseData;
     
@@ -550,13 +576,14 @@ class MetricsApi {
     final _queryParameters = <String, dynamic>{
       r'memberIdentifier': _encodeQueryParameter(memberIdentifier),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
       method: _method,
       queryParameters: _queryParameters,
     );
+    
     final FacilityUserResponse _responseData = deserialize<FacilityUserResponse, FacilityUserResponse>(_response.data!, 'FacilityUserResponse', growable: true);
     return _responseData;
     
@@ -592,7 +619,7 @@ class MetricsApi {
       r'applicationName': _encodeQueryParameter(applicationName),
       r'redirectUrl': _encodeQueryParameter(redirectUrl),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
@@ -600,6 +627,7 @@ class MetricsApi {
       queryParameters: _queryParameters,
       socketParameters: _socketParameters,
     );
+    
     final ApplicationResponse _responseData = deserialize<ApplicationResponse, ApplicationResponse>(_response.data!, 'ApplicationResponse', growable: true);
     return _responseData;
     
@@ -632,7 +660,7 @@ class MetricsApi {
     };
     final _queryParameters = <String, dynamic>{
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     await connection.action(
       path: _path,
       action: _action,
@@ -640,6 +668,7 @@ class MetricsApi {
       queryParameters: _queryParameters,
       socketParameters: _socketParameters,
     );
+    
 
     return;
   }
@@ -683,7 +712,7 @@ class MetricsApi {
       if (offset != null) r'offset': _encodeQueryParameter(offset),
       if (sort != null) r'sort': _encodeQueryParameter(sort),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
@@ -691,6 +720,7 @@ class MetricsApi {
       queryParameters: _queryParameters,
       socketParameters: _socketParameters,
     );
+    
     final ApplicationListResponse _responseData = deserialize<ApplicationListResponse, ApplicationListResponse>(_response.data!, 'ApplicationListResponse', growable: true);
     return _responseData;
     
@@ -723,7 +753,7 @@ class MetricsApi {
     final _queryParameters = <String, dynamic>{
       r'id': _encodeQueryParameter(id),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
@@ -731,6 +761,7 @@ class MetricsApi {
       queryParameters: _queryParameters,
       socketParameters: _socketParameters,
     );
+    
     final ApplicationResponse _responseData = deserialize<ApplicationResponse, ApplicationResponse>(_response.data!, 'ApplicationResponse', growable: true);
     return _responseData;
     
@@ -769,7 +800,7 @@ class MetricsApi {
       if (applicationName != null) r'applicationName': _encodeQueryParameter(applicationName),
       if (redirectUrl != null) r'redirectUrl': _encodeQueryParameter(redirectUrl),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
@@ -777,6 +808,7 @@ class MetricsApi {
       queryParameters: _queryParameters,
       socketParameters: _socketParameters,
     );
+    
     final ApplicationResponse _responseData = deserialize<ApplicationResponse, ApplicationResponse>(_response.data!, 'ApplicationResponse', growable: true);
     return _responseData;
     
@@ -805,13 +837,14 @@ class MetricsApi {
     final _queryParameters = <String, dynamic>{
       r'exchangeToken': _encodeQueryParameter(exchangeToken),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
       method: _method,
       queryParameters: _queryParameters,
     );
+    
     final UserResponse _responseData = deserialize<UserResponse, UserResponse>(_response.data!, 'UserResponse', growable: true);
     return _responseData;
     
@@ -840,13 +873,14 @@ class MetricsApi {
     final _queryParameters = <String, dynamic>{
       r'defaultExerciseAlias': _encodeQueryParameter(defaultExerciseAlias),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
       method: _method,
       queryParameters: _queryParameters,
     );
+    
     final CardioExerciseResponse _responseData = deserialize<CardioExerciseResponse, CardioExerciseResponse>(_response.data!, 'CardioExerciseResponse', growable: true);
     return _responseData;
     
@@ -876,7 +910,7 @@ class MetricsApi {
     };
     final _queryParameters = <String, dynamic>{
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     await connection.action(
       path: _path,
       action: _action,
@@ -884,6 +918,7 @@ class MetricsApi {
       queryParameters: _queryParameters,
       socketParameters: _socketParameters,
     );
+    
 
     return;
   }
@@ -923,13 +958,14 @@ class MetricsApi {
       if (offset != null) r'offset': _encodeQueryParameter(offset),
       if (sort != null) r'sort': _encodeQueryParameter(sort),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
       method: _method,
       queryParameters: _queryParameters,
     );
+    
     final CardioExerciseListResponse _responseData = deserialize<CardioExerciseListResponse, CardioExerciseListResponse>(_response.data!, 'CardioExerciseListResponse', growable: true);
     return _responseData;
     
@@ -965,7 +1001,7 @@ class MetricsApi {
       r'muscle': _encodeQueryParameter(muscle),
       r'targetLevel': _encodeQueryParameter(targetLevel),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
@@ -973,6 +1009,7 @@ class MetricsApi {
       queryParameters: _queryParameters,
       socketParameters: _socketParameters,
     );
+    
     final CardioExerciseMuscleResponse _responseData = deserialize<CardioExerciseMuscleResponse, CardioExerciseMuscleResponse>(_response.data!, 'CardioExerciseMuscleResponse', growable: true);
     return _responseData;
     
@@ -1002,7 +1039,7 @@ class MetricsApi {
     };
     final _queryParameters = <String, dynamic>{
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     await connection.action(
       path: _path,
       action: _action,
@@ -1010,6 +1047,7 @@ class MetricsApi {
       queryParameters: _queryParameters,
       socketParameters: _socketParameters,
     );
+    
 
     return;
   }
@@ -1056,7 +1094,7 @@ class MetricsApi {
       if (sort != null) r'sort': _encodeQueryParameter(sort),
       if (targetLevel != null) r'targetLevel': _encodeQueryParameter(targetLevel),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
@@ -1064,6 +1102,7 @@ class MetricsApi {
       queryParameters: _queryParameters,
       socketParameters: _socketParameters,
     );
+    
     final CardioExerciseMuscleListResponse _responseData = deserialize<CardioExerciseMuscleListResponse, CardioExerciseMuscleListResponse>(_response.data!, 'CardioExerciseMuscleListResponse', growable: true);
     return _responseData;
     
@@ -1092,13 +1131,14 @@ class MetricsApi {
     final _queryParameters = <String, dynamic>{
       r'id': _encodeQueryParameter(id),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
       method: _method,
       queryParameters: _queryParameters,
     );
+    
     final CardioExerciseMuscleResponse _responseData = deserialize<CardioExerciseMuscleResponse, CardioExerciseMuscleResponse>(_response.data!, 'CardioExerciseMuscleResponse', growable: true);
     return _responseData;
     
@@ -1131,7 +1171,7 @@ class MetricsApi {
     final _queryParameters = <String, dynamic>{
       r'targetLevel': _encodeQueryParameter(targetLevel),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
@@ -1139,6 +1179,7 @@ class MetricsApi {
       queryParameters: _queryParameters,
       socketParameters: _socketParameters,
     );
+    
     final CardioExerciseMuscleResponse _responseData = deserialize<CardioExerciseMuscleResponse, CardioExerciseMuscleResponse>(_response.data!, 'CardioExerciseMuscleResponse', growable: true);
     return _responseData;
     
@@ -1167,13 +1208,14 @@ class MetricsApi {
     final _queryParameters = <String, dynamic>{
       r'id': _encodeQueryParameter(id),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
       method: _method,
       queryParameters: _queryParameters,
     );
+    
     final CardioExerciseResponse _responseData = deserialize<CardioExerciseResponse, CardioExerciseResponse>(_response.data!, 'CardioExerciseResponse', growable: true);
     return _responseData;
     
@@ -1203,7 +1245,7 @@ class MetricsApi {
     };
     final _queryParameters = <String, dynamic>{
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
@@ -1211,6 +1253,7 @@ class MetricsApi {
       queryParameters: _queryParameters,
       socketParameters: _socketParameters,
     );
+    
     final CardioExerciseResponse _responseData = deserialize<CardioExerciseResponse, CardioExerciseResponse>(_response.data!, 'CardioExerciseResponse', growable: true);
     return _responseData;
     
@@ -1252,7 +1295,7 @@ class MetricsApi {
       if (instructionalVideo != null) r'instructionalVideo': _encodeQueryParameter(instructionalVideo),
       r'variant': _encodeQueryParameter(variant),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
@@ -1260,6 +1303,7 @@ class MetricsApi {
       queryParameters: _queryParameters,
       socketParameters: _socketParameters,
     );
+    
     final CardioExerciseVariantResponse _responseData = deserialize<CardioExerciseVariantResponse, CardioExerciseVariantResponse>(_response.data!, 'CardioExerciseVariantResponse', growable: true);
     return _responseData;
     
@@ -1289,7 +1333,7 @@ class MetricsApi {
     };
     final _queryParameters = <String, dynamic>{
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     await connection.action(
       path: _path,
       action: _action,
@@ -1297,6 +1341,7 @@ class MetricsApi {
       queryParameters: _queryParameters,
       socketParameters: _socketParameters,
     );
+    
 
     return;
   }
@@ -1342,13 +1387,14 @@ class MetricsApi {
       if (sort != null) r'sort': _encodeQueryParameter(sort),
       if (variant != null) r'variant': _encodeQueryParameter(variant),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
       method: _method,
       queryParameters: _queryParameters,
     );
+    
     final CardioExerciseVariantListResponse _responseData = deserialize<CardioExerciseVariantListResponse, CardioExerciseVariantListResponse>(_response.data!, 'CardioExerciseVariantListResponse', growable: true);
     return _responseData;
     
@@ -1377,13 +1423,14 @@ class MetricsApi {
     final _queryParameters = <String, dynamic>{
       r'id': _encodeQueryParameter(id),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
       method: _method,
       queryParameters: _queryParameters,
     );
+    
     final CardioExerciseVariantResponse _responseData = deserialize<CardioExerciseVariantResponse, CardioExerciseVariantResponse>(_response.data!, 'CardioExerciseVariantResponse', growable: true);
     return _responseData;
     
@@ -1422,7 +1469,7 @@ class MetricsApi {
       if (instructionalVideo != null) r'instructionalVideo': _encodeQueryParameter(instructionalVideo),
       r'variant': _encodeQueryParameter(variant),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
@@ -1430,6 +1477,7 @@ class MetricsApi {
       queryParameters: _queryParameters,
       socketParameters: _socketParameters,
     );
+    
     final CardioExerciseVariantResponse _responseData = deserialize<CardioExerciseVariantResponse, CardioExerciseVariantResponse>(_response.data!, 'CardioExerciseVariantResponse', growable: true);
     return _responseData;
     
@@ -1470,13 +1518,14 @@ class MetricsApi {
       if (offset != null) r'offset': _encodeQueryParameter(offset),
       if (sort != null) r'sort': _encodeQueryParameter(sort),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
       method: _method,
       queryParameters: _queryParameters,
     );
+    
     final CardioMachineListResponse _responseData = deserialize<CardioMachineListResponse, CardioMachineListResponse>(_response.data!, 'CardioMachineListResponse', growable: true);
     return _responseData;
     
@@ -1505,13 +1554,14 @@ class MetricsApi {
     final _queryParameters = <String, dynamic>{
       r'id': _encodeQueryParameter(id),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
       method: _method,
       queryParameters: _queryParameters,
     );
+    
     final CardioMachineResponse _responseData = deserialize<CardioMachineResponse, CardioMachineResponse>(_response.data!, 'CardioMachineResponse', growable: true);
     return _responseData;
     
@@ -1537,13 +1587,14 @@ class MetricsApi {
 
     final _queryParameters = <String, dynamic>{
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
       method: _method,
       queryParameters: _queryParameters,
     );
+    
     final EndpointsResponse _responseData = deserialize<EndpointsResponse, EndpointsResponse>(_response.data!, 'EndpointsResponse', growable: true);
     return _responseData;
     
@@ -1569,13 +1620,14 @@ class MetricsApi {
 
     final _queryParameters = <String, dynamic>{
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
       method: _method,
       queryParameters: _queryParameters,
     );
+    
     final ErrorResponse _responseData = deserialize<ErrorResponse, ErrorResponse>(_response.data!, 'ErrorResponse', growable: true);
     return _responseData;
     
@@ -1601,13 +1653,14 @@ class MetricsApi {
 
     final _queryParameters = <String, dynamic>{
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
       method: _method,
       queryParameters: _queryParameters,
     );
+    
     final HealthResponse _responseData = deserialize<HealthResponse, HealthResponse>(_response.data!, 'HealthResponse', growable: true);
     return _responseData;
     
@@ -1633,13 +1686,14 @@ class MetricsApi {
 
     final _queryParameters = <String, dynamic>{
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
       method: _method,
       queryParameters: _queryParameters,
     );
+    
     final StatusResponse _responseData = deserialize<StatusResponse, StatusResponse>(_response.data!, 'StatusResponse', growable: true);
     return _responseData;
     
@@ -1665,13 +1719,14 @@ class MetricsApi {
 
     final _queryParameters = <String, dynamic>{
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
       method: _method,
       queryParameters: _queryParameters,
     );
+    
     final TimeResponse _responseData = deserialize<TimeResponse, TimeResponse>(_response.data!, 'TimeResponse', growable: true);
     return _responseData;
     
@@ -1700,13 +1755,14 @@ class MetricsApi {
     final _queryParameters = <String, dynamic>{
       r'subscriptionKey': _encodeQueryParameter(subscriptionKey),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     await connection.action(
       path: _path,
       action: _action,
       method: _method,
       queryParameters: _queryParameters,
     );
+    
 
     return;
   }
@@ -1746,13 +1802,14 @@ class MetricsApi {
       r'termsUrl': _encodeQueryParameter(termsUrl),
       if (websiteUrl != null) r'websiteUrl': _encodeQueryParameter(websiteUrl),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
       method: _method,
       queryParameters: _queryParameters,
     );
+    
     final DevelopmentAccountResponse _responseData = deserialize<DevelopmentAccountResponse, DevelopmentAccountResponse>(_response.data!, 'DevelopmentAccountResponse', growable: true);
     return _responseData;
     
@@ -1782,7 +1839,7 @@ class MetricsApi {
     };
     final _queryParameters = <String, dynamic>{
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     await connection.action(
       path: _path,
       action: _action,
@@ -1790,6 +1847,7 @@ class MetricsApi {
       queryParameters: _queryParameters,
       socketParameters: _socketParameters,
     );
+    
 
     return;
   }
@@ -1826,13 +1884,14 @@ class MetricsApi {
       if (offset != null) r'offset': _encodeQueryParameter(offset),
       if (sort != null) r'sort': _encodeQueryParameter(sort),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
       method: _method,
       queryParameters: _queryParameters,
     );
+    
     final DevelopmentAccountListResponse _responseData = deserialize<DevelopmentAccountListResponse, DevelopmentAccountListResponse>(_response.data!, 'DevelopmentAccountListResponse', growable: true);
     return _responseData;
     
@@ -1874,7 +1933,7 @@ class MetricsApi {
       if (offset != null) r'offset': _encodeQueryParameter(offset),
       if (sort != null) r'sort': _encodeQueryParameter(sort),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
@@ -1882,6 +1941,7 @@ class MetricsApi {
       queryParameters: _queryParameters,
       socketParameters: _socketParameters,
     );
+    
     final DevelopmentAccountRelationshipListResponse _responseData = deserialize<DevelopmentAccountRelationshipListResponse, DevelopmentAccountRelationshipListResponse>(_response.data!, 'DevelopmentAccountRelationshipListResponse', growable: true);
     return _responseData;
     
@@ -1914,7 +1974,7 @@ class MetricsApi {
     };
     final _queryParameters = <String, dynamic>{
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     await connection.action(
       path: _path,
       action: _action,
@@ -1922,6 +1982,7 @@ class MetricsApi {
       queryParameters: _queryParameters,
       socketParameters: _socketParameters,
     );
+    
 
     return;
   }
@@ -1952,13 +2013,14 @@ class MetricsApi {
       r'code': _encodeQueryParameter(code),
       r'shouldAuthorize': _encodeQueryParameter(shouldAuthorize),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
       method: _method,
       queryParameters: _queryParameters,
     );
+    
     final DevelopmentAccountRelationshipResponse _responseData = deserialize<DevelopmentAccountRelationshipResponse, DevelopmentAccountRelationshipResponse>(_response.data!, 'DevelopmentAccountRelationshipResponse', growable: true);
     return _responseData;
     
@@ -1994,7 +2056,7 @@ class MetricsApi {
       r'email': _encodeQueryParameter(email),
       r'role': _encodeQueryParameter(role),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
@@ -2002,6 +2064,7 @@ class MetricsApi {
       queryParameters: _queryParameters,
       socketParameters: _socketParameters,
     );
+    
     final DevelopmentAccountRelationshipRequestResponse _responseData = deserialize<DevelopmentAccountRelationshipRequestResponse, DevelopmentAccountRelationshipRequestResponse>(_response.data!, 'DevelopmentAccountRelationshipRequestResponse', growable: true);
     return _responseData;
     
@@ -2051,13 +2114,14 @@ class MetricsApi {
       if (sort != null) r'sort': _encodeQueryParameter(sort),
       if (userId != null) r'userId': _encodeQueryParameter(userId),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
       method: _method,
       queryParameters: _queryParameters,
     );
+    
     final DevelopmentAccountRelationshipRequestListResponse _responseData = deserialize<DevelopmentAccountRelationshipRequestListResponse, DevelopmentAccountRelationshipRequestListResponse>(_response.data!, 'DevelopmentAccountRelationshipRequestListResponse', growable: true);
     return _responseData;
     
@@ -2092,13 +2156,14 @@ class MetricsApi {
       if (developmentAccountId != null) r'developmentAccountId': _encodeQueryParameter(developmentAccountId),
       if (id != null) r'id': _encodeQueryParameter(id),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
       method: _method,
       queryParameters: _queryParameters,
     );
+    
     final DevelopmentAccountRelationshipRequestResponse _responseData = deserialize<DevelopmentAccountRelationshipRequestResponse, DevelopmentAccountRelationshipRequestResponse>(_response.data!, 'DevelopmentAccountRelationshipRequestResponse', growable: true);
     return _responseData;
     
@@ -2131,7 +2196,7 @@ class MetricsApi {
     final _queryParameters = <String, dynamic>{
       r'id': _encodeQueryParameter(id),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
@@ -2139,6 +2204,7 @@ class MetricsApi {
       queryParameters: _queryParameters,
       socketParameters: _socketParameters,
     );
+    
     final DevelopmentAccountRelationshipResponse _responseData = deserialize<DevelopmentAccountRelationshipResponse, DevelopmentAccountRelationshipResponse>(_response.data!, 'DevelopmentAccountRelationshipResponse', growable: true);
     return _responseData;
     
@@ -2174,7 +2240,7 @@ class MetricsApi {
     final _queryParameters = <String, dynamic>{
       r'role': _encodeQueryParameter(role),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
@@ -2182,6 +2248,7 @@ class MetricsApi {
       queryParameters: _queryParameters,
       socketParameters: _socketParameters,
     );
+    
     final DevelopmentAccountRelationshipResponse _responseData = deserialize<DevelopmentAccountRelationshipResponse, DevelopmentAccountRelationshipResponse>(_response.data!, 'DevelopmentAccountRelationshipResponse', growable: true);
     return _responseData;
     
@@ -2210,13 +2277,14 @@ class MetricsApi {
     final _queryParameters = <String, dynamic>{
       r'id': _encodeQueryParameter(id),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
       method: _method,
       queryParameters: _queryParameters,
     );
+    
     final DevelopmentAccountResponse _responseData = deserialize<DevelopmentAccountResponse, DevelopmentAccountResponse>(_response.data!, 'DevelopmentAccountResponse', growable: true);
     return _responseData;
     
@@ -2261,7 +2329,7 @@ class MetricsApi {
       if (termsUrl != null) r'termsUrl': _encodeQueryParameter(termsUrl),
       if (websiteUrl != null) r'websiteUrl': _encodeQueryParameter(websiteUrl),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
@@ -2269,6 +2337,7 @@ class MetricsApi {
       queryParameters: _queryParameters,
       socketParameters: _socketParameters,
     );
+    
     final DevelopmentAccountResponse _responseData = deserialize<DevelopmentAccountResponse, DevelopmentAccountResponse>(_response.data!, 'DevelopmentAccountResponse', growable: true);
     return _responseData;
     
@@ -2300,13 +2369,14 @@ class MetricsApi {
       r'email': _encodeQueryParameter(email),
       if (userId != null) r'userId': _encodeQueryParameter(userId),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
       method: _method,
       queryParameters: _queryParameters,
     );
+    
     final EmailAddressResponse _responseData = deserialize<EmailAddressResponse, EmailAddressResponse>(_response.data!, 'EmailAddressResponse', growable: true);
     return _responseData;
     
@@ -2339,7 +2409,7 @@ class MetricsApi {
     final _queryParameters = <String, dynamic>{
       if (userId != null) r'userId': _encodeQueryParameter(userId),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     await connection.action(
       path: _path,
       action: _action,
@@ -2347,6 +2417,7 @@ class MetricsApi {
       queryParameters: _queryParameters,
       socketParameters: _socketParameters,
     );
+    
 
     return;
   }
@@ -2389,13 +2460,14 @@ class MetricsApi {
       if (sort != null) r'sort': _encodeQueryParameter(sort),
       if (userId != null) r'userId': _encodeQueryParameter(userId),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
       method: _method,
       queryParameters: _queryParameters,
     );
+    
     final EmailAddressListResponse _responseData = deserialize<EmailAddressListResponse, EmailAddressListResponse>(_response.data!, 'EmailAddressListResponse', growable: true);
     return _responseData;
     
@@ -2427,13 +2499,14 @@ class MetricsApi {
       r'id': _encodeQueryParameter(id),
       if (userId != null) r'userId': _encodeQueryParameter(userId),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
       method: _method,
       queryParameters: _queryParameters,
     );
+    
     final EmailAddressResponse _responseData = deserialize<EmailAddressResponse, EmailAddressResponse>(_response.data!, 'EmailAddressResponse', growable: true);
     return _responseData;
     
@@ -2463,7 +2536,7 @@ class MetricsApi {
     };
     final _queryParameters = <String, dynamic>{
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
@@ -2471,6 +2544,7 @@ class MetricsApi {
       queryParameters: _queryParameters,
       socketParameters: _socketParameters,
     );
+    
     final EmailAddressResponse _responseData = deserialize<EmailAddressResponse, EmailAddressResponse>(_response.data!, 'EmailAddressResponse', growable: true);
     return _responseData;
     
@@ -2503,7 +2577,7 @@ class MetricsApi {
     final _queryParameters = <String, dynamic>{
       if (userId != null) r'userId': _encodeQueryParameter(userId),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     await connection.action(
       path: _path,
       action: _action,
@@ -2511,6 +2585,7 @@ class MetricsApi {
       queryParameters: _queryParameters,
       socketParameters: _socketParameters,
     );
+    
 
     return;
   }
@@ -2547,13 +2622,14 @@ class MetricsApi {
       if (strengthExerciseId != null) r'strengthExerciseId': _encodeQueryParameter(strengthExerciseId),
       if (stretchExerciseId != null) r'stretchExerciseId': _encodeQueryParameter(stretchExerciseId),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
       method: _method,
       queryParameters: _queryParameters,
     );
+    
     final ExerciseAliasResponse _responseData = deserialize<ExerciseAliasResponse, ExerciseAliasResponse>(_response.data!, 'ExerciseAliasResponse', growable: true);
     return _responseData;
     
@@ -2583,7 +2659,7 @@ class MetricsApi {
     };
     final _queryParameters = <String, dynamic>{
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     await connection.action(
       path: _path,
       action: _action,
@@ -2591,6 +2667,7 @@ class MetricsApi {
       queryParameters: _queryParameters,
       socketParameters: _socketParameters,
     );
+    
 
     return;
   }
@@ -2642,13 +2719,14 @@ class MetricsApi {
       if (stretchExerciseId != null) r'stretchExerciseId': _encodeQueryParameter(stretchExerciseId),
       if (type != null) r'type': _encodeQueryParameter(type),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
       method: _method,
       queryParameters: _queryParameters,
     );
+    
     final ExerciseAliasListResponse _responseData = deserialize<ExerciseAliasListResponse, ExerciseAliasListResponse>(_response.data!, 'ExerciseAliasListResponse', growable: true);
     return _responseData;
     
@@ -2677,13 +2755,14 @@ class MetricsApi {
     final _queryParameters = <String, dynamic>{
       r'id': _encodeQueryParameter(id),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
       method: _method,
       queryParameters: _queryParameters,
     );
+    
     final ExerciseAliasResponse _responseData = deserialize<ExerciseAliasResponse, ExerciseAliasResponse>(_response.data!, 'ExerciseAliasResponse', growable: true);
     return _responseData;
     
@@ -2716,7 +2795,7 @@ class MetricsApi {
     final _queryParameters = <String, dynamic>{
       r'alias': _encodeQueryParameter(alias),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
@@ -2724,6 +2803,7 @@ class MetricsApi {
       queryParameters: _queryParameters,
       socketParameters: _socketParameters,
     );
+    
     final ExerciseAliasResponse _responseData = deserialize<ExerciseAliasResponse, ExerciseAliasResponse>(_response.data!, 'ExerciseAliasResponse', growable: true);
     return _responseData;
     
@@ -2765,7 +2845,7 @@ class MetricsApi {
       if (strengthExerciseVariantId != null) r'strengthExerciseVariantId': _encodeQueryParameter(strengthExerciseVariantId),
       if (stretchExerciseVariantId != null) r'stretchExerciseVariantId': _encodeQueryParameter(stretchExerciseVariantId),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
@@ -2773,6 +2853,7 @@ class MetricsApi {
       queryParameters: _queryParameters,
       socketParameters: _socketParameters,
     );
+    
     final ExerciseOrdinalSetAssignmentResponse _responseData = deserialize<ExerciseOrdinalSetAssignmentResponse, ExerciseOrdinalSetAssignmentResponse>(_response.data!, 'ExerciseOrdinalSetAssignmentResponse', growable: true);
     return _responseData;
     
@@ -2802,7 +2883,7 @@ class MetricsApi {
     };
     final _queryParameters = <String, dynamic>{
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     await connection.action(
       path: _path,
       action: _action,
@@ -2810,6 +2891,7 @@ class MetricsApi {
       queryParameters: _queryParameters,
       socketParameters: _socketParameters,
     );
+    
 
     return;
   }
@@ -2852,13 +2934,14 @@ class MetricsApi {
       if (ordinalIdentifier != null) r'ordinalIdentifier': _encodeQueryParameter(ordinalIdentifier),
       if (sort != null) r'sort': _encodeQueryParameter(sort),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
       method: _method,
       queryParameters: _queryParameters,
     );
+    
     final ExerciseOrdinalSetAssignmentListResponse _responseData = deserialize<ExerciseOrdinalSetAssignmentListResponse, ExerciseOrdinalSetAssignmentListResponse>(_response.data!, 'ExerciseOrdinalSetAssignmentListResponse', growable: true);
     return _responseData;
     
@@ -2887,13 +2970,14 @@ class MetricsApi {
     final _queryParameters = <String, dynamic>{
       r'id': _encodeQueryParameter(id),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
       method: _method,
       queryParameters: _queryParameters,
     );
+    
     final ExerciseOrdinalSetAssignmentResponse _responseData = deserialize<ExerciseOrdinalSetAssignmentResponse, ExerciseOrdinalSetAssignmentResponse>(_response.data!, 'ExerciseOrdinalSetAssignmentResponse', growable: true);
     return _responseData;
     
@@ -2928,13 +3012,14 @@ class MetricsApi {
       if (description != null) r'description': _encodeQueryParameter(description),
       r'name': _encodeQueryParameter(names),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
       method: _method,
       queryParameters: _queryParameters,
     );
+    
     final ExerciseOrdinalSetResponse _responseData = deserialize<ExerciseOrdinalSetResponse, ExerciseOrdinalSetResponse>(_response.data!, 'ExerciseOrdinalSetResponse', growable: true);
     return _responseData;
     
@@ -2964,7 +3049,7 @@ class MetricsApi {
     };
     final _queryParameters = <String, dynamic>{
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     await connection.action(
       path: _path,
       action: _action,
@@ -2972,6 +3057,7 @@ class MetricsApi {
       queryParameters: _queryParameters,
       socketParameters: _socketParameters,
     );
+    
 
     return;
   }
@@ -3014,13 +3100,14 @@ class MetricsApi {
       if (offset != null) r'offset': _encodeQueryParameter(offset),
       if (sort != null) r'sort': _encodeQueryParameter(sort),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
       method: _method,
       queryParameters: _queryParameters,
     );
+    
     final ExerciseOrdinalSetListResponse _responseData = deserialize<ExerciseOrdinalSetListResponse, ExerciseOrdinalSetListResponse>(_response.data!, 'ExerciseOrdinalSetListResponse', growable: true);
     return _responseData;
     
@@ -3049,13 +3136,14 @@ class MetricsApi {
     final _queryParameters = <String, dynamic>{
       r'id': _encodeQueryParameter(id),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
       method: _method,
       queryParameters: _queryParameters,
     );
+    
     final ExerciseOrdinalSetResponse _responseData = deserialize<ExerciseOrdinalSetResponse, ExerciseOrdinalSetResponse>(_response.data!, 'ExerciseOrdinalSetResponse', growable: true);
     return _responseData;
     
@@ -3091,7 +3179,7 @@ class MetricsApi {
       if (description != null) r'description': _encodeQueryParameter(description),
       r'name': _encodeQueryParameter(names),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
@@ -3099,6 +3187,7 @@ class MetricsApi {
       queryParameters: _queryParameters,
       socketParameters: _socketParameters,
     );
+    
     final ExerciseOrdinalSetResponse _responseData = deserialize<ExerciseOrdinalSetResponse, ExerciseOrdinalSetResponse>(_response.data!, 'ExerciseOrdinalSetResponse', growable: true);
     return _responseData;
     
@@ -3127,13 +3216,14 @@ class MetricsApi {
     final _queryParameters = <String, dynamic>{
       r'cidr': _encodeQueryParameter(cidr),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
       method: _method,
       queryParameters: _queryParameters,
     );
+    
     final FacilityAccessControlIPRangeResponse _responseData = deserialize<FacilityAccessControlIPRangeResponse, FacilityAccessControlIPRangeResponse>(_response.data!, 'FacilityAccessControlIPRangeResponse', growable: true);
     return _responseData;
     
@@ -3163,7 +3253,7 @@ class MetricsApi {
     };
     final _queryParameters = <String, dynamic>{
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     await connection.action(
       path: _path,
       action: _action,
@@ -3171,6 +3261,7 @@ class MetricsApi {
       queryParameters: _queryParameters,
       socketParameters: _socketParameters,
     );
+    
 
     return;
   }
@@ -3210,13 +3301,14 @@ class MetricsApi {
       if (offset != null) r'offset': _encodeQueryParameter(offset),
       if (sort != null) r'sort': _encodeQueryParameter(sort),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
       method: _method,
       queryParameters: _queryParameters,
     );
+    
     final FacilityAccessControlIPRangeListResponse _responseData = deserialize<FacilityAccessControlIPRangeListResponse, FacilityAccessControlIPRangeListResponse>(_response.data!, 'FacilityAccessControlIPRangeListResponse', growable: true);
     return _responseData;
     
@@ -3245,13 +3337,14 @@ class MetricsApi {
     final _queryParameters = <String, dynamic>{
       r'id': _encodeQueryParameter(id),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
       method: _method,
       queryParameters: _queryParameters,
     );
+    
     final FacilityAccessControlIPRangeResponse _responseData = deserialize<FacilityAccessControlIPRangeResponse, FacilityAccessControlIPRangeResponse>(_response.data!, 'FacilityAccessControlIPRangeResponse', growable: true);
     return _responseData;
     
@@ -3284,7 +3377,7 @@ class MetricsApi {
     final _queryParameters = <String, dynamic>{
       r'cidr': _encodeQueryParameter(cidr),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
@@ -3292,6 +3385,7 @@ class MetricsApi {
       queryParameters: _queryParameters,
       socketParameters: _socketParameters,
     );
+    
     final FacilityAccessControlIPRangeResponse _responseData = deserialize<FacilityAccessControlIPRangeResponse, FacilityAccessControlIPRangeResponse>(_response.data!, 'FacilityAccessControlIPRangeResponse', growable: true);
     return _responseData;
     
@@ -3317,13 +3411,14 @@ class MetricsApi {
 
     final _queryParameters = <String, dynamic>{
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
       method: _method,
       queryParameters: _queryParameters,
     );
+    
     final FacilityAccessControlKioskResponse _responseData = deserialize<FacilityAccessControlKioskResponse, FacilityAccessControlKioskResponse>(_response.data!, 'FacilityAccessControlKioskResponse', growable: true);
     return _responseData;
     
@@ -3358,13 +3453,14 @@ class MetricsApi {
       if (primaryIdentification != null) r'primaryIdentification': _encodeQueryParameter(primaryIdentification),
       if (secondaryIdentification != null) r'secondaryIdentification': _encodeQueryParameter(secondaryIdentification),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
       method: _method,
       queryParameters: _queryParameters,
     );
+    
     final FacilityAccessControlKioskResponse _responseData = deserialize<FacilityAccessControlKioskResponse, FacilityAccessControlKioskResponse>(_response.data!, 'FacilityAccessControlKioskResponse', growable: true);
     return _responseData;
     
@@ -3390,13 +3486,14 @@ class MetricsApi {
 
     final _queryParameters = <String, dynamic>{
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
       method: _method,
       queryParameters: _queryParameters,
     );
+    
     final FacilityAccessControlResponse _responseData = deserialize<FacilityAccessControlResponse, FacilityAccessControlResponse>(_response.data!, 'FacilityAccessControlResponse', growable: true);
     return _responseData;
     
@@ -3425,13 +3522,14 @@ class MetricsApi {
     final _queryParameters = <String, dynamic>{
       r'key': _encodeQueryParameter(key),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
       method: _method,
       queryParameters: _queryParameters,
     );
+    
     final FacilityResponse _responseData = deserialize<FacilityResponse, FacilityResponse>(_response.data!, 'FacilityResponse', growable: true);
     return _responseData;
     
@@ -3472,13 +3570,14 @@ class MetricsApi {
       r'serial': _encodeQueryParameter(serial),
       r'version': _encodeQueryParameter(version),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
       method: _method,
       queryParameters: _queryParameters,
     );
+    
     final FacilityCardioMachineResponse _responseData = deserialize<FacilityCardioMachineResponse, FacilityCardioMachineResponse>(_response.data!, 'FacilityCardioMachineResponse', growable: true);
     return _responseData;
     
@@ -3508,7 +3607,7 @@ class MetricsApi {
     };
     final _queryParameters = <String, dynamic>{
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     await connection.action(
       path: _path,
       action: _action,
@@ -3516,6 +3615,7 @@ class MetricsApi {
       queryParameters: _queryParameters,
       socketParameters: _socketParameters,
     );
+    
 
     return;
   }
@@ -3561,13 +3661,14 @@ class MetricsApi {
       if (serial != null) r'serial': _encodeQueryParameter(serial),
       if (sort != null) r'sort': _encodeQueryParameter(sort),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
       method: _method,
       queryParameters: _queryParameters,
     );
+    
     final FacilityCardioMachineListResponse _responseData = deserialize<FacilityCardioMachineListResponse, FacilityCardioMachineListResponse>(_response.data!, 'FacilityCardioMachineListResponse', growable: true);
     return _responseData;
     
@@ -3596,13 +3697,14 @@ class MetricsApi {
     final _queryParameters = <String, dynamic>{
       r'id': _encodeQueryParameter(id),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
       method: _method,
       queryParameters: _queryParameters,
     );
+    
     final FacilityCardioMachineResponse _responseData = deserialize<FacilityCardioMachineResponse, FacilityCardioMachineResponse>(_response.data!, 'FacilityCardioMachineResponse', growable: true);
     return _responseData;
     
@@ -3635,7 +3737,7 @@ class MetricsApi {
     final _queryParameters = <String, dynamic>{
       if (location != null) r'location': _encodeQueryParameter(location),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
@@ -3643,6 +3745,7 @@ class MetricsApi {
       queryParameters: _queryParameters,
       socketParameters: _socketParameters,
     );
+    
     final FacilityCardioMachineResponse _responseData = deserialize<FacilityCardioMachineResponse, FacilityCardioMachineResponse>(_response.data!, 'FacilityCardioMachineResponse', growable: true);
     return _responseData;
     
@@ -3668,13 +3771,14 @@ class MetricsApi {
 
     final _queryParameters = <String, dynamic>{
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
       method: _method,
       queryParameters: _queryParameters,
     );
+    
     final FacilityConfigurationResponse _responseData = deserialize<FacilityConfigurationResponse, FacilityConfigurationResponse>(_response.data!, 'FacilityConfigurationResponse', growable: true);
     return _responseData;
     
@@ -3700,13 +3804,14 @@ class MetricsApi {
 
     final _queryParameters = <String, dynamic>{
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
       method: _method,
       queryParameters: _queryParameters,
     );
+    
     final SubscriptionResponse _responseData = deserialize<SubscriptionResponse, SubscriptionResponse>(_response.data!, 'SubscriptionResponse', growable: true);
     return _responseData;
     
@@ -3753,13 +3858,14 @@ class MetricsApi {
       r'memberSecretForceLength': _encodeQueryParameter(memberSecretForceLength),
       r'memberSecretLength': _encodeQueryParameter(memberSecretLength),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
       method: _method,
       queryParameters: _queryParameters,
     );
+    
     final FacilityConfigurationResponse _responseData = deserialize<FacilityConfigurationResponse, FacilityConfigurationResponse>(_response.data!, 'FacilityConfigurationResponse', growable: true);
     return _responseData;
     
@@ -3812,14 +3918,360 @@ class MetricsApi {
       if (state != null) r'state': _encodeQueryParameter(state),
       if (website != null) r'website': _encodeQueryParameter(website),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
       method: _method,
       queryParameters: _queryParameters,
     );
+    
     final FacilityResponse _responseData = deserialize<FacilityResponse, FacilityResponse>(_response.data!, 'FacilityResponse', growable: true);
+    return _responseData;
+    
+  }
+
+  /// Show a facility display configuration
+  /// 1
+  ///
+  /// Parameters:
+  /// * [apiVersion] 
+  ///
+  /// Returns a [Future] containing a [Response] with a [FacilityDisplayConfigurationResponse] as data
+  Future<FacilityDisplayConfigurationResponse> facilityDisplayConfigurationShow({ 
+    String? apiVersion,
+  }) async {
+    final _path = r'/facility-display-configuration';
+    final _action = 'facilityDisplayConfiguration:show';
+    final _method = r'GET';
+
+    if (apiVersion == null) {
+      apiVersion = '1';
+    }
+
+    final _queryParameters = <String, dynamic>{
+      if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
+    };
+    final _response = await connection.action(
+      path: _path,
+      action: _action,
+      method: _method,
+      queryParameters: _queryParameters,
+    );
+    
+    final FacilityDisplayConfigurationResponse _responseData = deserialize<FacilityDisplayConfigurationResponse, FacilityDisplayConfigurationResponse>(_response.data!, 'FacilityDisplayConfigurationResponse', growable: true);
+    return _responseData;
+    
+  }
+
+  /// Subscribe to facility display configuration
+  /// 1
+  ///
+  /// Parameters:
+  /// * [apiVersion] 
+  ///
+  /// Returns a [Future] containing a [Response] with a [SubscriptionResponse] as data
+  Future<SubscriptionResponse> facilityDisplayConfigurationSubscribe({ 
+    String? apiVersion,
+  }) async {
+    final _path = r'/facility-display-configuration/subscribe';
+    final _action = 'facilityDisplayConfiguration:subscribe';
+    final _method = r'GET';
+
+    if (apiVersion == null) {
+      apiVersion = '1';
+    }
+
+    final _queryParameters = <String, dynamic>{
+      if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
+    };
+    final _response = await connection.action(
+      path: _path,
+      action: _action,
+      method: _method,
+      queryParameters: _queryParameters,
+    );
+    
+    final SubscriptionResponse _responseData = deserialize<SubscriptionResponse, SubscriptionResponse>(_response.data!, 'SubscriptionResponse', growable: true);
+    return _responseData;
+    
+  }
+
+  /// Update a facility display configuration
+  /// 1
+  ///
+  /// Parameters:
+  /// * [addedMass] 
+  /// * [dataMode] - Allowed values: power, velocity
+  /// * [defaultBrightness] 
+  /// * [focusMode] - Allowed values: mean, peak
+  /// * [isTorqueEnabled] 
+  /// * [machinesEnabled] 
+  /// * [operatingSchedule] 
+  /// * [operatingScheduleEnabled] 
+  /// * [performanceDropOff] 
+  /// * [qrCodeEnabled] 
+  /// * [secondsDelay] 
+  /// * [shouldForceExercise] 
+  /// * [showReviewScreen] 
+  /// * [signoutDelay] 
+  /// * [timeZone] - Allowed values: Africa/Abidjan, Africa/Accra, Africa/Addis_Ababa, Africa/Algiers, Africa/Asmara, Africa/Asmera, Africa/Bamako, Africa/Bangui, Africa/Banjul, Africa/Bissau, Africa/Blantyre, Africa/Brazzaville, Africa/Bujumbura, Africa/Cairo, Africa/Casablanca, Africa/Ceuta, Africa/Conakry, Africa/Dakar, Africa/Dar_es_Salaam, Africa/Djibouti, Africa/Douala, Africa/El_Aaiun, Africa/Freetown, Africa/Gaborone, Africa/Harare, Africa/Johannesburg, Africa/Juba, Africa/Kampala, Africa/Khartoum, Africa/Kigali, Africa/Kinshasa, Africa/Lagos, Africa/Libreville, Africa/Lome, Africa/Luanda, Africa/Lubumbashi, Africa/Lusaka, Africa/Malabo, Africa/Maputo, Africa/Maseru, Africa/Mbabane, Africa/Mogadishu, Africa/Monrovia, Africa/Nairobi, Africa/Ndjamena, Africa/Niamey, Africa/Nouakchott, Africa/Ouagadougou, Africa/Porto-Novo, Africa/Sao_Tome, Africa/Timbuktu, Africa/Tripoli, Africa/Tunis, Africa/Windhoek, America/Adak, America/Anchorage, America/Anguilla, America/Antigua, America/Araguaina, America/Argentina/Buenos_Aires, America/Argentina/Catamarca, America/Argentina/ComodRivadavia, America/Argentina/Cordoba, America/Argentina/Jujuy, America/Argentina/La_Rioja, America/Argentina/Mendoza, America/Argentina/Rio_Gallegos, America/Argentina/Salta, America/Argentina/San_Juan, America/Argentina/San_Luis, America/Argentina/Tucuman, America/Argentina/Ushuaia, America/Aruba, America/Asuncion, America/Atikokan, America/Atka, America/Bahia, America/Bahia_Banderas, America/Barbados, America/Belem, America/Belize, America/Blanc-Sablon, America/Boa_Vista, America/Bogota, America/Boise, America/Buenos_Aires, America/Cambridge_Bay, America/Campo_Grande, America/Cancun, America/Caracas, America/Catamarca, America/Cayenne, America/Cayman, America/Chicago, America/Chihuahua, America/Coral_Harbour, America/Cordoba, America/Costa_Rica, America/Creston, America/Cuiaba, America/Curacao, America/Danmarkshavn, America/Dawson, America/Dawson_Creek, America/Denver, America/Detroit, America/Dominica, America/Edmonton, America/Eirunepe, America/El_Salvador, America/Ensenada, America/Fort_Nelson, America/Fort_Wayne, America/Fortaleza, America/Glace_Bay, America/Godthab, America/Goose_Bay, America/Grand_Turk, America/Grenada, America/Guadeloupe, America/Guatemala, America/Guayaquil, America/Guyana, America/Halifax, America/Havana, America/Hermosillo, America/Indiana/Indianapolis, America/Indiana/Knox, America/Indiana/Marengo, America/Indiana/Petersburg, America/Indiana/Tell_City, America/Indiana/Vevay, America/Indiana/Vincennes, America/Indiana/Winamac, America/Indianapolis, America/Inuvik, America/Iqaluit, America/Jamaica, America/Jujuy, America/Juneau, America/Kentucky/Louisville, America/Kentucky/Monticello, America/Knox_IN, America/Kralendijk, America/La_Paz, America/Lima, America/Los_Angeles, America/Louisville, America/Lower_Princes, America/Maceio, America/Managua, America/Manaus, America/Marigot, America/Martinique, America/Matamoros, America/Mazatlan, America/Mendoza, America/Menominee, America/Merida, America/Metlakatla, America/Mexico_City, America/Miquelon, America/Moncton, America/Monterrey, America/Montevideo, America/Montreal, America/Montserrat, America/Nassau, America/New_York, America/Nipigon, America/Nome, America/Noronha, America/North_Dakota/Beulah, America/North_Dakota/Center, America/North_Dakota/New_Salem, America/Ojinaga, America/Panama, America/Pangnirtung, America/Paramaribo, America/Phoenix, America/Port-au-Prince, America/Port_of_Spain, America/Porto_Acre, America/Porto_Velho, America/Puerto_Rico, America/Rainy_River, America/Rankin_Inlet, America/Recife, America/Regina, America/Resolute, America/Rio_Branco, America/Rosario, America/Santa_Isabel, America/Santarem, America/Santiago, America/Santo_Domingo, America/Sao_Paulo, America/Scoresbysund, America/Shiprock, America/Sitka, America/St_Barthelemy, America/St_Johns, America/St_Kitts, America/St_Lucia, America/St_Thomas, America/St_Vincent, America/Swift_Current, America/Tegucigalpa, America/Thule, America/Thunder_Bay, America/Tijuana, America/Toronto, America/Tortola, America/Vancouver, America/Virgin, America/Whitehorse, America/Winnipeg, America/Yakutat, America/Yellowknife, Antarctica/Casey, Antarctica/Davis, Antarctica/DumontDUrville, Antarctica/Macquarie, Antarctica/Mawson, Antarctica/McMurdo, Antarctica/Palmer, Antarctica/Rothera, Antarctica/South_Pole, Antarctica/Syowa, Antarctica/Troll, Antarctica/Vostok, Arctic/Longyearbyen, Asia/Aden, Asia/Almaty, Asia/Amman, Asia/Anadyr, Asia/Aqtau, Asia/Aqtobe, Asia/Ashgabat, Asia/Ashkhabad, Asia/Atyrau, Asia/Baghdad, Asia/Bahrain, Asia/Baku, Asia/Bangkok, Asia/Barnaul, Asia/Beirut, Asia/Bishkek, Asia/Brunei, Asia/Calcutta, Asia/Chita, Asia/Choibalsan, Asia/Chongqing, Asia/Chungking, Asia/Colombo, Asia/Dacca, Asia/Damascus, Asia/Dhaka, Asia/Dili, Asia/Dubai, Asia/Dushanbe, Asia/Famagusta, Asia/Gaza, Asia/Hanoi, Asia/Harbin, Asia/Hebron, Asia/Ho_Chi_Minh, Asia/Hong_Kong, Asia/Hovd, Asia/Irkutsk, Asia/Istanbul, Asia/Jakarta, Asia/Jayapura, Asia/Jerusalem, Asia/Kabul, Asia/Kamchatka, Asia/Karachi, Asia/Kashgar, Asia/Kathmandu, Asia/Katmandu, Asia/Khandyga, Asia/Kolkata, Asia/Krasnoyarsk, Asia/Kuala_Lumpur, Asia/Kuching, Asia/Kuwait, Asia/Macao, Asia/Macau, Asia/Magadan, Asia/Makassar, Asia/Manila, Asia/Muscat, Asia/Nicosia, Asia/Novokuznetsk, Asia/Novosibirsk, Asia/Omsk, Asia/Oral, Asia/Phnom_Penh, Asia/Pontianak, Asia/Pyongyang, Asia/Qatar, Asia/Qyzylorda, Asia/Rangoon, Asia/Riyadh, Asia/Saigon, Asia/Sakhalin, Asia/Samarkand, Asia/Seoul, Asia/Shanghai, Asia/Singapore, Asia/Srednekolymsk, Asia/Taipei, Asia/Tashkent, Asia/Tbilisi, Asia/Tehran, Asia/Tel_Aviv, Asia/Thimbu, Asia/Thimphu, Asia/Tokyo, Asia/Tomsk, Asia/Ujung_Pandang, Asia/Ulaanbaatar, Asia/Ulan_Bator, Asia/Urumqi, Asia/Ust-Nera, Asia/Vientiane, Asia/Vladivostok, Asia/Yakutsk, Asia/Yangon, Asia/Yekaterinburg, Asia/Yerevan, Atlantic/Azores, Atlantic/Bermuda, Atlantic/Canary, Atlantic/Cape_Verde, Atlantic/Faeroe, Atlantic/Faroe, Atlantic/Jan_Mayen, Atlantic/Madeira, Atlantic/Reykjavik, Atlantic/South_Georgia, Atlantic/St_Helena, Atlantic/Stanley, Australia/ACT, Australia/Adelaide, Australia/Brisbane, Australia/Broken_Hill, Australia/Canberra, Australia/Currie, Australia/Darwin, Australia/Eucla, Australia/Hobart, Australia/LHI, Australia/Lindeman, Australia/Lord_Howe, Australia/Melbourne, Australia/NSW, Australia/North, Australia/Perth, Australia/Queensland, Australia/South, Australia/Sydney, Australia/Tasmania, Australia/Victoria, Australia/West, Australia/Yancowinna, Brazil/Acre, Brazil/DeNoronha, Brazil/East, Brazil/West, CET, CST6CDT, Canada/Atlantic, Canada/Central, Canada/East-Saskatchewan, Canada/Eastern, Canada/Mountain, Canada/Newfoundland, Canada/Pacific, Canada/Saskatchewan, Canada/Yukon, Chile/Continental, Chile/EasterIsland, Cuba, EET, EST, EST5EDT, Egypt, Eire, Etc/GMT, Etc/GMT+0, Etc/GMT+1, Etc/GMT+10, Etc/GMT+11, Etc/GMT+12, Etc/GMT+2, Etc/GMT+3, Etc/GMT+4, Etc/GMT+5, Etc/GMT+6, Etc/GMT+7, Etc/GMT+8, Etc/GMT+9, Etc/GMT-0, Etc/GMT-1, Etc/GMT-10, Etc/GMT-11, Etc/GMT-12, Etc/GMT-13, Etc/GMT-14, Etc/GMT-2, Etc/GMT-3, Etc/GMT-4, Etc/GMT-5, Etc/GMT-6, Etc/GMT-7, Etc/GMT-8, Etc/GMT-9, Etc/GMT0, Etc/Greenwich, Etc/UCT, Etc/UTC, Etc/Universal, Etc/Zulu, Europe/Amsterdam, Europe/Andorra, Europe/Astrakhan, Europe/Athens, Europe/Belfast, Europe/Belgrade, Europe/Berlin, Europe/Bratislava, Europe/Brussels, Europe/Bucharest, Europe/Budapest, Europe/Busingen, Europe/Chisinau, Europe/Copenhagen, Europe/Dublin, Europe/Gibraltar, Europe/Guernsey, Europe/Helsinki, Europe/Isle_of_Man, Europe/Istanbul, Europe/Jersey, Europe/Kaliningrad, Europe/Kiev, Europe/Kirov, Europe/Lisbon, Europe/Ljubljana, Europe/London, Europe/Luxembourg, Europe/Madrid, Europe/Malta, Europe/Mariehamn, Europe/Minsk, Europe/Monaco, Europe/Moscow, Europe/Nicosia, Europe/Oslo, Europe/Paris, Europe/Podgorica, Europe/Prague, Europe/Riga, Europe/Rome, Europe/Samara, Europe/San_Marino, Europe/Sarajevo, Europe/Saratov, Europe/Simferopol, Europe/Skopje, Europe/Sofia, Europe/Stockholm, Europe/Tallinn, Europe/Tirane, Europe/Tiraspol, Europe/Ulyanovsk, Europe/Uzhgorod, Europe/Vaduz, Europe/Vatican, Europe/Vienna, Europe/Vilnius, Europe/Volgograd, Europe/Warsaw, Europe/Zagreb, Europe/Zaporozhye, Europe/Zurich, GB, GB-Eire, GMT, GMT+0, GMT-0, GMT0, Greenwich, HST, Hongkong, Iceland, Indian/Antananarivo, Indian/Chagos, Indian/Christmas, Indian/Cocos, Indian/Comoro, Indian/Kerguelen, Indian/Mahe, Indian/Maldives, Indian/Mauritius, Indian/Mayotte, Indian/Reunion, Iran, Israel, Jamaica, Japan, Kwajalein, Libya, MET, MST, MST7MDT, Mexico/BajaNorte, Mexico/BajaSur, Mexico/General, NZ, NZ-CHAT, Navajo, PRC, PST8PDT, Pacific/Apia, Pacific/Auckland, Pacific/Bougainville, Pacific/Chatham, Pacific/Chuuk, Pacific/Easter, Pacific/Efate, Pacific/Enderbury, Pacific/Fakaofo, Pacific/Fiji, Pacific/Funafuti, Pacific/Galapagos, Pacific/Gambier, Pacific/Guadalcanal, Pacific/Guam, Pacific/Honolulu, Pacific/Johnston, Pacific/Kiritimati, Pacific/Kosrae, Pacific/Kwajalein, Pacific/Majuro, Pacific/Marquesas, Pacific/Midway, Pacific/Nauru, Pacific/Niue, Pacific/Norfolk, Pacific/Noumea, Pacific/Pago_Pago, Pacific/Palau, Pacific/Pitcairn, Pacific/Pohnpei, Pacific/Ponape, Pacific/Port_Moresby, Pacific/Rarotonga, Pacific/Saipan, Pacific/Samoa, Pacific/Tahiti, Pacific/Tarawa, Pacific/Tongatapu, Pacific/Truk, Pacific/Wake, Pacific/Wallis, Pacific/Yap, Poland, Portugal, ROC, ROK, Singapore, Turkey, UCT, US/Alaska, US/Aleutian, US/Arizona, US/Central, US/East-Indiana, US/Eastern, US/Hawaii, US/Indiana-Starke, US/Michigan, US/Mountain, US/Pacific, US/Samoa, UTC, Universal, W-SU, WET, Zulu
+  /// * [unit] - Allowed values: metric, imperial, si
+  /// * [apiVersion] 
+  ///
+  /// Returns a [Future] containing a [Response] with a [FacilityDisplayConfigurationResponse] as data
+  Future<FacilityDisplayConfigurationResponse> facilityDisplayConfigurationUpdate({ 
+    num? addedMass,
+    String? dataMode,
+    num? defaultBrightness,
+    String? focusMode,
+    bool? isTorqueEnabled,
+    bool? machinesEnabled,
+    String? operatingSchedule,
+    bool? operatingScheduleEnabled,
+    num? performanceDropOff,
+    bool? qrCodeEnabled,
+    num? secondsDelay,
+    bool? shouldForceExercise,
+    bool? showReviewScreen,
+    num? signoutDelay,
+    String? timeZone,
+    String? unit,
+    String? apiVersion,
+  }) async {
+    final _path = r'/facility-display-configuration';
+    final _action = 'facilityDisplayConfiguration:update';
+    final _method = r'PUT';
+
+    if (apiVersion == null) {
+      apiVersion = '1';
+    }
+
+    final _queryParameters = <String, dynamic>{
+      if (addedMass != null) r'addedMass': _encodeQueryParameter(addedMass),
+      if (dataMode != null) r'dataMode': _encodeQueryParameter(dataMode),
+      if (defaultBrightness != null) r'defaultBrightness': _encodeQueryParameter(defaultBrightness),
+      if (focusMode != null) r'focusMode': _encodeQueryParameter(focusMode),
+      if (isTorqueEnabled != null) r'isTorqueEnabled': _encodeQueryParameter(isTorqueEnabled),
+      if (machinesEnabled != null) r'machinesEnabled': _encodeQueryParameter(machinesEnabled),
+      if (operatingSchedule != null) r'operatingSchedule': _encodeQueryParameter(operatingSchedule),
+      if (operatingScheduleEnabled != null) r'operatingScheduleEnabled': _encodeQueryParameter(operatingScheduleEnabled),
+      if (performanceDropOff != null) r'performanceDropOff': _encodeQueryParameter(performanceDropOff),
+      if (qrCodeEnabled != null) r'qrCodeEnabled': _encodeQueryParameter(qrCodeEnabled),
+      if (secondsDelay != null) r'secondsDelay': _encodeQueryParameter(secondsDelay),
+      if (shouldForceExercise != null) r'shouldForceExercise': _encodeQueryParameter(shouldForceExercise),
+      if (showReviewScreen != null) r'showReviewScreen': _encodeQueryParameter(showReviewScreen),
+      if (signoutDelay != null) r'signoutDelay': _encodeQueryParameter(signoutDelay),
+      if (timeZone != null) r'timeZone': _encodeQueryParameter(timeZone),
+      if (unit != null) r'unit': _encodeQueryParameter(unit),
+      if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
+    };
+    final _response = await connection.action(
+      path: _path,
+      action: _action,
+      method: _method,
+      queryParameters: _queryParameters,
+    );
+    
+    final FacilityDisplayConfigurationResponse _responseData = deserialize<FacilityDisplayConfigurationResponse, FacilityDisplayConfigurationResponse>(_response.data!, 'FacilityDisplayConfigurationResponse', growable: true);
+    return _responseData;
+    
+  }
+
+  /// Claim a registered hub for a facility using its pairing code
+  /// 1
+  ///
+  /// Parameters:
+  /// * [linkCode] 
+  /// * [apiVersion] 
+  ///
+  /// Returns a [Future] containing a [Response] with a [HubLinkClaimResponse] as data
+  Future<HubLinkClaimResponse> facilityHubClaim({ 
+    required String linkCode,
+    String? apiVersion,
+  }) async {
+    final _path = r'/facility/hub/claim';
+    final _action = 'facilityHub:claim';
+    final _method = r'POST';
+
+    if (apiVersion == null) {
+      apiVersion = '1';
+    }
+
+    final _queryParameters = <String, dynamic>{
+      r'linkCode': _encodeQueryParameter(linkCode),
+      if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
+    };
+    final _response = await connection.action(
+      path: _path,
+      action: _action,
+      method: _method,
+      queryParameters: _queryParameters,
+    );
+    
+    final HubLinkClaimResponse _responseData = deserialize<HubLinkClaimResponse, HubLinkClaimResponse>(_response.data!, 'HubLinkClaimResponse', growable: true);
+    return _responseData;
+    
+  }
+
+  /// Delete a facility hub and revoke its tokens
+  /// 1
+  ///
+  /// Parameters:
+  /// * [facilityHubId] 
+  /// * [apiVersion] 
+  ///
+  /// Returns a [Future]
+  Future<void> facilityHubDelete({ 
+    required num facilityHubId,
+    String? apiVersion,
+  }) async {
+    final _path = r'/facility/hub/{facilityHubId}'.replaceAll('{' r'facilityHubId' '}', facilityHubId.toString());
+    final _action = 'facilityHub:delete';
+    final _method = r'DELETE';
+
+    if (apiVersion == null) {
+      apiVersion = '1';
+    }
+    final _socketParameters = <String, dynamic>{
+      r'facilityHubId': _encodeQueryParameter(facilityHubId),
+    };
+    final _queryParameters = <String, dynamic>{
+      if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
+    };
+    await connection.action(
+      path: _path,
+      action: _action,
+      method: _method,
+      queryParameters: _queryParameters,
+      socketParameters: _socketParameters,
+    );
+    
+
+    return;
+  }
+
+  /// Check the status of a hub link pairing code
+  /// 1
+  ///
+  /// Parameters:
+  /// * [hubLinkId] 
+  /// * [apiVersion] 
+  ///
+  /// Returns a [Future] containing a [Response] with a [FacilityHubLinkStatusResponse] as data
+  Future<FacilityHubLinkStatusResponse> facilityHubLinkStatus({ 
+    required num hubLinkId,
+    String? apiVersion,
+  }) async {
+    final _path = r'/facility/hub/link-status';
+    final _action = 'facilityHub:linkStatus';
+    final _method = r'GET';
+
+    if (apiVersion == null) {
+      apiVersion = '1';
+    }
+
+    final _queryParameters = <String, dynamic>{
+      r'hubLinkId': _encodeQueryParameter(hubLinkId),
+      if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
+    };
+    final _response = await connection.action(
+      path: _path,
+      action: _action,
+      method: _method,
+      queryParameters: _queryParameters,
+    );
+    
+    final FacilityHubLinkStatusResponse _responseData = deserialize<FacilityHubLinkStatusResponse, FacilityHubLinkStatusResponse>(_response.data!, 'FacilityHubLinkStatusResponse', growable: true);
+    return _responseData;
+    
+  }
+
+  /// List hubs for a facility
+  /// 1
+  ///
+  /// Parameters:
+  /// * [ascending] 
+  /// * [limit] 
+  /// * [offset] 
+  /// * [query] 
+  /// * [sort] 
+  /// * [apiVersion] 
+  ///
+  /// Returns a [Future] containing a [Response] with a [FacilityHubListResponse] as data
+  Future<FacilityHubListResponse> facilityHubList({ 
+    bool? ascending = false,
+    num? limit,
+    num? offset,
+    String? query,
+    String? sort = 'id',
+    String? apiVersion,
+  }) async {
+    final _path = r'/facility/hub/list';
+    final _action = 'facilityHub:list';
+    final _method = r'GET';
+
+    if (apiVersion == null) {
+      apiVersion = '1';
+    }
+
+    final _queryParameters = <String, dynamic>{
+      if (ascending != null) r'ascending': _encodeQueryParameter(ascending),
+      if (limit != null) r'limit': _encodeQueryParameter(limit),
+      if (offset != null) r'offset': _encodeQueryParameter(offset),
+      if (query != null) r'query': _encodeQueryParameter(query),
+      if (sort != null) r'sort': _encodeQueryParameter(sort),
+      if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
+    };
+    final _response = await connection.action(
+      path: _path,
+      action: _action,
+      method: _method,
+      queryParameters: _queryParameters,
+    );
+    
+    final FacilityHubListResponse _responseData = deserialize<FacilityHubListResponse, FacilityHubListResponse>(_response.data!, 'FacilityHubListResponse', growable: true);
+    return _responseData;
+    
+  }
+
+  /// Update a facility hub
+  /// 1
+  ///
+  /// Parameters:
+  /// * [facilityHubId] 
+  /// * [names] 
+  /// * [apiVersion] 
+  ///
+  /// Returns a [Future] containing a [Response] with a [FacilityHubUpdateResponse] as data
+  Future<FacilityHubUpdateResponse> facilityHubUpdate({ 
+    required num facilityHubId,
+    required String names,
+    String? apiVersion,
+  }) async {
+    final _path = r'/facility/hub/{facilityHubId}'.replaceAll('{' r'facilityHubId' '}', facilityHubId.toString());
+    final _action = 'facilityHub:update';
+    final _method = r'PUT';
+
+    if (apiVersion == null) {
+      apiVersion = '1';
+    }
+    final _socketParameters = <String, dynamic>{
+      r'facilityHubId': _encodeQueryParameter(facilityHubId),
+    };
+    final _queryParameters = <String, dynamic>{
+      r'name': _encodeQueryParameter(names),
+      if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
+    };
+    final _response = await connection.action(
+      path: _path,
+      action: _action,
+      method: _method,
+      queryParameters: _queryParameters,
+      socketParameters: _socketParameters,
+    );
+    
+    final FacilityHubUpdateResponse _responseData = deserialize<FacilityHubUpdateResponse, FacilityHubUpdateResponse>(_response.data!, 'FacilityHubUpdateResponse', growable: true);
     return _responseData;
     
   }
@@ -3853,13 +4305,14 @@ class MetricsApi {
       if (key != null) r'key': _encodeQueryParameter(key),
       r'type': _encodeQueryParameter(type),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
       method: _method,
       queryParameters: _queryParameters,
     );
+    
     final FacilityInBodyIntegrationResponse _responseData = deserialize<FacilityInBodyIntegrationResponse, FacilityInBodyIntegrationResponse>(_response.data!, 'FacilityInBodyIntegrationResponse', growable: true);
     return _responseData;
     
@@ -3885,13 +4338,14 @@ class MetricsApi {
 
     final _queryParameters = <String, dynamic>{
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     await connection.action(
       path: _path,
       action: _action,
       method: _method,
       queryParameters: _queryParameters,
     );
+    
 
     return;
   }
@@ -3916,13 +4370,14 @@ class MetricsApi {
 
     final _queryParameters = <String, dynamic>{
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
       method: _method,
       queryParameters: _queryParameters,
     );
+    
     final FacilityInBodyIntegrationResponse _responseData = deserialize<FacilityInBodyIntegrationResponse, FacilityInBodyIntegrationResponse>(_response.data!, 'FacilityInBodyIntegrationResponse', growable: true);
     return _responseData;
     
@@ -3955,7 +4410,7 @@ class MetricsApi {
     final _queryParameters = <String, dynamic>{
       r'echipData': _encodeQueryParameter(echipData),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
@@ -3963,6 +4418,7 @@ class MetricsApi {
       queryParameters: _queryParameters,
       socketParameters: _socketParameters,
     );
+    
     final KioskSessionResponse _responseData = deserialize<KioskSessionResponse, KioskSessionResponse>(_response.data!, 'KioskSessionResponse', growable: true);
     return _responseData;
     
@@ -3995,7 +4451,7 @@ class MetricsApi {
     final _queryParameters = <String, dynamic>{
       r'echipData': _encodeQueryParameter(echipData),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
@@ -4003,6 +4459,7 @@ class MetricsApi {
       queryParameters: _queryParameters,
       socketParameters: _socketParameters,
     );
+    
     final KioskSessionResponse _responseData = deserialize<KioskSessionResponse, KioskSessionResponse>(_response.data!, 'KioskSessionResponse', growable: true);
     return _responseData;
     
@@ -4028,13 +4485,14 @@ class MetricsApi {
 
     final _queryParameters = <String, dynamic>{
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     await connection.action(
       path: _path,
       action: _action,
       method: _method,
       queryParameters: _queryParameters,
     );
+    
 
     return;
   }
@@ -4059,13 +4517,14 @@ class MetricsApi {
 
     final _queryParameters = <String, dynamic>{
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
       method: _method,
       queryParameters: _queryParameters,
     );
+    
     final FacilityKioskTokenResponse _responseData = deserialize<FacilityKioskTokenResponse, FacilityKioskTokenResponse>(_response.data!, 'FacilityKioskTokenResponse', growable: true);
     return _responseData;
     
@@ -4091,13 +4550,14 @@ class MetricsApi {
 
     final _queryParameters = <String, dynamic>{
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     await connection.action(
       path: _path,
       action: _action,
       method: _method,
       queryParameters: _queryParameters,
     );
+    
 
     return;
   }
@@ -4128,13 +4588,14 @@ class MetricsApi {
       r'primaryIdentification': _encodeQueryParameter(primaryIdentification),
       if (secondaryIdentification != null) r'secondaryIdentification': _encodeQueryParameter(secondaryIdentification),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
       method: _method,
       queryParameters: _queryParameters,
     );
+    
     final FacilityUserResponse _responseData = deserialize<FacilityUserResponse, FacilityUserResponse>(_response.data!, 'FacilityUserResponse', growable: true);
     return _responseData;
     
@@ -4184,13 +4645,14 @@ class MetricsApi {
       if (sort != null) r'sort': _encodeQueryParameter(sort),
       if (type != null) r'type': _encodeQueryParameter(type),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
       method: _method,
       queryParameters: _queryParameters,
     );
+    
     final FacilityLicenseListResponse _responseData = deserialize<FacilityLicenseListResponse, FacilityLicenseListResponse>(_response.data!, 'FacilityLicenseListResponse', growable: true);
     return _responseData;
     
@@ -4219,13 +4681,14 @@ class MetricsApi {
     final _queryParameters = <String, dynamic>{
       r'id': _encodeQueryParameter(id),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
       method: _method,
       queryParameters: _queryParameters,
     );
+    
     final FacilityLicenseResponse _responseData = deserialize<FacilityLicenseResponse, FacilityLicenseResponse>(_response.data!, 'FacilityLicenseResponse', growable: true);
     return _responseData;
     
@@ -4252,19 +4715,19 @@ class MetricsApi {
   ///
   /// Returns a [Future] containing a [Response] with a [FacilityListResponse] as data
   Future<FacilityListResponse> facilityList({ 
-    num? address,
+    String? address,
     bool? ascending = true,
-    num? city,
-    num? country,
+    String? city,
+    String? country,
     num? limit,
-    num? names,
+    String? names,
     num? offset,
     num? page,
-    num? phone,
-    num? postcode,
+    String? phone,
+    String? postcode,
     num? quantity,
     String? sort = 'id',
-    num? state,
+    String? state,
     String? apiVersion,
   }) async {
     final _path = r'/facility/list';
@@ -4290,14 +4753,162 @@ class MetricsApi {
       if (sort != null) r'sort': _encodeQueryParameter(sort),
       if (state != null) r'state': _encodeQueryParameter(state),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
       method: _method,
       queryParameters: _queryParameters,
     );
+    
     final FacilityListResponse _responseData = deserialize<FacilityListResponse, FacilityListResponse>(_response.data!, 'FacilityListResponse', growable: true);
+    return _responseData;
+    
+  }
+
+  /// Remove the facility member identifier (PIN)
+  /// 1
+  ///
+  /// Parameters:
+  /// * [userId] 
+  /// * [apiVersion] 
+  ///
+  /// Returns a [Future] containing a [Response] with a [FacilityRelationshipResponse] as data
+  Future<FacilityRelationshipResponse> facilityPinDelete({ 
+    required num userId,
+    String? apiVersion,
+  }) async {
+    final _path = r'/facility/pin';
+    final _action = 'facilityPin:delete';
+    final _method = r'DELETE';
+
+    if (apiVersion == null) {
+      apiVersion = '1';
+    }
+
+    final _queryParameters = <String, dynamic>{
+      r'userId': _encodeQueryParameter(userId),
+      if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
+    };
+    final _response = await connection.action(
+      path: _path,
+      action: _action,
+      method: _method,
+      queryParameters: _queryParameters,
+    );
+    
+    final FacilityRelationshipResponse _responseData = deserialize<FacilityRelationshipResponse, FacilityRelationshipResponse>(_response.data!, 'FacilityRelationshipResponse', growable: true);
+    return _responseData;
+    
+  }
+
+  /// Login a facility user using a PIN
+  /// 1
+  ///
+  /// Parameters:
+  /// * [pin] 
+  /// * [apiVersion] 
+  ///
+  /// Returns a [Future] containing a [Response] with a [FacilityPinLoginResponse] as data
+  Future<FacilityPinLoginResponse> facilityPinLogin({ 
+    required String pin,
+    String? apiVersion,
+  }) async {
+    final _path = r'/facility/pin/login';
+    final _action = 'facilityPin:login';
+    final _method = r'POST';
+
+    if (apiVersion == null) {
+      apiVersion = '1';
+    }
+
+    final _queryParameters = <String, dynamic>{
+      r'pin': _encodeQueryParameter(pin),
+      if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
+    };
+    final _response = await connection.action(
+      path: _path,
+      action: _action,
+      method: _method,
+      queryParameters: _queryParameters,
+    );
+    
+    final FacilityPinLoginResponse _responseData = deserialize<FacilityPinLoginResponse, FacilityPinLoginResponse>(_response.data!, 'FacilityPinLoginResponse', growable: true);
+    return _responseData;
+    
+  }
+
+  /// Show the facility PIN for a user
+  /// 1
+  ///
+  /// Parameters:
+  /// * [userId] 
+  /// * [apiVersion] 
+  ///
+  /// Returns a [Future] containing a [Response] with a [FacilityRelationshipResponse] as data
+  Future<FacilityRelationshipResponse> facilityPinShow({ 
+    required num userId,
+    String? apiVersion,
+  }) async {
+    final _path = r'/facility/pin';
+    final _action = 'facilityPin:show';
+    final _method = r'GET';
+
+    if (apiVersion == null) {
+      apiVersion = '1';
+    }
+
+    final _queryParameters = <String, dynamic>{
+      r'userId': _encodeQueryParameter(userId),
+      if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
+    };
+    final _response = await connection.action(
+      path: _path,
+      action: _action,
+      method: _method,
+      queryParameters: _queryParameters,
+    );
+    
+    final FacilityRelationshipResponse _responseData = deserialize<FacilityRelationshipResponse, FacilityRelationshipResponse>(_response.data!, 'FacilityRelationshipResponse', growable: true);
+    return _responseData;
+    
+  }
+
+  /// Set or update a facility member identifier (PIN)
+  /// 1
+  ///
+  /// Parameters:
+  /// * [pin] 
+  /// * [userId] 
+  /// * [apiVersion] 
+  ///
+  /// Returns a [Future] containing a [Response] with a [FacilityRelationshipResponse] as data
+  Future<FacilityRelationshipResponse> facilityPinUpdate({ 
+    required String pin,
+    required num userId,
+    String? apiVersion,
+  }) async {
+    final _path = r'/facility/pin';
+    final _action = 'facilityPin:update';
+    final _method = r'PUT';
+
+    if (apiVersion == null) {
+      apiVersion = '1';
+    }
+
+    final _queryParameters = <String, dynamic>{
+      r'pin': _encodeQueryParameter(pin),
+      r'userId': _encodeQueryParameter(userId),
+      if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
+    };
+    final _response = await connection.action(
+      path: _path,
+      action: _action,
+      method: _method,
+      queryParameters: _queryParameters,
+    );
+    
+    final FacilityRelationshipResponse _responseData = deserialize<FacilityRelationshipResponse, FacilityRelationshipResponse>(_response.data!, 'FacilityRelationshipResponse', growable: true);
     return _responseData;
     
   }
@@ -4325,13 +4936,14 @@ class MetricsApi {
     final _queryParameters = <String, dynamic>{
       if (id != null) r'id': _encodeQueryParameter(id),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
       method: _method,
       queryParameters: _queryParameters,
     );
+    
     final FacilityProfileResponse _responseData = deserialize<FacilityProfileResponse, FacilityProfileResponse>(_response.data!, 'FacilityProfileResponse', growable: true);
     return _responseData;
     
@@ -4381,13 +4993,14 @@ class MetricsApi {
       if (state != null) r'state': _encodeQueryParameter(state),
       if (website != null) r'website': _encodeQueryParameter(website),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
       method: _method,
       queryParameters: _queryParameters,
     );
+    
     final FacilityProfileResponse _responseData = deserialize<FacilityProfileResponse, FacilityProfileResponse>(_response.data!, 'FacilityProfileResponse', growable: true);
     return _responseData;
     
@@ -4443,13 +5056,14 @@ class MetricsApi {
       r'name': _encodeQueryParameter(names),
       if (units != null) r'units': _encodeQueryParameter(units),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
       method: _method,
       queryParameters: _queryParameters,
     );
+    
     final FacilityRelationshipResponse _responseData = deserialize<FacilityRelationshipResponse, FacilityRelationshipResponse>(_response.data!, 'FacilityRelationshipResponse', growable: true);
     return _responseData;
     
@@ -4479,7 +5093,7 @@ class MetricsApi {
     };
     final _queryParameters = <String, dynamic>{
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     await connection.action(
       path: _path,
       action: _action,
@@ -4487,6 +5101,7 @@ class MetricsApi {
       queryParameters: _queryParameters,
       socketParameters: _socketParameters,
     );
+    
 
     return;
   }
@@ -4504,7 +5119,7 @@ class MetricsApi {
   /// * [memberIdentifier] 
   /// * [names] 
   /// * [offset] 
-  /// * [sort] - Allowed values: id, name, memberIdentifier, employeeRole
+  /// * [sort] - Allowed values: id, name, firstName, lastName, memberIdentifier, employeeRole, pinCode
   /// * [apiVersion] 
   ///
   /// Returns a [Future] containing a [Response] with a [FacilityUserRelationshipListResponse] as data
@@ -4541,13 +5156,14 @@ class MetricsApi {
       if (offset != null) r'offset': _encodeQueryParameter(offset),
       if (sort != null) r'sort': _encodeQueryParameter(sort),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
       method: _method,
       queryParameters: _queryParameters,
     );
+    
     final FacilityUserRelationshipListResponse _responseData = deserialize<FacilityUserRelationshipListResponse, FacilityUserRelationshipListResponse>(_response.data!, 'FacilityUserRelationshipListResponse', growable: true);
     return _responseData;
     
@@ -4576,13 +5192,14 @@ class MetricsApi {
     final _queryParameters = <String, dynamic>{
       r'id': _encodeQueryParameter(id),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
       method: _method,
       queryParameters: _queryParameters,
     );
+    
     final FacilityRelationshipResponse _responseData = deserialize<FacilityRelationshipResponse, FacilityRelationshipResponse>(_response.data!, 'FacilityRelationshipResponse', growable: true);
     return _responseData;
     
@@ -4611,13 +5228,14 @@ class MetricsApi {
     final _queryParameters = <String, dynamic>{
       if (id != null) r'id': _encodeQueryParameter(id),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
       method: _method,
       queryParameters: _queryParameters,
     );
+    
     final SubscriptionResponse _responseData = deserialize<SubscriptionResponse, SubscriptionResponse>(_response.data!, 'SubscriptionResponse', growable: true);
     return _responseData;
     
@@ -4656,7 +5274,7 @@ class MetricsApi {
       if (member != null) r'member': _encodeQueryParameter(member),
       if (memberIdentifier != null) r'memberIdentifier': _encodeQueryParameter(memberIdentifier),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
@@ -4664,6 +5282,419 @@ class MetricsApi {
       queryParameters: _queryParameters,
       socketParameters: _socketParameters,
     );
+    
+    final FacilityRelationshipResponse _responseData = deserialize<FacilityRelationshipResponse, FacilityRelationshipResponse>(_response.data!, 'FacilityRelationshipResponse', growable: true);
+    return _responseData;
+    
+  }
+
+  /// Bulk-create Nova-style members within the session facility from a CSV file
+  /// 1
+  ///
+  /// Parameters:
+  /// * [csv] - CSV file containing nova member rows
+  /// * [apiVersion] 
+  ///
+  /// Returns a [Future] containing a [Response] with a [NovaMemberBulkCreateResponse] as data
+  Future<NovaMemberBulkCreateResponse> facilityRelationshipNovaMemberBulkCreate({ 
+    required MultipartFile csv,
+    String? apiVersion,
+  }) async {
+    final _path = r'/facility/relationship/nova/member/bulk';
+    final _action = 'facilityRelationship:novaMemberBulkCreate';
+    final _method = r'POST';
+
+    if (apiVersion == null) {
+      apiVersion = '1';
+    }
+
+
+    // Multipart form body: connection package wraps this map in
+    // FormData.fromMap, so MultipartFile values flow through Dio's
+    // multipart serializer. DateTime values pass through
+    // _encodeQueryParameter for ISO8601 conversion.
+    final _bodyParameters = <String, dynamic>{
+      if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
+      r'csv': csv,
+    };
+    final _response = await connection.action(
+      path: _path,
+      action: _action,
+      method: _method,
+      bodyParameters: _bodyParameters,
+    );
+    
+    final NovaMemberBulkCreateResponse _responseData = deserialize<NovaMemberBulkCreateResponse, NovaMemberBulkCreateResponse>(_response.data!, 'NovaMemberBulkCreateResponse', growable: true);
+    return _responseData;
+    
+  }
+
+  /// Create a Nova-style member (no email, no credential) within the session facility
+  /// 1
+  ///
+  /// Parameters:
+  /// * [firstName] 
+  /// * [lastName] 
+  /// * [birthday] 
+  /// * [externalIdentifier] 
+  /// * [gender] - Allowed values: m, f, o
+  /// * [metricHeight] 
+  /// * [metricWeight] 
+  /// * [pinCode] 
+  /// * [apiVersion] 
+  ///
+  /// Returns a [Future] containing a [Response] with a [FacilityRelationshipResponse] as data
+  Future<FacilityRelationshipResponse> facilityRelationshipNovaMemberCreate({ 
+    required String firstName,
+    required String lastName,
+    DateTime? birthday,
+    String? externalIdentifier,
+    String? gender,
+    num? metricHeight,
+    num? metricWeight,
+    String? pinCode,
+    String? apiVersion,
+  }) async {
+    final _path = r'/facility/relationship/nova/member';
+    final _action = 'facilityRelationship:novaMemberCreate';
+    final _method = r'POST';
+
+    if (apiVersion == null) {
+      apiVersion = '1';
+    }
+
+    final _queryParameters = <String, dynamic>{
+      if (birthday != null) r'birthday': _encodeQueryParameter(birthday),
+      if (externalIdentifier != null) r'externalIdentifier': _encodeQueryParameter(externalIdentifier),
+      r'firstName': _encodeQueryParameter(firstName),
+      if (gender != null) r'gender': _encodeQueryParameter(gender),
+      r'lastName': _encodeQueryParameter(lastName),
+      if (metricHeight != null) r'metricHeight': _encodeQueryParameter(metricHeight),
+      if (metricWeight != null) r'metricWeight': _encodeQueryParameter(metricWeight),
+      if (pinCode != null) r'pinCode': _encodeQueryParameter(pinCode),
+      if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
+    };
+    final _response = await connection.action(
+      path: _path,
+      action: _action,
+      method: _method,
+      queryParameters: _queryParameters,
+    );
+    
+    final FacilityRelationshipResponse _responseData = deserialize<FacilityRelationshipResponse, FacilityRelationshipResponse>(_response.data!, 'FacilityRelationshipResponse', growable: true);
+    return _responseData;
+    
+  }
+
+  /// Fully delete a Nova member
+  /// 1
+  ///
+  /// Parameters:
+  /// * [facilityRelationshipId] 
+  /// * [apiVersion] 
+  ///
+  /// Returns a [Future]
+  Future<void> facilityRelationshipNovaMemberDelete({ 
+    required num facilityRelationshipId,
+    String? apiVersion,
+  }) async {
+    final _path = r'/facility/relationship/nova/member/{facilityRelationshipId}'.replaceAll('{' r'facilityRelationshipId' '}', facilityRelationshipId.toString());
+    final _action = 'facilityRelationship:novaMemberDelete';
+    final _method = r'DELETE';
+
+    if (apiVersion == null) {
+      apiVersion = '1';
+    }
+    final _socketParameters = <String, dynamic>{
+      r'facilityRelationshipId': _encodeQueryParameter(facilityRelationshipId),
+    };
+    final _queryParameters = <String, dynamic>{
+      if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
+    };
+    await connection.action(
+      path: _path,
+      action: _action,
+      method: _method,
+      queryParameters: _queryParameters,
+      socketParameters: _socketParameters,
+    );
+    
+
+    return;
+  }
+
+  /// Update a Nova member relationship and profile fields
+  /// 1
+  ///
+  /// Parameters:
+  /// * [facilityRelationshipId] 
+  /// * [birthday] 
+  /// * [externalIdentifier] 
+  /// * [firstName] 
+  /// * [gender] - Allowed values: m, f, o
+  /// * [lastName] 
+  /// * [metricHeight] 
+  /// * [metricWeight] 
+  /// * [pinCode] 
+  /// * [apiVersion] 
+  ///
+  /// Returns a [Future] containing a [Response] with a [FacilityRelationshipResponse] as data
+  Future<FacilityRelationshipResponse> facilityRelationshipNovaMemberUpdate({ 
+    required num facilityRelationshipId,
+    DateTime? birthday,
+    String? externalIdentifier,
+    String? firstName,
+    String? gender,
+    String? lastName,
+    num? metricHeight,
+    num? metricWeight,
+    String? pinCode,
+    String? apiVersion,
+  }) async {
+    final _path = r'/facility/relationship/nova/member/{facilityRelationshipId}'.replaceAll('{' r'facilityRelationshipId' '}', facilityRelationshipId.toString());
+    final _action = 'facilityRelationship:novaMemberUpdate';
+    final _method = r'PUT';
+
+    if (apiVersion == null) {
+      apiVersion = '1';
+    }
+    final _socketParameters = <String, dynamic>{
+      r'facilityRelationshipId': _encodeQueryParameter(facilityRelationshipId),
+    };
+    final _queryParameters = <String, dynamic>{
+      if (birthday != null) r'birthday': _encodeQueryParameter(birthday),
+      if (externalIdentifier != null) r'externalIdentifier': _encodeQueryParameter(externalIdentifier),
+      if (firstName != null) r'firstName': _encodeQueryParameter(firstName),
+      if (gender != null) r'gender': _encodeQueryParameter(gender),
+      if (lastName != null) r'lastName': _encodeQueryParameter(lastName),
+      if (metricHeight != null) r'metricHeight': _encodeQueryParameter(metricHeight),
+      if (metricWeight != null) r'metricWeight': _encodeQueryParameter(metricWeight),
+      if (pinCode != null) r'pinCode': _encodeQueryParameter(pinCode),
+      if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
+    };
+    final _response = await connection.action(
+      path: _path,
+      action: _action,
+      method: _method,
+      queryParameters: _queryParameters,
+      socketParameters: _socketParameters,
+    );
+    
+    final FacilityRelationshipResponse _responseData = deserialize<FacilityRelationshipResponse, FacilityRelationshipResponse>(_response.data!, 'FacilityRelationshipResponse', growable: true);
+    return _responseData;
+    
+  }
+
+  /// Deactivate a facility relationship
+  /// 1
+  ///
+  /// Parameters:
+  /// * [facilityRelationshipId] 
+  /// * [apiVersion] 
+  ///
+  /// Returns a [Future]
+  Future<void> facilityRelationshipNovaStaffDeactivate({ 
+    required num facilityRelationshipId,
+    String? apiVersion,
+  }) async {
+    final _path = r'/facility/relationship/nova/staff/{facilityRelationshipId}/deactivate'.replaceAll('{' r'facilityRelationshipId' '}', facilityRelationshipId.toString());
+    final _action = 'facilityRelationship:novaStaffDeactivate';
+    final _method = r'POST';
+
+    if (apiVersion == null) {
+      apiVersion = '1';
+    }
+    final _socketParameters = <String, dynamic>{
+      r'facilityRelationshipId': _encodeQueryParameter(facilityRelationshipId),
+    };
+    final _queryParameters = <String, dynamic>{
+      if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
+    };
+    await connection.action(
+      path: _path,
+      action: _action,
+      method: _method,
+      queryParameters: _queryParameters,
+      socketParameters: _socketParameters,
+    );
+    
+
+    return;
+  }
+
+  /// Fully delete a Nova staff member (account purge).
+  /// 1
+  ///
+  /// Parameters:
+  /// * [facilityRelationshipId] 
+  /// * [apiVersion] 
+  ///
+  /// Returns a [Future]
+  Future<void> facilityRelationshipNovaStaffDelete({ 
+    required num facilityRelationshipId,
+    String? apiVersion,
+  }) async {
+    final _path = r'/facility/relationship/nova/staff/{facilityRelationshipId}'.replaceAll('{' r'facilityRelationshipId' '}', facilityRelationshipId.toString());
+    final _action = 'facilityRelationship:novaStaffDelete';
+    final _method = r'DELETE';
+
+    if (apiVersion == null) {
+      apiVersion = '1';
+    }
+    final _socketParameters = <String, dynamic>{
+      r'facilityRelationshipId': _encodeQueryParameter(facilityRelationshipId),
+    };
+    final _queryParameters = <String, dynamic>{
+      if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
+    };
+    await connection.action(
+      path: _path,
+      action: _action,
+      method: _method,
+      queryParameters: _queryParameters,
+      socketParameters: _socketParameters,
+    );
+    
+
+    return;
+  }
+
+  /// Invite a nova staff member by email
+  /// 1
+  ///
+  /// Parameters:
+  /// * [email] 
+  /// * [employeeRole] - Allowed values: admin, customerSupport, trainer, frontDesk, maintenance
+  /// * [apiVersion] 
+  ///
+  /// Returns a [Future] containing a [Response] with a [FacilityRelationshipNovaStaffInviteResponse] as data
+  Future<FacilityRelationshipNovaStaffInviteResponse> facilityRelationshipNovaStaffInvite({ 
+    required String email,
+    required String employeeRole,
+    String? apiVersion,
+  }) async {
+    final _path = r'/facility/relationship/nova/staff/invite';
+    final _action = 'facilityRelationship:novaStaffInvite';
+    final _method = r'POST';
+
+    if (apiVersion == null) {
+      apiVersion = '1';
+    }
+
+    final _queryParameters = <String, dynamic>{
+      r'email': _encodeQueryParameter(email),
+      r'employeeRole': _encodeQueryParameter(employeeRole),
+      if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
+    };
+    final _response = await connection.action(
+      path: _path,
+      action: _action,
+      method: _method,
+      queryParameters: _queryParameters,
+    );
+    
+    final FacilityRelationshipNovaStaffInviteResponse _responseData = deserialize<FacilityRelationshipNovaStaffInviteResponse, FacilityRelationshipNovaStaffInviteResponse>(_response.data!, 'FacilityRelationshipNovaStaffInviteResponse', growable: true);
+    return _responseData;
+    
+  }
+
+  /// Reactivate a facility relationship
+  /// 1
+  ///
+  /// Parameters:
+  /// * [facilityRelationshipId] 
+  /// * [apiVersion] 
+  ///
+  /// Returns a [Future]
+  Future<void> facilityRelationshipNovaStaffReactivate({ 
+    required num facilityRelationshipId,
+    String? apiVersion,
+  }) async {
+    final _path = r'/facility/relationship/nova/staff/{facilityRelationshipId}/reactivate'.replaceAll('{' r'facilityRelationshipId' '}', facilityRelationshipId.toString());
+    final _action = 'facilityRelationship:novaStaffReactivate';
+    final _method = r'POST';
+
+    if (apiVersion == null) {
+      apiVersion = '1';
+    }
+    final _socketParameters = <String, dynamic>{
+      r'facilityRelationshipId': _encodeQueryParameter(facilityRelationshipId),
+    };
+    final _queryParameters = <String, dynamic>{
+      if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
+    };
+    await connection.action(
+      path: _path,
+      action: _action,
+      method: _method,
+      queryParameters: _queryParameters,
+      socketParameters: _socketParameters,
+    );
+    
+
+    return;
+  }
+
+  /// Update a Nova staff relationship and profile fields
+  /// 1
+  ///
+  /// Parameters:
+  /// * [facilityRelationshipId] 
+  /// * [birthday] 
+  /// * [employeeRole] - Allowed values: admin, customerSupport, trainer, frontDesk, maintenance
+  /// * [externalIdentifier] 
+  /// * [firstName] 
+  /// * [gender] - Allowed values: m, f, o
+  /// * [lastName] 
+  /// * [metricHeight] 
+  /// * [metricWeight] 
+  /// * [pinCode] 
+  /// * [apiVersion] 
+  ///
+  /// Returns a [Future] containing a [Response] with a [FacilityRelationshipResponse] as data
+  Future<FacilityRelationshipResponse> facilityRelationshipNovaStaffUpdate({ 
+    required num facilityRelationshipId,
+    DateTime? birthday,
+    String? employeeRole,
+    String? externalIdentifier,
+    String? firstName,
+    String? gender,
+    String? lastName,
+    num? metricHeight,
+    num? metricWeight,
+    String? pinCode,
+    String? apiVersion,
+  }) async {
+    final _path = r'/facility/relationship/nova/staff/{facilityRelationshipId}'.replaceAll('{' r'facilityRelationshipId' '}', facilityRelationshipId.toString());
+    final _action = 'facilityRelationship:novaStaffUpdate';
+    final _method = r'PUT';
+
+    if (apiVersion == null) {
+      apiVersion = '1';
+    }
+    final _socketParameters = <String, dynamic>{
+      r'facilityRelationshipId': _encodeQueryParameter(facilityRelationshipId),
+    };
+    final _queryParameters = <String, dynamic>{
+      if (birthday != null) r'birthday': _encodeQueryParameter(birthday),
+      if (employeeRole != null) r'employeeRole': _encodeQueryParameter(employeeRole),
+      if (externalIdentifier != null) r'externalIdentifier': _encodeQueryParameter(externalIdentifier),
+      if (firstName != null) r'firstName': _encodeQueryParameter(firstName),
+      if (gender != null) r'gender': _encodeQueryParameter(gender),
+      if (lastName != null) r'lastName': _encodeQueryParameter(lastName),
+      if (metricHeight != null) r'metricHeight': _encodeQueryParameter(metricHeight),
+      if (metricWeight != null) r'metricWeight': _encodeQueryParameter(metricWeight),
+      if (pinCode != null) r'pinCode': _encodeQueryParameter(pinCode),
+      if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
+    };
+    final _response = await connection.action(
+      path: _path,
+      action: _action,
+      method: _method,
+      queryParameters: _queryParameters,
+      socketParameters: _socketParameters,
+    );
+    
     final FacilityRelationshipResponse _responseData = deserialize<FacilityRelationshipResponse, FacilityRelationshipResponse>(_response.data!, 'FacilityRelationshipResponse', growable: true);
     return _responseData;
     
@@ -4704,13 +5735,14 @@ class MetricsApi {
       if (memberIdentifier != null) r'memberIdentifier': _encodeQueryParameter(memberIdentifier),
       if (userId != null) r'userId': _encodeQueryParameter(userId),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
       method: _method,
       queryParameters: _queryParameters,
     );
+    
     final FacilityRelationshipRequestResponse _responseData = deserialize<FacilityRelationshipRequestResponse, FacilityRelationshipRequestResponse>(_response.data!, 'FacilityRelationshipRequestResponse', growable: true);
     return _responseData;
     
@@ -4757,13 +5789,14 @@ class MetricsApi {
       if (sort != null) r'sort': _encodeQueryParameter(sort),
       if (userId != null) r'userId': _encodeQueryParameter(userId),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
       method: _method,
       queryParameters: _queryParameters,
     );
+    
     final FacilityRelationshipRequestListResponse _responseData = deserialize<FacilityRelationshipRequestListResponse, FacilityRelationshipRequestListResponse>(_response.data!, 'FacilityRelationshipRequestListResponse', growable: true);
     return _responseData;
     
@@ -4792,13 +5825,14 @@ class MetricsApi {
     final _queryParameters = <String, dynamic>{
       r'id': _encodeQueryParameter(id),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
       method: _method,
       queryParameters: _queryParameters,
     );
+    
     final FacilityRelationshipRequestResponse _responseData = deserialize<FacilityRelationshipRequestResponse, FacilityRelationshipRequestResponse>(_response.data!, 'FacilityRelationshipRequestResponse', growable: true);
     return _responseData;
     
@@ -4827,13 +5861,14 @@ class MetricsApi {
     final _queryParameters = <String, dynamic>{
       if (id != null) r'id': _encodeQueryParameter(id),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
       method: _method,
       queryParameters: _queryParameters,
     );
+    
     final SubscriptionResponse _responseData = deserialize<SubscriptionResponse, SubscriptionResponse>(_response.data!, 'SubscriptionResponse', growable: true);
     return _responseData;
     
@@ -4869,7 +5904,7 @@ class MetricsApi {
       r'approval': _encodeQueryParameter(approval),
       if (memberIdentifier != null) r'memberIdentifier': _encodeQueryParameter(memberIdentifier),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
@@ -4877,6 +5912,7 @@ class MetricsApi {
       queryParameters: _queryParameters,
       socketParameters: _socketParameters,
     );
+    
     final FacilityRelationshipResponse _responseData = deserialize<FacilityRelationshipResponse, FacilityRelationshipResponse>(_response.data!, 'FacilityRelationshipResponse', growable: true);
     return _responseData;
     
@@ -4911,13 +5947,14 @@ class MetricsApi {
       if (memberIdentifier != null) r'memberIdentifier': _encodeQueryParameter(memberIdentifier),
       if (userId != null) r'userId': _encodeQueryParameter(userId),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
       method: _method,
       queryParameters: _queryParameters,
     );
+    
     final FacilityRelationshipRequestResponse _responseData = deserialize<FacilityRelationshipRequestResponse, FacilityRelationshipRequestResponse>(_response.data!, 'FacilityRelationshipRequestResponse', growable: true);
     return _responseData;
     
@@ -4964,13 +6001,14 @@ class MetricsApi {
       if (sort != null) r'sort': _encodeQueryParameter(sort),
       if (userId != null) r'userId': _encodeQueryParameter(userId),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
       method: _method,
       queryParameters: _queryParameters,
     );
+    
     final PrivilegedFacilityRelationshipRequestListResponse _responseData = deserialize<PrivilegedFacilityRelationshipRequestListResponse, PrivilegedFacilityRelationshipRequestListResponse>(_response.data!, 'PrivilegedFacilityRelationshipRequestListResponse', growable: true);
     return _responseData;
     
@@ -5002,13 +6040,14 @@ class MetricsApi {
       r'id': _encodeQueryParameter(id),
       if (userId != null) r'userId': _encodeQueryParameter(userId),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
       method: _method,
       queryParameters: _queryParameters,
     );
+    
     final FacilityRelationshipRequestResponse _responseData = deserialize<FacilityRelationshipRequestResponse, FacilityRelationshipRequestResponse>(_response.data!, 'FacilityRelationshipRequestResponse', growable: true);
     return _responseData;
     
@@ -5040,13 +6079,14 @@ class MetricsApi {
       if (id != null) r'id': _encodeQueryParameter(id),
       if (userId != null) r'userId': _encodeQueryParameter(userId),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
       method: _method,
       queryParameters: _queryParameters,
     );
+    
     final SubscriptionResponse _responseData = deserialize<SubscriptionResponse, SubscriptionResponse>(_response.data!, 'SubscriptionResponse', growable: true);
     return _responseData;
     
@@ -5082,7 +6122,7 @@ class MetricsApi {
       r'approval': _encodeQueryParameter(approval),
       if (userId != null) r'userId': _encodeQueryParameter(userId),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
@@ -5090,6 +6130,7 @@ class MetricsApi {
       queryParameters: _queryParameters,
       socketParameters: _socketParameters,
     );
+    
     final FacilityRelationshipResponse _responseData = deserialize<FacilityRelationshipResponse, FacilityRelationshipResponse>(_response.data!, 'FacilityRelationshipResponse', growable: true);
     return _responseData;
     
@@ -5122,7 +6163,7 @@ class MetricsApi {
     final _queryParameters = <String, dynamic>{
       if (userId != null) r'userId': _encodeQueryParameter(userId),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     await connection.action(
       path: _path,
       action: _action,
@@ -5130,6 +6171,7 @@ class MetricsApi {
       queryParameters: _queryParameters,
       socketParameters: _socketParameters,
     );
+    
 
     return;
   }
@@ -5178,13 +6220,14 @@ class MetricsApi {
       if (sort != null) r'sort': _encodeQueryParameter(sort),
       if (userId != null) r'userId': _encodeQueryParameter(userId),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
       method: _method,
       queryParameters: _queryParameters,
     );
+    
     final UserFacilityRelationshipListResponse _responseData = deserialize<UserFacilityRelationshipListResponse, UserFacilityRelationshipListResponse>(_response.data!, 'UserFacilityRelationshipListResponse', growable: true);
     return _responseData;
     
@@ -5216,13 +6259,14 @@ class MetricsApi {
       r'id': _encodeQueryParameter(id),
       if (userId != null) r'userId': _encodeQueryParameter(userId),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
       method: _method,
       queryParameters: _queryParameters,
     );
+    
     final FacilityRelationshipResponse _responseData = deserialize<FacilityRelationshipResponse, FacilityRelationshipResponse>(_response.data!, 'FacilityRelationshipResponse', growable: true);
     return _responseData;
     
@@ -5254,13 +6298,14 @@ class MetricsApi {
       if (id != null) r'id': _encodeQueryParameter(id),
       if (userId != null) r'userId': _encodeQueryParameter(userId),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
       method: _method,
       queryParameters: _queryParameters,
     );
+    
     final SubscriptionResponse _responseData = deserialize<SubscriptionResponse, SubscriptionResponse>(_response.data!, 'SubscriptionResponse', growable: true);
     return _responseData;
     
@@ -5296,7 +6341,7 @@ class MetricsApi {
       r'memberSecret': _encodeQueryParameter(memberSecret),
       if (userId != null) r'userId': _encodeQueryParameter(userId),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
@@ -5304,6 +6349,7 @@ class MetricsApi {
       queryParameters: _queryParameters,
       socketParameters: _socketParameters,
     );
+    
     final FacilityRelationshipResponse _responseData = deserialize<FacilityRelationshipResponse, FacilityRelationshipResponse>(_response.data!, 'FacilityRelationshipResponse', growable: true);
     return _responseData;
     
@@ -5338,13 +6384,14 @@ class MetricsApi {
       r'group': _encodeQueryParameter(group),
       r'to': _encodeQueryParameter(to),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     await connection.action(
       path: _path,
       action: _action,
       method: _method,
       queryParameters: _queryParameters,
     );
+    
 
     return;
   }
@@ -5372,13 +6419,14 @@ class MetricsApi {
     final _queryParameters = <String, dynamic>{
       r'echipId': _encodeQueryParameter(echipId),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
       method: _method,
       queryParameters: _queryParameters,
     );
+    
     final SessionResponse _responseData = deserialize<SessionResponse, SessionResponse>(_response.data!, 'SessionResponse', growable: true);
     return _responseData;
     
@@ -5408,7 +6456,7 @@ class MetricsApi {
     };
     final _queryParameters = <String, dynamic>{
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     await connection.action(
       path: _path,
       action: _action,
@@ -5416,6 +6464,7 @@ class MetricsApi {
       queryParameters: _queryParameters,
       socketParameters: _socketParameters,
     );
+    
 
     return;
   }
@@ -5449,13 +6498,14 @@ class MetricsApi {
       if (echipId != null) r'echipId': _encodeQueryParameter(echipId),
       if (id != null) r'id': _encodeQueryParameter(id),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
       method: _method,
       queryParameters: _queryParameters,
     );
+    
     final SessionResponse _responseData = deserialize<SessionResponse, SessionResponse>(_response.data!, 'SessionResponse', growable: true);
     return _responseData;
     
@@ -5505,13 +6555,14 @@ class MetricsApi {
       if (sort != null) r'sort': _encodeQueryParameter(sort),
       if (to != null) r'to': _encodeQueryParameter(to),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
       method: _method,
       queryParameters: _queryParameters,
     );
+    
     final FacilitySessionListResponse _responseData = deserialize<FacilitySessionListResponse, FacilitySessionListResponse>(_response.data!, 'FacilitySessionListResponse', growable: true);
     return _responseData;
     
@@ -5546,13 +6597,14 @@ class MetricsApi {
       if (id != null) r'id': _encodeQueryParameter(id),
       if (userId != null) r'userId': _encodeQueryParameter(userId),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
       method: _method,
       queryParameters: _queryParameters,
     );
+    
     final SessionResponse _responseData = deserialize<SessionResponse, SessionResponse>(_response.data!, 'SessionResponse', growable: true);
     return _responseData;
     
@@ -5594,7 +6646,7 @@ class MetricsApi {
       if (forceEndPrevious != null) r'forceEndPrevious': _encodeQueryParameter(forceEndPrevious),
       if (sessionPlanSequenceAssignmentId != null) r'sessionPlanSequenceAssignmentId': _encodeQueryParameter(sessionPlanSequenceAssignmentId),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
@@ -5602,6 +6654,7 @@ class MetricsApi {
       queryParameters: _queryParameters,
       socketParameters: _socketParameters,
     );
+    
     final SessionStartResponse _responseData = deserialize<SessionStartResponse, SessionStartResponse>(_response.data!, 'SessionStartResponse', growable: true);
     return _responseData;
     
@@ -5631,7 +6684,7 @@ class MetricsApi {
     };
     final _queryParameters = <String, dynamic>{
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
@@ -5639,6 +6692,7 @@ class MetricsApi {
       queryParameters: _queryParameters,
       socketParameters: _socketParameters,
     );
+    
     final FacilitySessionListResponse _responseData = deserialize<FacilitySessionListResponse, FacilitySessionListResponse>(_response.data!, 'FacilitySessionListResponse', growable: true);
     return _responseData;
     
@@ -5667,13 +6721,14 @@ class MetricsApi {
     final _queryParameters = <String, dynamic>{
       if (id != null) r'id': _encodeQueryParameter(id),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
       method: _method,
       queryParameters: _queryParameters,
     );
+    
     final SubscriptionResponse _responseData = deserialize<SubscriptionResponse, SubscriptionResponse>(_response.data!, 'SubscriptionResponse', growable: true);
     return _responseData;
     
@@ -5709,7 +6764,7 @@ class MetricsApi {
       r'echipData': _encodeQueryParameter(echipData),
       if (id != null) r'id': _encodeQueryParameter(id),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
@@ -5717,6 +6772,7 @@ class MetricsApi {
       queryParameters: _queryParameters,
       socketParameters: _socketParameters,
     );
+    
     final SessionResponse _responseData = deserialize<SessionResponse, SessionResponse>(_response.data!, 'SessionResponse', growable: true);
     return _responseData;
     
@@ -5745,16 +6801,54 @@ class MetricsApi {
     final _queryParameters = <String, dynamic>{
       if (id != null) r'id': _encodeQueryParameter(id),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
       method: _method,
       queryParameters: _queryParameters,
     );
+    
     final FacilityResponse _responseData = deserialize<FacilityResponse, FacilityResponse>(_response.data!, 'FacilityResponse', growable: true);
     return _responseData;
     
+  }
+
+  /// Blacklist a facility strength machine&#39;s tokens
+  /// 1
+  ///
+  /// Parameters:
+  /// * [id] 
+  /// * [apiVersion] 
+  ///
+  /// Returns a [Future]
+  Future<void> facilityStrengthMachineBlacklist({ 
+    required num id,
+    String? apiVersion,
+  }) async {
+    final _path = r'/facility/strength-machine/{id}/blacklist'.replaceAll('{' r'id' '}', id.toString());
+    final _action = 'facilityStrengthMachine:blacklist';
+    final _method = r'POST';
+
+    if (apiVersion == null) {
+      apiVersion = '1';
+    }
+    final _socketParameters = <String, dynamic>{
+      r'id': _encodeQueryParameter(id),
+    };
+    final _queryParameters = <String, dynamic>{
+      if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
+    };
+    await connection.action(
+      path: _path,
+      action: _action,
+      method: _method,
+      queryParameters: _queryParameters,
+      socketParameters: _socketParameters,
+    );
+    
+
+    return;
   }
 
   /// Show a facility strength machine default configuration
@@ -5777,13 +6871,14 @@ class MetricsApi {
 
     final _queryParameters = <String, dynamic>{
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
       method: _method,
       queryParameters: _queryParameters,
     );
+    
     final FacilityStrengthMachineConfigurationResponse _responseData = deserialize<FacilityStrengthMachineConfigurationResponse, FacilityStrengthMachineConfigurationResponse>(_response.data!, 'FacilityStrengthMachineConfigurationResponse', growable: true);
     return _responseData;
     
@@ -5809,13 +6904,14 @@ class MetricsApi {
 
     final _queryParameters = <String, dynamic>{
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
       method: _method,
       queryParameters: _queryParameters,
     );
+    
     final SubscriptionResponse _responseData = deserialize<SubscriptionResponse, SubscriptionResponse>(_response.data!, 'SubscriptionResponse', growable: true);
     return _responseData;
     
@@ -5859,62 +6955,62 @@ class MetricsApi {
       r'secondaryFocus': _encodeQueryParameter(secondaryFocus),
       r'timeZone': _encodeQueryParameter(timeZone),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
       method: _method,
       queryParameters: _queryParameters,
     );
+    
     final FacilityStrengthMachineConfigurationResponse _responseData = deserialize<FacilityStrengthMachineConfigurationResponse, FacilityStrengthMachineConfigurationResponse>(_response.data!, 'FacilityStrengthMachineConfigurationResponse', growable: true);
     return _responseData;
     
   }
 
   /// Create a facility strength machine
-  /// 1
+  /// 2
   ///
   /// Parameters:
+  /// * [line] 
   /// * [model] 
   /// * [serial] 
-  /// * [strengthMachineId] 
   /// * [version] 
   /// * [location] 
   /// * [apiVersion] 
   ///
   /// Returns a [Future] containing a [Response] with a [FacilityStrengthMachineResponse] as data
   Future<FacilityStrengthMachineResponse> facilityStrengthMachineCreate({ 
-    required num model,
+    required String line,
+    required String model,
     required String serial,
-    required num strengthMachineId,
     required String version,
     String? location,
     String? apiVersion,
   }) async {
-    final _path = r'/facility/strength-machine/{strengthMachineId}'.replaceAll('{' r'strengthMachineId' '}', strengthMachineId.toString());
+    final _path = r'/facility/strength-machine';
     final _action = 'facilityStrengthMachine:create';
     final _method = r'POST';
 
     if (apiVersion == null) {
-      apiVersion = '1';
+      apiVersion = '2';
     }
-    final _socketParameters = <String, dynamic>{
-      r'strengthMachineId': _encodeQueryParameter(strengthMachineId),
-    };
+
     final _queryParameters = <String, dynamic>{
+      r'line': _encodeQueryParameter(line),
       if (location != null) r'location': _encodeQueryParameter(location),
       r'model': _encodeQueryParameter(model),
       r'serial': _encodeQueryParameter(serial),
       r'version': _encodeQueryParameter(version),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
       method: _method,
       queryParameters: _queryParameters,
-      socketParameters: _socketParameters,
     );
+    
     final FacilityStrengthMachineResponse _responseData = deserialize<FacilityStrengthMachineResponse, FacilityStrengthMachineResponse>(_response.data!, 'FacilityStrengthMachineResponse', growable: true);
     return _responseData;
     
@@ -5943,13 +7039,14 @@ class MetricsApi {
     final _queryParameters = <String, dynamic>{
       r'echipData': _encodeQueryParameter(echipData),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
       method: _method,
       queryParameters: _queryParameters,
     );
+    
     final FacilityStrengthMachineBulkCreateResponse _responseData = deserialize<FacilityStrengthMachineBulkCreateResponse, FacilityStrengthMachineBulkCreateResponse>(_response.data!, 'FacilityStrengthMachineBulkCreateResponse', growable: true);
     return _responseData;
     
@@ -5979,7 +7076,7 @@ class MetricsApi {
     };
     final _queryParameters = <String, dynamic>{
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     await connection.action(
       path: _path,
       action: _action,
@@ -5987,6 +7084,7 @@ class MetricsApi {
       queryParameters: _queryParameters,
       socketParameters: _socketParameters,
     );
+    
 
     return;
   }
@@ -6011,13 +7109,14 @@ class MetricsApi {
 
     final _queryParameters = <String, dynamic>{
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
       method: _method,
       queryParameters: _queryParameters,
     );
+    
     final FacilityStrengthMachineInitializerOTPTokenResponse _responseData = deserialize<FacilityStrengthMachineInitializerOTPTokenResponse, FacilityStrengthMachineInitializerOTPTokenResponse>(_response.data!, 'FacilityStrengthMachineInitializerOTPTokenResponse', growable: true);
     return _responseData;
     
@@ -6043,13 +7142,14 @@ class MetricsApi {
 
     final _queryParameters = <String, dynamic>{
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
       method: _method,
       queryParameters: _queryParameters,
     );
+    
     final FacilityStrengthMachineInitializerTokenResponse _responseData = deserialize<FacilityStrengthMachineInitializerTokenResponse, FacilityStrengthMachineInitializerTokenResponse>(_response.data!, 'FacilityStrengthMachineInitializerTokenResponse', growable: true);
     return _responseData;
     
@@ -6063,7 +7163,8 @@ class MetricsApi {
   /// * [limit] 
   /// * [model] 
   /// * [offset] 
-  /// * [sort] - Allowed values: id, model
+  /// * [query] 
+  /// * [sort] - Allowed values: id, model, name
   /// * [apiVersion] 
   ///
   /// Returns a [Future] containing a [Response] with a [FacilityStrengthMachineListResponse] as data
@@ -6072,6 +7173,7 @@ class MetricsApi {
     num? limit,
     num? model,
     num? offset,
+    String? query,
     String? sort = 'model',
     String? apiVersion,
   }) async {
@@ -6088,16 +7190,51 @@ class MetricsApi {
       if (limit != null) r'limit': _encodeQueryParameter(limit),
       if (model != null) r'model': _encodeQueryParameter(model),
       if (offset != null) r'offset': _encodeQueryParameter(offset),
+      if (query != null) r'query': _encodeQueryParameter(query),
       if (sort != null) r'sort': _encodeQueryParameter(sort),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
       method: _method,
       queryParameters: _queryParameters,
     );
+    
     final FacilityStrengthMachineListResponse _responseData = deserialize<FacilityStrengthMachineListResponse, FacilityStrengthMachineListResponse>(_response.data!, 'FacilityStrengthMachineListResponse', growable: true);
+    return _responseData;
+    
+  }
+
+  /// Exchange a machine initialization token for a short-lived machine session token
+  /// 1
+  ///
+  /// Parameters:
+  /// * [apiVersion] 
+  ///
+  /// Returns a [Future] containing a [Response] with a [FacilityStrengthMachineStartSessionResponse] as data
+  Future<FacilityStrengthMachineStartSessionResponse> facilityStrengthMachineMachineStartSession({ 
+    String? apiVersion,
+  }) async {
+    final _path = r'/facility/strength-machine/machine/start-session';
+    final _action = 'facilityStrengthMachine:machineStartSession';
+    final _method = r'POST';
+
+    if (apiVersion == null) {
+      apiVersion = '1';
+    }
+
+    final _queryParameters = <String, dynamic>{
+      if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
+    };
+    final _response = await connection.action(
+      path: _path,
+      action: _action,
+      method: _method,
+      queryParameters: _queryParameters,
+    );
+    
+    final FacilityStrengthMachineStartSessionResponse _responseData = deserialize<FacilityStrengthMachineStartSessionResponse, FacilityStrengthMachineStartSessionResponse>(_response.data!, 'FacilityStrengthMachineStartSessionResponse', growable: true);
     return _responseData;
     
   }
@@ -6131,13 +7268,14 @@ class MetricsApi {
       r'log': _encodeQueryParameter(log),
       r'takenAt': _encodeQueryParameter(takenAt),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
       method: _method,
       queryParameters: _queryParameters,
     );
+    
     final FacilityStrengthMachineMaintenanceRecordResponse _responseData = deserialize<FacilityStrengthMachineMaintenanceRecordResponse, FacilityStrengthMachineMaintenanceRecordResponse>(_response.data!, 'FacilityStrengthMachineMaintenanceRecordResponse', growable: true);
     return _responseData;
     
@@ -6167,7 +7305,7 @@ class MetricsApi {
     };
     final _queryParameters = <String, dynamic>{
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     await connection.action(
       path: _path,
       action: _action,
@@ -6175,6 +7313,7 @@ class MetricsApi {
       queryParameters: _queryParameters,
       socketParameters: _socketParameters,
     );
+    
 
     return;
   }
@@ -6223,13 +7362,14 @@ class MetricsApi {
       if (sort != null) r'sort': _encodeQueryParameter(sort),
       if (to != null) r'to': _encodeQueryParameter(to),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
       method: _method,
       queryParameters: _queryParameters,
     );
+    
     final FacilityStrengthMachineMaintenanceRecordListResponse _responseData = deserialize<FacilityStrengthMachineMaintenanceRecordListResponse, FacilityStrengthMachineMaintenanceRecordListResponse>(_response.data!, 'FacilityStrengthMachineMaintenanceRecordListResponse', growable: true);
     return _responseData;
     
@@ -6258,13 +7398,14 @@ class MetricsApi {
     final _queryParameters = <String, dynamic>{
       r'id': _encodeQueryParameter(id),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
       method: _method,
       queryParameters: _queryParameters,
     );
+    
     final FacilityStrengthMachineMaintenanceRecordResponse _responseData = deserialize<FacilityStrengthMachineMaintenanceRecordResponse, FacilityStrengthMachineMaintenanceRecordResponse>(_response.data!, 'FacilityStrengthMachineMaintenanceRecordResponse', growable: true);
     return _responseData;
     
@@ -6293,13 +7434,14 @@ class MetricsApi {
     final _queryParameters = <String, dynamic>{
       r'id': _encodeQueryParameter(id),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
       method: _method,
       queryParameters: _queryParameters,
     );
+    
     final FacilityStrengthMachineResponse _responseData = deserialize<FacilityStrengthMachineResponse, FacilityStrengthMachineResponse>(_response.data!, 'FacilityStrengthMachineResponse', growable: true);
     return _responseData;
     
@@ -6328,13 +7470,14 @@ class MetricsApi {
     final _queryParameters = <String, dynamic>{
       if (id != null) r'id': _encodeQueryParameter(id),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
       method: _method,
       queryParameters: _queryParameters,
     );
+    
     final SubscriptionResponse _responseData = deserialize<SubscriptionResponse, SubscriptionResponse>(_response.data!, 'SubscriptionResponse', growable: true);
     return _responseData;
     
@@ -6367,7 +7510,7 @@ class MetricsApi {
     final _queryParameters = <String, dynamic>{
       if (location != null) r'location': _encodeQueryParameter(location),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
@@ -6375,6 +7518,7 @@ class MetricsApi {
       queryParameters: _queryParameters,
       socketParameters: _socketParameters,
     );
+    
     final FacilityStrengthMachineResponse _responseData = deserialize<FacilityStrengthMachineResponse, FacilityStrengthMachineResponse>(_response.data!, 'FacilityStrengthMachineResponse', growable: true);
     return _responseData;
     
@@ -6421,13 +7565,14 @@ class MetricsApi {
       if (sort != null) r'sort': _encodeQueryParameter(sort),
       if (to != null) r'to': _encodeQueryParameter(to),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
       method: _method,
       queryParameters: _queryParameters,
     );
+    
     final FacilityStrengthMachineUtilizationInstanceListResponse _responseData = deserialize<FacilityStrengthMachineUtilizationInstanceListResponse, FacilityStrengthMachineUtilizationInstanceListResponse>(_response.data!, 'FacilityStrengthMachineUtilizationInstanceListResponse', growable: true);
     return _responseData;
     
@@ -6456,13 +7601,14 @@ class MetricsApi {
     final _queryParameters = <String, dynamic>{
       r'id': _encodeQueryParameter(id),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
       method: _method,
       queryParameters: _queryParameters,
     );
+    
     final FacilityStrengthMachineUtilizationInstanceResponse _responseData = deserialize<FacilityStrengthMachineUtilizationInstanceResponse, FacilityStrengthMachineUtilizationInstanceResponse>(_response.data!, 'FacilityStrengthMachineUtilizationInstanceResponse', growable: true);
     return _responseData;
     
@@ -6491,13 +7637,14 @@ class MetricsApi {
     final _queryParameters = <String, dynamic>{
       r'id': _encodeQueryParameter(id),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
       method: _method,
       queryParameters: _queryParameters,
     );
+    
     final SubscriptionResponse _responseData = deserialize<SubscriptionResponse, SubscriptionResponse>(_response.data!, 'SubscriptionResponse', growable: true);
     return _responseData;
     
@@ -6538,13 +7685,14 @@ class MetricsApi {
       r'source': _encodeQueryParameter(source_),
       if (userId != null) r'userId': _encodeQueryParameter(userId),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
       method: _method,
       queryParameters: _queryParameters,
     );
+    
     final HeartRateDataSetResponse _responseData = deserialize<HeartRateDataSetResponse, HeartRateDataSetResponse>(_response.data!, 'HeartRateDataSetResponse', growable: true);
     return _responseData;
     
@@ -6577,7 +7725,7 @@ class MetricsApi {
     final _queryParameters = <String, dynamic>{
       if (userId != null) r'userId': _encodeQueryParameter(userId),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     await connection.action(
       path: _path,
       action: _action,
@@ -6585,6 +7733,7 @@ class MetricsApi {
       queryParameters: _queryParameters,
       socketParameters: _socketParameters,
     );
+    
 
     return;
   }
@@ -6633,13 +7782,14 @@ class MetricsApi {
       if (to != null) r'to': _encodeQueryParameter(to),
       if (userId != null) r'userId': _encodeQueryParameter(userId),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
       method: _method,
       queryParameters: _queryParameters,
     );
+    
     final HeartRateDataSetListResponse _responseData = deserialize<HeartRateDataSetListResponse, HeartRateDataSetListResponse>(_response.data!, 'HeartRateDataSetListResponse', growable: true);
     return _responseData;
     
@@ -6674,13 +7824,14 @@ class MetricsApi {
       if (id != null) r'id': _encodeQueryParameter(id),
       if (userId != null) r'userId': _encodeQueryParameter(userId),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
       method: _method,
       queryParameters: _queryParameters,
     );
+    
     final HeartRateDataSetResponse _responseData = deserialize<HeartRateDataSetResponse, HeartRateDataSetResponse>(_response.data!, 'HeartRateDataSetResponse', growable: true);
     return _responseData;
     
@@ -6712,13 +7863,14 @@ class MetricsApi {
       if (id != null) r'id': _encodeQueryParameter(id),
       if (userId != null) r'userId': _encodeQueryParameter(userId),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
       method: _method,
       queryParameters: _queryParameters,
     );
+    
     final SubscriptionResponse _responseData = deserialize<SubscriptionResponse, SubscriptionResponse>(_response.data!, 'SubscriptionResponse', growable: true);
     return _responseData;
     
@@ -6754,7 +7906,7 @@ class MetricsApi {
       r'sessionId': _encodeQueryParameter(sessionId),
       if (userId != null) r'userId': _encodeQueryParameter(userId),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
@@ -6762,6 +7914,7 @@ class MetricsApi {
       queryParameters: _queryParameters,
       socketParameters: _socketParameters,
     );
+    
     final HeartRateDataSetResponse _responseData = deserialize<HeartRateDataSetResponse, HeartRateDataSetResponse>(_response.data!, 'HeartRateDataSetResponse', growable: true);
     return _responseData;
     
@@ -6799,13 +7952,14 @@ class MetricsApi {
       r'takenAt': _encodeQueryParameter(takenAt),
       if (userId != null) r'userId': _encodeQueryParameter(userId),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
       method: _method,
       queryParameters: _queryParameters,
     );
+    
     final HeightMeasurementResponse _responseData = deserialize<HeightMeasurementResponse, HeightMeasurementResponse>(_response.data!, 'HeightMeasurementResponse', growable: true);
     return _responseData;
     
@@ -6838,7 +7992,7 @@ class MetricsApi {
     final _queryParameters = <String, dynamic>{
       if (userId != null) r'userId': _encodeQueryParameter(userId),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     await connection.action(
       path: _path,
       action: _action,
@@ -6846,6 +8000,7 @@ class MetricsApi {
       queryParameters: _queryParameters,
       socketParameters: _socketParameters,
     );
+    
 
     return;
   }
@@ -6891,13 +8046,14 @@ class MetricsApi {
       if (to != null) r'to': _encodeQueryParameter(to),
       if (userId != null) r'userId': _encodeQueryParameter(userId),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
       method: _method,
       queryParameters: _queryParameters,
     );
+    
     final HeightMeasurementListResponse _responseData = deserialize<HeightMeasurementListResponse, HeightMeasurementListResponse>(_response.data!, 'HeightMeasurementListResponse', growable: true);
     return _responseData;
     
@@ -6929,13 +8085,14 @@ class MetricsApi {
       if (id != null) r'id': _encodeQueryParameter(id),
       if (userId != null) r'userId': _encodeQueryParameter(userId),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
       method: _method,
       queryParameters: _queryParameters,
     );
+    
     final HeightMeasurementResponse _responseData = deserialize<HeightMeasurementResponse, HeightMeasurementResponse>(_response.data!, 'HeightMeasurementResponse', growable: true);
     return _responseData;
     
@@ -6967,13 +8124,14 @@ class MetricsApi {
       if (id != null) r'id': _encodeQueryParameter(id),
       if (userId != null) r'userId': _encodeQueryParameter(userId),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
       method: _method,
       queryParameters: _queryParameters,
     );
+    
     final SubscriptionResponse _responseData = deserialize<SubscriptionResponse, SubscriptionResponse>(_response.data!, 'SubscriptionResponse', growable: true);
     return _responseData;
     
@@ -7074,13 +8232,14 @@ class MetricsApi {
       if (targetFtp != null) r'targetFtp': _encodeQueryParameter(targetFtp),
       if (userId != null) r'userId': _encodeQueryParameter(userId),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
       method: _method,
       queryParameters: _queryParameters,
     );
+    
     final MSeriesAppSessionResponse _responseData = deserialize<MSeriesAppSessionResponse, MSeriesAppSessionResponse>(_response.data!, 'MSeriesAppSessionResponse', growable: true);
     return _responseData;
     
@@ -7113,7 +8272,7 @@ class MetricsApi {
     final _queryParameters = <String, dynamic>{
       if (userId != null) r'userId': _encodeQueryParameter(userId),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     await connection.action(
       path: _path,
       action: _action,
@@ -7121,6 +8280,7 @@ class MetricsApi {
       queryParameters: _queryParameters,
       socketParameters: _socketParameters,
     );
+    
 
     return;
   }
@@ -7155,7 +8315,7 @@ class MetricsApi {
     final _queryParameters = <String, dynamic>{
       if (userId != null) r'userId': _encodeQueryParameter(userId),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
@@ -7163,6 +8323,7 @@ class MetricsApi {
       queryParameters: _queryParameters,
       socketParameters: _socketParameters,
     );
+    
     final MSeriesAppSessionExportResponse _responseData = deserialize<MSeriesAppSessionExportResponse, MSeriesAppSessionExportResponse>(_response.data!, 'MSeriesAppSessionExportResponse', growable: true);
     return _responseData;
     
@@ -7195,7 +8356,7 @@ class MetricsApi {
     final _queryParameters = <String, dynamic>{
       if (userId != null) r'userId': _encodeQueryParameter(userId),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     await connection.action(
       path: _path,
       action: _action,
@@ -7203,6 +8364,7 @@ class MetricsApi {
       queryParameters: _queryParameters,
       socketParameters: _socketParameters,
     );
+    
 
     return;
   }
@@ -7248,13 +8410,14 @@ class MetricsApi {
       if (to != null) r'to': _encodeQueryParameter(to),
       if (userId != null) r'userId': _encodeQueryParameter(userId),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
       method: _method,
       queryParameters: _queryParameters,
     );
+    
     final MSeriesAppSessionListResponse _responseData = deserialize<MSeriesAppSessionListResponse, MSeriesAppSessionListResponse>(_response.data!, 'MSeriesAppSessionListResponse', growable: true);
     return _responseData;
     
@@ -7289,13 +8452,14 @@ class MetricsApi {
       if (id != null) r'id': _encodeQueryParameter(id),
       if (userId != null) r'userId': _encodeQueryParameter(userId),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
       method: _method,
       queryParameters: _queryParameters,
     );
+    
     final MSeriesAppSessionResponse _responseData = deserialize<MSeriesAppSessionResponse, MSeriesAppSessionResponse>(_response.data!, 'MSeriesAppSessionResponse', growable: true);
     return _responseData;
     
@@ -7351,13 +8515,14 @@ class MetricsApi {
       r'source': _encodeQueryParameter(source_),
       if (userId != null) r'userId': _encodeQueryParameter(userId),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
       method: _method,
       queryParameters: _queryParameters,
     );
+    
     final MSeriesDataSetResponse _responseData = deserialize<MSeriesDataSetResponse, MSeriesDataSetResponse>(_response.data!, 'MSeriesDataSetResponse', growable: true);
     return _responseData;
     
@@ -7390,7 +8555,7 @@ class MetricsApi {
     final _queryParameters = <String, dynamic>{
       if (userId != null) r'userId': _encodeQueryParameter(userId),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     await connection.action(
       path: _path,
       action: _action,
@@ -7398,6 +8563,7 @@ class MetricsApi {
       queryParameters: _queryParameters,
       socketParameters: _socketParameters,
     );
+    
 
     return;
   }
@@ -7446,13 +8612,14 @@ class MetricsApi {
       if (to != null) r'to': _encodeQueryParameter(to),
       if (userId != null) r'userId': _encodeQueryParameter(userId),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
       method: _method,
       queryParameters: _queryParameters,
     );
+    
     final MSeriesDataSetListResponse _responseData = deserialize<MSeriesDataSetListResponse, MSeriesDataSetListResponse>(_response.data!, 'MSeriesDataSetListResponse', growable: true);
     return _responseData;
     
@@ -7481,13 +8648,14 @@ class MetricsApi {
     final _queryParameters = <String, dynamic>{
       if (id != null) r'id': _encodeQueryParameter(id),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     await connection.action(
       path: _path,
       action: _action,
       method: _method,
       queryParameters: _queryParameters,
     );
+    
 
     return;
   }
@@ -7521,13 +8689,14 @@ class MetricsApi {
       if (id != null) r'id': _encodeQueryParameter(id),
       if (userId != null) r'userId': _encodeQueryParameter(userId),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
       method: _method,
       queryParameters: _queryParameters,
     );
+    
     final MSeriesDataSetSegmentResponse _responseData = deserialize<MSeriesDataSetSegmentResponse, MSeriesDataSetSegmentResponse>(_response.data!, 'MSeriesDataSetSegmentResponse', growable: true);
     return _responseData;
     
@@ -7562,13 +8731,14 @@ class MetricsApi {
       if (id != null) r'id': _encodeQueryParameter(id),
       if (userId != null) r'userId': _encodeQueryParameter(userId),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
       method: _method,
       queryParameters: _queryParameters,
     );
+    
     final MSeriesDataSetResponse _responseData = deserialize<MSeriesDataSetResponse, MSeriesDataSetResponse>(_response.data!, 'MSeriesDataSetResponse', growable: true);
     return _responseData;
     
@@ -7600,13 +8770,14 @@ class MetricsApi {
       if (id != null) r'id': _encodeQueryParameter(id),
       if (userId != null) r'userId': _encodeQueryParameter(userId),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
       method: _method,
       queryParameters: _queryParameters,
     );
+    
     final SubscriptionResponse _responseData = deserialize<SubscriptionResponse, SubscriptionResponse>(_response.data!, 'SubscriptionResponse', growable: true);
     return _responseData;
     
@@ -7645,7 +8816,7 @@ class MetricsApi {
       r'sessionId': _encodeQueryParameter(sessionId),
       if (userId != null) r'userId': _encodeQueryParameter(userId),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
@@ -7653,6 +8824,7 @@ class MetricsApi {
       queryParameters: _queryParameters,
       socketParameters: _socketParameters,
     );
+    
     final MSeriesDataSetResponse _responseData = deserialize<MSeriesDataSetResponse, MSeriesDataSetResponse>(_response.data!, 'MSeriesDataSetResponse', growable: true);
     return _responseData;
     
@@ -7696,13 +8868,14 @@ class MetricsApi {
       r'takenAt': _encodeQueryParameter(takenAt),
       if (userId != null) r'userId': _encodeQueryParameter(userId),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
       method: _method,
       queryParameters: _queryParameters,
     );
+    
     final MSeriesFtpMeasurementResponse _responseData = deserialize<MSeriesFtpMeasurementResponse, MSeriesFtpMeasurementResponse>(_response.data!, 'MSeriesFtpMeasurementResponse', growable: true);
     return _responseData;
     
@@ -7735,7 +8908,7 @@ class MetricsApi {
     final _queryParameters = <String, dynamic>{
       if (userId != null) r'userId': _encodeQueryParameter(userId),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     await connection.action(
       path: _path,
       action: _action,
@@ -7743,6 +8916,7 @@ class MetricsApi {
       queryParameters: _queryParameters,
       socketParameters: _socketParameters,
     );
+    
 
     return;
   }
@@ -7797,13 +8971,14 @@ class MetricsApi {
       if (to != null) r'to': _encodeQueryParameter(to),
       if (userId != null) r'userId': _encodeQueryParameter(userId),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
       method: _method,
       queryParameters: _queryParameters,
     );
+    
     final MSeriesFtpMeasurementListResponse _responseData = deserialize<MSeriesFtpMeasurementListResponse, MSeriesFtpMeasurementListResponse>(_response.data!, 'MSeriesFtpMeasurementListResponse', growable: true);
     return _responseData;
     
@@ -7835,13 +9010,14 @@ class MetricsApi {
       if (id != null) r'id': _encodeQueryParameter(id),
       if (userId != null) r'userId': _encodeQueryParameter(userId),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
       method: _method,
       queryParameters: _queryParameters,
     );
+    
     final MSeriesFtpMeasurementResponse _responseData = deserialize<MSeriesFtpMeasurementResponse, MSeriesFtpMeasurementResponse>(_response.data!, 'MSeriesFtpMeasurementResponse', growable: true);
     return _responseData;
     
@@ -7873,44 +9049,33 @@ class MetricsApi {
       r'cardioMachineId': _encodeQueryParameter(cardioMachineId),
       if (userId != null) r'userId': _encodeQueryParameter(userId),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
       method: _method,
       queryParameters: _queryParameters,
     );
+    
     final MSeriesProfileStatsResponse _responseData = deserialize<MSeriesProfileStatsResponse, MSeriesProfileStatsResponse>(_response.data!, 'MSeriesProfileStatsResponse', growable: true);
     return _responseData;
     
   }
 
-  /// Create a user machine adjustment
+  /// Claim a single machine for a facility
   /// 1
   ///
   /// Parameters:
-  /// * [model] 
-  /// * [leftPosition] 
-  /// * [rightPosition] 
-  /// * [seat] 
-  /// * [start] 
-  /// * [stop] 
-  /// * [userId] 
+  /// * [claimCode] 
   /// * [apiVersion] 
   ///
-  /// Returns a [Future] containing a [Response] with a [MachineAdjustmentResponse] as data
-  Future<MachineAdjustmentResponse> machineAdjustmentCreate({ 
-    required String model,
-    String? leftPosition,
-    String? rightPosition,
-    String? seat,
-    String? start,
-    String? stop,
-    num? userId,
+  /// Returns a [Future] containing a [Response] with a [MachineClaimClaimResponse] as data
+  Future<MachineClaimClaimResponse> machineClaimClaim({ 
+    required String claimCode,
     String? apiVersion,
   }) async {
-    final _path = r'/user/machine-adjustment';
-    final _action = 'machineAdjustment:create';
+    final _path = r'/machine-claim/claim';
+    final _action = 'machineClaim:claim';
     final _method = r'POST';
 
     if (apiVersion == null) {
@@ -7918,89 +9083,79 @@ class MetricsApi {
     }
 
     final _queryParameters = <String, dynamic>{
-      if (leftPosition != null) r'leftPosition': _encodeQueryParameter(leftPosition),
-      r'model': _encodeQueryParameter(model),
-      if (rightPosition != null) r'rightPosition': _encodeQueryParameter(rightPosition),
-      if (seat != null) r'seat': _encodeQueryParameter(seat),
-      if (start != null) r'start': _encodeQueryParameter(start),
-      if (stop != null) r'stop': _encodeQueryParameter(stop),
-      if (userId != null) r'userId': _encodeQueryParameter(userId),
+      r'claimCode': _encodeQueryParameter(claimCode),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
       method: _method,
       queryParameters: _queryParameters,
     );
-    final MachineAdjustmentResponse _responseData = deserialize<MachineAdjustmentResponse, MachineAdjustmentResponse>(_response.data!, 'MachineAdjustmentResponse', growable: true);
+    
+    final MachineClaimClaimResponse _responseData = deserialize<MachineClaimClaimResponse, MachineClaimClaimResponse>(_response.data!, 'MachineClaimClaimResponse', growable: true);
     return _responseData;
     
   }
 
-  /// Delete a users machine adjustment
+  /// Confirm a claimed machine and receive permanent token
   /// 1
   ///
   /// Parameters:
-  /// * [id] 
-  /// * [userId] 
+  /// * [claimAccessCode] 
   /// * [apiVersion] 
   ///
-  /// Returns a [Future]
-  Future<void> machineAdjustmentDelete({ 
-    required num id,
-    num? userId,
+  /// Returns a [Future] containing a [Response] with a [MachineClaimConfirmResponse] as data
+  Future<MachineClaimConfirmResponse> machineClaimConfirm({ 
+    required String claimAccessCode,
     String? apiVersion,
   }) async {
-    final _path = r'/user/machine-adjustment/{id}'.replaceAll('{' r'id' '}', id.toString());
-    final _action = 'machineAdjustment:delete';
-    final _method = r'DELETE';
+    final _path = r'/machine-claim/confirm';
+    final _action = 'machineClaim:confirm';
+    final _method = r'POST';
 
     if (apiVersion == null) {
       apiVersion = '1';
     }
-    final _socketParameters = <String, dynamic>{
-      r'id': _encodeQueryParameter(id),
-    };
+
     final _queryParameters = <String, dynamic>{
-      if (userId != null) r'userId': _encodeQueryParameter(userId),
+      r'claimAccessCode': _encodeQueryParameter(claimAccessCode),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
-    await connection.action(
+    };
+    final _response = await connection.action(
       path: _path,
       action: _action,
       method: _method,
       queryParameters: _queryParameters,
-      socketParameters: _socketParameters,
     );
-
-    return;
+    
+    final MachineClaimConfirmResponse _responseData = deserialize<MachineClaimConfirmResponse, MachineClaimConfirmResponse>(_response.data!, 'MachineClaimConfirmResponse', growable: true);
+    return _responseData;
+    
   }
 
-  /// List user machine adjustments
+  /// List machine claims for a facility
   /// 1
   ///
   /// Parameters:
   /// * [ascending] 
   /// * [limit] 
-  /// * [model] 
   /// * [offset] 
-  /// * [sort] - Allowed values: id
-  /// * [userId] 
+  /// * [sort] - Allowed values: id, createdAt
+  /// * [status] 
   /// * [apiVersion] 
   ///
-  /// Returns a [Future] containing a [Response] with a [MachineAdjustmentListResponse] as data
-  Future<MachineAdjustmentListResponse> machineAdjustmentList({ 
-    bool? ascending = true,
+  /// Returns a [Future] containing a [Response] with a [MachineClaimListResponse] as data
+  Future<MachineClaimListResponse> machineClaimList({ 
+    bool? ascending = false,
     num? limit,
-    String? model,
     num? offset,
     String? sort = 'id',
-    num? userId,
+    String? status,
     String? apiVersion,
   }) async {
-    final _path = r'/user/machine-adjustment/list';
-    final _action = 'machineAdjustment:list';
+    final _path = r'/machine-claim/list';
+    final _action = 'machineClaim:list';
     final _method = r'GET';
 
     if (apiVersion == null) {
@@ -8010,39 +9165,94 @@ class MetricsApi {
     final _queryParameters = <String, dynamic>{
       if (ascending != null) r'ascending': _encodeQueryParameter(ascending),
       if (limit != null) r'limit': _encodeQueryParameter(limit),
-      if (model != null) r'model': _encodeQueryParameter(model),
       if (offset != null) r'offset': _encodeQueryParameter(offset),
       if (sort != null) r'sort': _encodeQueryParameter(sort),
-      if (userId != null) r'userId': _encodeQueryParameter(userId),
+      if (status != null) r'status': _encodeQueryParameter(status),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
       method: _method,
       queryParameters: _queryParameters,
     );
-    final MachineAdjustmentListResponse _responseData = deserialize<MachineAdjustmentListResponse, MachineAdjustmentListResponse>(_response.data!, 'MachineAdjustmentListResponse', growable: true);
+    
+    final MachineClaimListResponse _responseData = deserialize<MachineClaimListResponse, MachineClaimListResponse>(_response.data!, 'MachineClaimListResponse', growable: true);
     return _responseData;
     
   }
 
-  /// Shows a users machine adjustments
+  /// Register a machine for facility claiming
   /// 1
   ///
   /// Parameters:
-  /// * [id] 
-  /// * [userId] 
+  /// * [displayUUID] 
+  /// * [firmwareVersion] 
+  /// * [leftCylinderSerial] 
+  /// * [line] 
+  /// * [machineModel] 
+  /// * [mainBoardSerial] 
+  /// * [softwareVersion] 
+  /// * [rightCylinderSerial] 
   /// * [apiVersion] 
   ///
-  /// Returns a [Future] containing a [Response] with a [MachineAdjustmentResponse] as data
-  Future<MachineAdjustmentResponse> machineAdjustmentShow({ 
-    required num id,
-    num? userId,
+  /// Returns a [Future] containing a [Response] with a [MachineClaimRegisterResponse] as data
+  Future<MachineClaimRegisterResponse> machineClaimRegister({ 
+    required String displayUUID,
+    required String firmwareVersion,
+    required String leftCylinderSerial,
+    required String line,
+    required String machineModel,
+    required String mainBoardSerial,
+    required String softwareVersion,
+    String? rightCylinderSerial,
     String? apiVersion,
   }) async {
-    final _path = r'/user/machine-adjustment';
-    final _action = 'machineAdjustment:show';
+    final _path = r'/machine-claim/register';
+    final _action = 'machineClaim:register';
+    final _method = r'POST';
+
+    if (apiVersion == null) {
+      apiVersion = '1';
+    }
+
+    final _queryParameters = <String, dynamic>{
+      r'displayUUID': _encodeQueryParameter(displayUUID),
+      r'firmwareVersion': _encodeQueryParameter(firmwareVersion),
+      r'leftCylinderSerial': _encodeQueryParameter(leftCylinderSerial),
+      r'line': _encodeQueryParameter(line),
+      r'machineModel': _encodeQueryParameter(machineModel),
+      r'mainBoardSerial': _encodeQueryParameter(mainBoardSerial),
+      if (rightCylinderSerial != null) r'rightCylinderSerial': _encodeQueryParameter(rightCylinderSerial),
+      r'softwareVersion': _encodeQueryParameter(softwareVersion),
+      if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
+    };
+    final _response = await connection.action(
+      path: _path,
+      action: _action,
+      method: _method,
+      queryParameters: _queryParameters,
+    );
+    
+    final MachineClaimRegisterResponse _responseData = deserialize<MachineClaimRegisterResponse, MachineClaimRegisterResponse>(_response.data!, 'MachineClaimRegisterResponse', growable: true);
+    return _responseData;
+    
+  }
+
+  /// Show a machine claim for a facility
+  /// 1
+  ///
+  /// Parameters:
+  /// * [machineClaimId] 
+  /// * [apiVersion] 
+  ///
+  /// Returns a [Future] containing a [Response] with a [MachineClaimShowResponse] as data
+  Future<MachineClaimShowResponse> machineClaimShow({ 
+    required num machineClaimId,
+    String? apiVersion,
+  }) async {
+    final _path = r'/machine-claim/show';
+    final _action = 'machineClaim:show';
     final _method = r'GET';
 
     if (apiVersion == null) {
@@ -8050,72 +9260,89 @@ class MetricsApi {
     }
 
     final _queryParameters = <String, dynamic>{
-      r'id': _encodeQueryParameter(id),
-      if (userId != null) r'userId': _encodeQueryParameter(userId),
+      r'machineClaimId': _encodeQueryParameter(machineClaimId),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
       method: _method,
       queryParameters: _queryParameters,
     );
-    final MachineAdjustmentResponse _responseData = deserialize<MachineAdjustmentResponse, MachineAdjustmentResponse>(_response.data!, 'MachineAdjustmentResponse', growable: true);
+    
+    final MachineClaimShowResponse _responseData = deserialize<MachineClaimShowResponse, MachineClaimShowResponse>(_response.data!, 'MachineClaimShowResponse', growable: true);
     return _responseData;
     
   }
 
-  /// Update a users machine adjustments
+  /// Check claim status for a machine
   /// 1
   ///
   /// Parameters:
-  /// * [id] 
-  /// * [leftPosition] 
-  /// * [rightPosition] 
-  /// * [seat] 
-  /// * [start] 
-  /// * [stop] 
-  /// * [userId] 
+  /// * [claimAccessCode] 
   /// * [apiVersion] 
   ///
-  /// Returns a [Future] containing a [Response] with a [MachineAdjustmentResponse] as data
-  Future<MachineAdjustmentResponse> machineAdjustmentUpdate({ 
-    required num id,
-    String? leftPosition,
-    String? rightPosition,
-    String? seat,
-    String? start,
-    String? stop,
-    num? userId,
+  /// Returns a [Future] containing a [Response] with a [MachineClaimStatusResponse] as data
+  Future<MachineClaimStatusResponse> machineClaimStatus({ 
+    required String claimAccessCode,
     String? apiVersion,
   }) async {
-    final _path = r'/user/machine-adjustment/{id}'.replaceAll('{' r'id' '}', id.toString());
-    final _action = 'machineAdjustment:update';
-    final _method = r'PUT';
+    final _path = r'/machine-claim/status';
+    final _action = 'machineClaim:status';
+    final _method = r'GET';
 
     if (apiVersion == null) {
       apiVersion = '1';
     }
-    final _socketParameters = <String, dynamic>{
-      r'id': _encodeQueryParameter(id),
-    };
+
     final _queryParameters = <String, dynamic>{
-      if (leftPosition != null) r'leftPosition': _encodeQueryParameter(leftPosition),
-      if (rightPosition != null) r'rightPosition': _encodeQueryParameter(rightPosition),
-      if (seat != null) r'seat': _encodeQueryParameter(seat),
-      if (start != null) r'start': _encodeQueryParameter(start),
-      if (stop != null) r'stop': _encodeQueryParameter(stop),
-      if (userId != null) r'userId': _encodeQueryParameter(userId),
+      r'claimAccessCode': _encodeQueryParameter(claimAccessCode),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
       method: _method,
       queryParameters: _queryParameters,
-      socketParameters: _socketParameters,
     );
-    final MachineAdjustmentResponse _responseData = deserialize<MachineAdjustmentResponse, MachineAdjustmentResponse>(_response.data!, 'MachineAdjustmentResponse', growable: true);
+    
+    final MachineClaimStatusResponse _responseData = deserialize<MachineClaimStatusResponse, MachineClaimStatusResponse>(_response.data!, 'MachineClaimStatusResponse', growable: true);
+    return _responseData;
+    
+  }
+
+  /// Unclaim a machine that has not yet been confirmed
+  /// 1
+  ///
+  /// Parameters:
+  /// * [machineClaimId] 
+  /// * [apiVersion] 
+  ///
+  /// Returns a [Future] containing a [Response] with a [MachineClaimUnclaimResponse] as data
+  Future<MachineClaimUnclaimResponse> machineClaimUnclaim({ 
+    required num machineClaimId,
+    String? apiVersion,
+  }) async {
+    final _path = r'/machine-claim/unclaim';
+    final _action = 'machineClaim:unclaim';
+    final _method = r'DELETE';
+
+    if (apiVersion == null) {
+      apiVersion = '1';
+    }
+
+    final _queryParameters = <String, dynamic>{
+      r'machineClaimId': _encodeQueryParameter(machineClaimId),
+      if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
+    };
+    final _response = await connection.action(
+      path: _path,
+      action: _action,
+      method: _method,
+      queryParameters: _queryParameters,
+    );
+    
+    final MachineClaimUnclaimResponse _responseData = deserialize<MachineClaimUnclaimResponse, MachineClaimUnclaimResponse>(_response.data!, 'MachineClaimUnclaimResponse', growable: true);
     return _responseData;
     
   }
@@ -8140,13 +9367,14 @@ class MetricsApi {
 
     final _queryParameters = <String, dynamic>{
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
       method: _method,
       queryParameters: _queryParameters,
     );
+    
     final ServiceStatusResponse _responseData = deserialize<ServiceStatusResponse, ServiceStatusResponse>(_response.data!, 'ServiceStatusResponse', growable: true);
     return _responseData;
     
@@ -8184,13 +9412,14 @@ class MetricsApi {
       r'responseType': _encodeQueryParameter(responseType),
       r'state': _encodeQueryParameter(state),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
       method: _method,
       queryParameters: _queryParameters,
     );
+    
     final OauthResponse _responseData = deserialize<OauthResponse, OauthResponse>(_response.data!, 'OauthResponse', growable: true);
     return _responseData;
     
@@ -8219,13 +9448,14 @@ class MetricsApi {
     final _queryParameters = <String, dynamic>{
       r'accessToken': _encodeQueryParameter(accessToken),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     await connection.action(
       path: _path,
       action: _action,
       method: _method,
       queryParameters: _queryParameters,
     );
+    
 
     return;
   }
@@ -8260,7 +9490,7 @@ class MetricsApi {
       r'redirect': _encodeQueryParameter(redirect),
       r'type': _encodeQueryParameter(type),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
@@ -8268,6 +9498,7 @@ class MetricsApi {
       queryParameters: _queryParameters,
       socketParameters: _socketParameters,
     );
+    
     final RedirectResponse _responseData = deserialize<RedirectResponse, RedirectResponse>(_response.data!, 'RedirectResponse', growable: true);
     return _responseData;
     
@@ -8300,7 +9531,7 @@ class MetricsApi {
     final _queryParameters = <String, dynamic>{
       if (userId != null) r'userId': _encodeQueryParameter(userId),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     await connection.action(
       path: _path,
       action: _action,
@@ -8308,6 +9539,7 @@ class MetricsApi {
       queryParameters: _queryParameters,
       socketParameters: _socketParameters,
     );
+    
 
     return;
   }
@@ -8350,13 +9582,14 @@ class MetricsApi {
       if (sort != null) r'sort': _encodeQueryParameter(sort),
       if (userId != null) r'userId': _encodeQueryParameter(userId),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
       method: _method,
       queryParameters: _queryParameters,
     );
+    
     final OAuthServiceListResponse _responseData = deserialize<OAuthServiceListResponse, OAuthServiceListResponse>(_response.data!, 'OAuthServiceListResponse', growable: true);
     return _responseData;
     
@@ -8388,13 +9621,14 @@ class MetricsApi {
       r'id': _encodeQueryParameter(id),
       if (userId != null) r'userId': _encodeQueryParameter(userId),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
       method: _method,
       queryParameters: _queryParameters,
     );
+    
     final OAuthServiceResponse _responseData = deserialize<OAuthServiceResponse, OAuthServiceResponse>(_response.data!, 'OAuthServiceResponse', growable: true);
     return _responseData;
     
@@ -8435,13 +9669,14 @@ class MetricsApi {
       r'grantType': _encodeQueryParameter(grantType),
       if (refreshToken != null) r'refreshToken': _encodeQueryParameter(refreshToken),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
       method: _method,
       queryParameters: _queryParameters,
     );
+    
     final OauthTokenResponse _responseData = deserialize<OauthTokenResponse, OauthTokenResponse>(_response.data!, 'OauthTokenResponse', growable: true);
     return _responseData;
     
@@ -8470,13 +9705,14 @@ class MetricsApi {
     final _queryParameters = <String, dynamic>{
       if (userId != null) r'userId': _encodeQueryParameter(userId),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
       method: _method,
       queryParameters: _queryParameters,
     );
+    
     final PrimaryEmailAddressResponse _responseData = deserialize<PrimaryEmailAddressResponse, PrimaryEmailAddressResponse>(_response.data!, 'PrimaryEmailAddressResponse', growable: true);
     return _responseData;
     
@@ -8509,7 +9745,7 @@ class MetricsApi {
     final _queryParameters = <String, dynamic>{
       if (userId != null) r'userId': _encodeQueryParameter(userId),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
@@ -8517,6 +9753,7 @@ class MetricsApi {
       queryParameters: _queryParameters,
       socketParameters: _socketParameters,
     );
+    
     final PrimaryEmailAddressResponse _responseData = deserialize<PrimaryEmailAddressResponse, PrimaryEmailAddressResponse>(_response.data!, 'PrimaryEmailAddressResponse', growable: true);
     return _responseData;
     
@@ -8545,13 +9782,14 @@ class MetricsApi {
     final _queryParameters = <String, dynamic>{
       if (userId != null) r'userId': _encodeQueryParameter(userId),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
       method: _method,
       queryParameters: _queryParameters,
     );
+    
     final ProfileResponse _responseData = deserialize<ProfileResponse, ProfileResponse>(_response.data!, 'ProfileResponse', growable: true);
     return _responseData;
     
@@ -8580,13 +9818,14 @@ class MetricsApi {
     final _queryParameters = <String, dynamic>{
       if (userId != null) r'userId': _encodeQueryParameter(userId),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
       method: _method,
       queryParameters: _queryParameters,
     );
+    
     final SubscriptionResponse _responseData = deserialize<SubscriptionResponse, SubscriptionResponse>(_response.data!, 'SubscriptionResponse', growable: true);
     return _responseData;
     
@@ -8630,13 +9869,14 @@ class MetricsApi {
       if (units != null) r'units': _encodeQueryParameter(units),
       if (userId != null) r'userId': _encodeQueryParameter(userId),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
       method: _method,
       queryParameters: _queryParameters,
     );
+    
     final ProfileResponse _responseData = deserialize<ProfileResponse, ProfileResponse>(_response.data!, 'ProfileResponse', growable: true);
     return _responseData;
     
@@ -8669,7 +9909,7 @@ class MetricsApi {
     final _queryParameters = <String, dynamic>{
       if (userId != null) r'userId': _encodeQueryParameter(userId),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     await connection.action(
       path: _path,
       action: _action,
@@ -8677,6 +9917,7 @@ class MetricsApi {
       queryParameters: _queryParameters,
       socketParameters: _socketParameters,
     );
+    
 
     return;
   }
@@ -8708,7 +9949,7 @@ class MetricsApi {
     final _queryParameters = <String, dynamic>{
       if (userId != null) r'userId': _encodeQueryParameter(userId),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
@@ -8716,6 +9957,7 @@ class MetricsApi {
       queryParameters: _queryParameters,
       socketParameters: _socketParameters,
     );
+    
     final SessionResponse _responseData = deserialize<SessionResponse, SessionResponse>(_response.data!, 'SessionResponse', growable: true);
     return _responseData;
     
@@ -8768,13 +10010,14 @@ class MetricsApi {
       if (to != null) r'to': _encodeQueryParameter(to),
       if (userId != null) r'userId': _encodeQueryParameter(userId),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
       method: _method,
       queryParameters: _queryParameters,
     );
+    
     final SessionListResponse _responseData = deserialize<SessionListResponse, SessionListResponse>(_response.data!, 'SessionListResponse', growable: true);
     return _responseData;
     
@@ -8813,7 +10056,7 @@ class MetricsApi {
       r'scheduleIndexes': _encodeQueryParameter(scheduleIndexes),
       if (userId != null) r'userId': _encodeQueryParameter(userId),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
@@ -8821,6 +10064,7 @@ class MetricsApi {
       queryParameters: _queryParameters,
       socketParameters: _socketParameters,
     );
+    
     final SessionPlanResponse _responseData = deserialize<SessionPlanResponse, SessionPlanResponse>(_response.data!, 'SessionPlanResponse', growable: true);
     return _responseData;
     
@@ -8859,7 +10103,7 @@ class MetricsApi {
       r'scheduleIndexes': _encodeQueryParameter(scheduleIndexes),
       if (userId != null) r'userId': _encodeQueryParameter(userId),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
@@ -8867,6 +10111,7 @@ class MetricsApi {
       queryParameters: _queryParameters,
       socketParameters: _socketParameters,
     );
+    
     final SessionPlanResponse _responseData = deserialize<SessionPlanResponse, SessionPlanResponse>(_response.data!, 'SessionPlanResponse', growable: true);
     return _responseData;
     
@@ -8908,7 +10153,7 @@ class MetricsApi {
       r'startAt': _encodeQueryParameter(startAt),
       if (userId != null) r'userId': _encodeQueryParameter(userId),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
@@ -8916,6 +10161,7 @@ class MetricsApi {
       queryParameters: _queryParameters,
       socketParameters: _socketParameters,
     );
+    
     final SessionPlanResponse _responseData = deserialize<SessionPlanResponse, SessionPlanResponse>(_response.data!, 'SessionPlanResponse', growable: true);
     return _responseData;
     
@@ -8971,13 +10217,14 @@ class MetricsApi {
       r'startAt': _encodeQueryParameter(startAt),
       if (userId != null) r'userId': _encodeQueryParameter(userId),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
       method: _method,
       queryParameters: _queryParameters,
     );
+    
     final SessionPlanResponse _responseData = deserialize<SessionPlanResponse, SessionPlanResponse>(_response.data!, 'SessionPlanResponse', growable: true);
     return _responseData;
     
@@ -9010,7 +10257,7 @@ class MetricsApi {
     final _queryParameters = <String, dynamic>{
       if (userId != null) r'userId': _encodeQueryParameter(userId),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     await connection.action(
       path: _path,
       action: _action,
@@ -9018,6 +10265,7 @@ class MetricsApi {
       queryParameters: _queryParameters,
       socketParameters: _socketParameters,
     );
+    
 
     return;
   }
@@ -9055,7 +10303,7 @@ class MetricsApi {
       r'scheduleIndexes': _encodeQueryParameter(scheduleIndexes),
       if (userId != null) r'userId': _encodeQueryParameter(userId),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
@@ -9063,6 +10311,7 @@ class MetricsApi {
       queryParameters: _queryParameters,
       socketParameters: _socketParameters,
     );
+    
     final SessionPlanResponse _responseData = deserialize<SessionPlanResponse, SessionPlanResponse>(_response.data!, 'SessionPlanResponse', growable: true);
     return _responseData;
     
@@ -9112,13 +10361,14 @@ class MetricsApi {
       if (sort != null) r'sort': _encodeQueryParameter(sort),
       if (userId != null) r'userId': _encodeQueryParameter(userId),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
       method: _method,
       queryParameters: _queryParameters,
     );
+    
     final SessionPlanListResponse _responseData = deserialize<SessionPlanListResponse, SessionPlanListResponse>(_response.data!, 'SessionPlanListResponse', growable: true);
     return _responseData;
     
@@ -9156,13 +10406,14 @@ class MetricsApi {
       if (notes != null) r'notes': _encodeQueryParameter(notes),
       if (userId != null) r'userId': _encodeQueryParameter(userId),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
       method: _method,
       queryParameters: _queryParameters,
     );
+    
     final SessionPlanSequenceResponse _responseData = deserialize<SessionPlanSequenceResponse, SessionPlanSequenceResponse>(_response.data!, 'SessionPlanSequenceResponse', growable: true);
     return _responseData;
     
@@ -9195,7 +10446,7 @@ class MetricsApi {
     final _queryParameters = <String, dynamic>{
       if (userId != null) r'userId': _encodeQueryParameter(userId),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     await connection.action(
       path: _path,
       action: _action,
@@ -9203,6 +10454,7 @@ class MetricsApi {
       queryParameters: _queryParameters,
       socketParameters: _socketParameters,
     );
+    
 
     return;
   }
@@ -9234,7 +10486,7 @@ class MetricsApi {
     final _queryParameters = <String, dynamic>{
       if (userId != null) r'userId': _encodeQueryParameter(userId),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     await connection.action(
       path: _path,
       action: _action,
@@ -9242,6 +10494,7 @@ class MetricsApi {
       queryParameters: _queryParameters,
       socketParameters: _socketParameters,
     );
+    
 
     return;
   }
@@ -9287,13 +10540,14 @@ class MetricsApi {
       if (sort != null) r'sort': _encodeQueryParameter(sort),
       if (userId != null) r'userId': _encodeQueryParameter(userId),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
       method: _method,
       queryParameters: _queryParameters,
     );
+    
     final SessionPlanSequenceInstanceListResponse _responseData = deserialize<SessionPlanSequenceInstanceListResponse, SessionPlanSequenceInstanceListResponse>(_response.data!, 'SessionPlanSequenceInstanceListResponse', growable: true);
     return _responseData;
     
@@ -9325,13 +10579,14 @@ class MetricsApi {
       r'id': _encodeQueryParameter(id),
       if (userId != null) r'userId': _encodeQueryParameter(userId),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
       method: _method,
       queryParameters: _queryParameters,
     );
+    
     final SessionPlanSequenceInstanceResponse _responseData = deserialize<SessionPlanSequenceInstanceResponse, SessionPlanSequenceInstanceResponse>(_response.data!, 'SessionPlanSequenceInstanceResponse', growable: true);
     return _responseData;
     
@@ -9378,13 +10633,14 @@ class MetricsApi {
       if (sort != null) r'sort': _encodeQueryParameter(sort),
       if (userId != null) r'userId': _encodeQueryParameter(userId),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
       method: _method,
       queryParameters: _queryParameters,
     );
+    
     final SessionPlanSequenceListResponse _responseData = deserialize<SessionPlanSequenceListResponse, SessionPlanSequenceListResponse>(_response.data!, 'SessionPlanSequenceListResponse', growable: true);
     return _responseData;
     
@@ -9416,13 +10672,14 @@ class MetricsApi {
       r'id': _encodeQueryParameter(id),
       if (userId != null) r'userId': _encodeQueryParameter(userId),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
       method: _method,
       queryParameters: _queryParameters,
     );
+    
     final SessionPlanSequenceResponse _responseData = deserialize<SessionPlanSequenceResponse, SessionPlanSequenceResponse>(_response.data!, 'SessionPlanSequenceResponse', growable: true);
     return _responseData;
     
@@ -9466,13 +10723,14 @@ class MetricsApi {
       if (searchable != null) r'searchable': _encodeQueryParameter(searchable),
       if (userId != null) r'userId': _encodeQueryParameter(userId),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
       method: _method,
       queryParameters: _queryParameters,
     );
+    
     final SessionPlanSequenceTemplateResponse _responseData = deserialize<SessionPlanSequenceTemplateResponse, SessionPlanSequenceTemplateResponse>(_response.data!, 'SessionPlanSequenceTemplateResponse', growable: true);
     return _responseData;
     
@@ -9505,7 +10763,7 @@ class MetricsApi {
     final _queryParameters = <String, dynamic>{
       if (userId != null) r'userId': _encodeQueryParameter(userId),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     await connection.action(
       path: _path,
       action: _action,
@@ -9513,6 +10771,7 @@ class MetricsApi {
       queryParameters: _queryParameters,
       socketParameters: _socketParameters,
     );
+    
 
     return;
   }
@@ -9564,13 +10823,14 @@ class MetricsApi {
       if (sort != null) r'sort': _encodeQueryParameter(sort),
       if (userId != null) r'userId': _encodeQueryParameter(userId),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
       method: _method,
       queryParameters: _queryParameters,
     );
+    
     final SessionPlanSequenceTemplateListResponse _responseData = deserialize<SessionPlanSequenceTemplateListResponse, SessionPlanSequenceTemplateListResponse>(_response.data!, 'SessionPlanSequenceTemplateListResponse', growable: true);
     return _responseData;
     
@@ -9602,13 +10862,14 @@ class MetricsApi {
       r'id': _encodeQueryParameter(id),
       if (userId != null) r'userId': _encodeQueryParameter(userId),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
       method: _method,
       queryParameters: _queryParameters,
     );
+    
     final SessionPlanSequenceTemplateResponse _responseData = deserialize<SessionPlanSequenceTemplateResponse, SessionPlanSequenceTemplateResponse>(_response.data!, 'SessionPlanSequenceTemplateResponse', growable: true);
     return _responseData;
     
@@ -9659,7 +10920,7 @@ class MetricsApi {
       if (setIdOrder != null) r'setIdOrder': _encodeQueryParameter(setIdOrder),
       if (userId != null) r'userId': _encodeQueryParameter(userId),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
@@ -9667,6 +10928,7 @@ class MetricsApi {
       queryParameters: _queryParameters,
       socketParameters: _socketParameters,
     );
+    
     final SessionPlanSequenceTemplateResponse _responseData = deserialize<SessionPlanSequenceTemplateResponse, SessionPlanSequenceTemplateResponse>(_response.data!, 'SessionPlanSequenceTemplateResponse', growable: true);
     return _responseData;
     
@@ -9711,7 +10973,7 @@ class MetricsApi {
       if (setIdOrder != null) r'setIdOrder': _encodeQueryParameter(setIdOrder),
       if (userId != null) r'userId': _encodeQueryParameter(userId),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
@@ -9719,6 +10981,7 @@ class MetricsApi {
       queryParameters: _queryParameters,
       socketParameters: _socketParameters,
     );
+    
     final SessionPlanSequenceResponse _responseData = deserialize<SessionPlanSequenceResponse, SessionPlanSequenceResponse>(_response.data!, 'SessionPlanSequenceResponse', growable: true);
     return _responseData;
     
@@ -9757,7 +11020,7 @@ class MetricsApi {
       if (notes != null) r'notes': _encodeQueryParameter(notes),
       if (userId != null) r'userId': _encodeQueryParameter(userId),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
@@ -9765,6 +11028,7 @@ class MetricsApi {
       queryParameters: _queryParameters,
       socketParameters: _socketParameters,
     );
+    
     final SessionPlanSetResponse _responseData = deserialize<SessionPlanSetResponse, SessionPlanSetResponse>(_response.data!, 'SessionPlanSetResponse', growable: true);
     return _responseData;
     
@@ -9815,7 +11079,7 @@ class MetricsApi {
       if (notes != null) r'notes': _encodeQueryParameter(notes),
       if (userId != null) r'userId': _encodeQueryParameter(userId),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
@@ -9823,6 +11087,7 @@ class MetricsApi {
       queryParameters: _queryParameters,
       socketParameters: _socketParameters,
     );
+    
     final SessionPlanSetResponse _responseData = deserialize<SessionPlanSetResponse, SessionPlanSetResponse>(_response.data!, 'SessionPlanSetResponse', growable: true);
     return _responseData;
     
@@ -9873,7 +11138,7 @@ class MetricsApi {
       if (strengthMachineId != null) r'strengthMachineId': _encodeQueryParameter(strengthMachineId),
       if (userId != null) r'userId': _encodeQueryParameter(userId),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
@@ -9881,6 +11146,7 @@ class MetricsApi {
       queryParameters: _queryParameters,
       socketParameters: _socketParameters,
     );
+    
     final SessionPlanSetResponse _responseData = deserialize<SessionPlanSetResponse, SessionPlanSetResponse>(_response.data!, 'SessionPlanSetResponse', growable: true);
     return _responseData;
     
@@ -9919,7 +11185,7 @@ class MetricsApi {
       if (notes != null) r'notes': _encodeQueryParameter(notes),
       if (userId != null) r'userId': _encodeQueryParameter(userId),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
@@ -9927,6 +11193,7 @@ class MetricsApi {
       queryParameters: _queryParameters,
       socketParameters: _socketParameters,
     );
+    
     final SessionPlanSetResponse _responseData = deserialize<SessionPlanSetResponse, SessionPlanSetResponse>(_response.data!, 'SessionPlanSetResponse', growable: true);
     return _responseData;
     
@@ -9959,7 +11226,7 @@ class MetricsApi {
     final _queryParameters = <String, dynamic>{
       if (userId != null) r'userId': _encodeQueryParameter(userId),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     await connection.action(
       path: _path,
       action: _action,
@@ -9967,6 +11234,7 @@ class MetricsApi {
       queryParameters: _queryParameters,
       socketParameters: _socketParameters,
     );
+    
 
     return;
   }
@@ -9997,13 +11265,14 @@ class MetricsApi {
       r'id': _encodeQueryParameter(id),
       if (userId != null) r'userId': _encodeQueryParameter(userId),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
       method: _method,
       queryParameters: _queryParameters,
     );
+    
     final SessionPlanSetInstanceResponse _responseData = deserialize<SessionPlanSetInstanceResponse, SessionPlanSetInstanceResponse>(_response.data!, 'SessionPlanSetInstanceResponse', growable: true);
     return _responseData;
     
@@ -10039,7 +11308,7 @@ class MetricsApi {
       r'completed': _encodeQueryParameter(completed),
       if (userId != null) r'userId': _encodeQueryParameter(userId),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
@@ -10047,6 +11316,7 @@ class MetricsApi {
       queryParameters: _queryParameters,
       socketParameters: _socketParameters,
     );
+    
     final SessionPlanSetInstanceResponse _responseData = deserialize<SessionPlanSetInstanceResponse, SessionPlanSetInstanceResponse>(_response.data!, 'SessionPlanSetInstanceResponse', growable: true);
     return _responseData;
     
@@ -10094,7 +11364,7 @@ class MetricsApi {
       if (mSeriesDataSetId != null) r'mSeriesDataSetId': _encodeQueryParameter(mSeriesDataSetId),
       if (userId != null) r'userId': _encodeQueryParameter(userId),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
@@ -10102,6 +11372,7 @@ class MetricsApi {
       queryParameters: _queryParameters,
       socketParameters: _socketParameters,
     );
+    
     final SessionPlanSetInstanceResponse _responseData = deserialize<SessionPlanSetInstanceResponse, SessionPlanSetInstanceResponse>(_response.data!, 'SessionPlanSetInstanceResponse', growable: true);
     return _responseData;
     
@@ -10149,7 +11420,7 @@ class MetricsApi {
       if (strengthMachineDataSetId != null) r'strengthMachineDataSetId': _encodeQueryParameter(strengthMachineDataSetId),
       if (userId != null) r'userId': _encodeQueryParameter(userId),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
@@ -10157,6 +11428,7 @@ class MetricsApi {
       queryParameters: _queryParameters,
       socketParameters: _socketParameters,
     );
+    
     final SessionPlanSetInstanceResponse _responseData = deserialize<SessionPlanSetInstanceResponse, SessionPlanSetInstanceResponse>(_response.data!, 'SessionPlanSetInstanceResponse', growable: true);
     return _responseData;
     
@@ -10192,7 +11464,7 @@ class MetricsApi {
       r'completed': _encodeQueryParameter(completed),
       if (userId != null) r'userId': _encodeQueryParameter(userId),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
@@ -10200,6 +11472,7 @@ class MetricsApi {
       queryParameters: _queryParameters,
       socketParameters: _socketParameters,
     );
+    
     final SessionPlanSetInstanceResponse _responseData = deserialize<SessionPlanSetInstanceResponse, SessionPlanSetInstanceResponse>(_response.data!, 'SessionPlanSetInstanceResponse', growable: true);
     return _responseData;
     
@@ -10252,13 +11525,14 @@ class MetricsApi {
       if (type != null) r'type': _encodeQueryParameter(type),
       if (userId != null) r'userId': _encodeQueryParameter(userId),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
       method: _method,
       queryParameters: _queryParameters,
     );
+    
     final SessionPlanSetListResponse _responseData = deserialize<SessionPlanSetListResponse, SessionPlanSetListResponse>(_response.data!, 'SessionPlanSetListResponse', growable: true);
     return _responseData;
     
@@ -10290,13 +11564,14 @@ class MetricsApi {
       r'id': _encodeQueryParameter(id),
       if (userId != null) r'userId': _encodeQueryParameter(userId),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
       method: _method,
       queryParameters: _queryParameters,
     );
+    
     final SessionPlanSetResponse _responseData = deserialize<SessionPlanSetResponse, SessionPlanSetResponse>(_response.data!, 'SessionPlanSetResponse', growable: true);
     return _responseData;
     
@@ -10335,7 +11610,7 @@ class MetricsApi {
       if (notes != null) r'notes': _encodeQueryParameter(notes),
       if (userId != null) r'userId': _encodeQueryParameter(userId),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
@@ -10343,6 +11618,7 @@ class MetricsApi {
       queryParameters: _queryParameters,
       socketParameters: _socketParameters,
     );
+    
     final SessionPlanSetTemplateResponse _responseData = deserialize<SessionPlanSetTemplateResponse, SessionPlanSetTemplateResponse>(_response.data!, 'SessionPlanSetTemplateResponse', growable: true);
     return _responseData;
     
@@ -10393,7 +11669,7 @@ class MetricsApi {
       if (notes != null) r'notes': _encodeQueryParameter(notes),
       if (userId != null) r'userId': _encodeQueryParameter(userId),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
@@ -10401,6 +11677,7 @@ class MetricsApi {
       queryParameters: _queryParameters,
       socketParameters: _socketParameters,
     );
+    
     final SessionPlanSetTemplateResponse _responseData = deserialize<SessionPlanSetTemplateResponse, SessionPlanSetTemplateResponse>(_response.data!, 'SessionPlanSetTemplateResponse', growable: true);
     return _responseData;
     
@@ -10445,7 +11722,7 @@ class MetricsApi {
       if (strengthMachineId != null) r'strengthMachineId': _encodeQueryParameter(strengthMachineId),
       if (userId != null) r'userId': _encodeQueryParameter(userId),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
@@ -10453,6 +11730,7 @@ class MetricsApi {
       queryParameters: _queryParameters,
       socketParameters: _socketParameters,
     );
+    
     final SessionPlanSetTemplateResponse _responseData = deserialize<SessionPlanSetTemplateResponse, SessionPlanSetTemplateResponse>(_response.data!, 'SessionPlanSetTemplateResponse', growable: true);
     return _responseData;
     
@@ -10491,7 +11769,7 @@ class MetricsApi {
       if (notes != null) r'notes': _encodeQueryParameter(notes),
       if (userId != null) r'userId': _encodeQueryParameter(userId),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
@@ -10499,6 +11777,7 @@ class MetricsApi {
       queryParameters: _queryParameters,
       socketParameters: _socketParameters,
     );
+    
     final SessionPlanSetTemplateResponse _responseData = deserialize<SessionPlanSetTemplateResponse, SessionPlanSetTemplateResponse>(_response.data!, 'SessionPlanSetTemplateResponse', growable: true);
     return _responseData;
     
@@ -10531,7 +11810,7 @@ class MetricsApi {
     final _queryParameters = <String, dynamic>{
       if (userId != null) r'userId': _encodeQueryParameter(userId),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     await connection.action(
       path: _path,
       action: _action,
@@ -10539,6 +11818,7 @@ class MetricsApi {
       queryParameters: _queryParameters,
       socketParameters: _socketParameters,
     );
+    
 
     return;
   }
@@ -10584,13 +11864,14 @@ class MetricsApi {
       if (type != null) r'type': _encodeQueryParameter(type),
       if (userId != null) r'userId': _encodeQueryParameter(userId),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
       method: _method,
       queryParameters: _queryParameters,
     );
+    
     final SessionPlanSetTemplateListResponse _responseData = deserialize<SessionPlanSetTemplateListResponse, SessionPlanSetTemplateListResponse>(_response.data!, 'SessionPlanSetTemplateListResponse', growable: true);
     return _responseData;
     
@@ -10622,13 +11903,14 @@ class MetricsApi {
       r'id': _encodeQueryParameter(id),
       if (userId != null) r'userId': _encodeQueryParameter(userId),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
       method: _method,
       queryParameters: _queryParameters,
     );
+    
     final SessionPlanSetTemplateResponse _responseData = deserialize<SessionPlanSetTemplateResponse, SessionPlanSetTemplateResponse>(_response.data!, 'SessionPlanSetTemplateResponse', growable: true);
     return _responseData;
     
@@ -10667,7 +11949,7 @@ class MetricsApi {
       if (notes != null) r'notes': _encodeQueryParameter(notes),
       if (userId != null) r'userId': _encodeQueryParameter(userId),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
@@ -10675,6 +11957,7 @@ class MetricsApi {
       queryParameters: _queryParameters,
       socketParameters: _socketParameters,
     );
+    
     final SessionPlanSetTemplateResponse _responseData = deserialize<SessionPlanSetTemplateResponse, SessionPlanSetTemplateResponse>(_response.data!, 'SessionPlanSetTemplateResponse', growable: true);
     return _responseData;
     
@@ -10725,7 +12008,7 @@ class MetricsApi {
       if (notes != null) r'notes': _encodeQueryParameter(notes),
       if (userId != null) r'userId': _encodeQueryParameter(userId),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
@@ -10733,6 +12016,7 @@ class MetricsApi {
       queryParameters: _queryParameters,
       socketParameters: _socketParameters,
     );
+    
     final SessionPlanSetTemplateResponse _responseData = deserialize<SessionPlanSetTemplateResponse, SessionPlanSetTemplateResponse>(_response.data!, 'SessionPlanSetTemplateResponse', growable: true);
     return _responseData;
     
@@ -10777,7 +12061,7 @@ class MetricsApi {
       if (strengthMachineId != null) r'strengthMachineId': _encodeQueryParameter(strengthMachineId),
       if (userId != null) r'userId': _encodeQueryParameter(userId),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
@@ -10785,6 +12069,7 @@ class MetricsApi {
       queryParameters: _queryParameters,
       socketParameters: _socketParameters,
     );
+    
     final SessionPlanSetTemplateResponse _responseData = deserialize<SessionPlanSetTemplateResponse, SessionPlanSetTemplateResponse>(_response.data!, 'SessionPlanSetTemplateResponse', growable: true);
     return _responseData;
     
@@ -10823,7 +12108,7 @@ class MetricsApi {
       if (notes != null) r'notes': _encodeQueryParameter(notes),
       if (userId != null) r'userId': _encodeQueryParameter(userId),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
@@ -10831,6 +12116,7 @@ class MetricsApi {
       queryParameters: _queryParameters,
       socketParameters: _socketParameters,
     );
+    
     final SessionPlanSetTemplateResponse _responseData = deserialize<SessionPlanSetTemplateResponse, SessionPlanSetTemplateResponse>(_response.data!, 'SessionPlanSetTemplateResponse', growable: true);
     return _responseData;
     
@@ -10869,7 +12155,7 @@ class MetricsApi {
       if (notes != null) r'notes': _encodeQueryParameter(notes),
       if (userId != null) r'userId': _encodeQueryParameter(userId),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
@@ -10877,6 +12163,7 @@ class MetricsApi {
       queryParameters: _queryParameters,
       socketParameters: _socketParameters,
     );
+    
     final SessionPlanSetResponse _responseData = deserialize<SessionPlanSetResponse, SessionPlanSetResponse>(_response.data!, 'SessionPlanSetResponse', growable: true);
     return _responseData;
     
@@ -10927,7 +12214,7 @@ class MetricsApi {
       if (notes != null) r'notes': _encodeQueryParameter(notes),
       if (userId != null) r'userId': _encodeQueryParameter(userId),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
@@ -10935,6 +12222,7 @@ class MetricsApi {
       queryParameters: _queryParameters,
       socketParameters: _socketParameters,
     );
+    
     final SessionPlanSetResponse _responseData = deserialize<SessionPlanSetResponse, SessionPlanSetResponse>(_response.data!, 'SessionPlanSetResponse', growable: true);
     return _responseData;
     
@@ -10985,7 +12273,7 @@ class MetricsApi {
       if (strengthMachineId != null) r'strengthMachineId': _encodeQueryParameter(strengthMachineId),
       if (userId != null) r'userId': _encodeQueryParameter(userId),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
@@ -10993,6 +12281,7 @@ class MetricsApi {
       queryParameters: _queryParameters,
       socketParameters: _socketParameters,
     );
+    
     final SessionPlanSetResponse _responseData = deserialize<SessionPlanSetResponse, SessionPlanSetResponse>(_response.data!, 'SessionPlanSetResponse', growable: true);
     return _responseData;
     
@@ -11031,7 +12320,7 @@ class MetricsApi {
       if (notes != null) r'notes': _encodeQueryParameter(notes),
       if (userId != null) r'userId': _encodeQueryParameter(userId),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
@@ -11039,6 +12328,7 @@ class MetricsApi {
       queryParameters: _queryParameters,
       socketParameters: _socketParameters,
     );
+    
     final SessionPlanSetResponse _responseData = deserialize<SessionPlanSetResponse, SessionPlanSetResponse>(_response.data!, 'SessionPlanSetResponse', growable: true);
     return _responseData;
     
@@ -11070,13 +12360,14 @@ class MetricsApi {
       r'id': _encodeQueryParameter(id),
       if (userId != null) r'userId': _encodeQueryParameter(userId),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
       method: _method,
       queryParameters: _queryParameters,
     );
+    
     final SessionPlanResponse _responseData = deserialize<SessionPlanResponse, SessionPlanResponse>(_response.data!, 'SessionPlanResponse', growable: true);
     return _responseData;
     
@@ -11115,7 +12406,7 @@ class MetricsApi {
       r'scheduleIndexes': _encodeQueryParameter(scheduleIndexes),
       if (userId != null) r'userId': _encodeQueryParameter(userId),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
@@ -11123,6 +12414,7 @@ class MetricsApi {
       queryParameters: _queryParameters,
       socketParameters: _socketParameters,
     );
+    
     final SessionPlanTemplateResponse _responseData = deserialize<SessionPlanTemplateResponse, SessionPlanTemplateResponse>(_response.data!, 'SessionPlanTemplateResponse', growable: true);
     return _responseData;
     
@@ -11172,13 +12464,14 @@ class MetricsApi {
       r'scheduleLength': _encodeQueryParameter(scheduleLength),
       if (userId != null) r'userId': _encodeQueryParameter(userId),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
       method: _method,
       queryParameters: _queryParameters,
     );
+    
     final SessionPlanTemplateResponse _responseData = deserialize<SessionPlanTemplateResponse, SessionPlanTemplateResponse>(_response.data!, 'SessionPlanTemplateResponse', growable: true);
     return _responseData;
     
@@ -11211,7 +12504,7 @@ class MetricsApi {
     final _queryParameters = <String, dynamic>{
       if (userId != null) r'userId': _encodeQueryParameter(userId),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     await connection.action(
       path: _path,
       action: _action,
@@ -11219,6 +12512,7 @@ class MetricsApi {
       queryParameters: _queryParameters,
       socketParameters: _socketParameters,
     );
+    
 
     return;
   }
@@ -11256,7 +12550,7 @@ class MetricsApi {
       r'scheduleIndexes': _encodeQueryParameter(scheduleIndexes),
       if (userId != null) r'userId': _encodeQueryParameter(userId),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
@@ -11264,6 +12558,7 @@ class MetricsApi {
       queryParameters: _queryParameters,
       socketParameters: _socketParameters,
     );
+    
     final SessionPlanTemplateResponse _responseData = deserialize<SessionPlanTemplateResponse, SessionPlanTemplateResponse>(_response.data!, 'SessionPlanTemplateResponse', growable: true);
     return _responseData;
     
@@ -11322,13 +12617,14 @@ class MetricsApi {
       if (to != null) r'to': _encodeQueryParameter(to),
       if (userId != null) r'userId': _encodeQueryParameter(userId),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
       method: _method,
       queryParameters: _queryParameters,
     );
+    
     final SessionPlanTemplateListResponse _responseData = deserialize<SessionPlanTemplateListResponse, SessionPlanTemplateListResponse>(_response.data!, 'SessionPlanTemplateListResponse', growable: true);
     return _responseData;
     
@@ -11360,13 +12656,14 @@ class MetricsApi {
       r'id': _encodeQueryParameter(id),
       if (userId != null) r'userId': _encodeQueryParameter(userId),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
       method: _method,
       queryParameters: _queryParameters,
     );
+    
     final SessionPlanTemplateResponse _responseData = deserialize<SessionPlanTemplateResponse, SessionPlanTemplateResponse>(_response.data!, 'SessionPlanTemplateResponse', growable: true);
     return _responseData;
     
@@ -11420,7 +12717,7 @@ class MetricsApi {
       r'scheduleLength': _encodeQueryParameter(scheduleLength),
       if (userId != null) r'userId': _encodeQueryParameter(userId),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
@@ -11428,6 +12725,7 @@ class MetricsApi {
       queryParameters: _queryParameters,
       socketParameters: _socketParameters,
     );
+    
     final SessionPlanTemplateResponse _responseData = deserialize<SessionPlanTemplateResponse, SessionPlanTemplateResponse>(_response.data!, 'SessionPlanTemplateResponse', growable: true);
     return _responseData;
     
@@ -11487,7 +12785,7 @@ class MetricsApi {
       r'startAt': _encodeQueryParameter(startAt),
       if (userId != null) r'userId': _encodeQueryParameter(userId),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
@@ -11495,6 +12793,7 @@ class MetricsApi {
       queryParameters: _queryParameters,
       socketParameters: _socketParameters,
     );
+    
     final SessionPlanResponse _responseData = deserialize<SessionPlanResponse, SessionPlanResponse>(_response.data!, 'SessionPlanResponse', growable: true);
     return _responseData;
     
@@ -11526,13 +12825,14 @@ class MetricsApi {
       if (id != null) r'id': _encodeQueryParameter(id),
       if (userId != null) r'userId': _encodeQueryParameter(userId),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
       method: _method,
       queryParameters: _queryParameters,
     );
+    
     final SessionResponse _responseData = deserialize<SessionResponse, SessionResponse>(_response.data!, 'SessionResponse', growable: true);
     return _responseData;
     
@@ -11570,13 +12870,14 @@ class MetricsApi {
       if (sessionPlanSequenceAssignmentId != null) r'sessionPlanSequenceAssignmentId': _encodeQueryParameter(sessionPlanSequenceAssignmentId),
       if (userId != null) r'userId': _encodeQueryParameter(userId),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
       method: _method,
       queryParameters: _queryParameters,
     );
+    
     final SessionResponse _responseData = deserialize<SessionResponse, SessionResponse>(_response.data!, 'SessionResponse', growable: true);
     return _responseData;
     
@@ -11608,13 +12909,14 @@ class MetricsApi {
       if (id != null) r'id': _encodeQueryParameter(id),
       if (userId != null) r'userId': _encodeQueryParameter(userId),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
       method: _method,
       queryParameters: _queryParameters,
     );
+    
     final SubscriptionResponse _responseData = deserialize<SubscriptionResponse, SubscriptionResponse>(_response.data!, 'SubscriptionResponse', growable: true);
     return _responseData;
     
@@ -11655,13 +12957,14 @@ class MetricsApi {
       if (movement != null) r'movement': _encodeQueryParameter(movement),
       r'plane': _encodeQueryParameter(plane),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
       method: _method,
       queryParameters: _queryParameters,
     );
+    
     final StrengthExerciseResponse _responseData = deserialize<StrengthExerciseResponse, StrengthExerciseResponse>(_response.data!, 'StrengthExerciseResponse', growable: true);
     return _responseData;
     
@@ -11691,7 +12994,7 @@ class MetricsApi {
     };
     final _queryParameters = <String, dynamic>{
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     await connection.action(
       path: _path,
       action: _action,
@@ -11699,6 +13002,7 @@ class MetricsApi {
       queryParameters: _queryParameters,
       socketParameters: _socketParameters,
     );
+    
 
     return;
   }
@@ -11750,13 +13054,14 @@ class MetricsApi {
       if (plane != null) r'plane': _encodeQueryParameter(plane),
       if (sort != null) r'sort': _encodeQueryParameter(sort),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
       method: _method,
       queryParameters: _queryParameters,
     );
+    
     final StrengthExerciseListResponse _responseData = deserialize<StrengthExerciseListResponse, StrengthExerciseListResponse>(_response.data!, 'StrengthExerciseListResponse', growable: true);
     return _responseData;
     
@@ -11792,7 +13097,7 @@ class MetricsApi {
       r'muscle': _encodeQueryParameter(muscle),
       r'targetLevel': _encodeQueryParameter(targetLevel),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
@@ -11800,6 +13105,7 @@ class MetricsApi {
       queryParameters: _queryParameters,
       socketParameters: _socketParameters,
     );
+    
     final StrengthExerciseMuscleResponse _responseData = deserialize<StrengthExerciseMuscleResponse, StrengthExerciseMuscleResponse>(_response.data!, 'StrengthExerciseMuscleResponse', growable: true);
     return _responseData;
     
@@ -11829,7 +13135,7 @@ class MetricsApi {
     };
     final _queryParameters = <String, dynamic>{
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     await connection.action(
       path: _path,
       action: _action,
@@ -11837,6 +13143,7 @@ class MetricsApi {
       queryParameters: _queryParameters,
       socketParameters: _socketParameters,
     );
+    
 
     return;
   }
@@ -11883,7 +13190,7 @@ class MetricsApi {
       if (sort != null) r'sort': _encodeQueryParameter(sort),
       if (targetLevel != null) r'targetLevel': _encodeQueryParameter(targetLevel),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
@@ -11891,6 +13198,7 @@ class MetricsApi {
       queryParameters: _queryParameters,
       socketParameters: _socketParameters,
     );
+    
     final StrengthExerciseMuscleListResponse _responseData = deserialize<StrengthExerciseMuscleListResponse, StrengthExerciseMuscleListResponse>(_response.data!, 'StrengthExerciseMuscleListResponse', growable: true);
     return _responseData;
     
@@ -11919,13 +13227,14 @@ class MetricsApi {
     final _queryParameters = <String, dynamic>{
       r'id': _encodeQueryParameter(id),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
       method: _method,
       queryParameters: _queryParameters,
     );
+    
     final StrengthExerciseMuscleResponse _responseData = deserialize<StrengthExerciseMuscleResponse, StrengthExerciseMuscleResponse>(_response.data!, 'StrengthExerciseMuscleResponse', growable: true);
     return _responseData;
     
@@ -11958,7 +13267,7 @@ class MetricsApi {
     final _queryParameters = <String, dynamic>{
       r'targetLevel': _encodeQueryParameter(targetLevel),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
@@ -11966,6 +13275,7 @@ class MetricsApi {
       queryParameters: _queryParameters,
       socketParameters: _socketParameters,
     );
+    
     final StrengthExerciseMuscleResponse _responseData = deserialize<StrengthExerciseMuscleResponse, StrengthExerciseMuscleResponse>(_response.data!, 'StrengthExerciseMuscleResponse', growable: true);
     return _responseData;
     
@@ -11994,13 +13304,14 @@ class MetricsApi {
     final _queryParameters = <String, dynamic>{
       r'id': _encodeQueryParameter(id),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
       method: _method,
       queryParameters: _queryParameters,
     );
+    
     final StrengthExerciseResponse _responseData = deserialize<StrengthExerciseResponse, StrengthExerciseResponse>(_response.data!, 'StrengthExerciseResponse', growable: true);
     return _responseData;
     
@@ -12042,7 +13353,7 @@ class MetricsApi {
       if (movement != null) r'movement': _encodeQueryParameter(movement),
       r'plane': _encodeQueryParameter(plane),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
@@ -12050,6 +13361,7 @@ class MetricsApi {
       queryParameters: _queryParameters,
       socketParameters: _socketParameters,
     );
+    
     final StrengthExerciseResponse _responseData = deserialize<StrengthExerciseResponse, StrengthExerciseResponse>(_response.data!, 'StrengthExerciseResponse', growable: true);
     return _responseData;
     
@@ -12097,7 +13409,7 @@ class MetricsApi {
       if (strengthMachineId != null) r'strengthMachineId': _encodeQueryParameter(strengthMachineId),
       r'variant': _encodeQueryParameter(variant),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
@@ -12105,6 +13417,7 @@ class MetricsApi {
       queryParameters: _queryParameters,
       socketParameters: _socketParameters,
     );
+    
     final StrengthExerciseVariantResponse _responseData = deserialize<StrengthExerciseVariantResponse, StrengthExerciseVariantResponse>(_response.data!, 'StrengthExerciseVariantResponse', growable: true);
     return _responseData;
     
@@ -12134,7 +13447,7 @@ class MetricsApi {
     };
     final _queryParameters = <String, dynamic>{
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     await connection.action(
       path: _path,
       action: _action,
@@ -12142,6 +13455,7 @@ class MetricsApi {
       queryParameters: _queryParameters,
       socketParameters: _socketParameters,
     );
+    
 
     return;
   }
@@ -12154,6 +13468,8 @@ class MetricsApi {
   /// * [attachment] - Allowed values: bar, rope, singleHandles, doubleHandles, ankleStrap, thighStrap, belt, dip, pullUpBar
   /// * [equipmentMechanicalMovement] - Allowed values: unilateral, bilateral
   /// * [limit] 
+  /// * [line] 
+  /// * [machineModel] 
   /// * [offset] 
   /// * [sort] - Allowed values: id, variant, attachment, equipmentMechanicalMovement
   /// * [strengthExerciseId] 
@@ -12167,6 +13483,8 @@ class MetricsApi {
     String? attachment,
     String? equipmentMechanicalMovement,
     num? limit,
+    String? line,
+    String? machineModel,
     num? offset,
     String? sort = 'id',
     num? strengthExerciseId,
@@ -12187,19 +13505,22 @@ class MetricsApi {
       if (attachment != null) r'attachment': _encodeQueryParameter(attachment),
       if (equipmentMechanicalMovement != null) r'equipmentMechanicalMovement': _encodeQueryParameter(equipmentMechanicalMovement),
       if (limit != null) r'limit': _encodeQueryParameter(limit),
+      if (line != null) r'line': _encodeQueryParameter(line),
+      if (machineModel != null) r'machineModel': _encodeQueryParameter(machineModel),
       if (offset != null) r'offset': _encodeQueryParameter(offset),
       if (sort != null) r'sort': _encodeQueryParameter(sort),
       if (strengthExerciseId != null) r'strengthExerciseId': _encodeQueryParameter(strengthExerciseId),
       if (strengthMachineId != null) r'strengthMachineId': _encodeQueryParameter(strengthMachineId),
       if (variant != null) r'variant': _encodeQueryParameter(variant),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
       method: _method,
       queryParameters: _queryParameters,
     );
+    
     final StrengthExerciseVariantListResponse _responseData = deserialize<StrengthExerciseVariantListResponse, StrengthExerciseVariantListResponse>(_response.data!, 'StrengthExerciseVariantListResponse', growable: true);
     return _responseData;
     
@@ -12228,13 +13549,14 @@ class MetricsApi {
     final _queryParameters = <String, dynamic>{
       r'id': _encodeQueryParameter(id),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
       method: _method,
       queryParameters: _queryParameters,
     );
+    
     final StrengthExerciseVariantResponse _responseData = deserialize<StrengthExerciseVariantResponse, StrengthExerciseVariantResponse>(_response.data!, 'StrengthExerciseVariantResponse', growable: true);
     return _responseData;
     
@@ -12279,7 +13601,7 @@ class MetricsApi {
       if (instructionalVideo != null) r'instructionalVideo': _encodeQueryParameter(instructionalVideo),
       r'variant': _encodeQueryParameter(variant),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
@@ -12287,6 +13609,7 @@ class MetricsApi {
       queryParameters: _queryParameters,
       socketParameters: _socketParameters,
     );
+    
     final StrengthExerciseVariantResponse _responseData = deserialize<StrengthExerciseVariantResponse, StrengthExerciseVariantResponse>(_response.data!, 'StrengthExerciseVariantResponse', growable: true);
     return _responseData;
     
@@ -12372,13 +13695,14 @@ class MetricsApi {
       r'version': _encodeQueryParameter(version),
       r'work': _encodeQueryParameter(work),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
       method: _method,
       queryParameters: _queryParameters,
     );
+    
     final StrengthMachineDataSetResponse _responseData = deserialize<StrengthMachineDataSetResponse, StrengthMachineDataSetResponse>(_response.data!, 'StrengthMachineDataSetResponse', growable: true);
     return _responseData;
     
@@ -12416,13 +13740,14 @@ class MetricsApi {
       r'setData': _encodeQueryParameter(setData),
       if (userId != null) r'userId': _encodeQueryParameter(userId),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
       method: _method,
       queryParameters: _queryParameters,
     );
+    
     final StrengthMachineDataSetResponse _responseData = deserialize<StrengthMachineDataSetResponse, StrengthMachineDataSetResponse>(_response.data!, 'StrengthMachineDataSetResponse', growable: true);
     return _responseData;
     
@@ -12455,7 +13780,7 @@ class MetricsApi {
     final _queryParameters = <String, dynamic>{
       if (userId != null) r'userId': _encodeQueryParameter(userId),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     await connection.action(
       path: _path,
       action: _action,
@@ -12463,6 +13788,7 @@ class MetricsApi {
       queryParameters: _queryParameters,
       socketParameters: _socketParameters,
     );
+    
 
     return;
   }
@@ -12497,7 +13823,7 @@ class MetricsApi {
     final _queryParameters = <String, dynamic>{
       if (userId != null) r'userId': _encodeQueryParameter(userId),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
@@ -12505,6 +13831,7 @@ class MetricsApi {
       queryParameters: _queryParameters,
       socketParameters: _socketParameters,
     );
+    
     final StrengthMachineDataSetExportResponse _responseData = deserialize<StrengthMachineDataSetExportResponse, StrengthMachineDataSetExportResponse>(_response.data!, 'StrengthMachineDataSetExportResponse', growable: true);
     return _responseData;
     
@@ -12537,7 +13864,7 @@ class MetricsApi {
     };
     final _queryParameters = <String, dynamic>{
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     await connection.action(
       path: _path,
       action: _action,
@@ -12545,6 +13872,47 @@ class MetricsApi {
       queryParameters: _queryParameters,
       socketParameters: _socketParameters,
     );
+    
+
+    return;
+  }
+
+  /// Delete a strength machine data set
+  /// 1
+  ///
+  /// Parameters:
+  /// * [id] 
+  /// * [userId] 
+  /// * [apiVersion] 
+  ///
+  /// Returns a [Future]
+  Future<void> strengthMachineDataSetFacilityDelete({ 
+    required num id,
+    required num userId,
+    String? apiVersion,
+  }) async {
+    final _path = r'/facility/strength-machine-data-set/{id}'.replaceAll('{' r'id' '}', id.toString());
+    final _action = 'strengthMachineDataSet:facilityDelete';
+    final _method = r'DELETE';
+
+    if (apiVersion == null) {
+      apiVersion = '1';
+    }
+    final _socketParameters = <String, dynamic>{
+      r'id': _encodeQueryParameter(id),
+    };
+    final _queryParameters = <String, dynamic>{
+      r'userId': _encodeQueryParameter(userId),
+      if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
+    };
+    await connection.action(
+      path: _path,
+      action: _action,
+      method: _method,
+      queryParameters: _queryParameters,
+      socketParameters: _socketParameters,
+    );
+    
 
     return;
   }
@@ -12593,13 +13961,14 @@ class MetricsApi {
       if (to != null) r'to': _encodeQueryParameter(to),
       if (userId != null) r'userId': _encodeQueryParameter(userId),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
       method: _method,
       queryParameters: _queryParameters,
     );
+    
     final StrengthMachineDataSetListResponse _responseData = deserialize<StrengthMachineDataSetListResponse, StrengthMachineDataSetListResponse>(_response.data!, 'StrengthMachineDataSetListResponse', growable: true);
     return _responseData;
     
@@ -12631,14 +14000,51 @@ class MetricsApi {
       r'id': _encodeQueryParameter(id),
       if (userId != null) r'userId': _encodeQueryParameter(userId),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
       method: _method,
       queryParameters: _queryParameters,
     );
+    
     final StrengthMachineDataSetResponse _responseData = deserialize<StrengthMachineDataSetResponse, StrengthMachineDataSetResponse>(_response.data!, 'StrengthMachineDataSetResponse', growable: true);
+    return _responseData;
+    
+  }
+
+  /// Show metadata from the last recorded set on a strength machine
+  /// 1
+  ///
+  /// Parameters:
+  /// * [userId] 
+  /// * [apiVersion] 
+  ///
+  /// Returns a [Future] containing a [Response] with a [StrengthMachineLastSetMetaDataResponse] as data
+  Future<StrengthMachineLastSetMetaDataResponse> strengthMachineDataSetShowLastSetMetaData({ 
+    required num userId,
+    String? apiVersion,
+  }) async {
+    final _path = r'/strength-machine-data-set/last-set-meta-data';
+    final _action = 'strengthMachineDataSet:showLastSetMetaData';
+    final _method = r'GET';
+
+    if (apiVersion == null) {
+      apiVersion = '1';
+    }
+
+    final _queryParameters = <String, dynamic>{
+      r'userId': _encodeQueryParameter(userId),
+      if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
+    };
+    final _response = await connection.action(
+      path: _path,
+      action: _action,
+      method: _method,
+      queryParameters: _queryParameters,
+    );
+    
+    final StrengthMachineLastSetMetaDataResponse _responseData = deserialize<StrengthMachineLastSetMetaDataResponse, StrengthMachineLastSetMetaDataResponse>(_response.data!, 'StrengthMachineLastSetMetaDataResponse', growable: true);
     return _responseData;
     
   }
@@ -12669,13 +14075,14 @@ class MetricsApi {
       if (id != null) r'id': _encodeQueryParameter(id),
       if (userId != null) r'userId': _encodeQueryParameter(userId),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
       method: _method,
       queryParameters: _queryParameters,
     );
+    
     final SubscriptionResponse _responseData = deserialize<SubscriptionResponse, SubscriptionResponse>(_response.data!, 'SubscriptionResponse', growable: true);
     return _responseData;
     
@@ -12714,7 +14121,7 @@ class MetricsApi {
       if (strengthExerciseId != null) r'strengthExerciseId': _encodeQueryParameter(strengthExerciseId),
       if (userId != null) r'userId': _encodeQueryParameter(userId),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
@@ -12722,6 +14129,7 @@ class MetricsApi {
       queryParameters: _queryParameters,
       socketParameters: _socketParameters,
     );
+    
     final StrengthMachineDataSetResponse _responseData = deserialize<StrengthMachineDataSetResponse, StrengthMachineDataSetResponse>(_response.data!, 'StrengthMachineDataSetResponse', growable: true);
     return _responseData;
     
@@ -12768,13 +14176,14 @@ class MetricsApi {
       if (to != null) r'to': _encodeQueryParameter(to),
       if (userId != null) r'userId': _encodeQueryParameter(userId),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
       method: _method,
       queryParameters: _queryParameters,
     );
+    
     final StrengthMachineHistoryListResponse _responseData = deserialize<StrengthMachineHistoryListResponse, StrengthMachineHistoryListResponse>(_response.data!, 'StrengthMachineHistoryListResponse', growable: true);
     return _responseData;
     
@@ -12821,13 +14230,14 @@ class MetricsApi {
       if (sort != null) r'sort': _encodeQueryParameter(sort),
       if (variant != null) r'variant': _encodeQueryParameter(variant),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
       method: _method,
       queryParameters: _queryParameters,
     );
+    
     final StrengthMachineListResponse _responseData = deserialize<StrengthMachineListResponse, StrengthMachineListResponse>(_response.data!, 'StrengthMachineListResponse', growable: true);
     return _responseData;
     
@@ -12860,7 +14270,7 @@ class MetricsApi {
     final _queryParameters = <String, dynamic>{
       if (userId != null) r'userId': _encodeQueryParameter(userId),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
@@ -12868,6 +14278,7 @@ class MetricsApi {
       queryParameters: _queryParameters,
       socketParameters: _socketParameters,
     );
+    
     final StrengthMachineProfileStatsResponse _responseData = deserialize<StrengthMachineProfileStatsResponse, StrengthMachineProfileStatsResponse>(_response.data!, 'StrengthMachineProfileStatsResponse', growable: true);
     return _responseData;
     
@@ -12896,13 +14307,14 @@ class MetricsApi {
     final _queryParameters = <String, dynamic>{
       r'id': _encodeQueryParameter(id),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
       method: _method,
       queryParameters: _queryParameters,
     );
+    
     final StrengthMachineResponse _responseData = deserialize<StrengthMachineResponse, StrengthMachineResponse>(_response.data!, 'StrengthMachineResponse', growable: true);
     return _responseData;
     
@@ -12931,13 +14343,14 @@ class MetricsApi {
     final _queryParameters = <String, dynamic>{
       r'defaultExerciseAlias': _encodeQueryParameter(defaultExerciseAlias),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
       method: _method,
       queryParameters: _queryParameters,
     );
+    
     final StretchExerciseResponse _responseData = deserialize<StretchExerciseResponse, StretchExerciseResponse>(_response.data!, 'StretchExerciseResponse', growable: true);
     return _responseData;
     
@@ -12967,7 +14380,7 @@ class MetricsApi {
     };
     final _queryParameters = <String, dynamic>{
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     await connection.action(
       path: _path,
       action: _action,
@@ -12975,6 +14388,7 @@ class MetricsApi {
       queryParameters: _queryParameters,
       socketParameters: _socketParameters,
     );
+    
 
     return;
   }
@@ -13014,13 +14428,14 @@ class MetricsApi {
       if (offset != null) r'offset': _encodeQueryParameter(offset),
       if (sort != null) r'sort': _encodeQueryParameter(sort),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
       method: _method,
       queryParameters: _queryParameters,
     );
+    
     final StretchExerciseListResponse _responseData = deserialize<StretchExerciseListResponse, StretchExerciseListResponse>(_response.data!, 'StretchExerciseListResponse', growable: true);
     return _responseData;
     
@@ -13056,7 +14471,7 @@ class MetricsApi {
       r'muscle': _encodeQueryParameter(muscle),
       r'targetLevel': _encodeQueryParameter(targetLevel),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
@@ -13064,6 +14479,7 @@ class MetricsApi {
       queryParameters: _queryParameters,
       socketParameters: _socketParameters,
     );
+    
     final StretchExerciseMuscleResponse _responseData = deserialize<StretchExerciseMuscleResponse, StretchExerciseMuscleResponse>(_response.data!, 'StretchExerciseMuscleResponse', growable: true);
     return _responseData;
     
@@ -13093,7 +14509,7 @@ class MetricsApi {
     };
     final _queryParameters = <String, dynamic>{
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     await connection.action(
       path: _path,
       action: _action,
@@ -13101,6 +14517,7 @@ class MetricsApi {
       queryParameters: _queryParameters,
       socketParameters: _socketParameters,
     );
+    
 
     return;
   }
@@ -13147,7 +14564,7 @@ class MetricsApi {
       if (sort != null) r'sort': _encodeQueryParameter(sort),
       if (targetLevel != null) r'targetLevel': _encodeQueryParameter(targetLevel),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
@@ -13155,6 +14572,7 @@ class MetricsApi {
       queryParameters: _queryParameters,
       socketParameters: _socketParameters,
     );
+    
     final StretchExerciseMuscleListResponse _responseData = deserialize<StretchExerciseMuscleListResponse, StretchExerciseMuscleListResponse>(_response.data!, 'StretchExerciseMuscleListResponse', growable: true);
     return _responseData;
     
@@ -13183,13 +14601,14 @@ class MetricsApi {
     final _queryParameters = <String, dynamic>{
       r'id': _encodeQueryParameter(id),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
       method: _method,
       queryParameters: _queryParameters,
     );
+    
     final StretchExerciseMuscleResponse _responseData = deserialize<StretchExerciseMuscleResponse, StretchExerciseMuscleResponse>(_response.data!, 'StretchExerciseMuscleResponse', growable: true);
     return _responseData;
     
@@ -13222,7 +14641,7 @@ class MetricsApi {
     final _queryParameters = <String, dynamic>{
       r'targetLevel': _encodeQueryParameter(targetLevel),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
@@ -13230,6 +14649,7 @@ class MetricsApi {
       queryParameters: _queryParameters,
       socketParameters: _socketParameters,
     );
+    
     final StretchExerciseMuscleResponse _responseData = deserialize<StretchExerciseMuscleResponse, StretchExerciseMuscleResponse>(_response.data!, 'StretchExerciseMuscleResponse', growable: true);
     return _responseData;
     
@@ -13258,13 +14678,14 @@ class MetricsApi {
     final _queryParameters = <String, dynamic>{
       r'id': _encodeQueryParameter(id),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
       method: _method,
       queryParameters: _queryParameters,
     );
+    
     final StretchExerciseResponse _responseData = deserialize<StretchExerciseResponse, StretchExerciseResponse>(_response.data!, 'StretchExerciseResponse', growable: true);
     return _responseData;
     
@@ -13294,7 +14715,7 @@ class MetricsApi {
     };
     final _queryParameters = <String, dynamic>{
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
@@ -13302,6 +14723,7 @@ class MetricsApi {
       queryParameters: _queryParameters,
       socketParameters: _socketParameters,
     );
+    
     final StretchExerciseResponse _responseData = deserialize<StretchExerciseResponse, StretchExerciseResponse>(_response.data!, 'StretchExerciseResponse', growable: true);
     return _responseData;
     
@@ -13340,7 +14762,7 @@ class MetricsApi {
       if (instructionalVideo != null) r'instructionalVideo': _encodeQueryParameter(instructionalVideo),
       r'variant': _encodeQueryParameter(variant),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
@@ -13348,6 +14770,7 @@ class MetricsApi {
       queryParameters: _queryParameters,
       socketParameters: _socketParameters,
     );
+    
     final StretchExerciseVariantResponse _responseData = deserialize<StretchExerciseVariantResponse, StretchExerciseVariantResponse>(_response.data!, 'StretchExerciseVariantResponse', growable: true);
     return _responseData;
     
@@ -13377,7 +14800,7 @@ class MetricsApi {
     };
     final _queryParameters = <String, dynamic>{
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     await connection.action(
       path: _path,
       action: _action,
@@ -13385,6 +14808,7 @@ class MetricsApi {
       queryParameters: _queryParameters,
       socketParameters: _socketParameters,
     );
+    
 
     return;
   }
@@ -13427,13 +14851,14 @@ class MetricsApi {
       if (stretchExerciseId != null) r'stretchExerciseId': _encodeQueryParameter(stretchExerciseId),
       if (variant != null) r'variant': _encodeQueryParameter(variant),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
       method: _method,
       queryParameters: _queryParameters,
     );
+    
     final StretchExerciseVariantListResponse _responseData = deserialize<StretchExerciseVariantListResponse, StretchExerciseVariantListResponse>(_response.data!, 'StretchExerciseVariantListResponse', growable: true);
     return _responseData;
     
@@ -13462,13 +14887,14 @@ class MetricsApi {
     final _queryParameters = <String, dynamic>{
       r'id': _encodeQueryParameter(id),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
       method: _method,
       queryParameters: _queryParameters,
     );
+    
     final StretchExerciseVariantResponse _responseData = deserialize<StretchExerciseVariantResponse, StretchExerciseVariantResponse>(_response.data!, 'StretchExerciseVariantResponse', growable: true);
     return _responseData;
     
@@ -13507,7 +14933,7 @@ class MetricsApi {
       if (instructionalVideo != null) r'instructionalVideo': _encodeQueryParameter(instructionalVideo),
       r'variant': _encodeQueryParameter(variant),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
@@ -13515,6 +14941,7 @@ class MetricsApi {
       queryParameters: _queryParameters,
       socketParameters: _socketParameters,
     );
+    
     final StretchExerciseVariantResponse _responseData = deserialize<StretchExerciseVariantResponse, StretchExerciseVariantResponse>(_response.data!, 'StretchExerciseVariantResponse', growable: true);
     return _responseData;
     
@@ -13547,7 +14974,7 @@ class MetricsApi {
     };
     final _queryParameters = <String, dynamic>{
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     await connection.action(
       path: _path,
       action: _action,
@@ -13555,6 +14982,7 @@ class MetricsApi {
       queryParameters: _queryParameters,
       socketParameters: _socketParameters,
     );
+    
 
     return;
   }
@@ -13598,7 +15026,7 @@ class MetricsApi {
       if (offset != null) r'offset': _encodeQueryParameter(offset),
       if (sort != null) r'sort': _encodeQueryParameter(sort),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
@@ -13606,6 +15034,7 @@ class MetricsApi {
       queryParameters: _queryParameters,
       socketParameters: _socketParameters,
     );
+    
     final UserApplicationAuthorizationDeveloperListResponse _responseData = deserialize<UserApplicationAuthorizationDeveloperListResponse, UserApplicationAuthorizationDeveloperListResponse>(_response.data!, 'UserApplicationAuthorizationDeveloperListResponse', growable: true);
     return _responseData;
     
@@ -13638,7 +15067,7 @@ class MetricsApi {
     final _queryParameters = <String, dynamic>{
       r'id': _encodeQueryParameter(id),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
@@ -13646,6 +15075,7 @@ class MetricsApi {
       queryParameters: _queryParameters,
       socketParameters: _socketParameters,
     );
+    
     final UserApplicationAuthorizationResponse _responseData = deserialize<UserApplicationAuthorizationResponse, UserApplicationAuthorizationResponse>(_response.data!, 'UserApplicationAuthorizationResponse', growable: true);
     return _responseData;
     
@@ -13678,7 +15108,7 @@ class MetricsApi {
     final _queryParameters = <String, dynamic>{
       if (userId != null) r'userId': _encodeQueryParameter(userId),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     await connection.action(
       path: _path,
       action: _action,
@@ -13686,6 +15116,7 @@ class MetricsApi {
       queryParameters: _queryParameters,
       socketParameters: _socketParameters,
     );
+    
 
     return;
   }
@@ -13725,13 +15156,14 @@ class MetricsApi {
       if (sort != null) r'sort': _encodeQueryParameter(sort),
       if (userId != null) r'userId': _encodeQueryParameter(userId),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
       method: _method,
       queryParameters: _queryParameters,
     );
+    
     final UserApplicationAuthorizationUserListResponse _responseData = deserialize<UserApplicationAuthorizationUserListResponse, UserApplicationAuthorizationUserListResponse>(_response.data!, 'UserApplicationAuthorizationUserListResponse', growable: true);
     return _responseData;
     
@@ -13763,13 +15195,14 @@ class MetricsApi {
       r'id': _encodeQueryParameter(id),
       if (userId != null) r'userId': _encodeQueryParameter(userId),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
       method: _method,
       queryParameters: _queryParameters,
     );
+    
     final UserApplicationAuthorizationResponse _responseData = deserialize<UserApplicationAuthorizationResponse, UserApplicationAuthorizationResponse>(_response.data!, 'UserApplicationAuthorizationResponse', growable: true);
     return _responseData;
     
@@ -13804,13 +15237,14 @@ class MetricsApi {
       r'password': _encodeQueryParameter(password),
       if (refreshable != null) r'refreshable': _encodeQueryParameter(refreshable),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
       method: _method,
       queryParameters: _queryParameters,
     );
+    
     final UserResponse _responseData = deserialize<UserResponse, UserResponse>(_response.data!, 'UserResponse', growable: true);
     return _responseData;
     
@@ -13845,13 +15279,14 @@ class MetricsApi {
       r'password': _encodeQueryParameter(password),
       if (refreshable != null) r'refreshable': _encodeQueryParameter(refreshable),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     await connection.action(
       path: _path,
       action: _action,
       method: _method,
       queryParameters: _queryParameters,
     );
+    
 
     return;
   }
@@ -13879,13 +15314,14 @@ class MetricsApi {
     final _queryParameters = <String, dynamic>{
       if (userId != null) r'userId': _encodeQueryParameter(userId),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     await connection.action(
       path: _path,
       action: _action,
       method: _method,
       queryParameters: _queryParameters,
     );
+    
 
     return;
   }
@@ -13917,7 +15353,7 @@ class MetricsApi {
     final _queryParameters = <String, dynamic>{
       r'userToken': _encodeQueryParameter(userToken),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
@@ -13925,6 +15361,7 @@ class MetricsApi {
       queryParameters: _queryParameters,
       socketParameters: _socketParameters,
     );
+    
     final UserInBodyIntegrationResponse _responseData = deserialize<UserInBodyIntegrationResponse, UserInBodyIntegrationResponse>(_response.data!, 'UserInBodyIntegrationResponse', growable: true);
     return _responseData;
     
@@ -13954,7 +15391,7 @@ class MetricsApi {
     };
     final _queryParameters = <String, dynamic>{
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     await connection.action(
       path: _path,
       action: _action,
@@ -13962,6 +15399,7 @@ class MetricsApi {
       queryParameters: _queryParameters,
       socketParameters: _socketParameters,
     );
+    
 
     return;
   }
@@ -13990,7 +15428,7 @@ class MetricsApi {
     };
     final _queryParameters = <String, dynamic>{
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
@@ -13998,6 +15436,7 @@ class MetricsApi {
       queryParameters: _queryParameters,
       socketParameters: _socketParameters,
     );
+    
     final UserInBodyIntegrationResponse _responseData = deserialize<UserInBodyIntegrationResponse, UserInBodyIntegrationResponse>(_response.data!, 'UserInBodyIntegrationResponse', growable: true);
     return _responseData;
     
@@ -14027,7 +15466,7 @@ class MetricsApi {
     };
     final _queryParameters = <String, dynamic>{
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     await connection.action(
       path: _path,
       action: _action,
@@ -14035,8 +15474,230 @@ class MetricsApi {
       queryParameters: _queryParameters,
       socketParameters: _socketParameters,
     );
+    
 
     return;
+  }
+
+  /// Create a user session display configuration
+  /// 1
+  ///
+  /// Parameters:
+  /// * [dataMode] - Allowed values: power, velocity
+  /// * [focusMode] - Allowed values: mean, peak
+  /// * [names] 
+  /// * [addedMass] 
+  /// * [performanceDropOff] 
+  /// * [secondsDelay] 
+  /// * [apiVersion] 
+  ///
+  /// Returns a [Future] containing a [Response] with a [UserSessionDisplayConfigurationResponse] as data
+  Future<UserSessionDisplayConfigurationResponse> userSessionDisplayConfigurationCreate({ 
+    required String dataMode,
+    required String focusMode,
+    required String names,
+    num? addedMass,
+    num? performanceDropOff,
+    num? secondsDelay,
+    String? apiVersion,
+  }) async {
+    final _path = r'/user-session-display-configuration';
+    final _action = 'userSessionDisplayConfiguration:create';
+    final _method = r'POST';
+
+    if (apiVersion == null) {
+      apiVersion = '1';
+    }
+
+    final _queryParameters = <String, dynamic>{
+      if (addedMass != null) r'addedMass': _encodeQueryParameter(addedMass),
+      r'dataMode': _encodeQueryParameter(dataMode),
+      r'focusMode': _encodeQueryParameter(focusMode),
+      r'name': _encodeQueryParameter(names),
+      if (performanceDropOff != null) r'performanceDropOff': _encodeQueryParameter(performanceDropOff),
+      if (secondsDelay != null) r'secondsDelay': _encodeQueryParameter(secondsDelay),
+      if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
+    };
+    final _response = await connection.action(
+      path: _path,
+      action: _action,
+      method: _method,
+      queryParameters: _queryParameters,
+    );
+    
+    final UserSessionDisplayConfigurationResponse _responseData = deserialize<UserSessionDisplayConfigurationResponse, UserSessionDisplayConfigurationResponse>(_response.data!, 'UserSessionDisplayConfigurationResponse', growable: true);
+    return _responseData;
+    
+  }
+
+  /// Delete a user session display configuration
+  /// 1
+  ///
+  /// Parameters:
+  /// * [id] 
+  /// * [apiVersion] 
+  ///
+  /// Returns a [Future]
+  Future<void> userSessionDisplayConfigurationDelete({ 
+    required num id,
+    String? apiVersion,
+  }) async {
+    final _path = r'/user-session-display-configuration';
+    final _action = 'userSessionDisplayConfiguration:delete';
+    final _method = r'DELETE';
+
+    if (apiVersion == null) {
+      apiVersion = '1';
+    }
+
+    final _queryParameters = <String, dynamic>{
+      r'id': _encodeQueryParameter(id),
+      if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
+    };
+    await connection.action(
+      path: _path,
+      action: _action,
+      method: _method,
+      queryParameters: _queryParameters,
+    );
+    
+
+    return;
+  }
+
+  /// List a user&#39;s session display configurations
+  /// 1
+  ///
+  /// Parameters:
+  /// * [ascending] 
+  /// * [limit] 
+  /// * [offset] 
+  /// * [sort] - Allowed values: id, name
+  /// * [apiVersion] 
+  ///
+  /// Returns a [Future] containing a [Response] with a [UserSessionDisplayConfigurationListResponse] as data
+  Future<UserSessionDisplayConfigurationListResponse> userSessionDisplayConfigurationList({ 
+    bool? ascending = true,
+    num? limit,
+    num? offset,
+    String? sort = 'name',
+    String? apiVersion,
+  }) async {
+    final _path = r'/user-session-display-configuration/list';
+    final _action = 'userSessionDisplayConfiguration:list';
+    final _method = r'GET';
+
+    if (apiVersion == null) {
+      apiVersion = '1';
+    }
+
+    final _queryParameters = <String, dynamic>{
+      if (ascending != null) r'ascending': _encodeQueryParameter(ascending),
+      if (limit != null) r'limit': _encodeQueryParameter(limit),
+      if (offset != null) r'offset': _encodeQueryParameter(offset),
+      if (sort != null) r'sort': _encodeQueryParameter(sort),
+      if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
+    };
+    final _response = await connection.action(
+      path: _path,
+      action: _action,
+      method: _method,
+      queryParameters: _queryParameters,
+    );
+    
+    final UserSessionDisplayConfigurationListResponse _responseData = deserialize<UserSessionDisplayConfigurationListResponse, UserSessionDisplayConfigurationListResponse>(_response.data!, 'UserSessionDisplayConfigurationListResponse', growable: true);
+    return _responseData;
+    
+  }
+
+  /// Show a user session display configuration
+  /// 1
+  ///
+  /// Parameters:
+  /// * [id] 
+  /// * [apiVersion] 
+  ///
+  /// Returns a [Future] containing a [Response] with a [UserSessionDisplayConfigurationResponse] as data
+  Future<UserSessionDisplayConfigurationResponse> userSessionDisplayConfigurationShow({ 
+    required num id,
+    String? apiVersion,
+  }) async {
+    final _path = r'/user-session-display-configuration';
+    final _action = 'userSessionDisplayConfiguration:show';
+    final _method = r'GET';
+
+    if (apiVersion == null) {
+      apiVersion = '1';
+    }
+
+    final _queryParameters = <String, dynamic>{
+      r'id': _encodeQueryParameter(id),
+      if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
+    };
+    final _response = await connection.action(
+      path: _path,
+      action: _action,
+      method: _method,
+      queryParameters: _queryParameters,
+    );
+    
+    final UserSessionDisplayConfigurationResponse _responseData = deserialize<UserSessionDisplayConfigurationResponse, UserSessionDisplayConfigurationResponse>(_response.data!, 'UserSessionDisplayConfigurationResponse', growable: true);
+    return _responseData;
+    
+  }
+
+  /// Update a user session display configuration
+  /// 1
+  ///
+  /// Parameters:
+  /// * [id] 
+  /// * [addedMass] 
+  /// * [dataMode] - Allowed values: power, velocity
+  /// * [focusMode] - Allowed values: mean, peak
+  /// * [names] 
+  /// * [performanceDropOff] 
+  /// * [secondsDelay] 
+  /// * [apiVersion] 
+  ///
+  /// Returns a [Future] containing a [Response] with a [UserSessionDisplayConfigurationResponse] as data
+  Future<UserSessionDisplayConfigurationResponse> userSessionDisplayConfigurationUpdate({ 
+    required num id,
+    num? addedMass,
+    String? dataMode,
+    String? focusMode,
+    String? names,
+    num? performanceDropOff,
+    num? secondsDelay,
+    String? apiVersion,
+  }) async {
+    final _path = r'/user-session-display-configuration';
+    final _action = 'userSessionDisplayConfiguration:update';
+    final _method = r'PUT';
+
+    if (apiVersion == null) {
+      apiVersion = '1';
+    }
+
+    final _queryParameters = <String, dynamic>{
+      if (addedMass != null) r'addedMass': _encodeQueryParameter(addedMass),
+      if (dataMode != null) r'dataMode': _encodeQueryParameter(dataMode),
+      if (focusMode != null) r'focusMode': _encodeQueryParameter(focusMode),
+      r'id': _encodeQueryParameter(id),
+      if (names != null) r'name': _encodeQueryParameter(names),
+      if (performanceDropOff != null) r'performanceDropOff': _encodeQueryParameter(performanceDropOff),
+      if (secondsDelay != null) r'secondsDelay': _encodeQueryParameter(secondsDelay),
+      if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
+    };
+    final _response = await connection.action(
+      path: _path,
+      action: _action,
+      method: _method,
+      queryParameters: _queryParameters,
+    );
+    
+    final UserSessionDisplayConfigurationResponse _responseData = deserialize<UserSessionDisplayConfigurationResponse, UserSessionDisplayConfigurationResponse>(_response.data!, 'UserSessionDisplayConfigurationResponse', growable: true);
+    return _responseData;
+    
   }
 
   /// Show a user
@@ -14062,13 +15723,14 @@ class MetricsApi {
     final _queryParameters = <String, dynamic>{
       if (userId != null) r'userId': _encodeQueryParameter(userId),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
       method: _method,
       queryParameters: _queryParameters,
     );
+    
     final UserResponse _responseData = deserialize<UserResponse, UserResponse>(_response.data!, 'UserResponse', growable: true);
     return _responseData;
     
@@ -14097,13 +15759,14 @@ class MetricsApi {
     final _queryParameters = <String, dynamic>{
       if (userId != null) r'userId': _encodeQueryParameter(userId),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
       method: _method,
       queryParameters: _queryParameters,
     );
+    
     final SubscriptionResponse _responseData = deserialize<SubscriptionResponse, SubscriptionResponse>(_response.data!, 'SubscriptionResponse', growable: true);
     return _responseData;
     
@@ -14144,13 +15807,14 @@ class MetricsApi {
       r'takenAt': _encodeQueryParameter(takenAt),
       if (userId != null) r'userId': _encodeQueryParameter(userId),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
       method: _method,
       queryParameters: _queryParameters,
     );
+    
     final WeightMeasurementResponse _responseData = deserialize<WeightMeasurementResponse, WeightMeasurementResponse>(_response.data!, 'WeightMeasurementResponse', growable: true);
     return _responseData;
     
@@ -14183,7 +15847,7 @@ class MetricsApi {
     final _queryParameters = <String, dynamic>{
       if (userId != null) r'userId': _encodeQueryParameter(userId),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     await connection.action(
       path: _path,
       action: _action,
@@ -14191,6 +15855,7 @@ class MetricsApi {
       queryParameters: _queryParameters,
       socketParameters: _socketParameters,
     );
+    
 
     return;
   }
@@ -14222,7 +15887,7 @@ class MetricsApi {
     final _queryParameters = <String, dynamic>{
       r'jsonString': _encodeQueryParameter(jsonString),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
@@ -14230,6 +15895,7 @@ class MetricsApi {
       queryParameters: _queryParameters,
       socketParameters: _socketParameters,
     );
+    
     final WeightMeasurementResponse _responseData = deserialize<WeightMeasurementResponse, WeightMeasurementResponse>(_response.data!, 'WeightMeasurementResponse', growable: true);
     return _responseData;
     
@@ -14261,13 +15927,14 @@ class MetricsApi {
       r'csvString': _encodeQueryParameter(csvString),
       if (userId != null) r'userId': _encodeQueryParameter(userId),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
       method: _method,
       queryParameters: _queryParameters,
     );
+    
     final WeightMeasurementListResponse _responseData = deserialize<WeightMeasurementListResponse, WeightMeasurementListResponse>(_response.data!, 'WeightMeasurementListResponse', growable: true);
     return _responseData;
     
@@ -14314,13 +15981,14 @@ class MetricsApi {
       if (to != null) r'to': _encodeQueryParameter(to),
       if (userId != null) r'userId': _encodeQueryParameter(userId),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
       method: _method,
       queryParameters: _queryParameters,
     );
+    
     final WeightMeasurementListResponse _responseData = deserialize<WeightMeasurementListResponse, WeightMeasurementListResponse>(_response.data!, 'WeightMeasurementListResponse', growable: true);
     return _responseData;
     
@@ -14352,13 +16020,14 @@ class MetricsApi {
       if (id != null) r'id': _encodeQueryParameter(id),
       if (userId != null) r'userId': _encodeQueryParameter(userId),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
       method: _method,
       queryParameters: _queryParameters,
     );
+    
     final WeightMeasurementResponse _responseData = deserialize<WeightMeasurementResponse, WeightMeasurementResponse>(_response.data!, 'WeightMeasurementResponse', growable: true);
     return _responseData;
     
@@ -14390,14 +16059,290 @@ class MetricsApi {
       if (id != null) r'id': _encodeQueryParameter(id),
       if (userId != null) r'userId': _encodeQueryParameter(userId),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
-    };    
+    };
     final _response = await connection.action(
       path: _path,
       action: _action,
       method: _method,
       queryParameters: _queryParameters,
     );
+    
     final SubscriptionResponse _responseData = deserialize<SubscriptionResponse, SubscriptionResponse>(_response.data!, 'SubscriptionResponse', growable: true);
+    return _responseData;
+    
+  }
+
+  /// Export many A400 workout sets across a date range as a zip of reps.csv + time_series.csv
+  /// 1
+  ///
+  /// Parameters:
+  /// * [from] 
+  /// * [to] 
+  /// * [userId] 
+  /// * [apiVersion] 
+  ///
+  /// Returns a [Future]
+  Future<void> workoutSetBulkExport({ 
+    required DateTime from,
+    required DateTime to,
+    num? userId,
+    String? apiVersion,
+  }) async {
+    final _path = r'/workout-set/bulk-export';
+    final _action = 'workoutSet:bulkExport';
+    final _method = r'GET';
+
+    if (apiVersion == null) {
+      apiVersion = '1';
+    }
+
+    final _queryParameters = <String, dynamic>{
+      r'from': _encodeQueryParameter(from),
+      r'to': _encodeQueryParameter(to),
+      if (userId != null) r'userId': _encodeQueryParameter(userId),
+      if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
+    };
+    await connection.action(
+      path: _path,
+      action: _action,
+      method: _method,
+      queryParameters: _queryParameters,
+    );
+    
+
+    return;
+  }
+
+  /// Create a workout set from an Apollo Display device (machine-token auth).
+  /// 1
+  ///
+  /// Parameters:
+  /// * [clientSetId] 
+  /// * [userId] 
+  /// * [startedAt] 
+  /// * [workoutSetData] - gzip-compressed JSON (application/gzip)
+  /// * [apiVersion] 
+  /// * [exerciseId] 
+  ///
+  /// Returns a [Future] containing a [Response] with a [StrengthMachineDataSetResponse] as data
+  Future<StrengthMachineDataSetResponse> workoutSetCreate({ 
+    required String clientSetId,
+    required num userId,
+    required DateTime startedAt,
+    required MultipartFile workoutSetData,
+    String? apiVersion,
+    num? exerciseId,
+  }) async {
+    final _path = r'/workout-set';
+    final _action = 'workoutSet:create';
+    final _method = r'POST';
+
+    if (apiVersion == null) {
+      apiVersion = '1';
+    }
+
+
+    // Multipart form body: connection package wraps this map in
+    // FormData.fromMap, so MultipartFile values flow through Dio's
+    // multipart serializer. DateTime values pass through
+    // _encodeQueryParameter for ISO8601 conversion.
+    final _bodyParameters = <String, dynamic>{
+      if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
+      r'clientSetId': _encodeQueryParameter(clientSetId),
+      r'userId': _encodeQueryParameter(userId),
+      r'startedAt': _encodeQueryParameter(startedAt),
+      if (exerciseId != null) r'exerciseId': _encodeQueryParameter(exerciseId),
+      r'workoutSetData': workoutSetData,
+    };
+    final _response = await connection.action(
+      path: _path,
+      action: _action,
+      method: _method,
+      bodyParameters: _bodyParameters,
+    );
+    
+    final StrengthMachineDataSetResponse _responseData = deserialize<StrengthMachineDataSetResponse, StrengthMachineDataSetResponse>(_response.data!, 'StrengthMachineDataSetResponse', growable: true);
+    return _responseData;
+    
+  }
+
+  /// Export one A400 workout set as a zip of reps.csv + time_series.csv
+  /// 1
+  ///
+  /// Parameters:
+  /// * [id] 
+  /// * [apiVersion] 
+  ///
+  /// Returns a [Future]
+  Future<void> workoutSetExport({ 
+    required num id,
+    String? apiVersion,
+  }) async {
+    final _path = r'/workout-set/export';
+    final _action = 'workoutSet:export';
+    final _method = r'GET';
+
+    if (apiVersion == null) {
+      apiVersion = '1';
+    }
+
+    final _queryParameters = <String, dynamic>{
+      r'id': _encodeQueryParameter(id),
+      if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
+    };
+    await connection.action(
+      path: _path,
+      action: _action,
+      method: _method,
+      queryParameters: _queryParameters,
+    );
+    
+
+    return;
+  }
+
+  /// List A400 workout sets for a facility
+  /// 1
+  ///
+  /// Parameters:
+  /// * [ascending] 
+  /// * [from] 
+  /// * [limit] 
+  /// * [offset] 
+  /// * [query] 
+  /// * [sort] - Allowed values: id, completedAt
+  /// * [strengthMachineId] 
+  /// * [to] 
+  /// * [userId] 
+  /// * [apiVersion] 
+  ///
+  /// Returns a [Future] containing a [Response] with a [StrengthMachineDataSetListResponse] as data
+  Future<StrengthMachineDataSetListResponse> workoutSetList({ 
+    bool? ascending = false,
+    DateTime? from,
+    num? limit,
+    num? offset,
+    String? query,
+    String? sort = 'completedAt',
+    num? strengthMachineId,
+    DateTime? to,
+    num? userId,
+    String? apiVersion,
+  }) async {
+    final _path = r'/workout-set/list';
+    final _action = 'workoutSet:list';
+    final _method = r'GET';
+
+    if (apiVersion == null) {
+      apiVersion = '1';
+    }
+
+    final _queryParameters = <String, dynamic>{
+      if (ascending != null) r'ascending': _encodeQueryParameter(ascending),
+      if (from != null) r'from': _encodeQueryParameter(from),
+      if (limit != null) r'limit': _encodeQueryParameter(limit),
+      if (offset != null) r'offset': _encodeQueryParameter(offset),
+      if (query != null) r'query': _encodeQueryParameter(query),
+      if (sort != null) r'sort': _encodeQueryParameter(sort),
+      if (strengthMachineId != null) r'strengthMachineId': _encodeQueryParameter(strengthMachineId),
+      if (to != null) r'to': _encodeQueryParameter(to),
+      if (userId != null) r'userId': _encodeQueryParameter(userId),
+      if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
+    };
+    final _response = await connection.action(
+      path: _path,
+      action: _action,
+      method: _method,
+      queryParameters: _queryParameters,
+    );
+    
+    final StrengthMachineDataSetListResponse _responseData = deserialize<StrengthMachineDataSetListResponse, StrengthMachineDataSetListResponse>(_response.data!, 'StrengthMachineDataSetListResponse', growable: true);
+    return _responseData;
+    
+  }
+
+  /// Show an A400 workout set
+  /// 1
+  ///
+  /// Parameters:
+  /// * [id] 
+  /// * [apiVersion] 
+  ///
+  /// Returns a [Future] containing a [Response] with a [WorkoutSetResponse] as data
+  Future<WorkoutSetResponse> workoutSetShow({ 
+    required num id,
+    String? apiVersion,
+  }) async {
+    final _path = r'/workout-set';
+    final _action = 'workoutSet:show';
+    final _method = r'GET';
+
+    if (apiVersion == null) {
+      apiVersion = '1';
+    }
+
+    final _queryParameters = <String, dynamic>{
+      r'id': _encodeQueryParameter(id),
+      if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
+    };
+    final _response = await connection.action(
+      path: _path,
+      action: _action,
+      method: _method,
+      queryParameters: _queryParameters,
+    );
+    
+    final WorkoutSetResponse _responseData = deserialize<WorkoutSetResponse, WorkoutSetResponse>(_response.data!, 'WorkoutSetResponse', growable: true);
+    return _responseData;
+    
+  }
+
+  /// Update an existing workout set from an Apollo Display device (machine-token auth).
+  /// 1
+  ///
+  /// Parameters:
+  /// * [strengthMachineDataSetId] 
+  /// * [userId] 
+  /// * [workoutSetData] - gzip-compressed JSON (application/gzip)
+  /// * [apiVersion] 
+  /// * [exerciseId] 
+  ///
+  /// Returns a [Future] containing a [Response] with a [StrengthMachineDataSetResponse] as data
+  Future<StrengthMachineDataSetResponse> workoutSetUpdate({ 
+    required num strengthMachineDataSetId,
+    required num userId,
+    required MultipartFile workoutSetData,
+    String? apiVersion,
+    num? exerciseId,
+  }) async {
+    final _path = r'/workout-set';
+    final _action = 'workoutSet:update';
+    final _method = r'PUT';
+
+    if (apiVersion == null) {
+      apiVersion = '1';
+    }
+
+
+    // Multipart form body: connection package wraps this map in
+    // FormData.fromMap, so MultipartFile values flow through Dio's
+    // multipart serializer. DateTime values pass through
+    // _encodeQueryParameter for ISO8601 conversion.
+    final _bodyParameters = <String, dynamic>{
+      if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
+      r'strengthMachineDataSetId': _encodeQueryParameter(strengthMachineDataSetId),
+      r'userId': _encodeQueryParameter(userId),
+      if (exerciseId != null) r'exerciseId': _encodeQueryParameter(exerciseId),
+      r'workoutSetData': workoutSetData,
+    };
+    final _response = await connection.action(
+      path: _path,
+      action: _action,
+      method: _method,
+      bodyParameters: _bodyParameters,
+    );
+    
+    final StrengthMachineDataSetResponse _responseData = deserialize<StrengthMachineDataSetResponse, StrengthMachineDataSetResponse>(_response.data!, 'StrengthMachineDataSetResponse', growable: true);
     return _responseData;
     
   }

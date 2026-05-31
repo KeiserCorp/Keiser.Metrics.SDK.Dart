@@ -42,6 +42,11 @@ void main() {
       // TODO
     });
 
+    // String pinCode
+    test('to test the property `pinCode`', () async {
+      // TODO
+    });
+
     // EmployeeRole employeeRole
     test('to test the property `employeeRole`', () async {
       // TODO

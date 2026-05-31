@@ -30,7 +30,7 @@ class StrengthExerciseVariantData {
 
      this.attachment,
 
-    required  this.equipmentMechanicalMovement,
+     this.equipmentMechanicalMovement,
 
      this.instructionalImage,
 
@@ -82,12 +82,12 @@ class StrengthExerciseVariantData {
   @JsonKey(
     
     name: r'equipmentMechanicalMovement',
-    required: true,
+    required: false,
     includeIfNull: false
   )
 
 
-  final StrengthExerciseMovement equipmentMechanicalMovement;
+  final StrengthExerciseMovement? equipmentMechanicalMovement;
 
 
 

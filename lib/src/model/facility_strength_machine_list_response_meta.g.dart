@@ -18,6 +18,7 @@ FacilityStrengthMachineListResponseMeta
               requiredKeys: const ['sort'],
             );
             final val = FacilityStrengthMachineListResponseMeta(
+              query: $checkedConvert('query', (v) => v as String?),
               model: $checkedConvert('model', (v) => v as String?),
               source_: $checkedConvert('source', (v) => v as String?),
               sort: $checkedConvert(
@@ -45,6 +46,7 @@ Map<String, dynamic> _$FacilityStrengthMachineListResponseMetaToJson(
     }
   }
 
+  writeNotNull('query', instance.query);
   writeNotNull('model', instance.model);
   writeNotNull('source', instance.source_);
   val['sort'] = _$FacilityStrengthMachineSortingEnumMap[instance.sort]!;
@@ -59,4 +61,5 @@ Map<String, dynamic> _$FacilityStrengthMachineListResponseMetaToJson(
 const _$FacilityStrengthMachineSortingEnumMap = {
   FacilityStrengthMachineSorting.id: 'id',
   FacilityStrengthMachineSorting.model: 'model',
+  FacilityStrengthMachineSorting.name: 'name',
 };

@@ -7,6 +7,11 @@ void main() {
   // TODO add properties to the entity
 
   group(FacilityStrengthMachineListResponseMeta, () {
+    // String query
+    test('to test the property `query`', () async {
+      // TODO
+    });
+
     // String model
     test('to test the property `model`', () async {
       // TODO

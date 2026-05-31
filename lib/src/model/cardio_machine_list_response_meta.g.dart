@@ -51,5 +51,5 @@ Map<String, dynamic> _$CardioMachineListResponseMetaToJson(
 
 const _$CardioMachineSortingEnumMap = {
   CardioMachineSorting.id: 'id',
-  CardioMachineSorting.names: 'name',
+  CardioMachineSorting.name: 'name',
 };

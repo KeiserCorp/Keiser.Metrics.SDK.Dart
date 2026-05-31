@@ -32,6 +32,16 @@ void main() {
       // TODO
     });
 
+    // String pinCode
+    test('to test the property `pinCode`', () async {
+      // TODO
+    });
+
+    // String externalIdentifier
+    test('to test the property `externalIdentifier`', () async {
+      // TODO
+    });
+
     // bool hasSecretSet
     test('to test the property `hasSecretSet`', () async {
       // TODO
@@ -39,6 +49,11 @@ void main() {
 
     // EmployeeRole employeeRole
     test('to test the property `employeeRole`', () async {
+      // TODO
+    });
+
+    // String deactivatedAt
+    test('to test the property `deactivatedAt`', () async {
       // TODO
     });
 

@@ -808,6 +808,78 @@ void main() {
       // TODO
     });
 
+    // Show a facility display configuration
+    //
+    // 1
+    //
+    //Future<FacilityDisplayConfigurationResponse> facilityDisplayConfigurationShow({ String apiVersion }) async
+    test('test facilityDisplayConfigurationShow', () async {
+      // TODO
+    });
+
+    // Subscribe to facility display configuration
+    //
+    // 1
+    //
+    //Future<SubscriptionResponse> facilityDisplayConfigurationSubscribe({ String apiVersion }) async
+    test('test facilityDisplayConfigurationSubscribe', () async {
+      // TODO
+    });
+
+    // Update a facility display configuration
+    //
+    // 1
+    //
+    //Future<FacilityDisplayConfigurationResponse> facilityDisplayConfigurationUpdate({ num addedMass, String dataMode, num defaultBrightness, String focusMode, bool isTorqueEnabled, bool machinesEnabled, String operatingSchedule, bool operatingScheduleEnabled, num performanceDropOff, bool qrCodeEnabled, num secondsDelay, bool shouldForceExercise, bool showReviewScreen, num signoutDelay, String timeZone, String unit, String apiVersion }) async
+    test('test facilityDisplayConfigurationUpdate', () async {
+      // TODO
+    });
+
+    // Claim a registered hub for a facility using its pairing code
+    //
+    // 1
+    //
+    //Future<HubLinkClaimResponse> facilityHubClaim(String linkCode, { String apiVersion }) async
+    test('test facilityHubClaim', () async {
+      // TODO
+    });
+
+    // Delete a facility hub and revoke its tokens
+    //
+    // 1
+    //
+    //Future facilityHubDelete(num facilityHubId, { String apiVersion }) async
+    test('test facilityHubDelete', () async {
+      // TODO
+    });
+
+    // Check the status of a hub link pairing code
+    //
+    // 1
+    //
+    //Future<FacilityHubLinkStatusResponse> facilityHubLinkStatus(num hubLinkId, { String apiVersion }) async
+    test('test facilityHubLinkStatus', () async {
+      // TODO
+    });
+
+    // List hubs for a facility
+    //
+    // 1
+    //
+    //Future<FacilityHubListResponse> facilityHubList({ bool ascending, num limit, num offset, String query, String sort, String apiVersion }) async
+    test('test facilityHubList', () async {
+      // TODO
+    });
+
+    // Update a facility hub
+    //
+    // 1
+    //
+    //Future<FacilityHubUpdateResponse> facilityHubUpdate(num facilityHubId, String names, { String apiVersion }) async
+    test('test facilityHubUpdate', () async {
+      // TODO
+    });
+
     // Create a facility InBody integration
     //
     // 1
@@ -911,8 +983,44 @@ void main() {
     //
     // 1
     //
-    //Future<FacilityListResponse> facilityList({ num address, bool ascending, num city, num country, num limit, num names, num offset, num page, num phone, num postcode, num quantity, String sort, num state, String apiVersion }) async
+    //Future<FacilityListResponse> facilityList({ String address, bool ascending, String city, String country, num limit, String names, num offset, num page, String phone, String postcode, num quantity, String sort, String state, String apiVersion }) async
     test('test facilityList', () async {
+      // TODO
+    });
+
+    // Remove the facility member identifier (PIN)
+    //
+    // 1
+    //
+    //Future<FacilityRelationshipResponse> facilityPinDelete(num userId, { String apiVersion }) async
+    test('test facilityPinDelete', () async {
+      // TODO
+    });
+
+    // Login a facility user using a PIN
+    //
+    // 1
+    //
+    //Future<FacilityPinLoginResponse> facilityPinLogin(String pin, { String apiVersion }) async
+    test('test facilityPinLogin', () async {
+      // TODO
+    });
+
+    // Show the facility PIN for a user
+    //
+    // 1
+    //
+    //Future<FacilityRelationshipResponse> facilityPinShow(num userId, { String apiVersion }) async
+    test('test facilityPinShow', () async {
+      // TODO
+    });
+
+    // Set or update a facility member identifier (PIN)
+    //
+    // 1
+    //
+    //Future<FacilityRelationshipResponse> facilityPinUpdate(String pin, num userId, { String apiVersion }) async
+    test('test facilityPinUpdate', () async {
       // TODO
     });
 
@@ -985,6 +1093,87 @@ void main() {
     //
     //Future<FacilityRelationshipResponse> facilityRelationshipFacilityUpdate(num id, { String employeeRole, bool member, String memberIdentifier, String apiVersion }) async
     test('test facilityRelationshipFacilityUpdate', () async {
+      // TODO
+    });
+
+    // Bulk-create Nova-style members within the session facility from a CSV file
+    //
+    // 1
+    //
+    //Future<NovaMemberBulkCreateResponse> facilityRelationshipNovaMemberBulkCreate(MultipartFile csv, { String apiVersion }) async
+    test('test facilityRelationshipNovaMemberBulkCreate', () async {
+      // TODO
+    });
+
+    // Create a Nova-style member (no email, no credential) within the session facility
+    //
+    // 1
+    //
+    //Future<FacilityRelationshipResponse> facilityRelationshipNovaMemberCreate(String firstName, String lastName, { DateTime birthday, String externalIdentifier, String gender, num metricHeight, num metricWeight, String pinCode, String apiVersion }) async
+    test('test facilityRelationshipNovaMemberCreate', () async {
+      // TODO
+    });
+
+    // Fully delete a Nova member
+    //
+    // 1
+    //
+    //Future facilityRelationshipNovaMemberDelete(num facilityRelationshipId, { String apiVersion }) async
+    test('test facilityRelationshipNovaMemberDelete', () async {
+      // TODO
+    });
+
+    // Update a Nova member relationship and profile fields
+    //
+    // 1
+    //
+    //Future<FacilityRelationshipResponse> facilityRelationshipNovaMemberUpdate(num facilityRelationshipId, { DateTime birthday, String externalIdentifier, String firstName, String gender, String lastName, num metricHeight, num metricWeight, String pinCode, String apiVersion }) async
+    test('test facilityRelationshipNovaMemberUpdate', () async {
+      // TODO
+    });
+
+    // Deactivate a facility relationship
+    //
+    // 1
+    //
+    //Future facilityRelationshipNovaStaffDeactivate(num facilityRelationshipId, { String apiVersion }) async
+    test('test facilityRelationshipNovaStaffDeactivate', () async {
+      // TODO
+    });
+
+    // Fully delete a Nova staff member (account purge).
+    //
+    // 1
+    //
+    //Future facilityRelationshipNovaStaffDelete(num facilityRelationshipId, { String apiVersion }) async
+    test('test facilityRelationshipNovaStaffDelete', () async {
+      // TODO
+    });
+
+    // Invite a nova staff member by email
+    //
+    // 1
+    //
+    //Future<FacilityRelationshipNovaStaffInviteResponse> facilityRelationshipNovaStaffInvite(String email, String employeeRole, { String apiVersion }) async
+    test('test facilityRelationshipNovaStaffInvite', () async {
+      // TODO
+    });
+
+    // Reactivate a facility relationship
+    //
+    // 1
+    //
+    //Future facilityRelationshipNovaStaffReactivate(num facilityRelationshipId, { String apiVersion }) async
+    test('test facilityRelationshipNovaStaffReactivate', () async {
+      // TODO
+    });
+
+    // Update a Nova staff relationship and profile fields
+    //
+    // 1
+    //
+    //Future<FacilityRelationshipResponse> facilityRelationshipNovaStaffUpdate(num facilityRelationshipId, { DateTime birthday, String employeeRole, String externalIdentifier, String firstName, String gender, String lastName, num metricHeight, num metricWeight, String pinCode, String apiVersion }) async
+    test('test facilityRelationshipNovaStaffUpdate', () async {
       // TODO
     });
 
@@ -1222,6 +1411,15 @@ void main() {
       // TODO
     });
 
+    // Blacklist a facility strength machine's tokens
+    //
+    // 1
+    //
+    //Future facilityStrengthMachineBlacklist(num id, { String apiVersion }) async
+    test('test facilityStrengthMachineBlacklist', () async {
+      // TODO
+    });
+
     // Show a facility strength machine default configuration
     //
     // 1
@@ -1251,9 +1449,9 @@ void main() {
 
     // Create a facility strength machine
     //
-    // 1
+    // 2
     //
-    //Future<FacilityStrengthMachineResponse> facilityStrengthMachineCreate(num model, String serial, num strengthMachineId, String version, { String location, String apiVersion }) async
+    //Future<FacilityStrengthMachineResponse> facilityStrengthMachineCreate(String line, String model, String serial, String version, { String location, String apiVersion }) async
     test('test facilityStrengthMachineCreate', () async {
       // TODO
     });
@@ -1298,8 +1496,17 @@ void main() {
     //
     // 1
     //
-    //Future<FacilityStrengthMachineListResponse> facilityStrengthMachineList({ bool ascending, num limit, num model, num offset, String sort, String apiVersion }) async
+    //Future<FacilityStrengthMachineListResponse> facilityStrengthMachineList({ bool ascending, num limit, num model, num offset, String query, String sort, String apiVersion }) async
     test('test facilityStrengthMachineList', () async {
+      // TODO
+    });
+
+    // Exchange a machine initialization token for a short-lived machine session token
+    //
+    // 1
+    //
+    //Future<FacilityStrengthMachineStartSessionResponse> facilityStrengthMachineMachineStartSession({ String apiVersion }) async
+    test('test facilityStrengthMachineMachineStartSession', () async {
       // TODO
     });
 
@@ -1663,48 +1870,66 @@ void main() {
       // TODO
     });
 
-    // Create a user machine adjustment
+    // Claim a single machine for a facility
     //
     // 1
     //
-    //Future<MachineAdjustmentResponse> machineAdjustmentCreate(String model, { String leftPosition, String rightPosition, String seat, String start, String stop, num userId, String apiVersion }) async
-    test('test machineAdjustmentCreate', () async {
+    //Future<MachineClaimClaimResponse> machineClaimClaim(String claimCode, { String apiVersion }) async
+    test('test machineClaimClaim', () async {
       // TODO
     });
 
-    // Delete a users machine adjustment
+    // Confirm a claimed machine and receive permanent token
     //
     // 1
     //
-    //Future machineAdjustmentDelete(num id, { num userId, String apiVersion }) async
-    test('test machineAdjustmentDelete', () async {
+    //Future<MachineClaimConfirmResponse> machineClaimConfirm(String claimAccessCode, { String apiVersion }) async
+    test('test machineClaimConfirm', () async {
       // TODO
     });
 
-    // List user machine adjustments
+    // List machine claims for a facility
     //
     // 1
     //
-    //Future<MachineAdjustmentListResponse> machineAdjustmentList({ bool ascending, num limit, String model, num offset, String sort, num userId, String apiVersion }) async
-    test('test machineAdjustmentList', () async {
+    //Future<MachineClaimListResponse> machineClaimList({ bool ascending, num limit, num offset, String sort, String status, String apiVersion }) async
+    test('test machineClaimList', () async {
       // TODO
     });
 
-    // Shows a users machine adjustments
+    // Register a machine for facility claiming
     //
     // 1
     //
-    //Future<MachineAdjustmentResponse> machineAdjustmentShow(num id, { num userId, String apiVersion }) async
-    test('test machineAdjustmentShow', () async {
+    //Future<MachineClaimRegisterResponse> machineClaimRegister(String displayUUID, String firmwareVersion, String leftCylinderSerial, String line, String machineModel, String mainBoardSerial, String softwareVersion, { String rightCylinderSerial, String apiVersion }) async
+    test('test machineClaimRegister', () async {
       // TODO
     });
 
-    // Update a users machine adjustments
+    // Show a machine claim for a facility
     //
     // 1
     //
-    //Future<MachineAdjustmentResponse> machineAdjustmentUpdate(num id, { String leftPosition, String rightPosition, String seat, String start, String stop, num userId, String apiVersion }) async
-    test('test machineAdjustmentUpdate', () async {
+    //Future<MachineClaimShowResponse> machineClaimShow(num machineClaimId, { String apiVersion }) async
+    test('test machineClaimShow', () async {
+      // TODO
+    });
+
+    // Check claim status for a machine
+    //
+    // 1
+    //
+    //Future<MachineClaimStatusResponse> machineClaimStatus(String claimAccessCode, { String apiVersion }) async
+    test('test machineClaimStatus', () async {
+      // TODO
+    });
+
+    // Unclaim a machine that has not yet been confirmed
+    //
+    // 1
+    //
+    //Future<MachineClaimUnclaimResponse> machineClaimUnclaim(num machineClaimId, { String apiVersion }) async
+    test('test machineClaimUnclaim', () async {
       // TODO
     });
 
@@ -2495,7 +2720,7 @@ void main() {
     //
     // 1
     //
-    //Future<StrengthExerciseVariantListResponse> strengthExerciseVariantList({ bool ascending, String attachment, String equipmentMechanicalMovement, num limit, num offset, String sort, num strengthExerciseId, num strengthMachineId, String variant, String apiVersion }) async
+    //Future<StrengthExerciseVariantListResponse> strengthExerciseVariantList({ bool ascending, String attachment, String equipmentMechanicalMovement, num limit, String line, String machineModel, num offset, String sort, num strengthExerciseId, num strengthMachineId, String variant, String apiVersion }) async
     test('test strengthExerciseVariantList', () async {
       // TODO
     });
@@ -2563,6 +2788,15 @@ void main() {
       // TODO
     });
 
+    // Delete a strength machine data set
+    //
+    // 1
+    //
+    //Future strengthMachineDataSetFacilityDelete(num id, num userId, { String apiVersion }) async
+    test('test strengthMachineDataSetFacilityDelete', () async {
+      // TODO
+    });
+
     // List strength machine data sets
     //
     // 1
@@ -2578,6 +2812,15 @@ void main() {
     //
     //Future<StrengthMachineDataSetResponse> strengthMachineDataSetShow(num id, { num userId, String apiVersion }) async
     test('test strengthMachineDataSetShow', () async {
+      // TODO
+    });
+
+    // Show metadata from the last recorded set on a strength machine
+    //
+    // 1
+    //
+    //Future<StrengthMachineLastSetMetaDataResponse> strengthMachineDataSetShowLastSetMetaData(num userId, { String apiVersion }) async
+    test('test strengthMachineDataSetShowLastSetMetaData', () async {
       // TODO
     });
 
@@ -2887,6 +3130,51 @@ void main() {
       // TODO
     });
 
+    // Create a user session display configuration
+    //
+    // 1
+    //
+    //Future<UserSessionDisplayConfigurationResponse> userSessionDisplayConfigurationCreate(String dataMode, String focusMode, String names, { num addedMass, num performanceDropOff, num secondsDelay, String apiVersion }) async
+    test('test userSessionDisplayConfigurationCreate', () async {
+      // TODO
+    });
+
+    // Delete a user session display configuration
+    //
+    // 1
+    //
+    //Future userSessionDisplayConfigurationDelete(num id, { String apiVersion }) async
+    test('test userSessionDisplayConfigurationDelete', () async {
+      // TODO
+    });
+
+    // List a user's session display configurations
+    //
+    // 1
+    //
+    //Future<UserSessionDisplayConfigurationListResponse> userSessionDisplayConfigurationList({ bool ascending, num limit, num offset, String sort, String apiVersion }) async
+    test('test userSessionDisplayConfigurationList', () async {
+      // TODO
+    });
+
+    // Show a user session display configuration
+    //
+    // 1
+    //
+    //Future<UserSessionDisplayConfigurationResponse> userSessionDisplayConfigurationShow(num id, { String apiVersion }) async
+    test('test userSessionDisplayConfigurationShow', () async {
+      // TODO
+    });
+
+    // Update a user session display configuration
+    //
+    // 1
+    //
+    //Future<UserSessionDisplayConfigurationResponse> userSessionDisplayConfigurationUpdate(num id, { num addedMass, String dataMode, String focusMode, String names, num performanceDropOff, num secondsDelay, String apiVersion }) async
+    test('test userSessionDisplayConfigurationUpdate', () async {
+      // TODO
+    });
+
     // Show a user
     //
     // 1
@@ -2965,6 +3253,60 @@ void main() {
     //
     //Future<SubscriptionResponse> weightMeasurementSubscribe({ num id, num userId, String apiVersion }) async
     test('test weightMeasurementSubscribe', () async {
+      // TODO
+    });
+
+    // Export many A400 workout sets across a date range as a zip of reps.csv + time_series.csv
+    //
+    // 1
+    //
+    //Future workoutSetBulkExport(DateTime from, DateTime to, { num userId, String apiVersion }) async
+    test('test workoutSetBulkExport', () async {
+      // TODO
+    });
+
+    // Create a workout set from an Apollo Display device (machine-token auth).
+    //
+    // 1
+    //
+    //Future<StrengthMachineDataSetResponse> workoutSetCreate(String clientSetId, num userId, DateTime startedAt, MultipartFile workoutSetData, { String apiVersion, num exerciseId }) async
+    test('test workoutSetCreate', () async {
+      // TODO
+    });
+
+    // Export one A400 workout set as a zip of reps.csv + time_series.csv
+    //
+    // 1
+    //
+    //Future workoutSetExport(num id, { String apiVersion }) async
+    test('test workoutSetExport', () async {
+      // TODO
+    });
+
+    // List A400 workout sets for a facility
+    //
+    // 1
+    //
+    //Future<StrengthMachineDataSetListResponse> workoutSetList({ bool ascending, DateTime from, num limit, num offset, String query, String sort, num strengthMachineId, DateTime to, num userId, String apiVersion }) async
+    test('test workoutSetList', () async {
+      // TODO
+    });
+
+    // Show an A400 workout set
+    //
+    // 1
+    //
+    //Future<WorkoutSetResponse> workoutSetShow(num id, { String apiVersion }) async
+    test('test workoutSetShow', () async {
+      // TODO
+    });
+
+    // Update an existing workout set from an Apollo Display device (machine-token auth).
+    //
+    // 1
+    //
+    //Future<StrengthMachineDataSetResponse> workoutSetUpdate(num strengthMachineDataSetId, num userId, MultipartFile workoutSetData, { String apiVersion, num exerciseId }) async
+    test('test workoutSetUpdate', () async {
       // TODO
     });
 

@@ -63,5 +63,5 @@ Map<String, dynamic> _$FacilityListResponseMetaToJson(
 
 const _$FacilitySortingEnumMap = {
   FacilitySorting.id: 'id',
-  FacilitySorting.names: 'name',
+  FacilitySorting.name: 'name',
 };

@@ -8,7 +8,7 @@ import 'package:keiser_metrics_sdk/api.dart';
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**echipData** | **Object** |  | 
+**echipData** | **Map&lt;String, Object&gt;** |  | 
 **session** | [**SessionData**](SessionData.md) |  | [optional] 
 **accessToken** | **String** |  | [optional] 
 **refreshToken** | **String** |  | [optional] 

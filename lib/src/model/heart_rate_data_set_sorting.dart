@@ -14,7 +14,7 @@ enum HeartRateDataSetSorting {
   @JsonValue(r'endedAt')
   endedAt,
   @JsonValue(r'source')
-  source_,
+  source,
   @JsonValue(r'maxHeartRate')
   maxHeartRate,
   @JsonValue(r'averageHeartRate')

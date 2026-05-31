@@ -29,6 +29,12 @@ StrengthMachineData _$StrengthMachineDataFromJson(Map<String, dynamic> json) =>
               (v) => v == null
                   ? null
                   : StrengthExerciseData.fromJson(v as Map<String, dynamic>)),
+          modelNumbers: $checkedConvert(
+              'modelNumbers',
+              (v) => (v as List<dynamic>?)
+                  ?.map((e) => StrengthMachineModelNumberData.fromJson(
+                      e as Map<String, dynamic>))
+                  .toList()),
           models: $checkedConvert(
               'models',
               (v) => (v as List<dynamic>?)
@@ -59,6 +65,8 @@ Map<String, dynamic> _$StrengthMachineDataToJson(StrengthMachineData instance) {
   writeNotNull('defaultStrengthExerciseId', instance.defaultStrengthExerciseId);
   writeNotNull(
       'defaultStrengthExercise', instance.defaultStrengthExercise?.toJson());
+  writeNotNull(
+      'modelNumbers', instance.modelNumbers?.map((e) => e.toJson()).toList());
   writeNotNull('models', instance.models?.map((e) => e.toJson()).toList());
   return val;
 }

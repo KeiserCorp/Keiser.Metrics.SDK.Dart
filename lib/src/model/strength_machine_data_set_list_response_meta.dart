@@ -19,6 +19,8 @@ class StrengthMachineDataSetListResponseMeta {
   /// Returns a new [StrengthMachineDataSetListResponseMeta] instance.
   const StrengthMachineDataSetListResponseMeta({
 
+     this.query,
+
      this.from,
 
      this.to,
@@ -35,6 +37,18 @@ class StrengthMachineDataSetListResponseMeta {
 
      this.totalCount,
   });
+
+  @JsonKey(
+    
+    name: r'query',
+    required: false,
+    includeIfNull: false
+  )
+
+
+  final String? query;
+
+
 
   @JsonKey(
     
@@ -134,6 +148,7 @@ class StrengthMachineDataSetListResponseMeta {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is StrengthMachineDataSetListResponseMeta &&
+     other.query == query &&
      other.from == from &&
      other.to == to &&
      other.sort == sort &&
@@ -145,6 +160,7 @@ class StrengthMachineDataSetListResponseMeta {
 
   @override
   int get hashCode =>
+    query.hashCode +
     from.hashCode +
     to.hashCode +
     sort.hashCode +

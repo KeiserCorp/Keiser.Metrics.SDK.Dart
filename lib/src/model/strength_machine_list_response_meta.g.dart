@@ -55,6 +55,6 @@ Map<String, dynamic> _$StrengthMachineListResponseMetaToJson(
 
 const _$StrengthMachineSortingEnumMap = {
   StrengthMachineSorting.id: 'id',
-  StrengthMachineSorting.names: 'name',
+  StrengthMachineSorting.name: 'name',
   StrengthMachineSorting.line: 'line',
 };

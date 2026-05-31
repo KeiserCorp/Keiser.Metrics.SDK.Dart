@@ -5,6 +5,7 @@
 // ignore_for_file: unused_element
 import 'package:keiser_metrics_sdk/src/model/facility_profile_data.dart';
 import 'package:keiser_metrics_sdk/src/model/facility_strength_machine_configuration_data.dart';
+import 'package:keiser_metrics_sdk/src/model/facility_display_configuration_data.dart';
 import 'package:keiser_metrics_sdk/src/model/facility_configuration_data.dart';
 import 'package:keiser_metrics_sdk/src/model/facility_license_data.dart';
 import 'package:json_annotation/json_annotation.dart';
@@ -26,9 +27,13 @@ class FacilityData {
 
     required  this.licensedUntil,
 
+    required  this.isActive,
+
      this.facilityProfile,
 
      this.facilityConfiguration,
+
+     this.facilityDisplayConfiguration,
 
      this.facilityLicenses,
 
@@ -61,6 +66,18 @@ class FacilityData {
 
   @JsonKey(
     
+    name: r'isActive',
+    required: true,
+    includeIfNull: false
+  )
+
+
+  final bool isActive;
+
+
+
+  @JsonKey(
+    
     name: r'facilityProfile',
     required: false,
     includeIfNull: false
@@ -80,6 +97,18 @@ class FacilityData {
 
 
   final FacilityConfigurationData? facilityConfiguration;
+
+
+
+  @JsonKey(
+    
+    name: r'facilityDisplayConfiguration',
+    required: false,
+    includeIfNull: false
+  )
+
+
+  final FacilityDisplayConfigurationData? facilityDisplayConfiguration;
 
 
 
@@ -111,8 +140,10 @@ class FacilityData {
   bool operator ==(Object other) => identical(this, other) || other is FacilityData &&
      other.id == id &&
      other.licensedUntil == licensedUntil &&
+     other.isActive == isActive &&
      other.facilityProfile == facilityProfile &&
      other.facilityConfiguration == facilityConfiguration &&
+     other.facilityDisplayConfiguration == facilityDisplayConfiguration &&
      other.facilityLicenses == facilityLicenses &&
      other.facilityStrengthMachineConfiguration == facilityStrengthMachineConfiguration;
 
@@ -120,8 +151,10 @@ class FacilityData {
   int get hashCode =>
     id.hashCode +
     licensedUntil.hashCode +
+    isActive.hashCode +
     facilityProfile.hashCode +
     facilityConfiguration.hashCode +
+    facilityDisplayConfiguration.hashCode +
     facilityLicenses.hashCode +
     facilityStrengthMachineConfiguration.hashCode;
 

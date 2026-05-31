@@ -12,5 +12,5 @@ enum MSeriesFtpMeasurementSorting {
   @JsonValue(r'takenAt')
   takenAt,
   @JsonValue(r'source')
-  source_,
+  source,
 }

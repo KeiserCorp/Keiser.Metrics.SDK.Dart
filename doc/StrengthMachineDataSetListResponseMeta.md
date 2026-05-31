@@ -8,6 +8,7 @@ import 'package:keiser_metrics_sdk/api.dart';
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**query** | **String** |  | [optional] 
 **from** | [**DateTime**](DateTime.md) |  | [optional] 
 **to** | [**DateTime**](DateTime.md) |  | [optional] 
 **sort** | [**StrengthMachineDataSetSorting**](StrengthMachineDataSetSorting.md) |  | 

@@ -22,6 +22,10 @@ StrengthExerciseVariantListResponseMeta
                   $checkedConvert('strengthExerciseId', (v) => v as num?),
               strengthMachineId:
                   $checkedConvert('strengthMachineId', (v) => v as num?),
+              machineModel:
+                  $checkedConvert('machineModel', (v) => v as String?),
+              line: $checkedConvert('line',
+                  (v) => $enumDecodeNullable(_$StrengthMachineLineEnumMap, v)),
               variant: $checkedConvert(
                   'variant',
                   (v) => $enumDecodeNullable(
@@ -54,6 +58,8 @@ Map<String, dynamic> _$StrengthExerciseVariantListResponseMetaToJson(
 
   writeNotNull('strengthExerciseId', instance.strengthExerciseId);
   writeNotNull('strengthMachineId', instance.strengthMachineId);
+  writeNotNull('machineModel', instance.machineModel);
+  writeNotNull('line', _$StrengthMachineLineEnumMap[instance.line]);
   writeNotNull(
       'variant', _$StrengthExerciseVariantTypeEnumMap[instance.variant]);
   writeNotNull('attachment', instance.attachment);
@@ -66,6 +72,16 @@ Map<String, dynamic> _$StrengthExerciseVariantListResponseMetaToJson(
   writeNotNull('totalCount', instance.totalCount);
   return val;
 }
+
+const _$StrengthMachineLineEnumMap = {
+  StrengthMachineLine.a250: 'a250',
+  StrengthMachineLine.a300: 'a300',
+  StrengthMachineLine.a350: 'a350',
+  StrengthMachineLine.infinity: 'infinity',
+  StrengthMachineLine.powerRack: 'powerRack',
+  StrengthMachineLine.a400: 'a400',
+  StrengthMachineLine.a500: 'a500',
+};
 
 const _$StrengthExerciseVariantTypeEnumMap = {
   StrengthExerciseVariantType.normal: 'normal',

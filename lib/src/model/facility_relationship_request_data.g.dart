@@ -33,6 +33,7 @@ FacilityRelationshipRequestData _$FacilityRelationshipRequestDataFromJson(
           member: $checkedConvert('member', (v) => v as bool),
           memberIdentifier:
               $checkedConvert('memberIdentifier', (v) => v as String?),
+          pinCode: $checkedConvert('pinCode', (v) => v as String?),
           employeeRole: $checkedConvert('employeeRole',
               (v) => $enumDecodeNullable(_$EmployeeRoleEnumMap, v)),
           facility: $checkedConvert(
@@ -68,6 +69,7 @@ Map<String, dynamic> _$FacilityRelationshipRequestDataToJson(
   }
 
   writeNotNull('memberIdentifier', instance.memberIdentifier);
+  writeNotNull('pinCode', instance.pinCode);
   writeNotNull('employeeRole', _$EmployeeRoleEnumMap[instance.employeeRole]);
   writeNotNull('facility', instance.facility?.toJson());
   writeNotNull('user', instance.user?.toJson());

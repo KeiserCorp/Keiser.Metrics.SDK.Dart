@@ -10,7 +10,7 @@ enum PrivilegedFacilityRelationshipRequestSorting {
   @JsonValue(r'id')
   id,
   @JsonValue(r'name')
-  names,
+  name,
   @JsonValue(r'memberIdentifier')
   memberIdentifier,
   @JsonValue(r'employeeRole')

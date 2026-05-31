@@ -56,6 +56,6 @@ Map<String, dynamic> _$WeightMeasurementListResponseMetaToJson(
 
 const _$WeightMeasurementSortingEnumMap = {
   WeightMeasurementSorting.id: 'id',
-  WeightMeasurementSorting.source_: 'source',
+  WeightMeasurementSorting.source: 'source',
   WeightMeasurementSorting.takenAt: 'takenAt',
 };

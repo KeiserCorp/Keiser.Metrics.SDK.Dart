@@ -10,8 +10,10 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **num** |  | 
 **licensedUntil** | [**DateTime**](DateTime.md) |  | 
+**isActive** | **bool** |  | 
 **facilityProfile** | [**FacilityProfileData**](FacilityProfileData.md) |  | [optional] 
 **facilityConfiguration** | [**FacilityConfigurationData**](FacilityConfigurationData.md) |  | [optional] 
+**facilityDisplayConfiguration** | [**FacilityDisplayConfigurationData**](FacilityDisplayConfigurationData.md) |  | [optional] 
 **facilityLicenses** | [**List&lt;FacilityLicenseData&gt;**](FacilityLicenseData.md) |  | [optional] 
 **facilityStrengthMachineConfiguration** | [**FacilityStrengthMachineConfigurationData**](FacilityStrengthMachineConfigurationData.md) |  | [optional] 
 

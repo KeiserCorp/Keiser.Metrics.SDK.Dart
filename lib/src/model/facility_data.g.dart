@@ -13,12 +13,13 @@ FacilityData _$FacilityDataFromJson(Map<String, dynamic> json) =>
       ($checkedConvert) {
         $checkKeys(
           json,
-          requiredKeys: const ['id', 'licensedUntil'],
+          requiredKeys: const ['id', 'licensedUntil', 'isActive'],
         );
         final val = FacilityData(
           id: $checkedConvert('id', (v) => v as num),
           licensedUntil: $checkedConvert(
               'licensedUntil', (v) => DateTime.parse(v as String)),
+          isActive: $checkedConvert('isActive', (v) => v as bool),
           facilityProfile: $checkedConvert(
               'facilityProfile',
               (v) => v == null
@@ -29,6 +30,12 @@ FacilityData _$FacilityDataFromJson(Map<String, dynamic> json) =>
               (v) => v == null
                   ? null
                   : FacilityConfigurationData.fromJson(
+                      v as Map<String, dynamic>)),
+          facilityDisplayConfiguration: $checkedConvert(
+              'facilityDisplayConfiguration',
+              (v) => v == null
+                  ? null
+                  : FacilityDisplayConfigurationData.fromJson(
                       v as Map<String, dynamic>)),
           facilityLicenses: $checkedConvert(
               'facilityLicenses',
@@ -51,6 +58,7 @@ Map<String, dynamic> _$FacilityDataToJson(FacilityData instance) {
   final val = <String, dynamic>{
     'id': instance.id,
     'licensedUntil': instance.licensedUntil.toIso8601String(),
+    'isActive': instance.isActive,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -62,6 +70,8 @@ Map<String, dynamic> _$FacilityDataToJson(FacilityData instance) {
   writeNotNull('facilityProfile', instance.facilityProfile?.toJson());
   writeNotNull(
       'facilityConfiguration', instance.facilityConfiguration?.toJson());
+  writeNotNull('facilityDisplayConfiguration',
+      instance.facilityDisplayConfiguration?.toJson());
   writeNotNull('facilityLicenses',
       instance.facilityLicenses?.map((e) => e.toJson()).toList());
   writeNotNull('facilityStrengthMachineConfiguration',

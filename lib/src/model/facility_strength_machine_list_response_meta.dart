@@ -19,6 +19,8 @@ class FacilityStrengthMachineListResponseMeta {
   /// Returns a new [FacilityStrengthMachineListResponseMeta] instance.
   const FacilityStrengthMachineListResponseMeta({
 
+     this.query,
+
      this.model,
 
      this.source_,
@@ -35,6 +37,18 @@ class FacilityStrengthMachineListResponseMeta {
 
      this.totalCount,
   });
+
+  @JsonKey(
+    
+    name: r'query',
+    required: false,
+    includeIfNull: false
+  )
+
+
+  final String? query;
+
+
 
   @JsonKey(
     
@@ -134,6 +148,7 @@ class FacilityStrengthMachineListResponseMeta {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is FacilityStrengthMachineListResponseMeta &&
+     other.query == query &&
      other.model == model &&
      other.source_ == source_ &&
      other.sort == sort &&
@@ -145,6 +160,7 @@ class FacilityStrengthMachineListResponseMeta {
 
   @override
   int get hashCode =>
+    query.hashCode +
     model.hashCode +
     source_.hashCode +
     sort.hashCode +

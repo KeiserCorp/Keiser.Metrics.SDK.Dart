@@ -19,7 +19,8 @@ FacilityRelationshipData _$FacilityRelationshipDataFromJson(
             'userId',
             'facilityId',
             'member',
-            'hasSecretSet'
+            'hasSecretSet',
+            'deactivatedAt'
           ],
         );
         final val = FacilityRelationshipData(
@@ -29,9 +30,13 @@ FacilityRelationshipData _$FacilityRelationshipDataFromJson(
           member: $checkedConvert('member', (v) => v as bool),
           memberIdentifier:
               $checkedConvert('memberIdentifier', (v) => v as String?),
+          pinCode: $checkedConvert('pinCode', (v) => v as String?),
+          externalIdentifier:
+              $checkedConvert('externalIdentifier', (v) => v as String?),
           hasSecretSet: $checkedConvert('hasSecretSet', (v) => v as bool),
           employeeRole: $checkedConvert('employeeRole',
               (v) => $enumDecodeNullable(_$EmployeeRoleEnumMap, v)),
+          deactivatedAt: $checkedConvert('deactivatedAt', (v) => v as String),
           facility: $checkedConvert(
               'facility',
               (v) => v == null
@@ -64,8 +69,11 @@ Map<String, dynamic> _$FacilityRelationshipDataToJson(
   }
 
   writeNotNull('memberIdentifier', instance.memberIdentifier);
+  writeNotNull('pinCode', instance.pinCode);
+  writeNotNull('externalIdentifier', instance.externalIdentifier);
   val['hasSecretSet'] = instance.hasSecretSet;
   writeNotNull('employeeRole', _$EmployeeRoleEnumMap[instance.employeeRole]);
+  val['deactivatedAt'] = instance.deactivatedAt;
   writeNotNull('facility', instance.facility?.toJson());
   writeNotNull('user', instance.user?.toJson());
   return val;

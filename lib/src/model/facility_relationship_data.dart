@@ -31,9 +31,15 @@ class FacilityRelationshipData {
 
      this.memberIdentifier,
 
+     this.pinCode,
+
+     this.externalIdentifier,
+
     required  this.hasSecretSet,
 
      this.employeeRole,
+
+    required  this.deactivatedAt,
 
      this.facility,
 
@@ -102,6 +108,30 @@ class FacilityRelationshipData {
 
   @JsonKey(
     
+    name: r'pinCode',
+    required: false,
+    includeIfNull: false
+  )
+
+
+  final String? pinCode;
+
+
+
+  @JsonKey(
+    
+    name: r'externalIdentifier',
+    required: false,
+    includeIfNull: false
+  )
+
+
+  final String? externalIdentifier;
+
+
+
+  @JsonKey(
+    
     name: r'hasSecretSet',
     required: true,
     includeIfNull: false
@@ -121,6 +151,18 @@ class FacilityRelationshipData {
 
 
   final EmployeeRole? employeeRole;
+
+
+
+  @JsonKey(
+    
+    name: r'deactivatedAt',
+    required: true,
+    includeIfNull: false
+  )
+
+
+  final String deactivatedAt;
 
 
 
@@ -155,8 +197,11 @@ class FacilityRelationshipData {
      other.facilityId == facilityId &&
      other.member == member &&
      other.memberIdentifier == memberIdentifier &&
+     other.pinCode == pinCode &&
+     other.externalIdentifier == externalIdentifier &&
      other.hasSecretSet == hasSecretSet &&
      other.employeeRole == employeeRole &&
+     other.deactivatedAt == deactivatedAt &&
      other.facility == facility &&
      other.user == user;
 
@@ -167,8 +212,11 @@ class FacilityRelationshipData {
     facilityId.hashCode +
     member.hashCode +
     memberIdentifier.hashCode +
+    pinCode.hashCode +
+    externalIdentifier.hashCode +
     hasSecretSet.hashCode +
     employeeRole.hashCode +
+    deactivatedAt.hashCode +
     facility.hashCode +
     user.hashCode;
 
