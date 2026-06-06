@@ -42,6 +42,11 @@ void main() {
       // TODO
     });
 
+    // bool deactivated
+    test('to test the property `deactivated`', () async {
+      // TODO
+    });
+
     // num facilityId
     test('to test the property `facilityId`', () async {
       // TODO

@@ -31,6 +31,7 @@ FacilityUserRelationshipListResponseMeta
                   'sort',
                   (v) =>
                       $enumDecode(_$FacilityUserRelationshipSortingEnumMap, v)),
+              deactivated: $checkedConvert('deactivated', (v) => v as bool?),
               facilityId: $checkedConvert('facilityId', (v) => v as num?),
               ascending: $checkedConvert('ascending', (v) => v as bool?),
               limit: $checkedConvert('limit', (v) => v as num?),
@@ -59,6 +60,7 @@ Map<String, dynamic> _$FacilityUserRelationshipListResponseMetaToJson(
   writeNotNull('employeeRole', _$EmployeeRoleEnumMap[instance.employeeRole]);
   writeNotNull('includeSession', instance.includeSession);
   val['sort'] = _$FacilityUserRelationshipSortingEnumMap[instance.sort]!;
+  writeNotNull('deactivated', instance.deactivated);
   writeNotNull('facilityId', instance.facilityId);
   writeNotNull('ascending', instance.ascending);
   writeNotNull('limit', instance.limit);

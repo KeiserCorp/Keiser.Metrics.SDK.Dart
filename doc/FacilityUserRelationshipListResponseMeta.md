@@ -15,6 +15,7 @@ Name | Type | Description | Notes
 **employeeRole** | [**EmployeeRole**](EmployeeRole.md) |  | [optional] 
 **includeSession** | **bool** |  | [optional] 
 **sort** | [**FacilityUserRelationshipSorting**](FacilityUserRelationshipSorting.md) |  | 
+**deactivated** | **bool** |  | [optional] 
 **facilityId** | **num** |  | [optional] 
 **ascending** | **bool** |  | [optional] 
 **limit** | **num** |  | [optional] 

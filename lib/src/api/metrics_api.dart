@@ -5111,6 +5111,7 @@ class MetricsApi {
   ///
   /// Parameters:
   /// * [ascending] 
+  /// * [deactivated] 
   /// * [employee] 
   /// * [employeeRole] - Allowed values: admin, customerSupport, trainer, frontDesk, maintenance
   /// * [includeSession] 
@@ -5125,6 +5126,7 @@ class MetricsApi {
   /// Returns a [Future] containing a [Response] with a [FacilityUserRelationshipListResponse] as data
   Future<FacilityUserRelationshipListResponse> facilityRelationshipFacilityList({ 
     bool? ascending = true,
+    bool? deactivated,
     bool? employee,
     String? employeeRole,
     bool? includeSession,
@@ -5146,6 +5148,7 @@ class MetricsApi {
 
     final _queryParameters = <String, dynamic>{
       if (ascending != null) r'ascending': _encodeQueryParameter(ascending),
+      if (deactivated != null) r'deactivated': _encodeQueryParameter(deactivated),
       if (employee != null) r'employee': _encodeQueryParameter(employee),
       if (employeeRole != null) r'employeeRole': _encodeQueryParameter(employeeRole),
       if (includeSession != null) r'includeSession': _encodeQueryParameter(includeSession),

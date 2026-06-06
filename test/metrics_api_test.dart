@@ -1064,7 +1064,7 @@ void main() {
     //
     // 1
     //
-    //Future<FacilityUserRelationshipListResponse> facilityRelationshipFacilityList({ bool ascending, bool employee, String employeeRole, bool includeSession, num limit, bool member, String memberIdentifier, String names, num offset, String sort, String apiVersion }) async
+    //Future<FacilityUserRelationshipListResponse> facilityRelationshipFacilityList({ bool ascending, bool deactivated, bool employee, String employeeRole, bool includeSession, num limit, bool member, String memberIdentifier, String names, num offset, String sort, String apiVersion }) async
     test('test facilityRelationshipFacilityList', () async {
       // TODO
     });

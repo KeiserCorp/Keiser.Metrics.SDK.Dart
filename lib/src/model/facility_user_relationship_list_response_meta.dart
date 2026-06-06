@@ -34,6 +34,8 @@ class FacilityUserRelationshipListResponseMeta {
 
     required  this.sort,
 
+     this.deactivated,
+
      this.facilityId,
 
      this.ascending,
@@ -131,6 +133,18 @@ class FacilityUserRelationshipListResponseMeta {
 
   @JsonKey(
     
+    name: r'deactivated',
+    required: false,
+    includeIfNull: false
+  )
+
+
+  final bool? deactivated;
+
+
+
+  @JsonKey(
+    
     name: r'facilityId',
     required: false,
     includeIfNull: false
@@ -198,6 +212,7 @@ class FacilityUserRelationshipListResponseMeta {
      other.employeeRole == employeeRole &&
      other.includeSession == includeSession &&
      other.sort == sort &&
+     other.deactivated == deactivated &&
      other.facilityId == facilityId &&
      other.ascending == ascending &&
      other.limit == limit &&
@@ -213,6 +228,7 @@ class FacilityUserRelationshipListResponseMeta {
     employeeRole.hashCode +
     includeSession.hashCode +
     sort.hashCode +
+    deactivated.hashCode +
     facilityId.hashCode +
     ascending.hashCode +
     limit.hashCode +

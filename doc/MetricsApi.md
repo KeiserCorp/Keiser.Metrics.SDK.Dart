@@ -6377,7 +6377,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **facilityRelationshipFacilityList**
-> FacilityUserRelationshipListResponse facilityRelationshipFacilityList(ascending, employee, employeeRole, includeSession, limit, member, memberIdentifier, names, offset, sort, apiVersion)
+> FacilityUserRelationshipListResponse facilityRelationshipFacilityList(ascending, deactivated, employee, employeeRole, includeSession, limit, member, memberIdentifier, names, offset, sort, apiVersion)
 
 List a facility's user relationships
 
@@ -6392,6 +6392,7 @@ import 'package:keiser_metrics_sdk/api.dart';
 
 final api = MetricsApi metricsApi = MetricsApi();
 final bool ascending = true; // bool | 
+final bool deactivated = true; // bool | 
 final bool employee = true; // bool | 
 final String employeeRole = employeeRole_example; // String | Allowed values: admin, customerSupport, trainer, frontDesk, maintenance
 final bool includeSession = true; // bool | 
@@ -6404,7 +6405,7 @@ final String sort = sort_example; // String | Allowed values: id, name, firstNam
 final String apiVersion = apiVersion_example; // String | 
 
 try {
-    final response = metricsApi.facilityRelationshipFacilityList(ascending, employee, employeeRole, includeSession, limit, member, memberIdentifier, names, offset, sort, apiVersion);
+    final response = metricsApi.facilityRelationshipFacilityList(ascending, deactivated, employee, employeeRole, includeSession, limit, member, memberIdentifier, names, offset, sort, apiVersion);
     print(response);
 } catch on DioError (e) {
     print('Exception when calling MetricsApi->facilityRelationshipFacilityList: $e\n');
@@ -6416,6 +6417,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ascending** | **bool**|  | [optional] [default to true]
+ **deactivated** | **bool**|  | [optional] 
  **employee** | **bool**|  | [optional] 
  **employeeRole** | **String**| Allowed values: admin, customerSupport, trainer, frontDesk, maintenance | [optional] 
  **includeSession** | **bool**|  | [optional] 
