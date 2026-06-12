@@ -1,0 +1,18 @@
+# keiser_metrics_sdk.model.HeartRateDataPointData
+
+## Load the model package
+```dart
+import 'package:keiser_metrics_sdk/api.dart';
+```
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**takenAt** | [**DateTime**](DateTime.md) |  | 
+**heartRate** | **num** |  | 
+**heartRateDataSetId** | **num** |  | [optional] 
+**id** | **num** |  | [optional] 
+
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+
+
