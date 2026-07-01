@@ -13,7 +13,7 @@ This SDK facilitates communication between a client system (_ie: phone app, webs
 To use the package from [pub.dev](https://pub.dev), please include the following in pubspec.yaml
 ```yaml
 dependencies:
-  keiser_metrics_sdk: 5.4.9
+  keiser_metrics_sdk: 5.5.0
 ```
 
 ### Github
@@ -234,14 +234,18 @@ Method | HTTP request | Description
 [**facilityStrengthMachineInitializerOTP**](doc/MetricsApi.md#facilitystrengthmachineinitializerotp) | **GET** /facility/strength-machine/initializer-otp | Show facility strength machine initializer token
 [**facilityStrengthMachineInitializerToken**](doc/MetricsApi.md#facilitystrengthmachineinitializertoken) | **GET** /facility/strength-machine/initializer-token | Show facility strength machine initializer token
 [**facilityStrengthMachineList**](doc/MetricsApi.md#facilitystrengthmachinelist) | **GET** /facility/strength-machine/list | List facility strength machines (requires maintenance access)
+[**facilityStrengthMachineMachineReportUpdateResult**](doc/MetricsApi.md#facilitystrengthmachinemachinereportupdateresult) | **POST** /facility/strength-machine/machine/report-update-result | Report the outcome of a machine software update attempt (skipped or failed)
 [**facilityStrengthMachineMachineStartSession**](doc/MetricsApi.md#facilitystrengthmachinemachinestartsession) | **POST** /facility/strength-machine/machine/start-session | Exchange a machine initialization token for a short-lived machine session token
 [**facilityStrengthMachineMaintenanceRecordCreate**](doc/MetricsApi.md#facilitystrengthmachinemaintenancerecordcreate) | **POST** /facility/strength-machine/maintenance-record | Create a maintenance record for facility strength machine
 [**facilityStrengthMachineMaintenanceRecordDelete**](doc/MetricsApi.md#facilitystrengthmachinemaintenancerecorddelete) | **DELETE** /facility/strength-machine/maintenance-record/{id} | Delete a maintenance record for facility strength machine
 [**facilityStrengthMachineMaintenanceRecordList**](doc/MetricsApi.md#facilitystrengthmachinemaintenancerecordlist) | **GET** /facility/strength-machine/maintenance-record/list | List maintenance records for facility strength machines
 [**facilityStrengthMachineMaintenanceRecordShow**](doc/MetricsApi.md#facilitystrengthmachinemaintenancerecordshow) | **GET** /facility/strength-machine/maintenance-record | Show a maintenance record by for facility strength machine
+[**facilityStrengthMachineRequestSoftwareUpdate**](doc/MetricsApi.md#facilitystrengthmachinerequestsoftwareupdate) | **POST** /facility/strength-machine/request-software-update | Broadcast a software update command to currently connected machines in the facility
 [**facilityStrengthMachineShow**](doc/MetricsApi.md#facilitystrengthmachineshow) | **GET** /facility/strength-machine | Show a facility strength machine
 [**facilityStrengthMachineSubscribe**](doc/MetricsApi.md#facilitystrengthmachinesubscribe) | **GET** /facilityStrengthMachine/subscribe | Subscribe to changes to facility strength machine
+[**facilityStrengthMachineSubscribeToFacilityGlobalRoom**](doc/MetricsApi.md#facilitystrengthmachinesubscribetofacilityglobalroom) | **GET** /facility/strength-machine/subscribe-to-global-facility | Subscribe a machine session connection to the facility global room
 [**facilityStrengthMachineUpdate**](doc/MetricsApi.md#facilitystrengthmachineupdate) | **PUT** /facility/strength-machine/{id} | Update a facility strength machine
+[**facilityStrengthMachineUpdateSoftwareMetadata**](doc/MetricsApi.md#facilitystrengthmachineupdatesoftwaremetadata) | **POST** /facility/strength-machine/machine/update-software-metadata | Update the software metadata of a machine
 [**facilityStrengthMachineUtilizationInstanceList**](doc/MetricsApi.md#facilitystrengthmachineutilizationinstancelist) | **GET** /facility/strength-machine/utilization-instance/list | List facility strength machine utilization instances
 [**facilityStrengthMachineUtilizationInstanceShow**](doc/MetricsApi.md#facilitystrengthmachineutilizationinstanceshow) | **GET** /facility/strength-machine/utilization-instance | Show facility strength machine utilization instance
 [**facilitySubscribe**](doc/MetricsApi.md#facilitysubscribe) | **GET** /facility/subscribe | Subscribe to changes to a facility

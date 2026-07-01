@@ -175,14 +175,18 @@ Method | HTTP request | Description
 [**facilityStrengthMachineInitializerOTP**](MetricsApi.md#facilitystrengthmachineinitializerotp) | **GET** /facility/strength-machine/initializer-otp | Show facility strength machine initializer token
 [**facilityStrengthMachineInitializerToken**](MetricsApi.md#facilitystrengthmachineinitializertoken) | **GET** /facility/strength-machine/initializer-token | Show facility strength machine initializer token
 [**facilityStrengthMachineList**](MetricsApi.md#facilitystrengthmachinelist) | **GET** /facility/strength-machine/list | List facility strength machines (requires maintenance access)
+[**facilityStrengthMachineMachineReportUpdateResult**](MetricsApi.md#facilitystrengthmachinemachinereportupdateresult) | **POST** /facility/strength-machine/machine/report-update-result | Report the outcome of a machine software update attempt (skipped or failed)
 [**facilityStrengthMachineMachineStartSession**](MetricsApi.md#facilitystrengthmachinemachinestartsession) | **POST** /facility/strength-machine/machine/start-session | Exchange a machine initialization token for a short-lived machine session token
 [**facilityStrengthMachineMaintenanceRecordCreate**](MetricsApi.md#facilitystrengthmachinemaintenancerecordcreate) | **POST** /facility/strength-machine/maintenance-record | Create a maintenance record for facility strength machine
 [**facilityStrengthMachineMaintenanceRecordDelete**](MetricsApi.md#facilitystrengthmachinemaintenancerecorddelete) | **DELETE** /facility/strength-machine/maintenance-record/{id} | Delete a maintenance record for facility strength machine
 [**facilityStrengthMachineMaintenanceRecordList**](MetricsApi.md#facilitystrengthmachinemaintenancerecordlist) | **GET** /facility/strength-machine/maintenance-record/list | List maintenance records for facility strength machines
 [**facilityStrengthMachineMaintenanceRecordShow**](MetricsApi.md#facilitystrengthmachinemaintenancerecordshow) | **GET** /facility/strength-machine/maintenance-record | Show a maintenance record by for facility strength machine
+[**facilityStrengthMachineRequestSoftwareUpdate**](MetricsApi.md#facilitystrengthmachinerequestsoftwareupdate) | **POST** /facility/strength-machine/request-software-update | Broadcast a software update command to currently connected machines in the facility
 [**facilityStrengthMachineShow**](MetricsApi.md#facilitystrengthmachineshow) | **GET** /facility/strength-machine | Show a facility strength machine
 [**facilityStrengthMachineSubscribe**](MetricsApi.md#facilitystrengthmachinesubscribe) | **GET** /facilityStrengthMachine/subscribe | Subscribe to changes to facility strength machine
+[**facilityStrengthMachineSubscribeToFacilityGlobalRoom**](MetricsApi.md#facilitystrengthmachinesubscribetofacilityglobalroom) | **GET** /facility/strength-machine/subscribe-to-global-facility | Subscribe a machine session connection to the facility global room
 [**facilityStrengthMachineUpdate**](MetricsApi.md#facilitystrengthmachineupdate) | **PUT** /facility/strength-machine/{id} | Update a facility strength machine
+[**facilityStrengthMachineUpdateSoftwareMetadata**](MetricsApi.md#facilitystrengthmachineupdatesoftwaremetadata) | **POST** /facility/strength-machine/machine/update-software-metadata | Update the software metadata of a machine
 [**facilityStrengthMachineUtilizationInstanceList**](MetricsApi.md#facilitystrengthmachineutilizationinstancelist) | **GET** /facility/strength-machine/utilization-instance/list | List facility strength machine utilization instances
 [**facilityStrengthMachineUtilizationInstanceShow**](MetricsApi.md#facilitystrengthmachineutilizationinstanceshow) | **GET** /facility/strength-machine/utilization-instance | Show facility strength machine utilization instance
 [**facilitySubscribe**](MetricsApi.md#facilitysubscribe) | **GET** /facility/subscribe | Subscribe to changes to a facility
@@ -8925,6 +8929,56 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **facilityStrengthMachineMachineReportUpdateResult**
+> FacilityStrengthMachineResponse facilityStrengthMachineMachineReportUpdateResult(reason, resultType, apiVersion)
+
+Report the outcome of a machine software update attempt (skipped or failed)
+
+1
+
+### Example
+```dart
+import 'package:keiser_metrics_sdk/api.dart';
+// TODO Configure HTTP basic authorization: bearerAuth
+//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').username = 'YOUR_USERNAME'
+//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').password = 'YOUR_PASSWORD';
+
+final api = MetricsApi metricsApi = MetricsApi();
+final String reason = reason_example; // String | 
+final String resultType = resultType_example; // String | 
+final String apiVersion = apiVersion_example; // String | 
+
+try {
+    final response = metricsApi.facilityStrengthMachineMachineReportUpdateResult(reason, resultType, apiVersion);
+    print(response);
+} catch on DioError (e) {
+    print('Exception when calling MetricsApi->facilityStrengthMachineMachineReportUpdateResult: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **reason** | **String**|  | 
+ **resultType** | **String**|  | 
+ **apiVersion** | **String**|  | [optional] 
+
+### Return type
+
+[**FacilityStrengthMachineResponse**](FacilityStrengthMachineResponse.md)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **facilityStrengthMachineMachineStartSession**
 > FacilityStrengthMachineStartSessionResponse facilityStrengthMachineMachineStartSession(apiVersion)
 
@@ -9180,6 +9234,51 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **facilityStrengthMachineRequestSoftwareUpdate**
+> facilityStrengthMachineRequestSoftwareUpdate(apiVersion)
+
+Broadcast a software update command to currently connected machines in the facility
+
+1
+
+### Example
+```dart
+import 'package:keiser_metrics_sdk/api.dart';
+// TODO Configure HTTP basic authorization: bearerAuth
+//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').username = 'YOUR_USERNAME'
+//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').password = 'YOUR_PASSWORD';
+
+final api = MetricsApi metricsApi = MetricsApi();
+final String apiVersion = apiVersion_example; // String | 
+
+try {
+    metricsApi.facilityStrengthMachineRequestSoftwareUpdate(apiVersion);
+} catch on DioError (e) {
+    print('Exception when calling MetricsApi->facilityStrengthMachineRequestSoftwareUpdate: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **apiVersion** | **String**|  | [optional] 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **facilityStrengthMachineShow**
 > FacilityStrengthMachineResponse facilityStrengthMachineShow(id, apiVersion)
 
@@ -9276,6 +9375,51 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **facilityStrengthMachineSubscribeToFacilityGlobalRoom**
+> facilityStrengthMachineSubscribeToFacilityGlobalRoom(apiVersion)
+
+Subscribe a machine session connection to the facility global room
+
+1
+
+### Example
+```dart
+import 'package:keiser_metrics_sdk/api.dart';
+// TODO Configure HTTP basic authorization: bearerAuth
+//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').username = 'YOUR_USERNAME'
+//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').password = 'YOUR_PASSWORD';
+
+final api = MetricsApi metricsApi = MetricsApi();
+final String apiVersion = apiVersion_example; // String | 
+
+try {
+    metricsApi.facilityStrengthMachineSubscribeToFacilityGlobalRoom(apiVersion);
+} catch on DioError (e) {
+    print('Exception when calling MetricsApi->facilityStrengthMachineSubscribeToFacilityGlobalRoom: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **apiVersion** | **String**|  | [optional] 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **facilityStrengthMachineUpdate**
 > FacilityStrengthMachineResponse facilityStrengthMachineUpdate(id, location, apiVersion)
 
@@ -9323,6 +9467,55 @@ Name | Type | Description  | Notes
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **facilityStrengthMachineUpdateSoftwareMetadata**
+> facilityStrengthMachineUpdateSoftwareMetadata(buildNumber, softwareVersion, apiVersion)
+
+Update the software metadata of a machine
+
+1
+
+### Example
+```dart
+import 'package:keiser_metrics_sdk/api.dart';
+// TODO Configure HTTP basic authorization: bearerAuth
+//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').username = 'YOUR_USERNAME'
+//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').password = 'YOUR_PASSWORD';
+
+final api = MetricsApi metricsApi = MetricsApi();
+final String buildNumber = buildNumber_example; // String | 
+final String softwareVersion = softwareVersion_example; // String | 
+final String apiVersion = apiVersion_example; // String | 
+
+try {
+    metricsApi.facilityStrengthMachineUpdateSoftwareMetadata(buildNumber, softwareVersion, apiVersion);
+} catch on DioError (e) {
+    print('Exception when calling MetricsApi->facilityStrengthMachineUpdateSoftwareMetadata: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **buildNumber** | **String**|  | 
+ **softwareVersion** | **String**|  | 
+ **apiVersion** | **String**|  | [optional] 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

@@ -1501,6 +1501,15 @@ void main() {
       // TODO
     });
 
+    // Report the outcome of a machine software update attempt (skipped or failed)
+    //
+    // 1
+    //
+    //Future<FacilityStrengthMachineResponse> facilityStrengthMachineMachineReportUpdateResult(String reason, String resultType, { String apiVersion }) async
+    test('test facilityStrengthMachineMachineReportUpdateResult', () async {
+      // TODO
+    });
+
     // Exchange a machine initialization token for a short-lived machine session token
     //
     // 1
@@ -1546,6 +1555,15 @@ void main() {
       // TODO
     });
 
+    // Broadcast a software update command to currently connected machines in the facility
+    //
+    // 1
+    //
+    //Future facilityStrengthMachineRequestSoftwareUpdate({ String apiVersion }) async
+    test('test facilityStrengthMachineRequestSoftwareUpdate', () async {
+      // TODO
+    });
+
     // Show a facility strength machine
     //
     // 1
@@ -1564,12 +1582,30 @@ void main() {
       // TODO
     });
 
+    // Subscribe a machine session connection to the facility global room
+    //
+    // 1
+    //
+    //Future facilityStrengthMachineSubscribeToFacilityGlobalRoom({ String apiVersion }) async
+    test('test facilityStrengthMachineSubscribeToFacilityGlobalRoom', () async {
+      // TODO
+    });
+
     // Update a facility strength machine
     //
     // 1
     //
     //Future<FacilityStrengthMachineResponse> facilityStrengthMachineUpdate(num id, { String location, String apiVersion }) async
     test('test facilityStrengthMachineUpdate', () async {
+      // TODO
+    });
+
+    // Update the software metadata of a machine
+    //
+    // 1
+    //
+    //Future facilityStrengthMachineUpdateSoftwareMetadata(String buildNumber, String softwareVersion, { String apiVersion }) async
+    test('test facilityStrengthMachineUpdateSoftwareMetadata', () async {
       // TODO
     });
 

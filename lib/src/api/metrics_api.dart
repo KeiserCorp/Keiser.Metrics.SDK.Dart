@@ -7209,6 +7209,45 @@ class MetricsApi {
     
   }
 
+  /// Report the outcome of a machine software update attempt (skipped or failed)
+  /// 1
+  ///
+  /// Parameters:
+  /// * [reason] 
+  /// * [resultType] 
+  /// * [apiVersion] 
+  ///
+  /// Returns a [Future] containing a [Response] with a [FacilityStrengthMachineResponse] as data
+  Future<FacilityStrengthMachineResponse> facilityStrengthMachineMachineReportUpdateResult({ 
+    required String reason,
+    required String resultType,
+    String? apiVersion,
+  }) async {
+    final _path = r'/facility/strength-machine/machine/report-update-result';
+    final _action = 'facilityStrengthMachine:machineReportUpdateResult';
+    final _method = r'POST';
+
+    if (apiVersion == null) {
+      apiVersion = '1';
+    }
+
+    final _queryParameters = <String, dynamic>{
+      r'reason': _encodeQueryParameter(reason),
+      r'resultType': _encodeQueryParameter(resultType),
+      if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
+    };
+    final _response = await connection.action(
+      path: _path,
+      action: _action,
+      method: _method,
+      queryParameters: _queryParameters,
+    );
+    
+    final FacilityStrengthMachineResponse _responseData = deserialize<FacilityStrengthMachineResponse, FacilityStrengthMachineResponse>(_response.data!, 'FacilityStrengthMachineResponse', growable: true);
+    return _responseData;
+    
+  }
+
   /// Exchange a machine initialization token for a short-lived machine session token
   /// 1
   ///
@@ -7414,6 +7453,38 @@ class MetricsApi {
     
   }
 
+  /// Broadcast a software update command to currently connected machines in the facility
+  /// 1
+  ///
+  /// Parameters:
+  /// * [apiVersion] 
+  ///
+  /// Returns a [Future]
+  Future<void> facilityStrengthMachineRequestSoftwareUpdate({ 
+    String? apiVersion,
+  }) async {
+    final _path = r'/facility/strength-machine/request-software-update';
+    final _action = 'facilityStrengthMachine:requestSoftwareUpdate';
+    final _method = r'POST';
+
+    if (apiVersion == null) {
+      apiVersion = '1';
+    }
+
+    final _queryParameters = <String, dynamic>{
+      if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
+    };
+    await connection.action(
+      path: _path,
+      action: _action,
+      method: _method,
+      queryParameters: _queryParameters,
+    );
+    
+
+    return;
+  }
+
   /// Show a facility strength machine
   /// 1
   ///
@@ -7486,6 +7557,38 @@ class MetricsApi {
     
   }
 
+  /// Subscribe a machine session connection to the facility global room
+  /// 1
+  ///
+  /// Parameters:
+  /// * [apiVersion] 
+  ///
+  /// Returns a [Future]
+  Future<void> facilityStrengthMachineSubscribeToFacilityGlobalRoom({ 
+    String? apiVersion,
+  }) async {
+    final _path = r'/facility/strength-machine/subscribe-to-global-facility';
+    final _action = 'facilityStrengthMachine:subscribeToFacilityGlobalRoom';
+    final _method = r'GET';
+
+    if (apiVersion == null) {
+      apiVersion = '1';
+    }
+
+    final _queryParameters = <String, dynamic>{
+      if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
+    };
+    await connection.action(
+      path: _path,
+      action: _action,
+      method: _method,
+      queryParameters: _queryParameters,
+    );
+    
+
+    return;
+  }
+
   /// Update a facility strength machine
   /// 1
   ///
@@ -7525,6 +7628,44 @@ class MetricsApi {
     final FacilityStrengthMachineResponse _responseData = deserialize<FacilityStrengthMachineResponse, FacilityStrengthMachineResponse>(_response.data!, 'FacilityStrengthMachineResponse', growable: true);
     return _responseData;
     
+  }
+
+  /// Update the software metadata of a machine
+  /// 1
+  ///
+  /// Parameters:
+  /// * [buildNumber] 
+  /// * [softwareVersion] 
+  /// * [apiVersion] 
+  ///
+  /// Returns a [Future]
+  Future<void> facilityStrengthMachineUpdateSoftwareMetadata({ 
+    required String buildNumber,
+    required String softwareVersion,
+    String? apiVersion,
+  }) async {
+    final _path = r'/facility/strength-machine/machine/update-software-metadata';
+    final _action = 'facilityStrengthMachine:updateSoftwareMetadata';
+    final _method = r'POST';
+
+    if (apiVersion == null) {
+      apiVersion = '1';
+    }
+
+    final _queryParameters = <String, dynamic>{
+      r'buildNumber': _encodeQueryParameter(buildNumber),
+      r'softwareVersion': _encodeQueryParameter(softwareVersion),
+      if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
+    };
+    await connection.action(
+      path: _path,
+      action: _action,
+      method: _method,
+      queryParameters: _queryParameters,
+    );
+    
+
+    return;
   }
 
   /// List facility strength machine utilization instances

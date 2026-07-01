@@ -30,6 +30,16 @@ class FacilityStrengthMachineData {
 
      this.softwareVersion,
 
+    required  this.outdated,
+
+     this.lastUpdateSkippedAt,
+
+     this.lastUpdateSkippedReason,
+
+     this.lastUpdateFailureAt,
+
+     this.lastUpdateFailureReason,
+
      this.mainBoardSerial,
 
      this.location,
@@ -102,6 +112,66 @@ class FacilityStrengthMachineData {
 
 
   final String? softwareVersion;
+
+
+
+  @JsonKey(
+    
+    name: r'outdated',
+    required: true,
+    includeIfNull: false
+  )
+
+
+  final bool outdated;
+
+
+
+  @JsonKey(
+    
+    name: r'lastUpdateSkippedAt',
+    required: false,
+    includeIfNull: false
+  )
+
+
+  final DateTime? lastUpdateSkippedAt;
+
+
+
+  @JsonKey(
+    
+    name: r'lastUpdateSkippedReason',
+    required: false,
+    includeIfNull: false
+  )
+
+
+  final String? lastUpdateSkippedReason;
+
+
+
+  @JsonKey(
+    
+    name: r'lastUpdateFailureAt',
+    required: false,
+    includeIfNull: false
+  )
+
+
+  final DateTime? lastUpdateFailureAt;
+
+
+
+  @JsonKey(
+    
+    name: r'lastUpdateFailureReason',
+    required: false,
+    includeIfNull: false
+  )
+
+
+  final String? lastUpdateFailureReason;
 
 
 
@@ -196,6 +266,11 @@ class FacilityStrengthMachineData {
      other.model == model &&
      other.version == version &&
      other.softwareVersion == softwareVersion &&
+     other.outdated == outdated &&
+     other.lastUpdateSkippedAt == lastUpdateSkippedAt &&
+     other.lastUpdateSkippedReason == lastUpdateSkippedReason &&
+     other.lastUpdateFailureAt == lastUpdateFailureAt &&
+     other.lastUpdateFailureReason == lastUpdateFailureReason &&
      other.mainBoardSerial == mainBoardSerial &&
      other.location == location &&
      other.displayUUID == displayUUID &&
@@ -211,6 +286,11 @@ class FacilityStrengthMachineData {
     model.hashCode +
     version.hashCode +
     softwareVersion.hashCode +
+    outdated.hashCode +
+    lastUpdateSkippedAt.hashCode +
+    lastUpdateSkippedReason.hashCode +
+    lastUpdateFailureAt.hashCode +
+    lastUpdateFailureReason.hashCode +
     mainBoardSerial.hashCode +
     location.hashCode +
     displayUUID.hashCode +

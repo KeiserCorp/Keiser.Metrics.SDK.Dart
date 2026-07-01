@@ -14,7 +14,13 @@ FacilityStrengthMachineData _$FacilityStrengthMachineDataFromJson(
       ($checkedConvert) {
         $checkKeys(
           json,
-          requiredKeys: const ['id', 'updatedAt', 'model', 'version'],
+          requiredKeys: const [
+            'id',
+            'updatedAt',
+            'model',
+            'version',
+            'outdated'
+          ],
         );
         final val = FacilityStrengthMachineData(
           id: $checkedConvert('id', (v) => v as num),
@@ -23,6 +29,15 @@ FacilityStrengthMachineData _$FacilityStrengthMachineDataFromJson(
           version: $checkedConvert('version', (v) => v as String),
           softwareVersion:
               $checkedConvert('softwareVersion', (v) => v as String?),
+          outdated: $checkedConvert('outdated', (v) => v as bool),
+          lastUpdateSkippedAt: $checkedConvert('lastUpdateSkippedAt',
+              (v) => v == null ? null : DateTime.parse(v as String)),
+          lastUpdateSkippedReason:
+              $checkedConvert('lastUpdateSkippedReason', (v) => v as String?),
+          lastUpdateFailureAt: $checkedConvert('lastUpdateFailureAt',
+              (v) => v == null ? null : DateTime.parse(v as String)),
+          lastUpdateFailureReason:
+              $checkedConvert('lastUpdateFailureReason', (v) => v as String?),
           mainBoardSerial:
               $checkedConvert('mainBoardSerial', (v) => v as String?),
           location: $checkedConvert('location', (v) => v as String?),
@@ -62,6 +77,13 @@ Map<String, dynamic> _$FacilityStrengthMachineDataToJson(
   }
 
   writeNotNull('softwareVersion', instance.softwareVersion);
+  val['outdated'] = instance.outdated;
+  writeNotNull(
+      'lastUpdateSkippedAt', instance.lastUpdateSkippedAt?.toIso8601String());
+  writeNotNull('lastUpdateSkippedReason', instance.lastUpdateSkippedReason);
+  writeNotNull(
+      'lastUpdateFailureAt', instance.lastUpdateFailureAt?.toIso8601String());
+  writeNotNull('lastUpdateFailureReason', instance.lastUpdateFailureReason);
   writeNotNull('mainBoardSerial', instance.mainBoardSerial);
   writeNotNull('location', instance.location);
   writeNotNull('displayUUID', instance.displayUUID);

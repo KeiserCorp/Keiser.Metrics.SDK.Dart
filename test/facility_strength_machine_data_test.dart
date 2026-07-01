@@ -32,6 +32,31 @@ void main() {
       // TODO
     });
 
+    // bool outdated
+    test('to test the property `outdated`', () async {
+      // TODO
+    });
+
+    // DateTime lastUpdateSkippedAt
+    test('to test the property `lastUpdateSkippedAt`', () async {
+      // TODO
+    });
+
+    // String lastUpdateSkippedReason
+    test('to test the property `lastUpdateSkippedReason`', () async {
+      // TODO
+    });
+
+    // DateTime lastUpdateFailureAt
+    test('to test the property `lastUpdateFailureAt`', () async {
+      // TODO
+    });
+
+    // String lastUpdateFailureReason
+    test('to test the property `lastUpdateFailureReason`', () async {
+      // TODO
+    });
+
     // String mainBoardSerial
     test('to test the property `mainBoardSerial`', () async {
       // TODO

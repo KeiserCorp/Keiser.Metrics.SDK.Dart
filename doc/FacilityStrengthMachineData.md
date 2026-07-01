@@ -13,6 +13,11 @@ Name | Type | Description | Notes
 **model** | **String** |  | 
 **version** | **String** |  | 
 **softwareVersion** | **String** |  | [optional] 
+**outdated** | **bool** |  | 
+**lastUpdateSkippedAt** | [**DateTime**](DateTime.md) |  | [optional] 
+**lastUpdateSkippedReason** | **String** |  | [optional] 
+**lastUpdateFailureAt** | [**DateTime**](DateTime.md) |  | [optional] 
+**lastUpdateFailureReason** | **String** |  | [optional] 
 **mainBoardSerial** | **String** |  | [optional] 
 **location** | **String** |  | [optional] 
 **displayUUID** | **String** |  | [optional] 
