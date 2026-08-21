@@ -9980,8 +9980,10 @@ class MetricsApi {
   ///
   /// Parameters:
   /// * [birthday] 
+  /// * [firstName] 
   /// * [gender] - Allowed values: m, f, o
   /// * [language] - Allowed values: af, ar, az, be, bg, ca, cs, cy, da, de, dv, el, en, eo, es, et, eu, fa, fi, fo, fr, gl, gu, he, hi, hr, hu, hy, id, is, it, ja, ka, kk, kn, ko, kok, ky, lt, lv, mi, mk, mn, mr, ms, mt, nb, nl, ns, pa, pl, ps, pt, qu, ro, ru, sa, se, sk, sl, sq, sv, sw, ta, te, th, tl, tn, tr, tt, ts, uk, ur, uz, vi, xh, zh, zu
+  /// * [lastName] 
   /// * [names] 
   /// * [units] - Allowed values: metric, imperial
   /// * [userId] 
@@ -9990,8 +9992,10 @@ class MetricsApi {
   /// Returns a [Future] containing a [Response] with a [ProfileResponse] as data
   Future<ProfileResponse> profileUpdate({ 
     DateTime? birthday,
+    String? firstName,
     String? gender,
     String? language,
+    String? lastName,
     String? names,
     String? units,
     num? userId,
@@ -10007,8 +10011,10 @@ class MetricsApi {
 
     final _queryParameters = <String, dynamic>{
       if (birthday != null) r'birthday': _encodeQueryParameter(birthday),
+      if (firstName != null) r'firstName': _encodeQueryParameter(firstName),
       if (gender != null) r'gender': _encodeQueryParameter(gender),
       if (language != null) r'language': _encodeQueryParameter(language),
+      if (lastName != null) r'lastName': _encodeQueryParameter(lastName),
       if (names != null) r'name': _encodeQueryParameter(names),
       if (units != null) r'units': _encodeQueryParameter(units),
       if (userId != null) r'userId': _encodeQueryParameter(userId),

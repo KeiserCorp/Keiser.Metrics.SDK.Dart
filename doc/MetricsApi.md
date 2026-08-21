@@ -12269,7 +12269,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **profileUpdate**
-> ProfileResponse profileUpdate(birthday, gender, language, names, units, userId, apiVersion)
+> ProfileResponse profileUpdate(birthday, firstName, gender, language, lastName, names, units, userId, apiVersion)
 
 Update a user profile
 
@@ -12284,15 +12284,17 @@ import 'package:keiser_metrics_sdk/api.dart';
 
 final api = MetricsApi metricsApi = MetricsApi();
 final DateTime birthday = 2013-10-20T19:20:30+01:00; // DateTime | 
+final String firstName = firstName_example; // String | 
 final String gender = gender_example; // String | Allowed values: m, f, o
 final String language = language_example; // String | Allowed values: af, ar, az, be, bg, ca, cs, cy, da, de, dv, el, en, eo, es, et, eu, fa, fi, fo, fr, gl, gu, he, hi, hr, hu, hy, id, is, it, ja, ka, kk, kn, ko, kok, ky, lt, lv, mi, mk, mn, mr, ms, mt, nb, nl, ns, pa, pl, ps, pt, qu, ro, ru, sa, se, sk, sl, sq, sv, sw, ta, te, th, tl, tn, tr, tt, ts, uk, ur, uz, vi, xh, zh, zu
+final String lastName = lastName_example; // String | 
 final String names = names_example; // String | 
 final String units = units_example; // String | Allowed values: metric, imperial
 final num userId = 8.14; // num | 
 final String apiVersion = apiVersion_example; // String | 
 
 try {
-    final response = metricsApi.profileUpdate(birthday, gender, language, names, units, userId, apiVersion);
+    final response = metricsApi.profileUpdate(birthday, firstName, gender, language, lastName, names, units, userId, apiVersion);
     print(response);
 } catch on DioError (e) {
     print('Exception when calling MetricsApi->profileUpdate: $e\n');
@@ -12304,8 +12306,10 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **birthday** | **DateTime**|  | [optional] 
+ **firstName** | **String**|  | [optional] 
  **gender** | **String**| Allowed values: m, f, o | [optional] 
  **language** | **String**| Allowed values: af, ar, az, be, bg, ca, cs, cy, da, de, dv, el, en, eo, es, et, eu, fa, fi, fo, fr, gl, gu, he, hi, hr, hu, hy, id, is, it, ja, ka, kk, kn, ko, kok, ky, lt, lv, mi, mk, mn, mr, ms, mt, nb, nl, ns, pa, pl, ps, pt, qu, ro, ru, sa, se, sk, sl, sq, sv, sw, ta, te, th, tl, tn, tr, tt, ts, uk, ur, uz, vi, xh, zh, zu | [optional] 
+ **lastName** | **String**|  | [optional] 
  **names** | **String**|  | [optional] 
  **units** | **String**| Allowed values: metric, imperial | [optional] 
  **userId** | **num**|  | [optional] 

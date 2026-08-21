@@ -2081,7 +2081,7 @@ void main() {
     //
     // 1
     //
-    //Future<ProfileResponse> profileUpdate({ DateTime birthday, String gender, String language, String names, String units, num userId, String apiVersion }) async
+    //Future<ProfileResponse> profileUpdate({ DateTime birthday, String firstName, String gender, String language, String lastName, String names, String units, num userId, String apiVersion }) async
     test('test profileUpdate', () async {
       // TODO
     });
