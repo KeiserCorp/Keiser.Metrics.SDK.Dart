@@ -173,11 +173,15 @@ class MetricsApi {
   static final MetricsApi _instance = MetricsApi._internal();
   MetricsApi._internal();
 
-  factory MetricsApi([MetricsConnection? connection]) {
+  factory MetricsApi({
+    MetricsConnection? connection,
+    Duration? keepAliveRenewalBuffer,
+  }) {
     _instance.connection = connection ??
         MetricsConnection(
           restEndpoint: _defaultRestEndpoint,
           socketEndpoint: _defaultSocketEndpoint,
+          keepAliveRenewalBuffer: keepAliveRenewalBuffer,
         );
     return _instance;
   }
