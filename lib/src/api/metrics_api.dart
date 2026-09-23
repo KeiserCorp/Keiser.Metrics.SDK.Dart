@@ -16228,6 +16228,10 @@ class MetricsApi {
   /// Parameters:
   /// * [from] 
   /// * [to] 
+  /// * [formatTimestamps] 
+  /// * [includeTimeSeries] 
+  /// * [repColumns] - Allowed values: userId, name, modelNumber, setNumber, exerciseName, completedAt, dataMode, dropOff, rep, resistance, resistanceUserUnits, torque, torqueUserUnits, side, startSinceEpoch, endSinceEpoch, peakPower, meanPower, peakVelocity, meanVelocity, rom, isAbovePeakDropOff, isAboveMeanDropOff, sixRepTest, sixRepTestUserUnits, sixRepTestTorque, sixRepTestTorqueUserUnits, externalId
+  /// * [timeSeriesColumns] - Allowed values: userId, name, modelNumber, exerciseName, setNumber, epochTime, lPosition, rPosition, lPower, rPower, lForce, lForceUserUnits, lForceTorque, lForceTorqueUserUnits, rForce, rForceUserUnits, rForceTorque, rForceTorqueUserUnits, lVelocity, rVelocity, lAcceleration, rAcceleration, lAccelerationOfMass, rAccelerationOfMass, lArmWeight, rArmWeight, lRawPower, rRawPower, externalId
   /// * [userId] 
   /// * [apiVersion] 
   ///
@@ -16235,6 +16239,10 @@ class MetricsApi {
   Future<void> workoutSetBulkExport({ 
     required DateTime from,
     required DateTime to,
+    bool? formatTimestamps,
+    bool? includeTimeSeries,
+    String? repColumns,
+    String? timeSeriesColumns,
     num? userId,
     String? apiVersion,
   }) async {
@@ -16247,7 +16255,11 @@ class MetricsApi {
     }
 
     final _queryParameters = <String, dynamic>{
+      if (formatTimestamps != null) r'formatTimestamps': _encodeQueryParameter(formatTimestamps),
       r'from': _encodeQueryParameter(from),
+      if (includeTimeSeries != null) r'includeTimeSeries': _encodeQueryParameter(includeTimeSeries),
+      if (repColumns != null) r'repColumns': _encodeQueryParameter(repColumns),
+      if (timeSeriesColumns != null) r'timeSeriesColumns': _encodeQueryParameter(timeSeriesColumns),
       r'to': _encodeQueryParameter(to),
       if (userId != null) r'userId': _encodeQueryParameter(userId),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
@@ -16321,11 +16333,19 @@ class MetricsApi {
   ///
   /// Parameters:
   /// * [id] 
+  /// * [formatTimestamps] 
+  /// * [includeTimeSeries] 
+  /// * [repColumns] - Allowed values: userId, name, modelNumber, setNumber, exerciseName, completedAt, dataMode, dropOff, rep, resistance, resistanceUserUnits, torque, torqueUserUnits, side, startSinceEpoch, endSinceEpoch, peakPower, meanPower, peakVelocity, meanVelocity, rom, isAbovePeakDropOff, isAboveMeanDropOff, sixRepTest, sixRepTestUserUnits, sixRepTestTorque, sixRepTestTorqueUserUnits, externalId
+  /// * [timeSeriesColumns] - Allowed values: userId, name, modelNumber, exerciseName, setNumber, epochTime, lPosition, rPosition, lPower, rPower, lForce, lForceUserUnits, lForceTorque, lForceTorqueUserUnits, rForce, rForceUserUnits, rForceTorque, rForceTorqueUserUnits, lVelocity, rVelocity, lAcceleration, rAcceleration, lAccelerationOfMass, rAccelerationOfMass, lArmWeight, rArmWeight, lRawPower, rRawPower, externalId
   /// * [apiVersion] 
   ///
   /// Returns a [Future]
   Future<void> workoutSetExport({ 
     required num id,
+    bool? formatTimestamps,
+    bool? includeTimeSeries,
+    String? repColumns,
+    String? timeSeriesColumns,
     String? apiVersion,
   }) async {
     final _path = r'/workout-set/export';
@@ -16337,7 +16357,11 @@ class MetricsApi {
     }
 
     final _queryParameters = <String, dynamic>{
+      if (formatTimestamps != null) r'formatTimestamps': _encodeQueryParameter(formatTimestamps),
       r'id': _encodeQueryParameter(id),
+      if (includeTimeSeries != null) r'includeTimeSeries': _encodeQueryParameter(includeTimeSeries),
+      if (repColumns != null) r'repColumns': _encodeQueryParameter(repColumns),
+      if (timeSeriesColumns != null) r'timeSeriesColumns': _encodeQueryParameter(timeSeriesColumns),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
     };
     await connection.action(

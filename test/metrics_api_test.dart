@@ -3296,7 +3296,7 @@ void main() {
     //
     // 1
     //
-    //Future workoutSetBulkExport(DateTime from, DateTime to, { num userId, String apiVersion }) async
+    //Future workoutSetBulkExport(DateTime from, DateTime to, { bool formatTimestamps, bool includeTimeSeries, String repColumns, String timeSeriesColumns, num userId, String apiVersion }) async
     test('test workoutSetBulkExport', () async {
       // TODO
     });
@@ -3314,7 +3314,7 @@ void main() {
     //
     // 1
     //
-    //Future workoutSetExport(num id, { String apiVersion }) async
+    //Future workoutSetExport(num id, { bool formatTimestamps, bool includeTimeSeries, String repColumns, String timeSeriesColumns, String apiVersion }) async
     test('test workoutSetExport', () async {
       // TODO
     });

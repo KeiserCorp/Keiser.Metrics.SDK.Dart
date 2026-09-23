@@ -19562,7 +19562,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **workoutSetBulkExport**
-> workoutSetBulkExport(from, to, userId, apiVersion)
+> workoutSetBulkExport(from, to, formatTimestamps, includeTimeSeries, repColumns, timeSeriesColumns, userId, apiVersion)
 
 Export many A400 workout sets across a date range as a zip of reps.csv + time_series.csv
 
@@ -19578,11 +19578,15 @@ import 'package:keiser_metrics_sdk/api.dart';
 final api = MetricsApi metricsApi = MetricsApi();
 final DateTime from = 2013-10-20T19:20:30+01:00; // DateTime | 
 final DateTime to = 2013-10-20T19:20:30+01:00; // DateTime | 
+final bool formatTimestamps = true; // bool | 
+final bool includeTimeSeries = true; // bool | 
+final String repColumns = repColumns_example; // String | Allowed values: userId, name, modelNumber, setNumber, exerciseName, completedAt, dataMode, dropOff, rep, resistance, resistanceUserUnits, torque, torqueUserUnits, side, startSinceEpoch, endSinceEpoch, peakPower, meanPower, peakVelocity, meanVelocity, rom, isAbovePeakDropOff, isAboveMeanDropOff, sixRepTest, sixRepTestUserUnits, sixRepTestTorque, sixRepTestTorqueUserUnits, externalId
+final String timeSeriesColumns = timeSeriesColumns_example; // String | Allowed values: userId, name, modelNumber, exerciseName, setNumber, epochTime, lPosition, rPosition, lPower, rPower, lForce, lForceUserUnits, lForceTorque, lForceTorqueUserUnits, rForce, rForceUserUnits, rForceTorque, rForceTorqueUserUnits, lVelocity, rVelocity, lAcceleration, rAcceleration, lAccelerationOfMass, rAccelerationOfMass, lArmWeight, rArmWeight, lRawPower, rRawPower, externalId
 final num userId = 8.14; // num | 
 final String apiVersion = apiVersion_example; // String | 
 
 try {
-    metricsApi.workoutSetBulkExport(from, to, userId, apiVersion);
+    metricsApi.workoutSetBulkExport(from, to, formatTimestamps, includeTimeSeries, repColumns, timeSeriesColumns, userId, apiVersion);
 } catch on DioError (e) {
     print('Exception when calling MetricsApi->workoutSetBulkExport: $e\n');
 }
@@ -19594,6 +19598,10 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **from** | **DateTime**|  | 
  **to** | **DateTime**|  | 
+ **formatTimestamps** | **bool**|  | [optional] 
+ **includeTimeSeries** | **bool**|  | [optional] 
+ **repColumns** | **String**| Allowed values: userId, name, modelNumber, setNumber, exerciseName, completedAt, dataMode, dropOff, rep, resistance, resistanceUserUnits, torque, torqueUserUnits, side, startSinceEpoch, endSinceEpoch, peakPower, meanPower, peakVelocity, meanVelocity, rom, isAbovePeakDropOff, isAboveMeanDropOff, sixRepTest, sixRepTestUserUnits, sixRepTestTorque, sixRepTestTorqueUserUnits, externalId | [optional] 
+ **timeSeriesColumns** | **String**| Allowed values: userId, name, modelNumber, exerciseName, setNumber, epochTime, lPosition, rPosition, lPower, rPower, lForce, lForceUserUnits, lForceTorque, lForceTorqueUserUnits, rForce, rForceUserUnits, rForceTorque, rForceTorqueUserUnits, lVelocity, rVelocity, lAcceleration, rAcceleration, lAccelerationOfMass, rAccelerationOfMass, lArmWeight, rArmWeight, lRawPower, rRawPower, externalId | [optional] 
  **userId** | **num**|  | [optional] 
  **apiVersion** | **String**|  | [optional] 
 
@@ -19669,7 +19677,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **workoutSetExport**
-> workoutSetExport(id, apiVersion)
+> workoutSetExport(id, formatTimestamps, includeTimeSeries, repColumns, timeSeriesColumns, apiVersion)
 
 Export one A400 workout set as a zip of reps.csv + time_series.csv
 
@@ -19684,10 +19692,14 @@ import 'package:keiser_metrics_sdk/api.dart';
 
 final api = MetricsApi metricsApi = MetricsApi();
 final num id = 8.14; // num | 
+final bool formatTimestamps = true; // bool | 
+final bool includeTimeSeries = true; // bool | 
+final String repColumns = repColumns_example; // String | Allowed values: userId, name, modelNumber, setNumber, exerciseName, completedAt, dataMode, dropOff, rep, resistance, resistanceUserUnits, torque, torqueUserUnits, side, startSinceEpoch, endSinceEpoch, peakPower, meanPower, peakVelocity, meanVelocity, rom, isAbovePeakDropOff, isAboveMeanDropOff, sixRepTest, sixRepTestUserUnits, sixRepTestTorque, sixRepTestTorqueUserUnits, externalId
+final String timeSeriesColumns = timeSeriesColumns_example; // String | Allowed values: userId, name, modelNumber, exerciseName, setNumber, epochTime, lPosition, rPosition, lPower, rPower, lForce, lForceUserUnits, lForceTorque, lForceTorqueUserUnits, rForce, rForceUserUnits, rForceTorque, rForceTorqueUserUnits, lVelocity, rVelocity, lAcceleration, rAcceleration, lAccelerationOfMass, rAccelerationOfMass, lArmWeight, rArmWeight, lRawPower, rRawPower, externalId
 final String apiVersion = apiVersion_example; // String | 
 
 try {
-    metricsApi.workoutSetExport(id, apiVersion);
+    metricsApi.workoutSetExport(id, formatTimestamps, includeTimeSeries, repColumns, timeSeriesColumns, apiVersion);
 } catch on DioError (e) {
     print('Exception when calling MetricsApi->workoutSetExport: $e\n');
 }
@@ -19698,6 +19710,10 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **num**|  | 
+ **formatTimestamps** | **bool**|  | [optional] 
+ **includeTimeSeries** | **bool**|  | [optional] 
+ **repColumns** | **String**| Allowed values: userId, name, modelNumber, setNumber, exerciseName, completedAt, dataMode, dropOff, rep, resistance, resistanceUserUnits, torque, torqueUserUnits, side, startSinceEpoch, endSinceEpoch, peakPower, meanPower, peakVelocity, meanVelocity, rom, isAbovePeakDropOff, isAboveMeanDropOff, sixRepTest, sixRepTestUserUnits, sixRepTestTorque, sixRepTestTorqueUserUnits, externalId | [optional] 
+ **timeSeriesColumns** | **String**| Allowed values: userId, name, modelNumber, exerciseName, setNumber, epochTime, lPosition, rPosition, lPower, rPower, lForce, lForceUserUnits, lForceTorque, lForceTorqueUserUnits, rForce, rForceUserUnits, rForceTorque, rForceTorqueUserUnits, lVelocity, rVelocity, lAcceleration, rAcceleration, lAccelerationOfMass, rAccelerationOfMass, lArmWeight, rArmWeight, lRawPower, rRawPower, externalId | [optional] 
  **apiVersion** | **String**|  | [optional] 
 
 ### Return type
