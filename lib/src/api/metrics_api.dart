@@ -7252,10 +7252,12 @@ class MetricsApi {
   /// 1
   ///
   /// Parameters:
+  /// * [wireguardIp] 
   /// * [apiVersion] 
   ///
   /// Returns a [Future] containing a [Response] with a [FacilityStrengthMachineStartSessionResponse] as data
   Future<FacilityStrengthMachineStartSessionResponse> facilityStrengthMachineMachineStartSession({ 
+    String? wireguardIp,
     String? apiVersion,
   }) async {
     final _path = r'/facility/strength-machine/machine/start-session';
@@ -7267,6 +7269,7 @@ class MetricsApi {
     }
 
     final _queryParameters = <String, dynamic>{
+      if (wireguardIp != null) r'wireguardIp': _encodeQueryParameter(wireguardIp),
       if (apiVersion != null) r'apiVersion': _encodeQueryParameter(apiVersion),
     };
     final _response = await connection.action(

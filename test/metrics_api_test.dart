@@ -1514,7 +1514,7 @@ void main() {
     //
     // 1
     //
-    //Future<FacilityStrengthMachineStartSessionResponse> facilityStrengthMachineMachineStartSession({ String apiVersion }) async
+    //Future<FacilityStrengthMachineStartSessionResponse> facilityStrengthMachineMachineStartSession({ String wireguardIp, String apiVersion }) async
     test('test facilityStrengthMachineMachineStartSession', () async {
       // TODO
     });

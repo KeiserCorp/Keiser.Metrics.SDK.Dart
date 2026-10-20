@@ -57,6 +57,11 @@ void main() {
       // TODO
     });
 
+    // String wireguardIp
+    test('to test the property `wireguardIp`', () async {
+      // TODO
+    });
+
     // String mainBoardSerial
     test('to test the property `mainBoardSerial`', () async {
       // TODO

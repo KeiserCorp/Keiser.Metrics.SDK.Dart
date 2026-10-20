@@ -40,6 +40,8 @@ class FacilityStrengthMachineData {
 
      this.lastUpdateFailureReason,
 
+     this.wireguardIp,
+
      this.mainBoardSerial,
 
      this.location,
@@ -177,6 +179,18 @@ class FacilityStrengthMachineData {
 
   @JsonKey(
     
+    name: r'wireguardIp',
+    required: false,
+    includeIfNull: false
+  )
+
+
+  final String? wireguardIp;
+
+
+
+  @JsonKey(
+    
     name: r'mainBoardSerial',
     required: false,
     includeIfNull: false
@@ -271,6 +285,7 @@ class FacilityStrengthMachineData {
      other.lastUpdateSkippedReason == lastUpdateSkippedReason &&
      other.lastUpdateFailureAt == lastUpdateFailureAt &&
      other.lastUpdateFailureReason == lastUpdateFailureReason &&
+     other.wireguardIp == wireguardIp &&
      other.mainBoardSerial == mainBoardSerial &&
      other.location == location &&
      other.displayUUID == displayUUID &&
@@ -291,6 +306,7 @@ class FacilityStrengthMachineData {
     lastUpdateSkippedReason.hashCode +
     lastUpdateFailureAt.hashCode +
     lastUpdateFailureReason.hashCode +
+    wireguardIp.hashCode +
     mainBoardSerial.hashCode +
     location.hashCode +
     displayUUID.hashCode +

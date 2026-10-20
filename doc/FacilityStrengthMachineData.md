@@ -18,6 +18,7 @@ Name | Type | Description | Notes
 **lastUpdateSkippedReason** | **String** |  | [optional] 
 **lastUpdateFailureAt** | [**DateTime**](DateTime.md) |  | [optional] 
 **lastUpdateFailureReason** | **String** |  | [optional] 
+**wireguardIp** | **String** |  | [optional] 
 **mainBoardSerial** | **String** |  | [optional] 
 **location** | **String** |  | [optional] 
 **displayUUID** | **String** |  | [optional] 

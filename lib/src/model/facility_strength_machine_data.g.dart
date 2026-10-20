@@ -38,6 +38,7 @@ FacilityStrengthMachineData _$FacilityStrengthMachineDataFromJson(
               (v) => v == null ? null : DateTime.parse(v as String)),
           lastUpdateFailureReason:
               $checkedConvert('lastUpdateFailureReason', (v) => v as String?),
+          wireguardIp: $checkedConvert('wireguardIp', (v) => v as String?),
           mainBoardSerial:
               $checkedConvert('mainBoardSerial', (v) => v as String?),
           location: $checkedConvert('location', (v) => v as String?),
@@ -84,6 +85,7 @@ Map<String, dynamic> _$FacilityStrengthMachineDataToJson(
   writeNotNull(
       'lastUpdateFailureAt', instance.lastUpdateFailureAt?.toIso8601String());
   writeNotNull('lastUpdateFailureReason', instance.lastUpdateFailureReason);
+  writeNotNull('wireguardIp', instance.wireguardIp);
   writeNotNull('mainBoardSerial', instance.mainBoardSerial);
   writeNotNull('location', instance.location);
   writeNotNull('displayUUID', instance.displayUUID);

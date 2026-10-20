@@ -8980,7 +8980,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **facilityStrengthMachineMachineStartSession**
-> FacilityStrengthMachineStartSessionResponse facilityStrengthMachineMachineStartSession(apiVersion)
+> FacilityStrengthMachineStartSessionResponse facilityStrengthMachineMachineStartSession(wireguardIp, apiVersion)
 
 Exchange a machine initialization token for a short-lived machine session token
 
@@ -8994,10 +8994,11 @@ import 'package:keiser_metrics_sdk/api.dart';
 //defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').password = 'YOUR_PASSWORD';
 
 final api = MetricsApi metricsApi = MetricsApi();
+final String wireguardIp = wireguardIp_example; // String | 
 final String apiVersion = apiVersion_example; // String | 
 
 try {
-    final response = metricsApi.facilityStrengthMachineMachineStartSession(apiVersion);
+    final response = metricsApi.facilityStrengthMachineMachineStartSession(wireguardIp, apiVersion);
     print(response);
 } catch on DioError (e) {
     print('Exception when calling MetricsApi->facilityStrengthMachineMachineStartSession: $e\n');
@@ -9008,6 +9009,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **wireguardIp** | **String**|  | [optional] 
  **apiVersion** | **String**|  | [optional] 
 
 ### Return type
