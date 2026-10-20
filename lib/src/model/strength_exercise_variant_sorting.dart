@@ -1,0 +1,18 @@
+//
+// AUTO-GENERATED FILE, DO NOT MODIFY!
+//
+
+// ignore_for_file: unused_element
+import 'package:json_annotation/json_annotation.dart';
+
+
+enum StrengthExerciseVariantSorting {
+  @JsonValue(r'id')
+  id,
+  @JsonValue(r'variant')
+  variant,
+  @JsonValue(r'attachment')
+  attachment,
+  @JsonValue(r'equipmentMechanicalMovement')
+  equipmentMechanicalMovement,
+}
